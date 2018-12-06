@@ -39,6 +39,7 @@
 
 #include "SMK_TP_Type.h"
 #include "SMK_TP.h"
+#include "cdd_lfic_drv.h"
 
 
 /* INPUT OUTPUT ------------------------------------------------------------------------*/
@@ -236,26 +237,27 @@ FUNC(void, TP_CODE) RE_SMK_TP(void) /* PRQA S 0850 */ /* MD_MSR_19.8 */
 void TestCANInput_TP(void)
 {
 	static u8 PreviousButton = 0;
+	static u8 InputCnt = 0;
 
+	Rte_Read_Debug_PVT_PEPS_Logic_Ctrl_Debug_PVT_PEPS_Logic_Ctrl(&PVT_PEPS_Logic_Ctrl);
 	Rte_Read_Debug_PVT_PEPS_AntP1_X_Ctrl_Debug_PVT_PEPS_AntP1_X_Ctrl(&PVT_PEPS_AntP1_X_Ctrl);
 	Rte_Read_Debug_PVT_PEPS_AntP1_Y_Ctrl_Debug_PVT_PEPS_AntP1_Y_Ctrl(&PVT_PEPS_AntP1_Y_Ctrl);
 	Rte_Read_Debug_PVT_PEPS_AntPi_X_Ctrl_Debug_PVT_PEPS_AntPi_X_Ctrl(&PVT_PEPS_AntPi_X_Ctrl);
 	Rte_Read_Debug_PVT_PEPS_AntPi_Y_Ctrl_Debug_PVT_PEPS_AntPi_Y_Ctrl(&PVT_PEPS_AntPi_Y_Ctrl);
-	Rte_Read_Debug_PVT_PEPS_Logic_Ctrl_Debug_PVT_PEPS_Logic_Ctrl(&PVT_PEPS_Logic_Ctrl);
-
-
 
 	if(ImmoMenu == 0)
 	{
-		if(PreviousButton != (uint8)PVT_PEPS_Logic_Ctrl)
+		if((PreviousButton != (uint8)PVT_PEPS_Logic_Ctrl) && (InputCnt >= 2))
 		{
+			InputCnt = 0;
+
 			PreviousButton = (uint8)PVT_PEPS_Logic_Ctrl;	
 			ImmoMenu = (uint8)PVT_PEPS_Logic_Ctrl;
 		}
 		else
 		{
-
-		}	
+			InputCnt++;
+		}
 	}
 	else
 	{
@@ -279,23 +281,40 @@ void TestCANInput_TP(void)
 
 	}
 
+	if(PVT_PEPS_AntPi_Y_Ctrl != 0)
+	{
+		ImmoMode = (PEPS_ImmoMode)PVT_PEPS_AntPi_Y_Ctrl;
+		
+		if((ImmoMode == SharedCoil) || (ImmoMode == Active_High))
+		{
+			(void)lf_ata5291_wreg(GPIO1,0x01);
+				lf_ata5291_sgp(0);
+		}
+		else if(ImmoMode == Active_Low)
+		{
+			(void)lf_ata5291_wreg(GPIO1,0x01);
+				lf_ata5291_sgp(1);
+		}
+		else if(ImmoMode == High_Z)
+		{
+			(void)lf_ata5291_wreg(GPIO1,0x00);
+		}
+		else
+		{
+
+		}
+	}
+	else
+	{
+
+	}
 }
 
 void TestAppl_TP(void)
 {
-	static u8 IrcChecker = 0;
-	static u8 preMenu = 0;
+	static u8 IrqChecker = 0;
 	static u8 TestApplCnt = 0;
-/*
-	if(preMenu == ImmoMenu)
-	{
-		ImmoMenu = 0;
-	}
-	else
-	{
-		preMenu = ImmoMenu;
-	}
-*/
+
 
 	if(ImmoMenu != 0)
 	{
@@ -307,7 +326,7 @@ void TestAppl_TP(void)
 				ImmoStep = 1;
 				break;
 			case 1:
-				if(TestApplCnt >= 1)
+				if(TestApplCnt >= 2)
 				{
 					TestApplCnt = 0;
 					ImmoStep = 2;
@@ -336,23 +355,29 @@ void TestAppl_TP(void)
 	}
 	
 
-
 	if(Dio_ReadChannel(DioConf_DioChannel_LFIC_IRQ) == 1)
 	{
-		if(IrcChecker >= 5)
+		if(IrqChecker >= 5)
 		{
-			lfic_global_status_check();
+			IrqChecker = 0;
+
+			RE_Timeout_Tx_Telegram();
+
+			ImmoMenu = 0;
+			ImmoStep = 0;
+			ImmoOrder = 0;
+			ImmoData = 0;
+			ImmoFlag = 0;
 		}
 		else
 		{
-			IrcChecker++;
+			IrqChecker++;
 		}
 	}
 	else
 	{
-		IrcChecker = 0;
+		IrqChecker = 0;
 	}
-
 }
 
 void TestCANOutput_TP(void)
@@ -362,19 +387,7 @@ void TestCANOutput_TP(void)
 	if(cnt >= 5)
 	{
 		cnt = 0;
-/*
-		if(ImmoFlag == 1)
-		{
-			if((ImmoMenu == 2) && (PVT_PEPS_AntP1_X != (Debug_PVT_PEPS_AntP1_X)Buffer_DST_RxData[2]))
-			{
-				PVT_PEPS_AntP1_X = (Debug_PVT_PEPS_AntP1_X)Buffer_DST_RxData[2];
-			}
 
-			ImmoFlag = 0;
-			ImmoMenu = 0;
-
-		}
-*/
 		if(ImmoFlag == 1)
 		{
 			ImmoFlag = 0;

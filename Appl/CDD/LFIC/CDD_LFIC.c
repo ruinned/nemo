@@ -158,7 +158,7 @@ static  volatile uint8 inversionFlag = 0;
 static volatile uint8 tmpReturn=0;
 
 uint8	lf_antenna_RSSIOutputOrder[LF_ANT_RSSI_OUTPUT_ORDER_MAX] = {0u,};
-uint8 b_ImmoSharedCoilMode = 1;
+PEPS_ImmoMode ImmoMode = SharedCoil;
 
 /* LF_RF_Tunning Factor */
 uint8	Antena_P1_Gain		= 0u;
@@ -960,15 +960,16 @@ static void check_errors(void)
 ***********************************************************************************************************************/
 static void AtaImmoTurnOn(void)
 {
-	if(b_ImmoSharedCoilMode == 1)
+	if(ImmoMode == SharedCoil)
 	{
 		lf_ata5291_sdm(0x00, 0x01);
 		lf_ata5291_gis();
 	}
 	else
 	{
-		lf_ata5291_gim();		// Turn on CW Immo only, use normal immo mode
+		lf_ata5291_gim();	// Turn on CW Immo only, use normal immo mode
 	}
+
 	lf_ata5291_iro(0);
 	lf_ata5291_crx();
 	lf_ata5291_wait ( 1, 150 ); 	//32 * 8?s * 151 = ~38.7 ms (Transponder startup time)
@@ -992,8 +993,24 @@ static void AtaImmoInit(void)
 	ata5291_Immo_timing.One  = 32;
 	ata5291_Immo_timing.Zero = 16;
 
-	(void)lf_ata5291_wreg(GPIO1,0x01);
-	lf_ata5291_sgp(0);
+	if((ImmoMode == SharedCoil) || (ImmoMode == Active_High))
+	{
+		(void)lf_ata5291_wreg(GPIO1,0x01);
+			lf_ata5291_sgp(0);
+	}
+	else if(ImmoMode == Active_Low)
+	{
+		(void)lf_ata5291_wreg(GPIO1,0x01);
+			lf_ata5291_sgp(1);
+	}
+	else if(ImmoMode == High_Z)
+	{
+		(void)lf_ata5291_wreg(GPIO1,0x00);
+	}
+	else
+	{
+
+	}
 
 	immoDataBuffer = lf_ata5291_rreg(IMRCC); // Immobilizer Rx Check Configuration
 	immoDataBuffer = immoDataBuffer | 0x80; 	
@@ -1364,19 +1381,19 @@ static void Set_LF_Antena(uint8 ant_index)
 {
 	if(ant_index == kANTENA_P1) // P1(circuit), Ant1
 	{
-		lf_ata5291_sdm(0x02, 0x02);
+		lf_ata5291_sdm(0x01, 0x01);
 	}	
 	else if(ant_index == kANTENA_P2) // P2(circuit), Ant2
 	{
-		lf_ata5291_sdm(0x04, 0x04);
+		lf_ata5291_sdm(0x02, 0x02);
 	}	
 	else if(ant_index == kANTENA_P3)	// P3(circuit), Ant3
 	{
-		lf_ata5291_sdm(0x08, 0x08);
+		lf_ata5291_sdm(0x04, 0x04);
 	}	
 	else if(ant_index == kANTENA_P4) // P4(circuit), Ant4
 	{
-		lf_ata5291_sdm(0x02, 0x04);
+		lf_ata5291_sdm(0x08, 0x08);
 	}
 	else
 	{
@@ -1603,7 +1620,18 @@ void DST_RX_ISR(void)
 {
  	static uint8 bufferFillLevel = 0;
 
-	lf_ata5291_sgp(1);
+	if((ImmoMode == SharedCoil) || (ImmoMode == Active_High))
+	{
+		lf_ata5291_sgp(1);
+	}
+	else if(ImmoMode == Active_Low)
+	{
+		lf_ata5291_sgp(0);
+	}
+	else
+	{
+
+	}
 
 	bufferFillLevel = lf_ata5291_grx();				
 	if(bufferFillLevel > 63) bufferFillLevel=63;
@@ -1621,7 +1649,19 @@ void DST_RX_ISR(void)
 		Rte_Write_b_DST_ResponseNG_P_SR(On);
 	}
 
-	lf_ata5291_sgp(0);
+	if((ImmoMode == SharedCoil) || (ImmoMode == Active_High))
+	{
+		lf_ata5291_sgp(0);
+	}
+	else if(ImmoMode == Active_Low)
+	{
+		lf_ata5291_sgp(1);
+	}
+	else
+	{
+
+	}
+
 	lf_ata5291_gid();				
 }
 
@@ -1892,7 +1932,7 @@ FUNC(void, CDD_LFIC_CODE) RE_SetupLF_Periodic_Telegram(VAR(uint8, AUTOMATIC) b_A
 	lf_ata5291_scc(Get_LFGainValue(LF_GAIN_FIRST,b_SearchPattern,b_AntenaIndex)); /* Set Coil Current */
 	
 /*
-	if(b_ImmoSharedCoilMode == 1)
+	if(ImmoMode == SharedCoil)
 	{
 		lf_ata5291_gis();
 		lf_ata5291_wait(1, 77); // 32*8us*(77+1) ~ 20ms
@@ -2268,7 +2308,19 @@ FUNC(void, CDD_LFIC_CODE) RE_SetupDST_Telegram(uint8 dst_order) /* PRQA S 0850 *
 	(void)lf_ata5291_wreg(RBCFG,(DST_RxDataLength*2)+10);	// *2 => expect TP Rx Data(NRZ), RBCFG = Fill Lvl Threshold Setting
 
 	AtaImmoTurnOn();	
-	lf_ata5291_sgp(0x1);
+
+	if((ImmoMode == SharedCoil) || (ImmoMode == Active_High))
+	{
+		lf_ata5291_sgp(1);
+	}
+	else if(ImmoMode == Active_Low)
+	{
+		lf_ata5291_sgp(0);
+	}
+	else
+	{
+
+	}
 
 	//IoHwAb_GptEnableNotification(Rte_PDAV_IoHwAbP_Gpt_LFControl_1);
 	//IoHwAb_GptStartTimer(Rte_PDAV_IoHwAbP_Gpt_LFControl_1, 40000); /* Value is tick, tick = ?? ms?? */
@@ -2540,8 +2592,20 @@ void Test_SetupDST_Telegram(uint8 dst_order, uint8 data)
 	
 	(void)lf_ata5291_wreg(RBCFG,(DST_RxDataLength*2)+10);	// *2 => expect TP Rx Data(NRZ), RBCFG = Fill Lvl Threshold Setting
 
-	AtaImmoTurnOn();	
-	lf_ata5291_sgp(0x1);
+	AtaImmoTurnOn();
+
+	if((ImmoMode == SharedCoil) || (ImmoMode == Active_High))
+	{
+		lf_ata5291_sgp(1);
+	}
+	else if(ImmoMode == Active_Low)
+	{
+		lf_ata5291_sgp(0);
+	}
+	else
+	{
+
+	}
 
 	//IoHwAb_GptEnableNotification(Rte_PDAV_IoHwAbP_Gpt_LFControl_1);
 	//IoHwAb_GptStartTimer(Rte_PDAV_IoHwAbP_Gpt_LFControl_1, 40000); /* Value is tick, tick = ?? ms?? */

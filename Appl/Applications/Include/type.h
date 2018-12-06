@@ -146,6 +146,15 @@ extern u8	lf_antenna_RSSIOutputOrder[LF_ANT_RSSI_OUTPUT_ORDER_MAX];
 
 
 //scim
+typedef enum
+{
+	SharedCoil = 1,
+	Active_High,
+	Active_Low,
+	High_Z
+} PEPS_ImmoMode;
+extern PEPS_ImmoMode ImmoMode;
+
 extern u8	b_FobFound_OK;
 extern u8	b_RkeFunction_OK;
 extern u8 LFSearchCompleteFlag_test;
