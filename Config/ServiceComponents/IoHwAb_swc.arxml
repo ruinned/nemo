@@ -1,0 +1,1771 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="b52e4384-c505-4727-ab79-637dc75f2b82">
+          <SHORT-NAME>IoHwAb_swc</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="3412e94a-43cc-4079-a452-74cd79b026a9">
+              <SHORT-NAME>ComponentTypes</SHORT-NAME>
+              <ELEMENTS>
+                <ECU-ABSTRACTION-SW-COMPONENT-TYPE UUID="b59ba04f-0b8f-4de2-91a3-9de1b46000b1">
+                  <SHORT-NAME>IoHwAb</SHORT-NAME>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="6203d6bc-d37f-4dfc-81a1-9250e8226e57">
+                      <SHORT-NAME>AdInterfaces_P</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/AdiInterface_I</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="8370c30b-e06e-430b-a220-e3cc9565f369">
+                      <SHORT-NAME>Do12VInterface_P</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/Do12VInterface_I</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="76d853bb-0eab-4af9-9a64-093237fd1d37">
+                      <SHORT-NAME>DobhsCtrlInterface_P_2</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/DobhsCtrlInterface_I</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="97fa4d51-81c5-4e0a-8d7b-1cb726e4a10b">
+                      <SHORT-NAME>DobhsCtrlInterface_P_3</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/DobhsCtrlInterface_I</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="52b3b33a-4cdf-4430-9356-523349e22806">
+                      <SHORT-NAME>DobhsCtrlInterface_P_4</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/DobhsCtrlInterface_I</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="ab26e808-55aa-4a78-9573-1feb4bfc2e7c">
+                      <SHORT-NAME>DobhsCtrlInterface_P_1</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/DobhsCtrlInterface_I</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="a6cf42a3-2252-4437-8511-0f5611573e54">
+                      <SHORT-NAME>LficICU_P</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/Icu_I</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="062353c0-3506-46fd-97c4-a1c4571fe9c7">
+                      <SHORT-NAME>RficICU_P</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/Icu_I</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="d252bcc8-5850-440c-9d13-e21a2b373643">
+                      <SHORT-NAME>LficNRESDio_P</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/Dio_I</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="3bad4383-3b0f-4d05-9d79-f505d5c370bd">
+                      <SHORT-NAME>RficNRESDio_P</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/Dio_I</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="60864e61-50ad-4375-a123-5a19d66706c0">
+                      <SHORT-NAME>DowhsInterfaces_P_1</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/DowhsInterface_I</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="a465a60b-edba-4a80-8cf4-b236acb1c8d6">
+                      <SHORT-NAME>DowlsInterface_P_1</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/DowlsInterface_I</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="9e38b39a-9bb1-4f64-9bae-b37e36478fbe">
+                      <SHORT-NAME>DowhsInterfaces_P_2</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/DowhsInterface_I</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="4df37c8f-4685-42fb-adbf-c199a38345d0">
+                      <SHORT-NAME>DowlsInterface_P_2</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/DowlsInterface_I</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="e7ef1100-ef2b-40cc-8f57-9da0be5c2d82">
+                      <SHORT-NAME>DowlsInterface_P_3</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/DowlsInterface_I</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="058046fe-7e1b-4db4-b361-910030ef08fe">
+                      <SHORT-NAME>IoHwAbInternalBehavior</SHORT-NAME>
+                      <EVENTS>
+                        <OPERATION-INVOKED-EVENT UUID="439a5d39-2746-4660-8f33-4bb37909c5b2">
+                          <SHORT-NAME>OpEventIoHwAb_AdInterfaces_P_GetAdiPinState_GetAdiPinState_AdInterfaces_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_AdInterfaces_P_GetAdiPinState</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/AdInterfaces_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/AdiInterface_I/GetAdiPinState</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="153b29d5-54f6-4e81-abe4-540b11d00182">
+                          <SHORT-NAME>OpEventIoHwAb_AdInterfaces_P_GetAdiPinStateAll_GetAdiPinStateAll_AdInterfaces_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_AdInterfaces_P_GetAdiPinStateAll</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/AdInterfaces_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/AdiInterface_I/GetAdiPinStateAll</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="b69a5eb9-6fac-41f5-960d-c5a4981feec6">
+                          <SHORT-NAME>OpEventIoHwAb_AdInterfaces_P_GetPullUpState_GetPullUpState_AdInterfaces_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_AdInterfaces_P_GetPullUpState</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/AdInterfaces_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/AdiInterface_I/GetPullUpState</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="ba20d955-3ad1-4e0e-91df-0382177344e4">
+                          <SHORT-NAME>OpEventIoHwAb_AdInterfaces_P_SetPullUp_SetPullUp_AdInterfaces_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_AdInterfaces_P_SetPullUp</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/AdInterfaces_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/AdiInterface_I/SetPullUp</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="23a9eb43-fed2-4077-831a-ce34674bc39b">
+                          <SHORT-NAME>OpEventIoHwAb_Do12VInterface_P_GetDo12VPinsState_GetDo12VPinsState_Do12VInterface_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_Do12VInterface_P_GetDo12VPinsState</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/Do12VInterface_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Do12VInterface_I/GetDo12VPinsState</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="05f3ebeb-36cd-4cfe-a541-99188f29357d">
+                          <SHORT-NAME>OpEventIoHwAb_Do12VInterface_P_SetDcdc12VActive_SetDcdc12VActive_Do12VInterface_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_Do12VInterface_P_SetDcdc12VActive</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/Do12VInterface_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Do12VInterface_I/SetDcdc12VActive</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="9f4d8307-5ee2-4ff8-8b66-8a1209a515e5">
+                          <SHORT-NAME>OpEventIoHwAb_Do12VInterface_P_SetDo12VLivingActive_SetDo12VLivingActive_Do12VInterface_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_Do12VInterface_P_SetDo12VLivingActive</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/Do12VInterface_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Do12VInterface_I/SetDo12VLivingActive</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="a384523e-288a-4eba-b43a-6d19524bcbd9">
+                          <SHORT-NAME>OpEventIoHwAb_Do12VInterface_P_SetDo12VParkedActive_SetDo12VParkedActive_Do12VInterface_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_Do12VInterface_P_SetDo12VParkedActive</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/Do12VInterface_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Do12VInterface_I/SetDo12VParkedActive</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="7a6060d4-5e0f-46c4-bda6-5b74194ee171">
+                          <SHORT-NAME>OpEventIoHwAb_DobhsCtrlInterface_P_2_GetDobhsPinState_GetDobhsPinState_DobhsCtrlInterface_P_2</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DobhsCtrlInterface_P_2_GetDobhsPinState</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DobhsCtrlInterface_P_2</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DobhsCtrlInterface_I/GetDobhsPinState</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="4516d2d9-5f49-42a9-9e8b-6664ec9b218f">
+                          <SHORT-NAME>OpEventIoHwAb_DobhsCtrlInterface_P_2_SetDobhsActive_SetDobhsActive_DobhsCtrlInterface_P_2</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DobhsCtrlInterface_P_2_SetDobhsActive</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DobhsCtrlInterface_P_2</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DobhsCtrlInterface_I/SetDobhsActive</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="5c62d077-4434-43d8-bc9d-24be2e6beaa1">
+                          <SHORT-NAME>OpEventIoHwAb_DobhsCtrlInterface_P_3_GetDobhsPinState_GetDobhsPinState_DobhsCtrlInterface_P_3</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DobhsCtrlInterface_P_3_GetDobhsPinState</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DobhsCtrlInterface_P_3</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DobhsCtrlInterface_I/GetDobhsPinState</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="619bde9a-c9a8-4b76-9c5c-2ee61917a85a">
+                          <SHORT-NAME>OpEventIoHwAb_DobhsCtrlInterface_P_3_SetDobhsActive_SetDobhsActive_DobhsCtrlInterface_P_3</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DobhsCtrlInterface_P_3_SetDobhsActive</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DobhsCtrlInterface_P_3</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DobhsCtrlInterface_I/SetDobhsActive</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="d1642e57-a4fd-46f0-89e0-0404123724fe">
+                          <SHORT-NAME>OpEventIoHwAb_DobhsCtrlInterface_P_4_GetDobhsPinState_GetDobhsPinState_DobhsCtrlInterface_P_4</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DobhsCtrlInterface_P_4_GetDobhsPinState</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DobhsCtrlInterface_P_4</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DobhsCtrlInterface_I/GetDobhsPinState</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="8fce1ddd-742c-41d4-a782-cf991e325105">
+                          <SHORT-NAME>OpEventIoHwAb_DobhsCtrlInterface_P_4_SetDobhsActive_SetDobhsActive_DobhsCtrlInterface_P_4</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DobhsCtrlInterface_P_4_SetDobhsActive</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DobhsCtrlInterface_P_4</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DobhsCtrlInterface_I/SetDobhsActive</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="bbbef5c8-2ec5-44b7-8361-c2523ab2658a">
+                          <SHORT-NAME>OpEventIoHwAb_DobhsCtrlInterface_P_1_GetDobhsPinState_GetDobhsPinState_DobhsCtrlInterface_P_1</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DobhsCtrlInterface_P_1_GetDobhsPinState</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DobhsCtrlInterface_P_1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DobhsCtrlInterface_I/GetDobhsPinState</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="e63388a9-27b8-4c66-8599-3810bcd72ca7">
+                          <SHORT-NAME>OpEventIoHwAb_DobhsCtrlInterface_P_1_SetDobhsActive_SetDobhsActive_DobhsCtrlInterface_P_1</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DobhsCtrlInterface_P_1_SetDobhsActive</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DobhsCtrlInterface_P_1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DobhsCtrlInterface_I/SetDobhsActive</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <TIMING-EVENT UUID="b6827d2a-1dfc-4233-ba38-48f9b5c2a459">
+                          <SHORT-NAME>Timer_IoHwAb_REIoHwAb_10ms</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_REIoHwAb_10ms</START-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </TIMING-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="961d96ab-40e9-4985-9792-fb569a54b78b">
+                          <SHORT-NAME>OpEventIoHwAb_LficICU_P_IcuEnableNotification_IcuEnableNotification_LficICU_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_LficICU_P_IcuEnableNotification</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/LficICU_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Icu_I/IcuEnableNotification</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="28ab09fd-600c-49cb-8e17-49475e4a1653">
+                          <SHORT-NAME>OpEventIoHwAb_LficICU_P_IcuEnableEdgeDetection_IcuEnableEdgeDetection_LficICU_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_LficICU_P_IcuEnableEdgeDetection</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/LficICU_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Icu_I/IcuEnableEdgeDetection</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="f002cc6b-34f0-49ba-a057-b9a11aed015c">
+                          <SHORT-NAME>OpEventIoHwAb_RficICU_P_IcuEnableNotification_IcuEnableNotification_RficICU_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_RficICU_P_IcuEnableNotification</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/RficICU_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Icu_I/IcuEnableNotification</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="fa07de07-c080-405b-9866-cde5d389271e">
+                          <SHORT-NAME>OpEventIoHwAb_RficICU_P_IcuEnableEdgeDetection_IcuEnableEdgeDetection_RficICU_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_RficICU_P_IcuEnableEdgeDetection</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/RficICU_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Icu_I/IcuEnableEdgeDetection</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="f5d5d1b9-1979-4b35-8323-33a8a0a67f75">
+                          <SHORT-NAME>OpEventIoHwAb_LficNRESDio_P_Read_Read_LficNRESDio_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_LficNRESDio_P_Read</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/LficNRESDio_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Dio_I/Read</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="7e1b12cf-f87f-4a1f-bbe6-6913805ddb3e">
+                          <SHORT-NAME>OpEventIoHwAb_LficNRESDio_P_Write_Write_LficNRESDio_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_LficNRESDio_P_Write</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/LficNRESDio_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Dio_I/Write</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="c9d24c6c-2923-4129-ba3b-bb5d16f00ebe">
+                          <SHORT-NAME>OpEventIoHwAb_LficICU_P_IcuDisableEdgeDetection_IcuDisableEdgeDetection_LficICU_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_LficICU_P_IcuDisableEdgeDetection</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/LficICU_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Icu_I/IcuDisableEdgeDetection</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="c166202b-61e1-4a45-914a-ef9a80492edb">
+                          <SHORT-NAME>OpEventIoHwAb_LficICU_P_IcuDisableNotification_IcuDisableNotification_LficICU_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_LficICU_P_IcuDisableNotification</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/LficICU_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Icu_I/IcuDisableNotification</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="9b5c0e15-3e7a-46fd-8d39-fe144e1c4115">
+                          <SHORT-NAME>OpEventIoHwAb_RficICU_P_IcuDisableEdgeDetection_IcuDisableEdgeDetection_RficICU_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_RficICU_P_IcuDisableEdgeDetection</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/RficICU_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Icu_I/IcuDisableEdgeDetection</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="a9a3abd0-bc05-4abd-b8ad-ade654a355e5">
+                          <SHORT-NAME>OpEventIoHwAb_RficICU_P_IcuDisableNotification_IcuDisableNotification_RficICU_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_RficICU_P_IcuDisableNotification</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/RficICU_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Icu_I/IcuDisableNotification</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="e0e62d70-c39d-4afb-b690-af818d7c51f2">
+                          <SHORT-NAME>OpEventIoHwAb_RficNRESDio_P_Read_Read_RficNRESDio_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_RficNRESDio_P_Read</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/RficNRESDio_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Dio_I/Read</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="ae21af55-8346-44f3-b08b-9bfe85648782">
+                          <SHORT-NAME>OpEventIoHwAb_RficNRESDio_P_Write_Write_RficNRESDio_P</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_RficNRESDio_P_Write</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/RficNRESDio_P</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/Dio_I/Write</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="173c2a9c-4c72-4d8f-a1a5-c5c0ce856bb6">
+                          <SHORT-NAME>OpEventIoHwAb_DowhsInterfaces_P_1_GetDoPinStateOne_GetDoPinStateOne_DowhsInterfaces_P_1</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DowhsInterfaces_P_1_GetDoPinStateOne</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DowhsInterfaces_P_1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DowhsInterface_I/GetDoPinStateOne</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="ed9cc7b0-5c1d-4d4e-ad2c-8bd3e022618f">
+                          <SHORT-NAME>OpEventIoHwAb_DowhsInterfaces_P_1_SetDowActive_SetDowActive_DowhsInterfaces_P_1</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DowhsInterfaces_P_1_SetDowActive</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DowhsInterfaces_P_1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DowhsInterface_I/SetDowActive</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="6384dc4e-7c2e-4949-8783-2d35f1bbdf58">
+                          <SHORT-NAME>OpEventIoHwAb_DowlsInterface_P_1_GetDoPinStateOne_GetDoPinStateOne_DowlsInterface_P_1</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DowlsInterface_P_1_GetDoPinStateOne</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DowlsInterface_P_1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DowlsInterface_I/GetDoPinStateOne</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="60743a50-b0f2-4026-99f4-5d725b58486f">
+                          <SHORT-NAME>OpEventIoHwAb_DowlsInterface_P_1_SetDowlsActive_SetDowlsActive_DowlsInterface_P_1</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DowlsInterface_P_1_SetDowlsActive</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DowlsInterface_P_1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DowlsInterface_I/SetDowlsActive</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="f977c0b7-f975-4691-a664-71ff57cdf87e">
+                          <SHORT-NAME>OpEventIoHwAb_DowhsInterfaces_P_2_GetDoPinStateOne_GetDoPinStateOne_DowhsInterfaces_P_2</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DowhsInterfaces_P_2_GetDoPinStateOne</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DowhsInterfaces_P_2</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DowhsInterface_I/GetDoPinStateOne</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="682728a2-1b7f-4578-a357-2989a553bc29">
+                          <SHORT-NAME>OpEventIoHwAb_DowhsInterfaces_P_2_SetDowActive_SetDowActive_DowhsInterfaces_P_2</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DowhsInterfaces_P_2_SetDowActive</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DowhsInterfaces_P_2</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DowhsInterface_I/SetDowActive</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="0633f7a6-6e71-4fde-b933-9eecd4ba56bb">
+                          <SHORT-NAME>OpEventIoHwAb_DowlsInterface_P_2_GetDoPinStateOne_GetDoPinStateOne_DowlsInterface_P_2</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DowlsInterface_P_2_GetDoPinStateOne</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DowlsInterface_P_2</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DowlsInterface_I/GetDoPinStateOne</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="5856e432-6c05-44a1-b9eb-1cb020b34c9f">
+                          <SHORT-NAME>OpEventIoHwAb_DowlsInterface_P_2_SetDowlsActive_SetDowlsActive_DowlsInterface_P_2</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DowlsInterface_P_2_SetDowlsActive</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DowlsInterface_P_2</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DowlsInterface_I/SetDowlsActive</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="6c51fa12-6002-4946-a0bc-1bfa867c5fe9">
+                          <SHORT-NAME>OpEventIoHwAb_DowlsInterface_P_3_GetDoPinStateOne_GetDoPinStateOne_DowlsInterface_P_3</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DowlsInterface_P_3_GetDoPinStateOne</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DowlsInterface_P_3</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DowlsInterface_I/GetDoPinStateOne</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="f8e1e50d-d902-4b26-ab2f-b472a5185694">
+                          <SHORT-NAME>OpEventIoHwAb_DowlsInterface_P_3_SetDowlsActive_SetDowlsActive_DowlsInterface_P_3</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_DowlsInterface_P_3_SetDowlsActive</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DowlsInterface_P_3</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/DowlsInterface_I/SetDowlsActive</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/AdInterfaces_P</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/Do12VInterface_P</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DobhsCtrlInterface_P_2</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DobhsCtrlInterface_P_3</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DobhsCtrlInterface_P_4</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DobhsCtrlInterface_P_1</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/LficICU_P</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/RficICU_P</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/LficNRESDio_P</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/RficNRESDio_P</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DowhsInterfaces_P_1</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DowlsInterface_P_1</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DowhsInterfaces_P_2</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DowlsInterface_P_2</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/DowlsInterface_P_3</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="a15faaa1-680e-457c-b775-a30a1577ffd3">
+                          <SHORT-NAME>IoHwAb_AdInterfaces_P_GetAdiPinState</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'GetAdiPinState' of the Client/Server Port Prototype 'AdInterfaces_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_AdInterfaces_P_GetAdiPinState</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="39753f62-7943-4c18-9d2a-c2179e6278f1">
+                          <SHORT-NAME>IoHwAb_AdInterfaces_P_GetAdiPinStateAll</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'GetAdiPinStateAll' of the Client/Server Port Prototype 'AdInterfaces_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_AdInterfaces_P_GetAdiPinStateAll</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="da298090-8865-4d9f-a807-420bcadc5400">
+                          <SHORT-NAME>IoHwAb_AdInterfaces_P_GetPullUpState</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'GetPullUpState' of the Client/Server Port Prototype 'AdInterfaces_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_AdInterfaces_P_GetPullUpState</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="399122e7-a41c-4b93-a638-fc03deda12c8">
+                          <SHORT-NAME>IoHwAb_AdInterfaces_P_SetPullUp</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'SetPullUp' of the Client/Server Port Prototype 'AdInterfaces_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_AdInterfaces_P_SetPullUp</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="87f54852-51fe-40b1-a396-ea14a391bd06">
+                          <SHORT-NAME>IoHwAb_Do12VInterface_P_GetDo12VPinsState</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'GetDo12VPinsState' of the Client/Server Port Prototype 'Do12VInterface_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_Do12VInterface_P_GetDo12VPinsState</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="2ea442e1-1937-4b7d-9959-b59ee2abe278">
+                          <SHORT-NAME>IoHwAb_Do12VInterface_P_SetDcdc12VActive</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'SetDcdc12VActive' of the Client/Server Port Prototype 'Do12VInterface_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_Do12VInterface_P_SetDcdc12VActive</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="0dfdc2e1-7ff5-487f-a402-4447fc4a614d">
+                          <SHORT-NAME>IoHwAb_Do12VInterface_P_SetDo12VLivingActive</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'SetDo12VLivingActive' of the Client/Server Port Prototype 'Do12VInterface_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_Do12VInterface_P_SetDo12VLivingActive</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="82f68a2e-4988-4757-9937-02bc3372dd01">
+                          <SHORT-NAME>IoHwAb_Do12VInterface_P_SetDo12VParkedActive</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'SetDo12VParkedActive' of the Client/Server Port Prototype 'Do12VInterface_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_Do12VInterface_P_SetDo12VParkedActive</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="26a0948a-a6ac-488a-a636-8b00ee7cf957">
+                          <SHORT-NAME>IoHwAb_DobhsCtrlInterface_P_2_GetDobhsPinState</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'GetDobhsPinState' of the Client/Server Port Prototype 'DobhsCtrlInterface_P_2'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DobhsCtrlInterface_P_2_GetDobhsPinState</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="51ba3bc5-be32-45c8-b4fc-696a8fa2b2d8">
+                          <SHORT-NAME>IoHwAb_DobhsCtrlInterface_P_2_SetDobhsActive</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'SetDobhsActive' of the Client/Server Port Prototype 'DobhsCtrlInterface_P_2'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DobhsCtrlInterface_P_2_SetDobhsActive</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="1feba0ba-515f-497f-be6b-aeecb5cfb50a">
+                          <SHORT-NAME>IoHwAb_DobhsCtrlInterface_P_3_GetDobhsPinState</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'GetDobhsPinState' of the Client/Server Port Prototype 'DobhsCtrlInterface_P_3'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DobhsCtrlInterface_P_3_GetDobhsPinState</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="5c79d121-76ac-4d74-9025-12c505f47f81">
+                          <SHORT-NAME>IoHwAb_DobhsCtrlInterface_P_3_SetDobhsActive</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'SetDobhsActive' of the Client/Server Port Prototype 'DobhsCtrlInterface_P_3'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DobhsCtrlInterface_P_3_SetDobhsActive</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="319fb5f9-08c8-4e68-adbc-92d5f960744c">
+                          <SHORT-NAME>IoHwAb_DobhsCtrlInterface_P_4_GetDobhsPinState</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'GetDobhsPinState' of the Client/Server Port Prototype 'DobhsCtrlInterface_P_4'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DobhsCtrlInterface_P_4_GetDobhsPinState</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="715b9e05-423e-4447-9238-547469177261">
+                          <SHORT-NAME>IoHwAb_DobhsCtrlInterface_P_4_SetDobhsActive</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'SetDobhsActive' of the Client/Server Port Prototype 'DobhsCtrlInterface_P_4'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DobhsCtrlInterface_P_4_SetDobhsActive</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="801c02ba-53bb-45f5-b4f2-d84ac34e5e83">
+                          <SHORT-NAME>IoHwAb_DobhsCtrlInterface_P_1_GetDobhsPinState</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'GetDobhsPinState' of the Client/Server Port Prototype 'DobhsCtrlInterface_P_1'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DobhsCtrlInterface_P_1_GetDobhsPinState</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="96487a05-005a-4a5d-b452-f88cdb53e835">
+                          <SHORT-NAME>IoHwAb_DobhsCtrlInterface_P_1_SetDobhsActive</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'SetDobhsActive' of the Client/Server Port Prototype 'DobhsCtrlInterface_P_1'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DobhsCtrlInterface_P_1_SetDobhsActive</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="1e4a38ab-34cd-40e8-aec7-3bb98e9a39a5">
+                          <SHORT-NAME>IoHwAb_REIoHwAb_10ms</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_REIoHwAb_10ms</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="9d16902a-3a67-412f-98ff-648faefba188">
+                          <SHORT-NAME>IoHwAb_LficICU_P_IcuEnableNotification</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'IcuEnableNotification' of the Client/Server Port Prototype 'LficICU_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_LficICU_P_IcuEnableNotification</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="86b298e4-94a1-46e6-9e60-af21a38747bf">
+                          <SHORT-NAME>IoHwAb_LficICU_P_IcuEnableEdgeDetection</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'IcuEnableEdgeDetection' of the Client/Server Port Prototype 'LficICU_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_LficICU_P_IcuEnableEdgeDetection</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="420d459a-1c1c-45fb-81b5-2b701ad3a07e">
+                          <SHORT-NAME>IoHwAb_RficICU_P_IcuEnableNotification</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'IcuEnableNotification' of the Client/Server Port Prototype 'RficICU_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_RficICU_P_IcuEnableNotification</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="1869ac1f-e5d6-458b-a5c5-fdea30af632b">
+                          <SHORT-NAME>IoHwAb_RficICU_P_IcuEnableEdgeDetection</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'IcuEnableEdgeDetection' of the Client/Server Port Prototype 'RficICU_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_RficICU_P_IcuEnableEdgeDetection</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="f0a0dce8-d10e-4e91-998e-91e5d729b648">
+                          <SHORT-NAME>IoHwAb_LficNRESDio_P_Read</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'Read' of the Client/Server Port Prototype 'LficNRESDio_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_LficNRESDio_P_Read</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="fb95d4ee-b760-47d5-a17b-7de57f945666">
+                          <SHORT-NAME>IoHwAb_LficNRESDio_P_Write</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'Write' of the Client/Server Port Prototype 'LficNRESDio_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_LficNRESDio_P_Write</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="1126196a-e9ae-4a6f-9618-718df27ce666">
+                          <SHORT-NAME>IoHwAb_LficICU_P_IcuDisableEdgeDetection</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'IcuDisableEdgeDetection' of the Client/Server Port Prototype 'LficICU_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_LficICU_P_IcuDisableEdgeDetection</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="ee07db21-c491-491c-9bf5-17441127be6a">
+                          <SHORT-NAME>IoHwAb_LficICU_P_IcuDisableNotification</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'IcuDisableNotification' of the Client/Server Port Prototype 'LficICU_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_LficICU_P_IcuDisableNotification</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="7b19e9ba-1c19-4fda-8e0a-a749514a2958">
+                          <SHORT-NAME>IoHwAb_RficICU_P_IcuDisableEdgeDetection</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'IcuDisableEdgeDetection' of the Client/Server Port Prototype 'RficICU_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_RficICU_P_IcuDisableEdgeDetection</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="55cf7cf9-9237-4e5c-914a-311b000afe98">
+                          <SHORT-NAME>IoHwAb_RficICU_P_IcuDisableNotification</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'IcuDisableNotification' of the Client/Server Port Prototype 'RficICU_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_RficICU_P_IcuDisableNotification</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="624293ea-0545-4dc0-abe4-9370105393b1">
+                          <SHORT-NAME>IoHwAb_RficNRESDio_P_Read</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'Read' of the Client/Server Port Prototype 'RficNRESDio_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_RficNRESDio_P_Read</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="08953c17-a0b6-4dbb-9f04-998a692e4c51">
+                          <SHORT-NAME>IoHwAb_RficNRESDio_P_Write</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'Write' of the Client/Server Port Prototype 'RficNRESDio_P'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_RficNRESDio_P_Write</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="9b8c3bb5-c850-4103-b4d2-b061d4186da7">
+                          <SHORT-NAME>IoHwAb_DowhsInterfaces_P_1_GetDoPinStateOne</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'GetDoPinStateOne' of the Client/Server Port Prototype 'DowhsInterfaces_P_1'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DowhsInterfaces_P_1_GetDoPinStateOne</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="35f75f7f-9356-4c68-a3fb-717a7a14a5c8">
+                          <SHORT-NAME>IoHwAb_DowhsInterfaces_P_1_SetDowActive</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'SetDowActive' of the Client/Server Port Prototype 'DowhsInterfaces_P_1'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DowhsInterfaces_P_1_SetDowActive</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="19cf9735-3df7-49dd-8b6a-e6e702308c8b">
+                          <SHORT-NAME>IoHwAb_DowlsInterface_P_1_GetDoPinStateOne</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'GetDoPinStateOne' of the Client/Server Port Prototype 'DowlsInterface_P_1'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DowlsInterface_P_1_GetDoPinStateOne</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="fdfa8477-b4bf-4a34-b5e2-9f482dfbb823">
+                          <SHORT-NAME>IoHwAb_DowlsInterface_P_1_SetDowlsActive</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'SetDowlsActive' of the Client/Server Port Prototype 'DowlsInterface_P_1'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DowlsInterface_P_1_SetDowlsActive</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="1b960e57-f43a-46c3-b00d-13a6d5c4a88a">
+                          <SHORT-NAME>IoHwAb_DowhsInterfaces_P_2_GetDoPinStateOne</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'GetDoPinStateOne' of the Client/Server Port Prototype 'DowhsInterfaces_P_2'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DowhsInterfaces_P_2_GetDoPinStateOne</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="8ad345b7-8f41-4392-92ea-d920b1e07273">
+                          <SHORT-NAME>IoHwAb_DowhsInterfaces_P_2_SetDowActive</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'SetDowActive' of the Client/Server Port Prototype 'DowhsInterfaces_P_2'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DowhsInterfaces_P_2_SetDowActive</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="70ec059e-c587-4bde-9b95-953780c5a0fb">
+                          <SHORT-NAME>IoHwAb_DowlsInterface_P_2_GetDoPinStateOne</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'GetDoPinStateOne' of the Client/Server Port Prototype 'DowlsInterface_P_2'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DowlsInterface_P_2_GetDoPinStateOne</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="41a8259a-b5c0-4a11-aeec-be08365ddeed">
+                          <SHORT-NAME>IoHwAb_DowlsInterface_P_2_SetDowlsActive</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'SetDowlsActive' of the Client/Server Port Prototype 'DowlsInterface_P_2'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DowlsInterface_P_2_SetDowlsActive</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="2767510d-5b3e-4776-9b15-87b8982573d5">
+                          <SHORT-NAME>IoHwAb_DowlsInterface_P_3_GetDoPinStateOne</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'GetDoPinStateOne' of the Client/Server Port Prototype 'DowlsInterface_P_3'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DowlsInterface_P_3_GetDoPinStateOne</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="19790c6b-3d58-4382-96c3-965b3765458b">
+                          <SHORT-NAME>IoHwAb_DowlsInterface_P_3_SetDowlsActive</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Runnable Entity for calling the Operation 'SetDowlsActive' of the Client/Server Port Prototype 'DowlsInterface_P_3'.</L-2>
+                          </DESC>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_DowlsInterface_P_3_SetDowlsActive</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </ECU-ABSTRACTION-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="d972600c-7d70-4440-bb70-562d9ada3d7e">
+                  <SHORT-NAME>IoHwAbImplementation</SHORT-NAME>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="efc08bbb-ed2c-4523-8468-03923072b501">
+              <SHORT-NAME>Interfaces</SHORT-NAME>
+              <ELEMENTS>
+                <CLIENT-SERVER-INTERFACE UUID="515204fd-0adc-49c5-92ff-a9c7706da6ff">
+                  <SHORT-NAME>FSC_OperationalMode_I</SHORT-NAME>
+                  <IS-SERVICE>false</IS-SERVICE>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="479a0982-4ec8-4b17-bfff-e43ef3a544b7">
+                      <SHORT-NAME>VbatInterface_P</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/FSC_OperationalMode_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="790fa81b-a298-47cd-936b-b231c4a39286">
+                      <SHORT-NAME>FSC_OperationalMode</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/FSC_OperationalMode_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="f16674e3-27d8-44de-bf12-73bdfd4cd701">
+                      <SHORT-NAME>IoHwAbApplicationError</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="731a2cf3-f1c9-47f7-83b6-72f663daa63c">
+                  <SHORT-NAME>VbatInterface_I</SHORT-NAME>
+                  <IS-SERVICE>false</IS-SERVICE>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="a4140c6d-0793-471c-8f0e-df686ab734c6">
+                      <SHORT-NAME>VbatInterface_P</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/VbatInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="d3d1a299-79ad-4e00-a93b-014b3b212d12">
+                      <SHORT-NAME>FSC_OperationalMode</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/VbatInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="ed3b5d52-fddd-436d-a22b-1f0883764cfc">
+                      <SHORT-NAME>DobhsCtrlInterface_P_1</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/VbatInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="3fe7bf29-0ab9-49ac-8b29-81317be7f715">
+                      <SHORT-NAME>DobhsCtrlInterface_P_2</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/VbatInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="7242af69-7306-4f8c-8244-9749685689eb">
+                      <SHORT-NAME>DobhsCtrlInterface_P_3</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/VbatInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="dd61c4ec-9152-4cb8-9cf0-f06ac76586c4">
+                      <SHORT-NAME>DobhsCtrlInterface_P_5</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/VbatInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="9f7b1c5e-2e79-4188-b0a6-a77b703aa0db">
+                      <SHORT-NAME>DobhsCtrlInterface_P_4</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/VbatInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="c2acdcb3-14c5-4d99-a343-78cf4cb6cee8">
+                      <SHORT-NAME>IoHwAbApplicationError</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="5a08d1f9-ad06-40a5-a2dd-ad5c32f95594">
+                  <SHORT-NAME>DowlsInterface_I</SHORT-NAME>
+                  <IS-SERVICE>false</IS-SERVICE>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="b1467f7d-3c16-41a9-9035-0ae003975206">
+                      <SHORT-NAME>GetDoPinStateOne</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="06f4383d-c1f9-4603-bbfe-1d9f450e40fb">
+                          <SHORT-NAME>DoPinRef</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT8</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="5489fffc-150c-49a4-abeb-ee39bcaf5953">
+                          <SHORT-NAME>IsDoActivated</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_BOOL</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="f3b86ea3-02ef-4174-b2e1-d008a22f4615">
+                          <SHORT-NAME>DoPinVoltage</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT16</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="afadc8c2-a869-4ef3-adb6-17bf7995da10">
+                          <SHORT-NAME>BatteryVoltage</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT16</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="fb46775c-95e0-4866-945b-8e24802b9d7f">
+                          <SHORT-NAME>DutyCycle</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT8</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="9210835d-e171-4a54-8c92-a22ebc4f3770">
+                          <SHORT-NAME>Period</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT16</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="0b3b4149-5349-4d2b-b2a2-8cc5ed6d5f33">
+                          <SHORT-NAME>DiagStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/VGTT_EcuPinDiagStatus</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/DowlsInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="cd4ab727-e5bd-43a3-b3cb-02a14e4b7b5b">
+                      <SHORT-NAME>SetDowlsActive</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="e0a80efb-a321-4fdf-8ca5-4572dbf9693c">
+                          <SHORT-NAME>OutputId</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT8</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="cbdbae1f-1515-473d-aac3-08cc797c0e57">
+                          <SHORT-NAME>Period</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT16</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="018ee747-a6d0-4dd9-9d15-901a756bc65f">
+                          <SHORT-NAME>DutyCycle</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_SINT8</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/DowlsInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="826fd3e2-6c29-4191-adeb-303004b3a481">
+                      <SHORT-NAME>IoHwAbApplicationError</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="513fef23-4048-434c-a4ab-a36c09603603">
+                  <SHORT-NAME>DobhsCtrlInterface_I</SHORT-NAME>
+                  <IS-SERVICE>false</IS-SERVICE>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="b39f14d3-610d-452c-a641-a63deac022a8">
+                      <SHORT-NAME>GetDobhsPinState</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="adde927f-7799-46ab-a1fe-97905f962edc">
+                          <SHORT-NAME>IsDoActivated</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_BOOL</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="120c16ab-e1fe-4280-94ff-fba83ee0c689">
+                          <SHORT-NAME>DoPinVoltage</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT16</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="7513b233-2f66-480d-a541-ac55460d791f">
+                          <SHORT-NAME>BatteryVoltage</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT16</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="5a86f0ea-b474-40f1-8a64-7d73720d40bf">
+                          <SHORT-NAME>DiagStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/VGTT_EcuPinDiagStatus</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/DobhsCtrlInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="66562214-6472-45d6-ae3b-dceae8c5bc26">
+                      <SHORT-NAME>SetDobhsActive</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="9f35b133-230c-4d63-8014-9b9372866d71">
+                          <SHORT-NAME>Activation</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_BOOL</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/DobhsCtrlInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="9eee0fa6-f3e3-4c3e-8957-feb1c46c84ed">
+                      <SHORT-NAME>IoHwAbApplicationError</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="c2b088eb-827d-403e-9962-fe329cc54c69">
+                  <SHORT-NAME>AdiInterface_I</SHORT-NAME>
+                  <IS-SERVICE>false</IS-SERVICE>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="2cc72c98-088d-45bc-aa3e-0105e438ec60">
+                      <SHORT-NAME>GetAdiPinState</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="e6d7e3a4-c256-4686-ba72-987fd854a434">
+                          <SHORT-NAME>AdiPinRef</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT8</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="1033ff1b-c296-46e6-be87-f86bb671fe3f">
+                          <SHORT-NAME>AdiPinVoltage</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT16</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="5c9082b1-2ff2-444c-bed0-bea1e87d6d34">
+                          <SHORT-NAME>LivingPullUpVoltage</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/VGTT_EcuPinVoltage_0V2</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/AdiInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="dc3e7cbe-187e-47ee-ba7e-3b9a2729d5ff">
+                      <SHORT-NAME>GetAdiPinStateAll</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="faf92cac-046c-418f-8946-ce98a801c477">
+                          <SHORT-NAME>VoltageOnAdiPins</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/VGTT_ScimAdiPinsState</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="c71ceb76-c7fc-49b0-abf5-f2b954549627">
+                          <SHORT-NAME>LivingPullUpVoltage</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/VGTT_EcuPinVoltage_0V2</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/AdiInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="097392bf-73d3-4563-9d75-54ffee6f325c">
+                      <SHORT-NAME>GetPullUpState</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="0da18fca-9ee7-4b56-8881-be8ba272aac5">
+                          <SHORT-NAME>PullUpVoltage_Living</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/VGTT_EcuPinVoltage_0V2</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="2ff3437b-2ca6-4115-9c8e-f7cb7ab759d7">
+                          <SHORT-NAME>PullUpVoltage_Parked</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/VGTT_EcuPinVoltage_0V2</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="9fd5875e-bf5f-4b9e-99c7-513fb4fb9f0c">
+                          <SHORT-NAME>PullUpVoltage_DAI1</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/VGTT_EcuPinVoltage_0V2</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="e18e93d6-cf27-4635-b721-128f36af3a99">
+                          <SHORT-NAME>PullUpVoltage_DAI2</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/VGTT_EcuPinVoltage_0V2</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/AdiInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="658fcd49-0433-484b-8987-a0fdbef8f782">
+                      <SHORT-NAME>SetPullUp</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="1a731deb-2670-4953-afa7-1d3f1a6e11f8">
+                          <SHORT-NAME>ActivateLivingPullUp</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_BOOL</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="608ab254-e92a-484d-b7ec-09cfbb026237">
+                          <SHORT-NAME>ActivateParkedPullUp</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_BOOL</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="0e8f9228-e355-4036-9d5a-c9e6e3abe090">
+                          <SHORT-NAME>ActivateDAIPullUp</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_BOOL</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/AdiInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="f28cd860-473a-469f-832d-7b572adec520">
+                      <SHORT-NAME>IoHwAbApplicationError</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="c34383ea-740d-4be3-8c71-c7ecdc825b09">
+                  <SHORT-NAME>Do12VInterface_I</SHORT-NAME>
+                  <IS-SERVICE>false</IS-SERVICE>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="271ec0ed-754a-409d-b20d-ecb164f2f55b">
+                      <SHORT-NAME>GetDo12VPinsState</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="327882af-70a1-4797-9a96-b62440aa083c">
+                          <SHORT-NAME>SelectParkedOrLivingPin</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT8</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="ea7b5494-fd22-4d75-9aef-da639b75e5d1">
+                          <SHORT-NAME>IsDo12VActivated</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_BOOL</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="0587899b-6990-42ee-966a-50f35cd815c2">
+                          <SHORT-NAME>Do12VPinVoltage</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/VGTT_EcuPinVoltage_0V2</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="5e3d9e3f-491c-45f6-a4ab-a8b3c755bb1d">
+                          <SHORT-NAME>BatteryVoltage</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT16</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="dd6ae3e2-0ddd-4ee8-b2af-1b96f398d156">
+                          <SHORT-NAME>DcdcRefVoltage</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/VGTT_EcuPinVoltage_0V2</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="609e4cbe-6b4f-41f8-9f70-09063fd92e04">
+                          <SHORT-NAME>DiagStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/VGTT_EcuPinDiagStatus</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/Do12VInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="1ab7cc5e-f595-46bf-a76a-539293690048">
+                      <SHORT-NAME>SetDcdc12VActive</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="db3e9e7b-1e5a-4b32-b7ee-697af2151e0f">
+                          <SHORT-NAME>Activation</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_BOOL</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/Do12VInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="891824e8-9aea-47a8-9537-87727bc73619">
+                      <SHORT-NAME>SetDo12VLivingActive</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="b9d0e282-153d-4037-a78d-32c750e09a29">
+                          <SHORT-NAME>Activation</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_BOOL</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/Do12VInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="4ece6c4e-5ca1-411b-9455-4538d800468a">
+                      <SHORT-NAME>SetDo12VParkedActive</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="c686ad29-0b22-415d-b460-d27f4f169c1d">
+                          <SHORT-NAME>Activation</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_BOOL</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/Do12VInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="bb39ac77-27a7-41a3-aff3-551bb7879940">
+                      <SHORT-NAME>IoHwAbApplicationError</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="defdd129-1c54-4aa5-a210-68d71093c090">
+                  <SHORT-NAME>DobhsDiagInterface_I</SHORT-NAME>
+                  <IS-SERVICE>false</IS-SERVICE>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="445a435c-f526-4925-8494-9a9854889917">
+                      <SHORT-NAME>IoHwAbOperation</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/DobhsDiagInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="df4dc598-dd20-42fd-a945-1e7dab0604b8">
+                      <SHORT-NAME>IoHwAbApplicationError</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="5032206e-9222-4b79-afad-e8f248d65739">
+                  <SHORT-NAME>DowhsInterface_I</SHORT-NAME>
+                  <IS-SERVICE>false</IS-SERVICE>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="40fc0b27-61d7-448c-84bb-4106841d9d1f">
+                      <SHORT-NAME>GetDoPinStateOne</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="7e2328e2-2681-40e0-ad35-0cbce21a9a5b">
+                          <SHORT-NAME>DoPinRef</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT8</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="5aa0d809-2437-4cfb-8b34-73881b94b140">
+                          <SHORT-NAME>IsDoActivated</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_BOOL</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="5efaaead-7acc-4989-88e7-c75c98c5e897">
+                          <SHORT-NAME>DoPinVoltage</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT16</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="d74fe69a-4a3d-442e-b345-cb3895852b37">
+                          <SHORT-NAME>BatteryVoltage</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT16</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="7bf8c369-b082-4753-83a4-5e222af59c4b">
+                          <SHORT-NAME>DutyCycle</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT8</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="c812fa24-817a-4e61-bec0-e5d03b118ca1">
+                          <SHORT-NAME>Period</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT16</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="91a48d94-635a-44a9-9e0d-ae7a8d79d379">
+                          <SHORT-NAME>DiagStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/VGTT_EcuPinDiagStatus</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/DowhsInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="f6058e14-cbf1-4ee2-bf55-76e5b6a41ea3">
+                      <SHORT-NAME>SetDowActive</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="e328a6d0-9e50-4a0d-8d4a-fc570fa67a55">
+                          <SHORT-NAME>OutputId</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT8</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="3b5c77e3-9647-406d-b25b-8e90bbff5b6f">
+                          <SHORT-NAME>Period</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT16</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="22e1329e-a749-4e91-93d1-c9e21d4d25a3">
+                          <SHORT-NAME>DutyCycle</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT8</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/DowhsInterface_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="ec71b1b5-6ff6-4f6c-91fa-4243b466cc28">
+                      <SHORT-NAME>IoHwAbApplicationError</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="b177cac7-6004-4860-9bf1-82f984579575">
+                  <SHORT-NAME>Icu_I</SHORT-NAME>
+                  <IS-SERVICE>false</IS-SERVICE>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="95e0b006-797f-480c-978d-e8612f649291">
+                      <SHORT-NAME>IcuEnableNotification</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/Icu_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="6ffdc615-8440-4908-a7e1-86e400e0857d">
+                      <SHORT-NAME>IcuEnableEdgeDetection</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/Icu_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="926c67cc-9265-4aaf-93d7-48504e85fe08">
+                      <SHORT-NAME>IcuDisableEdgeDetection</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/Icu_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="831371b9-c4ca-4c18-94a5-d709ac4244fe">
+                      <SHORT-NAME>IcuDisableNotification</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/Icu_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="7e8c9f28-9115-4d34-8a40-286c431440d7">
+                      <SHORT-NAME>IoHwAbApplicationError</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="728cfb40-ba26-4dca-8a48-c5b58711fa9b">
+                  <SHORT-NAME>Dio_I</SHORT-NAME>
+                  <IS-SERVICE>false</IS-SERVICE>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="ede4853d-d33c-4c29-a620-cffbb6ad8bfa">
+                      <SHORT-NAME>Read</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="a343d49d-e652-4ef1-8069-4e1db51f1632">
+                          <SHORT-NAME>ReadValue</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT8</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/Dio_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="24c293f6-ac6f-43ae-9326-64934af93d75">
+                      <SHORT-NAME>Write</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="c1b5fc1e-112a-4b97-ad58-475023289f21">
+                          <SHORT-NAME>SetValue</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT8</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/IoHwAb_swc/Interfaces/Dio_I/IoHwAbApplicationError</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="87979625-da24-4da1-8923-975ebce4b500">
+                      <SHORT-NAME>IoHwAbApplicationError</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="f5743414-721a-4b6e-b6ba-6ca12195a8ca">
+              <SHORT-NAME>DataTypes</SHORT-NAME>
+              <ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE UUID="190354ec-bd78-430a-9b45-558fc4d3e8f1">
+                  <SHORT-NAME>IOHWAB_UINT8</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <DATA-CONSTR-REF DEST="DATA-CONSTR">/MICROSAR/IoHwAb_swc/DataTypes/DataConstrs/IOHWAB_UINT8_Constr</DATA-CONSTR-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="b0433a27-ebb0-4402-9390-63e235a6eaae">
+                  <SHORT-NAME>IOHWAB_SINT8</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <DATA-CONSTR-REF DEST="DATA-CONSTR">/MICROSAR/IoHwAb_swc/DataTypes/DataConstrs/IOHWAB_SINT8_Constr</DATA-CONSTR-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="f821565e-74b0-4003-a6ed-8d5f63d48d4e">
+                  <SHORT-NAME>IOHWAB_UINT16</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <DATA-CONSTR-REF DEST="DATA-CONSTR">/MICROSAR/IoHwAb_swc/DataTypes/DataConstrs/IOHWAB_UINT16_Constr</DATA-CONSTR-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="fe7009b1-60f9-4206-a38a-b152d8bb769b">
+                  <SHORT-NAME>IOHWAB_BOOL</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="27191214-aead-41ff-81f8-79346694f2e9">
+                  <SHORT-NAME>VGTT_EcuPinVoltage_0V2</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="1524a13a-3bd5-4513-a889-348938175cfc">
+                  <SHORT-NAME>VGTT_ScimAdiPinsState</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="860fd342-a660-453d-b6b8-ace036c4eb81">
+                  <SHORT-NAME>VGTT_EcuPinDiagStatus</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/IoHwAb_swc/DataTypes/IOHWAB_UINT8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+              </ELEMENTS>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="4e897978-3b4b-423e-bcaa-0013010dedce">
+                  <SHORT-NAME>DataConstrs</SHORT-NAME>
+                  <ELEMENTS>
+                    <DATA-CONSTR UUID="9e20ed29-ef83-4d0a-95f8-91a59e24fa1f">
+                      <SHORT-NAME>IOHWAB_UINT8_Constr</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="477cdc43-7162-40e2-893d-2d12e44254d6">
+                      <SHORT-NAME>IOHWAB_SINT8_Constr</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-128</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">127</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="b08e9593-b422-4a48-9456-ab8edafb4380">
+                      <SHORT-NAME>IOHWAB_UINT16_Constr</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">65535</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

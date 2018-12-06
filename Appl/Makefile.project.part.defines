@@ -1,0 +1,366 @@
+###############################################################################
+#  Makefile.project.part.defines
+###############################################################################
+# MakeSupport type: AUTOSAR
+
+
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Root of the project (dir where the additionally used components reside) from the
+# scope of the makefile location.
+# E.g. makefile is located under
+#    d:\usr\develop\can\PAG\HC08\COSMIC\testsuit\appl
+# and the components like drv, il reside under
+#    d:\usr\develop\can\PAG\HC08\COSMIC
+# The root is given (relative to the Makefile)
+#    ROOT = ..\..\..\..
+#------------------------------------------------------------------------------
+ROOT = ..\..\..\..
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# $(GENTOOL_DIR) contains the path to your version.info file
+# E.g.:    GENTOOL_DIR = $(ROOT)\Generators\Components
+#------------------------------------------------------------------------------
+GENTOOL_DIR = $(ROOT)\Generators\Components
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Version of Makefile.project.part.defines
+#------------------------------------------------------------------------------
+MPPD_VERSION = 32
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Path to which *.obj, *.err, *.lst will be moved/generated
+#------------------------------------------------------------------------------
+OBJ_PATH = obj
+ERR_PATH = err
+LST_PATH = lst
+LOG_PATH = log
+LIB_PATH = lib
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Redirect error output to stdout (and not only to *.err files)
+#------------------------------------------------------------------------------
+ERR_TO_STDOUT = 1
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# $(GENDATA_DIR) contains the directory into which the ecu specific data is
+# generated
+# E.g.: GENDATA_DIR = GenData
+#------------------------------------------------------------------------------
+GENDATA_DIR = GenData
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# $(GENDATA_OS_DIR) contains the directory into which the ecu osspecific data is
+# generated
+# E.g.: GENDATA_OS_DIR = GenDataOs
+#------------------------------------------------------------------------------
+GENDATA_OS_DIR = $(GENDATA_DIR)
+
+#------------------------------------------------------------------------------
+# Use Autosar Makefiles
+#------------------------------------------------------------------------------
+USE_AUTOSAR_MAKE = 1
+
+#------------------------------------------------------------------------------
+# Subfolder of BSW components (mandatory BSW with konStruct 1.7.xx or newer)
+#------------------------------------------------------------------------------
+GLOBAL_COMP_DIR = BSW
+
+#------------------------------------------------------------------------------
+# Subfolder of ASR software components# Relative to $(ROOT)\$(GLOBAL_COMP_DIR)
+#------------------------------------------------------------------------------
+GLOBAL_SWC_DIR = ..\SWC
+
+#------------------------------------------------------------------------------
+# Subfolder of Third Party components (e.g. Third Party MCAL)# Relative to $(ROOT)\$(GLOBAL_COMP_DIR)
+#------------------------------------------------------------------------------
+GLOBAL_THIRDPARTY_DIR = ..\ThirdParty
+
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Define usage of the generated RTE makefile
+# $(RTE_MAKEFILE_DIR) contains the directory into which RTE makefile is generated
+# Please note: If you are using RTE 4.11 or lower (MSR4 R15 and lower), the
+# generated RTE makefile will not work with the Vector MakeSupport. Add the 
+# RTE source files manually in this case and comment out RTE_MAKEFILE_DIR
+#------------------------------------------------------------------------------
+RTE_MAKEFILE_DIR = $(GENDATA_DIR)\mak
+
+ifneq ($(RTE_MAKEFILE_DIR),)
+include $(RTE_MAKEFILE_DIR)\Rte_rules.mak
+include $(RTE_MAKEFILE_DIR)\Rte_defs.mak
+include $(RTE_MAKEFILE_DIR)\Rte_check.mak
+endif
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# $(TGFGENDATA_DIR) contains the directory into which the Test Generator
+# Framework data is generated
+# E.g.: TGFGENDATA_DIR = TGFGenData
+#------------------------------------------------------------------------------
+TGFGENDATA_DIR =
+
+ifneq ($(TGFGENDATA_DIR),)
+include $(TGFGENDATA_DIR)\Makefile.Appl
+endif
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# $(STARTAPPL_MAKE_USED) defines if the the StartApplication makefile shall be used
+# $(STARTAPPLGENDATA_DIR) contains the folder of the makefile for the start application
+# E.g.: STARTAPPLGENDATA_DIR = $(GENDATA_DIR)\mak
+#------------------------------------------------------------------------------
+STARTAPPL_MAKE_USED = 1
+STARTAPPLGENDATA_DIR =
+
+ifeq ($(STARTAPPL_MAKE_USED),1)
+include $(STARTAPPLGENDATA_DIR)\Makefile.StartApplication
+endif
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Define MCAL modules that shall be excluded from build
+#------------------------------------------------------------------------------
+MCAL_EXCLUDE_ADC    = 0
+MCAL_EXCLUDE_DIO    = 0
+MCAL_EXCLUDE_GPT    = 0
+MCAL_EXCLUDE_ICU    = 0
+MCAL_EXCLUDE_MCU    = 0
+MCAL_EXCLUDE_PORT   = 0
+MCAL_EXCLUDE_PWM    = 0
+MCAL_EXCLUDE_SPI    = 0
+MCAL_EXCLUDE_WDG    =  1
+MCAL_EXCLUDE_FLS    = 0
+MCAL_EXCLUDE_FEE    = 0
+MCAL_EXCLUDE_EEP    =  1
+MCAL_EXCLUDE_CRY    =  1
+MCAL_EXCLUDE_SAFETY =  1
+MCAL_EXCLUDE_FLSTST =  1
+MCAL_EXCLUDE_RAMTST =  1
+MCAL_EXCLUDE_CORTST =  1
+
+
+LINIF_USE_LINTP = 1
+
+###############################################################################
+#  Modules
+###############################################################################
+MODULE_LIST_PROJECT += CCL_ASR4COMMCFG5
+MODULE_LIST_PROJECT += CCL_ASR4SMCAN
+MODULE_LIST_PROJECT += CCL_ASR4SMLIN
+MODULE_LIST_PROJECT += CDD_ASR4DCMADDON
+MODULE_LIST_PROJECT += CDD_ASR4DRM
+MODULE_LIST_PROJECT += CP_ASR4XCP
+MODULE_LIST_PROJECT += CP_XCPONCANASR
+MODULE_LIST_PROJECT += DIAG_ASR4DCM
+MODULE_LIST_PROJECT += DIAG_ASR4DEM
+MODULE_LIST_PROJECT += DIAG_ASR4J1939DCM
+MODULE_LIST_PROJECT += DIAG_ASRSWCVDEM42
+MODULE_LIST_PROJECT += DRVCAN__COREASR
+MODULE_LIST_PROJECT += DRVLIN__COREASR
+MODULE_LIST_PROJECT += ECUAB_ASRIOHWAB
+MODULE_LIST_PROJECT += GW_ASRPDURCFG5
+MODULE_LIST_PROJECT += IF_ASR4IFLIN
+MODULE_LIST_PROJECT += IF_ASR4IFWD
+MODULE_LIST_PROJECT += IF_ASRIFCAN
+MODULE_LIST_PROJECT += IF_ASRIFFEE
+MODULE_LIST_PROJECT += IF_ASRIFMEM
+MODULE_LIST_PROJECT += IF_VXASRVPM_VOLVOAB
+MODULE_LIST_PROJECT += IL_ASRCOMCFG5
+MODULE_LIST_PROJECT += IL_ASRIPDUMCFG5
+MODULE_LIST_PROJECT += J1939_ASRJ1939RM
+MODULE_LIST_PROJECT += MCAL_MPC57XXYFSL01ASR4SUB
+MODULE_LIST_PROJECT += MEMSERVICE_ASRNVM
+MODULE_LIST_PROJECT += MONITORING_ASR4DBG
+MODULE_LIST_PROJECT += MONITORING_ASR4RTM
+MODULE_LIST_PROJECT += MONITORING_ASRDLT
+MODULE_LIST_PROJECT += NM_ASR4NMCAN
+MODULE_LIST_PROJECT += NM_ASR4NMIF
+MODULE_LIST_PROJECT += NM_ASRNMLIN
+MODULE_LIST_PROJECT += NMJ1939_ASRJ1939NM
+MODULE_LIST_PROJECT += OS_PLATFORMPPCGEN7
+MODULE_LIST_PROJECT += SYSSERVICE_ASR4BSWMCFG5
+MODULE_LIST_PROJECT += SYSSERVICE_ASR4ECUM
+MODULE_LIST_PROJECT += SYSSERVICE_ASR4WDM
+MODULE_LIST_PROJECT += SYSSERVICE_ASRCRC
+MODULE_LIST_PROJECT += SYSSERVICE_ASRCRY
+MODULE_LIST_PROJECT += SYSSERVICE_ASRCSM
+MODULE_LIST_PROJECT += SYSSERVICE_ASRDET
+MODULE_LIST_PROJECT += SYSSERVICE_ASRRAMTST
+MODULE_LIST_PROJECT += SYSSERVICE_CRYPTOCV
+MODULE_LIST_PROJECT += SYSSERVICE_ISSM_VOLVO_AB
+MODULE_LIST_PROJECT += TP_ASR4TPCAN
+MODULE_LIST_PROJECT += TPJ1939_ASRJ1939TP
+MODULE_LIST_PROJECT += VSTDLIB
+
+
+CCL_ASR4COMMCFG5_USED                                            = 1
+CCL_ASR4SMCAN_USED                                               = 1
+CCL_ASR4SMLIN_USED                                               = 1
+CDD_ASR4DCMADDON_USED                                            =   0
+CDD_ASR4DRM_USED                                                 =   0
+CP_ASR4XCP_USED                                                  =   0
+CP_XCPONCANASR_USED                                              =   0
+DIAG_ASR4DCM_USED                                                = 1
+DIAG_ASR4DEM_USED                                                = 1
+DIAG_ASR4J1939DCM_USED                                           =   0
+DIAG_ASRSWCVDEM42_USED                                           =   0
+DRVCAN__COREASR_USED                                             = 1
+DRVLIN__COREASR_USED                                             = 1
+ECUAB_ASRIOHWAB_USED                                             = 1
+GW_ASRPDURCFG5_USED                                              = 1
+IF_ASR4IFLIN_USED                                                = 1
+IF_ASR4IFWD_USED                                                 =   0
+IF_ASRIFCAN_USED                                                 = 1
+IF_ASRIFFEE_USED                                                 = 1
+IF_ASRIFMEM_USED                                                 = 1
+IF_VXASRVPM_VOLVOAB_USED                                         =   0
+IL_ASRCOMCFG5_USED                                               = 1
+IL_ASRIPDUMCFG5_USED                                             =   0
+J1939_ASRJ1939RM_USED                                            = 1
+MCAL_MPC57XXYFSL01ASR4SUB_USED                                   = 1
+MEMSERVICE_ASRNVM_USED                                           = 1
+MONITORING_ASR4DBG_USED                                          =   0
+MONITORING_ASR4RTM_USED                                          =   0
+MONITORING_ASRDLT_USED                                           =   0
+NM_ASR4NMCAN_USED                                                = 1
+NM_ASR4NMIF_USED                                                 = 1
+NM_ASRNMLIN_USED                                                 =   0
+NMJ1939_ASRJ1939NM_USED                                          = 1
+OS_PLATFORMPPCGEN7_USED                                          = 1
+SYSSERVICE_ASR4BSWMCFG5_USED                                     = 1
+SYSSERVICE_ASR4ECUM_USED                                         = 1
+SYSSERVICE_ASR4WDM_USED                                          =   0
+SYSSERVICE_ASRCRC_USED                                           = 1
+SYSSERVICE_ASRCRY_USED                                           =   0
+SYSSERVICE_ASRCSM_USED                                           =   0
+SYSSERVICE_ASRDET_USED                                           = 1
+SYSSERVICE_ASRRAMTST_USED                                        =   0
+SYSSERVICE_CRYPTOCV_USED                                         = 1
+SYSSERVICE_ISSM_VOLVO_AB_USED                                    = 1
+TP_ASR4TPCAN_USED                                                = 1
+TPJ1939_ASRJ1939TP_USED                                          = 1
+VSTDLIB_USED                                                     = 1
+
+
+CCL_ASR4COMMCFG5_PATH                                            = BSW\ComM
+CCL_ASR4SMCAN_PATH                                               = BSW\CanSM
+CCL_ASR4SMLIN_PATH                                               = BSW\LinSM
+CDD_ASR4DCMADDON_PATH                                            = BSW\DcmAddOn
+CDD_ASR4DRM_PATH                                                 = BSW\CddDrm
+CP_ASR4XCP_PATH                                                  = BSW\Xcp
+CP_XCPONCANASR_PATH                                              = BSW\CanXcp
+DIAG_ASR4DCM_PATH                                                = BSW\Dcm
+DIAG_ASR4DEM_PATH                                                = BSW\Dem
+DIAG_ASR4J1939DCM_PATH                                           = BSW\J1939Dcm
+DIAG_ASRSWCVDEM42_PATH                                           = BSW\vDem42
+DRVCAN__COREASR_PATH                                             = BSW\Can
+DRVLIN__COREASR_PATH                                             = BSW\Lin
+ECUAB_ASRIOHWAB_PATH                                             = BSW\IoHwAb
+GW_ASRPDURCFG5_PATH                                              = BSW\PduR
+IF_ASR4IFLIN_PATH                                                = BSW\LinIf
+IF_ASR4IFWD_PATH                                                 = BSW\WdgIf
+IF_ASRIFCAN_PATH                                                 = BSW\CanIf
+IF_ASRIFFEE_PATH                                                 = BSW\Fee
+IF_ASRIFMEM_PATH                                                 = BSW\MemIf
+IF_VXASRVPM_VOLVOAB_PATH                                         = BSW\VpmClient
+IL_ASRCOMCFG5_PATH                                               = BSW\Com
+IL_ASRIPDUMCFG5_PATH                                             = BSW\IpduM
+J1939_ASRJ1939RM_PATH                                            = BSW\J1939Rm
+MCAL_MPC57XXYFSL01ASR4SUB_PATH                                   = BSW\Mcal_Mpc57xxy
+MEMSERVICE_ASRNVM_PATH                                           = BSW\NvM
+MONITORING_ASR4DBG_PATH                                          = BSW\Dbg
+MONITORING_ASR4RTM_PATH                                          = BSW\Rtm
+MONITORING_ASRDLT_PATH                                           = BSW\Dlt
+NM_ASR4NMCAN_PATH                                                = BSW\CanNm
+NM_ASR4NMIF_PATH                                                 = BSW\Nm
+NM_ASRNMLIN_PATH                                                 = BSW\LinNm
+NMJ1939_ASRJ1939NM_PATH                                          = BSW\J1939Nm
+OS_PLATFORMPPCGEN7_PATH                                          = BSW\Os
+SYSSERVICE_ASR4BSWMCFG5_PATH                                     = BSW\BswM
+SYSSERVICE_ASR4ECUM_PATH                                         = BSW\EcuM
+SYSSERVICE_ASR4WDM_PATH                                          = BSW\WdgM
+SYSSERVICE_ASRCRC_PATH                                           = BSW\Crc
+SYSSERVICE_ASRCRY_PATH                                           = BSW\Cry
+SYSSERVICE_ASRCSM_PATH                                           = BSW\Csm
+SYSSERVICE_ASRDET_PATH                                           = BSW\Det
+SYSSERVICE_ASRRAMTST_PATH                                        = BSW\RamTst
+SYSSERVICE_CRYPTOCV_PATH                                         = BSW\SecMod
+SYSSERVICE_ISSM_VOLVO_AB_PATH                                    = BSW\Issm
+TP_ASR4TPCAN_PATH                                                = BSW\CanTp
+TPJ1939_ASRJ1939TP_PATH                                          = BSW\J1939Tp
+VSTDLIB_PATH                                                     = BSW\VStdLib
+
+ADDITIONAL_INCLUDES += $(ROOT)\BSW\Mcal_Mpc57xxy
+
+
+###############################################################################
+#  Application (StartAppl)
+###############################################################################
+# additional application include directories
+ADDITIONAL_INCLUDES += Include
+ADDITIONAL_INCLUDES += CDD\LFIC\Include
+ADDITIONAL_INCLUDES += CDD\RFIC\SMK_CRC\Include
+ADDITIONAL_INCLUDES += Applications\Include
+ADDITIONAL_INCLUDES += PEPS\Telegram\Include
+ADDITIONAL_INCLUDES += PEPS\TP\Include
+ADDITIONAL_INCLUDES += PEPS\EncDec\Include
+#ADDITIONAL_INCLUDES += PEPS\Eeprom\Include
+
+#PEPS
+APP_SOURCE_LST += Source\Telegram.c
+APP_SOURCE_LST += PEPS\Telegram\SMK_TelegramStrategy.c
+APP_SOURCE_LST += PEPS\Telegram\SMK_TelegramTable_SP2.c
+
+APP_SOURCE_LST += CDD\RFIC\CDD_RFIC.c
+APP_SOURCE_LST += CDD\LFIC\CDD_LFIC.c
+APP_SOURCE_LST += CDD\RFIC\SMK_CRC\CRC4.c
+APP_SOURCE_LST += CDD\RFIC\SMK_CRC\CRC8.c
+
+APP_SOURCE_LST += PEPS\EncDec\AES128.c
+APP_SOURCE_LST += PEPS\EncDec\Encryption.c
+
+APP_SOURCE_LST += Source\TP.c
+APP_SOURCE_LST += PEPS\TP\SMK_TPStrategy.c
+
+APP_SOURCE_LST += Source\pj_function.c
+#APP_SOURCE_LST += Source\Eeprom\app_eeprom.c
+
+
+# application source files
+APP_SOURCE_LST += Source\EcuM_Callout_Stubs.c
+APP_SOURCE_LST += Source\BswM_Callout_Stubs.c
+APP_SOURCE_LST += Source\Os_Callout_Stubs.c
+APP_SOURCE_LST += Source\BrsAsrMain.c
+APP_SOURCE_LST += Source\BswInit_Callout_Stubs.c
+APP_SOURCE_LST += Source\Dcm_Callout_Stubs.c
+APP_SOURCE_LST += Source\BrsHw.c
+APP_SOURCE_LST += Source\BrsStartup.c
+APP_SOURCE_LST += Source\Cdd.c
+APP_SOURCE_LST += Source\Stubs.c
+
+
+APP_SOURCE_LST += Source\TestLin.c
+APP_SOURCE_LST += Source\PVTApp_Do12VInterface.c
+APP_SOURCE_LST += Source\PVTApp_AdiInterfaces.c
+APP_SOURCE_LST += Source\PVTApp_DobhsCtrlInterface.c
+APP_SOURCE_LST += Source\PVTApp_DowhsDowlsInterface.c
+#APP_SOURCE_LST += Source\PVTApp_Radio.c
+
+APP_SOURCE_LST += Source\IoHwAb.c
+
+#APP_SOURCE_LST += Source\IoHwAb_QM_RF_IF.c
+#APP_SOURCE_LST += Source\IoHwAb_QM_RF_COMTP.c
+#APP_SOURCE_LST += Source\IoHwAb_QM_LF_IF.c
+#APP_SOURCE_LST += Source\IoHwAb_QM_LF_COMTP.c
+#APP_SOURCE_LST += Source\IoHwAb_QM_IO.c
+#APP_SOURCE_LST += Source\IoHwAb_ASIL_Dobhs.c
+#APP_SOURCE_LST += Source\IoHwAb_ASIL_Core.c

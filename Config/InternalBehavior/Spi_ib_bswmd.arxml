@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="05214e7a-ff95-4a21-b3a6-f53e64c26fea">
+      <SHORT-NAME>TS_T2D35M10I0R0</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="95651d72-f827-497a-ae37-78beac311664">
+          <SHORT-NAME>Spi_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="5d2d4a44-3c29-4fc9-9242-9599e9028583">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="94197143-11fc-4fa2-8494-d6d90028b00b">
+                  <SHORT-NAME>Spi</SHORT-NAME>
+                  <PROVIDED-ENTRYS>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/TS_T2D35M10I0R0/Spi_ib_bswmd/BswModuleDescriptions/Spi_MainFunction_Handling</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  </PROVIDED-ENTRYS>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="6a4968c3-90ba-47da-be61-6aded82deb2d">
+                      <SHORT-NAME>SpiBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="24e572a6-bb41-46d2-ad2f-2282e64b465a">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_00</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="37b7a297-0f03-47ff-8a50-e49495e3ff40">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_01</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="b2c71f01-0108-4efc-bb9f-4d13841ac563">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_02</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="6ede92a4-0538-4f03-b72c-b248374f4430">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_03</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="a8420853-a0e7-4358-8f09-ac19be9ce648">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_04</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="4f267162-b66e-4947-9614-daefaf7bacca">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_05</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="7878f6e6-dc80-43f0-80af-6bfb6e702c67">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_06</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="759cebb2-347e-48ef-90f8-c7b413384763">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_07</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="dfbc06ca-bc88-4f85-9b18-59aff0d9ee3c">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_08</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="961ddc36-b1fb-469e-a624-9ac1728067ba">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_09</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="540cd5bf-54c0-4031-a340-7e11ed0e2f30">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_10</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="5274b04e-3294-49e6-a502-efc8dfe04a8b">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_11</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="7d3ace3d-acfd-4232-b077-e4abb2c0e313">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_12</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="877e58ea-beb3-48ed-a9d4-fe92eef7b208">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_13</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="28067964-de06-4870-90fb-61a31a76e865">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_14</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="4979cb3b-479a-4057-b6db-de769cc2c35a">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_15</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="cf529227-f8c7-45cb-bd4c-fda433a85fc9">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_16</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="cd54e0d2-fd6c-4825-ac3b-e3b6c65a4014">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_17</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="3d3b40e1-5437-4caa-956f-7f50f2a36c05">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_18</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="5e2ab74f-e45c-4f58-a08c-92fe20edc706">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_19</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="6cc4c044-1058-489e-abe8-49761972288d">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_20</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="5bf797b6-dbe4-4388-ac43-c455585e448a">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_21</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="cdac5f48-5f03-4ecc-8005-cc40251b7439">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_22</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="a6cc4a81-cd5f-4cb4-8323-434c8e6bafc6">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_23</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="66d389aa-90c5-417e-9c05-e71a49edbeb6">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_24</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="c0211ac3-a8cb-4f1f-ad1e-e8e8072eaa13">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_25</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="00767493-65f7-485f-9eb9-cc6632ee9d7a">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_26</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="127cafff-c715-428f-a763-44acbe6fe56c">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_27</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="bff17277-281b-4018-87cf-47a0148e320f">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_28</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="59a2c802-0a08-485a-ad0e-5a09216eb0b0">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_29</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="31b0238a-054a-44f4-abe5-e598910e7934">
+                          <SHORT-NAME>SPI_EXCLUSIVE_AREA_30</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="d57795fa-ec7a-4f93-bf24-d182a42c1e85">
+                          <SHORT-NAME>Spi_MainFunction_Handling</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/TS_T2D35M10I0R0/Spi_ib_bswmd/BswModuleDescriptions/Spi_MainFunction_Handling</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="13877914-47a3-4a9e-9bc1-673581ded2dd">
+                          <SHORT-NAME>Spi_MainFunction_HandlingTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/TS_T2D35M10I0R0/Spi_ib_bswmd/BswModuleDescriptions/Spi/SpiBehavior/Spi_MainFunction_Handling</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.005</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="0712b835-a05d-48f8-b90c-6cc7d55f58c8">
+                  <SHORT-NAME>Spi_MainFunction_Handling</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="d721eb34-d576-41fd-aa17-2484b89041e9">
+          <SHORT-NAME>J1939Rm_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="7b789130-c3fe-4e02-9e74-a6383710d52b">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="09edd876-c08e-4738-91a1-4a49e3725fa9">
+                  <SHORT-NAME>J1939Rm</SHORT-NAME>
+                  <PROVIDED-ENTRYS>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/J1939Rm_ib_bswmd/BswModuleDescriptions/J1939Rm_MainFunction</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  </PROVIDED-ENTRYS>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="e25ca3a4-961c-48be-b2c7-8d6884f77d64">
+                      <SHORT-NAME>J1939RmBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="621f2287-9706-4548-901b-a174106e521f">
+                          <SHORT-NAME>J1939RM_EXCLUSIVE_AREA_TXPDULOCK</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Used to protect access to Tx PDUs.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="9cca7f68-5ca7-4921-ad66-da8684dfcb77">
+                          <SHORT-NAME>J1939RM_EXCLUSIVE_AREA_ACKQUEUELOCK</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Used to protect access to the Acknowledgement message queue.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="cabcc0d6-b04a-423f-a0dd-4eb8a9cb72a9">
+                          <SHORT-NAME>J1939RM_EXCLUSIVE_AREA_REQQUEUELOCK</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Used to protect access to the Request message queue.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="d1368b37-20f0-4daa-ba28-2c0d91362ffc">
+                          <SHORT-NAME>J1939RM_EXCLUSIVE_AREA_REQ2QUEUELOCK</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Used to protect access to the Request2 message queue.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="4cab434e-b6cf-4e24-a82f-daaab83a476f">
+                          <SHORT-NAME>J1939Rm_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/J1939Rm_ib_bswmd/BswModuleDescriptions/J1939Rm_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="988e8f89-6115-44f5-bee9-b26bd2e092c5">
+                          <SHORT-NAME>J1939Rm_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/J1939Rm_ib_bswmd/BswModuleDescriptions/J1939Rm/J1939RmBehavior/J1939Rm_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="efa48b12-22d4-4f75-98db-255586601872">
+                  <SHORT-NAME>J1939Rm_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

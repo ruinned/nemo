@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Settings>
+    <Settings Name="com.vector.cfg.gui.moduleexport.history">
+        <Settings Name="1537475994184">
+            <Settings Name="0">
+                <Setting Value="/ActiveEcuC/J1939Nm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="1">
+                <Setting Value="/EcuM/EcuM" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="10">
+                <Setting Value="/Dem/Dem" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="11">
+                <Setting Value="/ActiveEcuC/Dcm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="12">
+                <Setting Value="/Spi/Spi" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="13">
+                <Setting Value="/ActiveEcuC/J1939Tp" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="14">
+                <Setting Value="/Pwm/Pwm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="15">
+                <Setting Value="/ActiveEcuC/PduR" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="16">
+                <Setting Value="/Dio/Dio" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="17">
+                <Setting Value="/ActiveEcuC/Can" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="18">
+                <Setting Value="/Port/Port" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="19">
+                <Setting Value="/ActiveEcuC/J1939Rm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="2">
+                <Setting Value="/Mcl/Mcl" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="20">
+                <Setting Value="/Icu/Icu" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="21">
+                <Setting Value="/ActiveEcuC/Com" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="22">
+                <Setting Value="/Adc/Adc" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="23">
+                <Setting Value="/ActiveEcuC/LinIf" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="24">
+                <Setting Value="/ActiveEcuC/IoHwAb" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="25">
+                <Setting Value="/ActiveEcuC/ComM" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="26">
+                <Setting Value="/Fls/Fls" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="27">
+                <Setting Value="/ActiveEcuC/CanSM" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="28">
+                <Setting Value="/ActiveEcuC/NvM" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="29">
+                <Setting Value="/ActiveEcuC/LinSM" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="3">
+                <Setting Value="/ActiveEcuC/Rte" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="30">
+                <Setting Value="/ActiveEcuC/CanNm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="31">
+                <Setting Value="/ActiveEcuC/Crc" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="32">
+                <Setting Value="/Mcu/Mcu" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="33">
+                <Setting Value="/ActiveEcuC/Det" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="34">
+                <Setting Value="/Gpt/Gpt" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="35">
+                <Setting Value="/ActiveEcuC/EcuC" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="36">
+                <Setting Value="/ActiveEcuC/CanTp" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="37">
+                <Setting Value="/ActiveEcuC/CanTrcv" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="38">
+                <Setting Value="/ActiveEcuC/CanIf" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="39">
+                <Setting Value="/ActiveEcuC/LinTp" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="4">
+                <Setting Value="/Resource/Resource" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="40">
+                <Setting Value="/ActiveEcuC/Lin" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="41">
+                <Setting Value="/ActiveEcuC/MemIf" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="42">
+                <Setting Value="/ActiveEcuC/Fee" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="43">
+                <Setting Value="/ActiveEcuC/Nm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="44">
+                <Setting Value="/Wdg/Wdg" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="45">
+                <Setting Value="/ActiveEcuC/BswM" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="46">
+                <Setting Value="/ActiveEcuC/Issm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="5">
+                <Setting Value="/ActiveEcuC/Os" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="6">
+                <Setting Value="/ActiveEcuC/Brs" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="7">
+                <Setting Value="/ActiveEcuC/Cdd" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="8">
+                <Setting Value="/ActiveEcuC/vDem42" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="9">
+                <Setting Value="/Base/Base" Name="moduleEcucPath"/>
+            </Settings>
+            <Setting Value="C:\Vector\CBD1800194_D01_Mpc57xx\Applications\SipAddon\SCIM_BP\Export\modules.arxml" Name="filePath"/>
+        </Settings>
+        <Settings Name="1541605969434">
+            <Settings Name="0">
+                <Setting Value="/ActiveEcuC/Crc" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="1">
+                <Setting Value="/Mcu/Mcu" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="10">
+                <Setting Value="/ActiveEcuC/CanTp" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="11">
+                <Setting Value="/ActiveEcuC/EcuC" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="12">
+                <Setting Value="/ActiveEcuC/LinTp" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="13">
+                <Setting Value="/ActiveEcuC/Can" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="14">
+                <Setting Value="/ActiveEcuC/Com" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="15">
+                <Setting Value="/ActiveEcuC/LinIf" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="16">
+                <Setting Value="/ActiveEcuC/LinSM" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="17">
+                <Setting Value="/ActiveEcuC/BswM" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="18">
+                <Setting Value="/ActiveEcuC/CanSM" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="19">
+                <Setting Value="/ActiveEcuC/CanNm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="2">
+                <Setting Value="/ActiveEcuC/Det" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="20">
+                <Setting Value="/ActiveEcuC/ComM" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="21">
+                <Setting Value="/ActiveEcuC/Nm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="22">
+                <Setting Value="/ActiveEcuC/J1939Nm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="23">
+                <Setting Value="/ActiveEcuC/vDem42" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="24">
+                <Setting Value="/ActiveEcuC/Cdd" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="25">
+                <Setting Value="/Resource/Resource" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="26">
+                <Setting Value="/Base/Base" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="27">
+                <Setting Value="/Mcl/Mcl" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="28">
+                <Setting Value="/ActiveEcuC/Brs" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="29">
+                <Setting Value="/ActiveEcuC/Dcm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="3">
+                <Setting Value="/Gpt/Gpt" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="30">
+                <Setting Value="/Dem/Dem" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="31">
+                <Setting Value="/Dio/Dio" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="32">
+                <Setting Value="/Icu/Icu" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="33">
+                <Setting Value="/Pwm/Pwm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="34">
+                <Setting Value="/Adc/Adc" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="35">
+                <Setting Value="/ActiveEcuC/IoHwAb" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="36">
+                <Setting Value="/Port/Port" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="37">
+                <Setting Value="/Spi/Spi" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="38">
+                <Setting Value="/ActiveEcuC/Fee" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="39">
+                <Setting Value="/Fls/Fls" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="4">
+                <Setting Value="/ActiveEcuC/J1939Rm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="40">
+                <Setting Value="/ActiveEcuC/NvM" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="41">
+                <Setting Value="/ActiveEcuC/MemIf" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="42">
+                <Setting Value="/EcuM/EcuM" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="43">
+                <Setting Value="/ActiveEcuC/Issm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="44">
+                <Setting Value="/Wdg/Wdg" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="45">
+                <Setting Value="/ActiveEcuC/Rte" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="46">
+                <Setting Value="/ActiveEcuC/Os" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="5">
+                <Setting Value="/ActiveEcuC/PduR" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="6">
+                <Setting Value="/ActiveEcuC/CanTrcv" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="7">
+                <Setting Value="/ActiveEcuC/CanIf" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="8">
+                <Setting Value="/ActiveEcuC/Lin" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="9">
+                <Setting Value="/ActiveEcuC/J1939Tp" Name="moduleEcucPath"/>
+            </Settings>
+            <Setting Value="C:\Vector\CBD1800194_D01_Mpc57xx\Applications\SipAddon\SCIM_BP_181107_DebugFault\Export_Test.arxml" Name="filePath"/>
+        </Settings>
+    </Settings>
+    <Settings Name="com.vector.cfg.gui.moduleimport.history">
+        <Settings Name="1541525383015">
+            <Settings Name="0">
+                <Settings Name="0">
+                    <Setting Value="true" Name="active"/>
+                    <Setting Value="/Mcu/Mcu" Name="ecucPath"/>
+                    <Setting Value="Replace" Name="importMode"/>
+                </Settings>
+                <Setting Value="C:\Vector\CBD1800194_D01_Mpc57xx\Applications\SipAddon\SCIM_BP_181106_PVT_LF&amp;RFIC_NEWBOARD_PwmReg_Dbc\Config\ECUC\MCU_Only.arxml" Name="filePath"/>
+            </Settings>
+        </Settings>
+        <Settings Name="1541648013095">
+            <Settings Name="0">
+                <Settings Name="0">
+                    <Setting Value="true" Name="active"/>
+                    <Setting Value="/Mcu/Mcu" Name="ecucPath"/>
+                    <Setting Value="Replace" Name="importMode"/>
+                </Settings>
+                <Setting Value="C:\Vector\CBD1800194_D01_Mpc57xx\Applications\SipAddon\SCIM_BP_181107_DebugFault\Config\ECUC\CBD1800194D00_Mcu_ecuc_16MHz.arxml.arxml" Name="filePath"/>
+            </Settings>
+        </Settings>
+        <Settings Name="1541988552113">
+            <Settings Name="0">
+                <Settings Name="0">
+                    <Setting Value="true" Name="active"/>
+                    <Setting Value="/Mcu/Mcu" Name="ecucPath"/>
+                    <Setting Value="Replace" Name="importMode"/>
+                </Settings>
+                <Setting Value="C:\Vector\CBD1800194_D01_Mpc57xx\Applications\SipAddon\SCIM_BP_181107_DebugFault\Config\ECUC\CBD1800194D00_Mcu_ecuc_40MHz.arxml" Name="filePath"/>
+            </Settings>
+        </Settings>
+    </Settings>
+</Settings>

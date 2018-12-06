@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="aa5cbf85-cb82-4dbe-9993-754dbd09d0e2">
+          <SHORT-NAME>J1939Tp_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="73f0ab77-a92e-4b4a-96dd-8f3455457f21">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="a6622e0b-9bef-461a-b850-661212925583">
+                  <SHORT-NAME>J1939Tp</SHORT-NAME>
+                  <PROVIDED-ENTRYS>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/J1939Tp_ib_bswmd/BswModuleDescriptions/J1939Tp_MainFunction</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  </PROVIDED-ENTRYS>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="27f1005f-44ce-4419-89e6-42b65a55409d">
+                      <SHORT-NAME>J1939TpBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="d5143072-390f-4819-89b5-d37d6ef9135b">
+                          <SHORT-NAME>TxNPduLock</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Protect N-PDU transmission lock against concurrent access from interrupt and task level.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="0245fd96-6e69-446c-b2ec-345b2f3f0f84">
+                          <SHORT-NAME>RxNSduLock</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Protect N-SDU reception lock against concurrent access from interrupt and task level.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="117ce040-2e2b-4342-98a8-92f74b6c90c8">
+                          <SHORT-NAME>TxNSduLock</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Protect N-SDU transmission lock against concurrent access from interrupt and task level.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="c9aab1af-3084-4826-9ec7-86b3f5969c94">
+                          <SHORT-NAME>J1939Tp_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/J1939Tp_ib_bswmd/BswModuleDescriptions/J1939Tp_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="ca0ac703-e5cd-4b88-9674-6f12ff8a5df9">
+                          <SHORT-NAME>J1939Tp_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/J1939Tp_ib_bswmd/BswModuleDescriptions/J1939Tp/J1939TpBehavior/J1939Tp_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="53883280-400a-4e8b-9e1b-2a0932828d60">
+                  <SHORT-NAME>J1939Tp_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

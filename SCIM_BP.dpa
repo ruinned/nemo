@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProjectAssistant Version="5.17.45 SP1">
+    <General>
+        <Name>CBD1800194D00</Name>
+        <Version>1.0</Version>
+        <Author>visthm</Author>
+    </General>
+    <Environment>
+        <Platform>Canoeemu</Platform>
+        <Derivative UUID="DB5C1BD2-145D-43AA-A5EA-C2AEF9CCC8F0">MPC5746C</Derivative>
+        <Compiler UUID="44266E21-0E8C-4DDA-B800-91CE20104931">Diab</Compiler>
+        <PinLayout></PinLayout>
+        <SipIds>
+            <SipId>CBD1800194_D01</SipId>
+        </SipIds>
+        <TargetType>Real Target</TargetType>
+        <PostBuildLoadableSupport>true</PostBuildLoadableSupport>
+        <PostBuildSelectableSupport>false</PostBuildSelectableSupport>
+    </Environment>
+    <Folders>
+        <ECUC>.\Config\ECUC</ECUC>
+        <GenData>.\Appl\GenData</GenData>
+        <GenDataVtt>.\Appl\GenDataVtt</GenDataVtt>
+        <Source>.\Appl\Source</Source>
+        <ServiceComponents>.\Config\ServiceComponents</ServiceComponents>
+        <Logs>.\Log</Logs>
+        <SIP>.\..\..\..</SIP>
+        <StartMenu></StartMenu>
+        <ApplicationComponentFolders>
+            <ApplicationComponentFolder>.\Config\ApplicationComponents</ApplicationComponentFolder>
+        </ApplicationComponentFolders>
+        <BswInternalBehaviour>.\Config\InternalBehavior</BswInternalBehaviour>
+        <McData>.\Config\McData</McData>
+        <DefinitionRestriction>.\DefRestrict</DefinitionRestriction>
+        <AUTOSAR>.\Config\AUTOSAR</AUTOSAR>
+    </Folders>
+    <Tools>
+        <DEV>D:\Program Files (x86)\Vector DaVinci Developer 4.2 (SP2)\Bin\DaVinciDEV.exe</DEV>
+        <LegacyConverter Version="1.8.21"/>
+        <DDM Version="5.17.51 SP2"/>
+    </Tools>
+    <Input>
+        <ECUEX>Config\System\SystemExtract.arxml</ECUEX>
+        <Options>
+            <IgnoreUuidsSystemDescriptionFiles>false</IgnoreUuidsSystemDescriptionFiles>
+            <IgnoreUuidsStandardConfigurationFiles>false</IgnoreUuidsStandardConfigurationFiles>
+            <GenerateUpdateReport>true</GenerateUpdateReport>
+        </Options>
+    </Input>
+    <References>
+        <DVWorkspace>.\Config\Developer\SCIM_BP.dcf</DVWorkspace>
+        <FlatMap>Config\System\FlatMap.arxml</FlatMap>
+        <FlatECUEX>Config\System\FlatExtract.arxml</FlatECUEX>
+        <OEMCommunicationExtract>Config\System\Communication.arxml</OEMCommunicationExtract>
+        <EcucFileReferences/>
+    </References>
+    <EcucSplitter>
+        <Configuration>.\Config\ECUC\CBD1800194D00.ecuc.arxml</Configuration>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Com_ecuc.arxml">
+            <Module Name="Com"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Rte_ecuc.arxml">
+            <Module Name="Rte"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Os_ecuc.arxml">
+            <Module Name="Os"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_LinSM_ecuc.arxml">
+            <Module Name="LinSM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_ComM_ecuc.arxml">
+            <Module Name="ComM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_EcuC_ecuc.arxml">
+            <Module Name="EcuC"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_LinTp_ecuc.arxml">
+            <Module Name="LinTp"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_LinIf_ecuc.arxml">
+            <Module Name="LinIf"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_CanIf_ecuc.arxml">
+            <Module Name="CanIf"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Lin_ecuc.arxml">
+            <Module Name="Lin"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Can_ecuc.arxml">
+            <Module Name="Can"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_J1939Tp_ecuc.arxml">
+            <Module Name="J1939Tp"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Det_ecuc.arxml">
+            <Module Name="Det"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_J1939Nm_ecuc.arxml">
+            <Module Name="J1939Nm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_PduR_ecuc.arxml">
+            <Module Name="PduR"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_J1939Rm_ecuc.arxml">
+            <Module Name="J1939Rm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_CanSM_ecuc.arxml">
+            <Module Name="CanSM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_BswM_ecuc.arxml">
+            <Module Name="BswM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Nm_ecuc.arxml">
+            <Module Name="Nm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Fls_ecuc.arxml">
+            <Module Name="Fls"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_EcuM_ecuc.arxml">
+            <Module Name="EcuM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Dem_ecuc.arxml">
+            <Module Name="Dem"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Issm_ecuc.arxml">
+            <Module Name="Issm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Dcm_ecuc.arxml">
+            <Module Name="Dcm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_CanTp_ecuc.arxml">
+            <Module Name="CanTp"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_CanNm_ecuc.arxml">
+            <Module Name="CanNm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_vDem42_ecuc.arxml">
+            <Module Name="vDem42"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_NvM_ecuc.arxml">
+            <Module Name="NvM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_MemIf_ecuc.arxml">
+            <Module Name="MemIf"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Crc_ecuc.arxml">
+            <Module Name="Crc"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Fee_ecuc.arxml">
+            <Module Name="Fee"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Cdd_ecuc.arxml">
+            <Module Name="Cdd"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Resource_ecuc.arxml">
+            <Module Name="Resource"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Icu_ecuc.arxml">
+            <Module Name="Icu"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Wdg_ecuc.arxml">
+            <Module Name="Wdg"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Base_ecuc.arxml">
+            <Module Name="Base"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Mcl_ecuc.arxml">
+            <Module Name="Mcl"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Spi_ecuc.arxml">
+            <Module Name="Spi"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_CanTrcv_ecuc.arxml">
+            <Module Name="CanTrcv"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_IoHwAb_ecuc.arxml">
+            <Module Name="IoHwAb"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Dio_ecuc.arxml">
+            <Module Name="Dio"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Pwm_ecuc.arxml">
+            <Module Name="Pwm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Port_ecuc.arxml">
+            <Module Name="Port"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Adc_ecuc.arxml">
+            <Module Name="Adc"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Gpt_ecuc.arxml">
+            <Module Name="Gpt"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Mcu_ecuc.arxml">
+            <Module Name="Mcu"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Brs_ecuc.arxml">
+            <Module Name="Brs"/>
+        </Splitter>
+        <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
+    </EcucSplitter>
+    <Display LastVersion="5.17.51 SP2">
+        <FileSet Id="" CS="7e2c4cca">
+            <File EcuInstance="CIOM" Hash="785fc3bb82e1cf88e095409df78cd6bd" FileCategory="legacy_communication_data">$(DpaProjectFolder)\COM\CAN\Backbone1J1939_postfix.dbc</File>
+            <File EcuInstance="CIOM" Hash="93706f302b6dad68aff8e42bfe0aa234" FileCategory="legacy_communication_data">$(DpaProjectFolder)\COM\CAN\Backbone2_postfix+PVT_0.7.dbc</File>
+            <File EcuInstance="CIOM" Hash="64c80e46db36dadfa664a91801c3e133" FileCategory="legacy_communication_data">$(DpaProjectFolder)\COM\CAN\CabSubnet_postfix.dbc</File>
+            <File EcuInstance="CIOM" Hash="228be0434af7b1c037f249983cf21170" FileCategory="legacy_communication_data">$(DpaProjectFolder)\COM\CAN\FMSNet_postfix.dbc</File>
+            <File EcuInstance="CIOM" Hash="7c77cd487d6f8d06d5de58d09e8d2af8" FileCategory="legacy_communication_data">$(DpaProjectFolder)\COM\CAN\SecuritySubnet_postfix.dbc</File>
+            <File EcuInstance="CIOM" Hash="7bb478e0a596bc9dd2f7ec73c68ef27" FileCategory="legacy_communication_data">$(DpaProjectFolder)\COM\LIN\LIN1_CIOM_postfix.ldf</File>
+            <File EcuInstance="CIOM" Hash="a6526796c41e78030b2e972a8dfaf809" FileCategory="legacy_communication_data">$(DpaProjectFolder)\COM\LIN\LIN2_CIOM_postfix.ldf</File>
+            <File EcuInstance="CIOM" Hash="90310c028cb63ce164ebf9d28b8caa9" FileCategory="legacy_communication_data">$(DpaProjectFolder)\COM\LIN\LIN3_CIOM_postfix.ldf</File>
+            <File EcuInstance="CIOM" Hash="79fe6e50fc1982cfd89838d4bbac4b20" FileCategory="legacy_communication_data">$(DpaProjectFolder)\COM\LIN\LIN4_CIOM_postfix.ldf</File>
+            <File EcuInstance="CIOM" Hash="7ebc5c4f5226cf30b80b83fc4b47889e" FileCategory="legacy_communication_data">$(DpaProjectFolder)\COM\LIN\LIN5_CIOM_postfix.ldf</File>
+        </FileSet>
+        <Merge/>
+    </Display>
+    <ECUC>
+        <Active RootPackageName="/ActiveEcuC/ActiveEcuC">Config\ECUC\CBD1800194D00.ecuc.arxml</Active>
+        <Derived RootPackageName="/InitialEcuC/InitialEcuC">Config\ECUC\CBD1800194D00.ecuc.Initial.arxml</Derived>
+    </ECUC>
+    <PostBuildLoadable RTEDataFreezeChecksum="" CurrentConfigurationPhase="PRE_COMPILE"/>
+    <DEVSettings>
+        <SelectiveImport>All</SelectiveImport>
+        <ObjectLocking>true</ObjectLocking>
+        <ImportModePreset>true</ImportModePreset>
+    </DEVSettings>
+    <ToolSettings>
+        <Generators>
+            <Settings Name="com.vector.cfg.gen.core.genusersettings">
+                <Settings Name="com.vector.cfg.gen.Tresos_proxy">
+                    <Settings Name="General">
+                        <Setting Value="System" Name="forcearchitecture"/>
+                        <Setting Value="1055,1648,2062" Name="ignoretresosmsgids"/>
+                        <Setting Value="true" Name="performanceoptimization"/>
+                        <Setting Value="false" Name="tresosverification"/>
+                    </Settings>
+                </Settings>
+            </Settings>
+            <Settings Name="com.vector.cfg.gui.core.generators.ExtGenStepOrder">
+                <Setting Value="INTERNAL_GENERATION" Name="Order"/>
+            </Settings>
+            <Settings Name="com.vector.cfg.gui.core.generators.GeneratedModules"/>
+            <Settings Name="com.vector.cfg.gui.core.generators.GenerationTarget">
+                <Setting Value="Real Target" Name="TargetType"/>
+            </Settings>
+            <Settings Name="com.vector.cfg.gui.core.generators.GeneratorsWithoutModuleDef"/>
+        </Generators>
+        <Misc>
+            <Settings Name="com.vector.cfg.gen.core.bswmdmigration.internal.service.BswImplVersionPersistor">
+                <Settings Name="|MICROSAR|BswM">
+                    <Setting Value="10.3.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|CanIf">
+                    <Setting Value="6.16.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|CanNm">
+                    <Setting Value="7.2.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|CanSM">
+                    <Setting Value="2.13.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|CanTp">
+                    <Setting Value="3.3.2" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Can_ImxFlexcan3|Can">
+                    <Setting Value="5.1.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|CddDrm|Cdd">
+                    <Setting Value="1.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Com">
+                    <Setting Value="14.0.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|ComM">
+                    <Setting Value="9.0.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Crc">
+                    <Setting Value="5.4.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Cry_30_LibCv|Cry">
+                    <Setting Value="3.0.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Csm">
+                    <Setting Value="3.0.2" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Dbg">
+                    <Setting Value="1.0.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Dcm">
+                    <Setting Value="9.5.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Dem">
+                    <Setting Value="14.6.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Det">
+                    <Setting Value="10.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Dlt">
+                    <Setting Value="1.7.4" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|EcuC">
+                    <Setting Value="1.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|EcuM">
+                    <Setting Value="8.0.2" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Fee">
+                    <Setting Value="8.1.6" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|IoHwAb">
+                    <Setting Value="3.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|IpduM">
+                    <Setting Value="6.8.3" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Issm">
+                    <Setting Value="3.4.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|J1939Dcm">
+                    <Setting Value="8.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|J1939Nm">
+                    <Setting Value="4.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|J1939Rm">
+                    <Setting Value="2.3.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|J1939Tp">
+                    <Setting Value="1.3.3" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|LinIf">
+                    <Setting Value="5.2.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|LinNm">
+                    <Setting Value="2.3.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|LinSM">
+                    <Setting Value="5.2.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|LinTp">
+                    <Setting Value="5.2.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|MemIf">
+                    <Setting Value="3.3.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Nm">
+                    <Setting Value="11.0.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|NvM">
+                    <Setting Value="5.7.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Os">
+                    <Setting Value="2.19.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|PduR">
+                    <Setting Value="11.5.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|RamTst">
+                    <Setting Value="2.2.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Rte">
+                    <Setting Value="4.18.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Rtm">
+                    <Setting Value="3.1.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Vita">
+                    <Setting Value="3.1.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|WdgIf">
+                    <Setting Value="5.2.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|WdgM">
+                    <Setting Value="5.2.2" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|WrapNv">
+                    <Setting Value="2.4.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Xcp">
+                    <Setting Value="4.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|vDem42">
+                    <Setting Value="1.2.0" Name="BswImplSwVersion"/>
+                </Settings>
+            </Settings>
+            <Settings Name="com.vector.cfg.gen.core.gencore.internal.aov.AutomaticOnDemandValidationConfigurationService">
+                <Setting Value="rO0ABXNyAGpjb20udmVjdG9yLmNmZy5nZW4uY29yZS5nZW5jb3JlLmludGVybmFsLmFvdi5BdXRv&#xA;bWF0aWNPbkRlbWFuZFZhbGlkYXRpb25Db25maWd1cmF0aW9uU2VydmljZSRQZXJzaXN0ZWREYXRh&#xA;pcjrmQ6cuakCAAJaAAlhY3RpdmF0ZWRMABJkZWFjdGl2YXRlZE1vZHVsZXN0ABZMamF2YS91dGls&#xA;L0NvbGxlY3Rpb247eHABc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlz&#xA;dCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHN0ABNbTGphdmEvbGFuZy9PYmpl&#xA;Y3Q7eHB1cgATW0xqYXZhLmxhbmcuT2JqZWN0O5DOWJ8QcylsAgAAeHAAAAAA" Name="Data"/>
+            </Settings>
+            <Settings Name="com.vector.cfg.gui.pse.pages.generators">
+                <Settings Name="BuildVipProject"/>
+                <Settings Name="CustomWorkflowExecution"/>
+            </Settings>
+            <Settings Name="com.vector.cfg.persistency.internal.folder">
+                <Settings Name="TargetFolderManager"/>
+            </Settings>
+            <Settings Name="com.vector.cfg.workflow.project.model">
+                <Settings Name="DiagnosticsDataModifier"/>
+                <Settings Name="LegacyConverter"/>
+            </Settings>
+        </Misc>
+    </ToolSettings>
+    <TopDownServiceConfiguration>
+        <NvM>true</NvM>
+    </TopDownServiceConfiguration>
+    <Miscellaneous>
+        <AmdGenerateDebugData>false</AmdGenerateDebugData>
+        <AutomaticSyncSystemDescription>false</AutomaticSyncSystemDescription>
+    </Miscellaneous>
+    <SwctGeneration>
+        <Component Name="StartApplication" GenerationEnabled="false"/>
+        <Component Name="StartApplicationTrusted" GenerationEnabled="false"/>
+        <Component Name="StartApplicationMemoryAccessState" GenerationEnabled="false"/>
+        <Component Name="IohwAb" GenerationEnabled="true"/>
+        <Component Name="TestApp" GenerationEnabled="false"/>
+        <Component Name="IOHWAB" GenerationEnabled="true"/>
+        <Component Name="TestLin" GenerationEnabled="false"/>
+        <Component Name="CoreHW_ASIL" GenerationEnabled="true"/>
+        <Component Name="IoHwAb_ASIL_Dobhs" GenerationEnabled="false"/>
+        <Component Name="IoHwAb_QM_LF_COMTP" GenerationEnabled="false"/>
+        <Component Name="IoHwAb_QM_LF_IF" GenerationEnabled="false"/>
+        <Component Name="IoHwAb_QM_RF_COMTP" GenerationEnabled="false"/>
+        <Component Name="IoHwAb_QM_RF_IF" GenerationEnabled="false"/>
+        <Component Name="IoHwAb_QM_IO" GenerationEnabled="false"/>
+        <Component Name="PVTApp_Do12VInterface" GenerationEnabled="false"/>
+        <Component Name="PVTApp_AdiInterfaces" GenerationEnabled="false"/>
+        <Component Name="IoHwAb_ASIL_Core" GenerationEnabled="false"/>
+        <Component Name="PVTApp_DobhsCtrlInterface" GenerationEnabled="false"/>
+        <Component Name="IoHwAb" GenerationEnabled="false"/>
+        <Component Name="PVTApp_DowhsDowlsInterface" GenerationEnabled="false"/>
+        <Component Name="Telegram" GenerationEnabled="false"/>
+        <Component Name="CDD_LFIC" GenerationEnabled="false" TargetFolder=".\Appl\CDD\LFIC"/>
+        <Component Name="CDD_RFIC" GenerationEnabled="false" TargetFolder=".\Appl\CDD\RFIC"/>
+        <Component Name="PVTApp_Radio" GenerationEnabled="false"/>
+        <Component Name="TP" GenerationEnabled="true"/>
+    </SwctGeneration>
+</ProjectAssistant>

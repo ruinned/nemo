@@ -1,0 +1,945 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: FMSU ERAU CIOM
+
+
+BO_ 2566842929 VW_X_CIOMFMS: 8 CIOM
+ SG_ FMSAxleLocation : 0|8@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMSAxleWeight : 8|16@1+ (0.5,0) [0|32767.5] "kg"  FMSU
+
+BO_ 2566908977 VP236_X_CIOMFMS: 8 CIOM
+ SG_ WeightClass : 0|4@1+ (1,0) [0|0] ""  ERAU
+ SG_ FuncIndIlluminationLevel_ISig_30 : 4|3@1+ (1,0) [0|0] ""  ERAU
+
+BO_ 2566907979 VP232_X_ERAU: 8 ERAU
+ SG_ DiagInfoERAU : 57|7@1+ (1,0) [0|127] "NotApplicable"  CIOM
+
+BO_ 2566843441 VI_X_CIOMFMS: 17 CIOM
+ SG_ FMSVehicleIdentNumber : 0|136@1+ (1,0) [0|0] ""  FMSU,ERAU
+
+BO_ 2566832433 VDHR_X_CIOMFMS: 8 CIOM
+ SG_ TotalVehicleDistanceHiRes_fms : 0|32@1+ (5,0) [0|21474836475] "m"  FMSU
+
+BO_ 2565603121 TPDT_X_CIOMFMS: 8 CIOM
+ SG_ TPDT_SeqNo_CIOMFMS : 0|8@1+ (1,0) [0|0] ""  FMSU,ERAU
+
+BO_ 2565668657 TPCM_X_CIOMFMS: 8 CIOM
+ SG_ TPCM_ControlByte_CIOMFMS : 0|8@1+ (1,0) [0|0] ""  FMSU,ERAU
+
+BO_ 2365484081 TCO1_X_CIOMFMS: 8 CIOM
+ SG_ TachographPerformance_fms : 28|2@1+ (1,0) [0|0] ""  FMSU
+ SG_ DriverCardDriver1_fms : 12|2@1+ (1,0) [0|0] ""  FMSU
+ SG_ Driver2TimeRelatedStates_fms : 16|4@1+ (1,0) [0|0] ""  FMSU
+ SG_ HandlingInformation_fms : 26|2@1+ (1,0) [0|0] ""  FMSU
+ SG_ VehicleMotion_fms : 6|2@1+ (1,0) [0|0] ""  FMSU
+ SG_ Driver1WorkingState_fms : 0|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ DriverCardDriver2_fms : 20|2@1+ (1,0) [0|0] ""  FMSU
+ SG_ Driver1TimeRelatedStates_fms : 8|4@1+ (1,0) [0|0] ""  FMSU
+ SG_ SystemEvent_fms : 24|2@1+ (1,0) [0|0] ""  FMSU
+ SG_ Driver2WorkingState_fms : 3|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ TachographVehicleSpeed_fms : 48|16@1+ (0.00390625,0) [0|255.99609375] "Km_per_h"  FMSU
+ SG_ VehicleOverspeed_fms : 14|2@1+ (1,0) [0|0] ""  FMSU
+ SG_ DirectionIndicator_fms : 30|2@1+ (1,0) [0|0] ""  FMSU
+
+BO_ 2566832177 SERV_X_CIOMFMS: 8 CIOM
+ SG_ FMSServiceDistance : 8|16@1+ (5,-160635) [-160635|167040] "km"  FMSU
+
+BO_ 2566759473 PTODE_X_CIOMFMS: 8 CIOM
+ SG_ FMSAtLeastOnePTOEngaged : 48|2@1+ (1,0) [0|0] ""  FMSU
+
+BO_ 2566844977 LFE_X_CIOMFMS: 8 CIOM
+ SG_ EngineFuelRate_fms : 0|16@1+ (0.05,0) [0|3276.75] "l_per_h"  FMSU
+ SG_ FMSInstantFuelEconomy : 16|16@1+ (0.001953125,0) [0|127.998046875] "km_per_l"  FMSU
+
+BO_ 2566842673 LFC_X_CIOMFMS: 8 CIOM
+ SG_ FMSEngineTotalFuelUsed : 32|32@1+ (0.5,0) [0|2147483647.5] "l"  FMSU
+
+BO_ 2566719793 HRLFC_X_CIOMFMS: 8 CIOM
+ SG_ FMSHiResEngineTotalFuelUsed : 32|32@1+ (0.001,0) [0|4294967.295] "l"  FMSU
+
+BO_ 2566841649 HOURS_X_CIOMFMS: 8 CIOM
+ SG_ FMSEngineTotHoursOfOp : 0|32@1+ (0.05,0) [0|214748364.75] "h"  FMSU
+
+BO_ 2633879857 FMS_X_CIOMFMS: 8 CIOM
+ SG_ FMSDiagnosisSupported : 0|2@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMSSoftwareVersionSupported : 8|32@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMSRequestsSupported : 2|2@1+ (1,0) [0|0] ""  FMSU
+
+BO_ 2566749489 FMS1_X_CIOMFMS: 8 CIOM
+ SG_ FMS1_fms_TellTaleStatus12 : 48|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMS1_fms_TellTaleStatus5 : 20|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMS1_fms_TellTaleStatus1 : 4|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMS1_fms_TellTaleStatus9 : 36|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMS1_fms_TellTaleStatus4 : 16|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMS1_fms_TellTaleStatus6 : 24|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMS1_fms_TellTaleStatus13 : 52|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMS1_fms_Blockid : 0|4@1+ (1,0) [0|15] ""  FMSU
+ SG_ FMS1_fms_TellTaleStatus8 : 32|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMS1_fms_TellTaleStatus11 : 44|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMS1_fms_TellTaleStatus15 : 60|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMS1_fms_TellTaleStatus10 : 40|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMS1_fms_TellTaleStatus14 : 56|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMS1_fms_TellTaleStatus2 : 8|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMS1_fms_TellTaleStatus3 : 12|3@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMS1_fms_TellTaleStatus7 : 28|3@1+ (1,0) [0|0] ""  FMSU
+
+BO_ 2566843953 ET1_X_CIOMFMS: 8 CIOM
+ SG_ EngineCoolantTemp_stat_fms : 0|8@1+ (1,-40) [-40|215] "DegreeC"  FMSU
+
+BO_ 2565865488 ERC1_x_RECUFMS: 8 CIOM
+ SG_ ActualDrvlnRetdrPctTrq_fms : 8|8@1+ (1,-125) [-125|130] "Percent"  FMSU
+ SG_ RetarderTorqueMode_fms : 0|4@1+ (1,0) [0|0] ""  FMSU
+
+BO_ 2565865487 ERC1_x_EMSRetFMS: 8 CIOM
+ SG_ EngineRetarderTorqueMode_fms : 0|4@1+ (1,0) [0|0] ""  FMSU
+ SG_ ActualEngRetdrPercentTrq_fms : 8|8@1+ (1,-125) [-125|130] "Percent"  FMSU
+
+BO_ 2364539697 EEC2_X_CIOMFMS: 8 CIOM
+ SG_ AcceleratorPedalPosition1_fms : 8|8@1+ (0.4,0) [0|102] "Percent"  FMSU
+ SG_ EnginePctLoadAtCurrentSpd_fms : 16|8@1+ (1,0) [0|255] "Percent"  FMSU
+
+BO_ 2364539953 EEC1_X_CIOMFMS: 8 CIOM
+ SG_ EngineSpeed_fms : 24|16@1+ (0.125,0) [0|8191.875] "rpm"  FMSU
+ SG_ ActualEnginePercentTorque_fms : 16|8@1+ (1,-125) [-125|130] "Percent"  FMSU
+
+BO_ 2566767153 EEC14_X_CIOMFMS: 8 CIOM
+ SG_ FuelType : 48|8@1+ (1,0) [0|0] ""  ERAU
+
+BO_ 2566810417 DI_X_CIOMFMS: 40 CIOM
+ SG_ FMSDriversIdentifications : 0|320@1+ (1,0) [0|0] ""  FMSU
+
+BO_ 2566847537 DD_X_CIOMFMS: 8 CIOM
+ SG_ FuelLevel_fms : 8|8@1+ (0.4,0) [0|102] "Percent"  FMSU
+
+BO_ 2566811697 CVW_X_CIOMFMS: 8 CIOM
+ SG_ GrossCombVehicleWeight_fms : 16|16@1+ (10,0) [0|655350] "kg"  FMSU
+
+BO_ 2563833649 CL_X_CIOMFMS: 8 CIOM
+ SG_ BacklightLevelHighRes2_ISig_30 : 0|8@1+ (0.4,0) [0|102] "Percent"  ERAU
+
+BO_ 2566844721 CCVS_X_CIOMFMS: 8 CIOM
+ SG_ BrakeSwitch_fms : 28|2@1+ (1,0) [0|0] ""  FMSU
+ SG_ CCActive_fms : 24|2@1+ (1,0) [0|0] ""  FMSU
+ SG_ WheelBasedVehicleSpeed_fms : 8|16@1+ (0.00390625,0) [0|255.99609375] "Km_per_h"  FMSU
+ SG_ ClutchSwitch_fms : 30|2@1+ (1,0) [0|0] ""  FMSU
+ SG_ FMSPtoState : 48|5@1+ (1,0) [0|0] ""  FMSU
+
+BO_ 2566805041 AT1T1I1_X_CIOMFMS: 8 CIOM
+ SG_ CatalystTankLevel_fms : 0|8@1+ (0.4,0) [0|102] "Percent"  FMSU
+
+BO_ 2566845745 AMB_X_CIOMFMS: 8 CIOM
+ SG_ AmbientAirTemperature_fms : 24|16@1+ (0.03125,-273) [-273|1774.96875] "DegreeC"  FMSU
+
+BO_ 2566827569 AIR1_X_CIOMFMS: 8 CIOM
+ SG_ ServiceBrakeAirPrsCircuit1_fms : 16|8@1+ (8,0) [0|2040] "kPa"  FMSU
+ SG_ ServiceBrakeAirPrsCircuit2_fms : 24|8@1+ (8,0) [0|2040] "kPa"  FMSU
+
+
+
+CM_ "COM_MATRIX_1.31.0";
+CM_ BO_ 2566842929 "PGN 65258 Vehicle Weight";
+CM_ BO_ 2566843441 "PGN 65260 Vehicle Identification";
+CM_ BO_ 2566832433 "PGN 65217 High Resolution Vehicle Distance";
+CM_ BO_ 2565603121 "PGN 60160 Transport Protocol Data Transfer";
+CM_ BO_ 2565668657 "PGN 60416 Transport Protocol Connection Management";
+CM_ BO_ 2365484081 "PGN 65132 Tachograph";
+CM_ BO_ 2566832177 "PGN 65216 Service Information";
+CM_ BO_ 2566759473 "PGN 64932 PTO Drive Engagement";
+CM_ BO_ 2566844977 "PGN 65266 Fuel Economy (Liquid)";
+CM_ BO_ 2566842673 "PGN 65257 Fuel Consumption (Liquid)";
+CM_ BO_ 2566719793 "PGN 64777 High Resolution Fuel Consumption (Liquid)";
+CM_ BO_ 2566841649 "PGN 65253 Engine Hours, Revolutions";
+CM_ BO_ 2633879857 "PGN 64977 FMS-standard Interface Identity Capabilities";
+CM_ BO_ 2566749489 "PGN 64893 FMS Telltale status";
+CM_ BO_ 2566843953 "PGN 65262 Engine Temperature 1";
+CM_ BO_ 2565865488 "PGN 61440 Electronic Retarder Controller 1 from driveline retarder";
+CM_ BO_ 2565865487 "PGN 61440 Electronic Retarder Controller 1 from engine retarder";
+CM_ BO_ 2364539697 "PGN 61443 Electronic Engine Controller 2";
+CM_ BO_ 2364539953 "PGN 61444 Electronic Engine Controller 1";
+CM_ BO_ 2566767153 "PGN 64962 Electronic Engine Controller 14
+";
+CM_ BO_ 2566810417 "PGN 65131 Drivers Identification";
+CM_ BO_ 2566847537 "PGN 65276 Dash Display";
+CM_ BO_ 2566811697 "PGN 64872 Gross Combination Vehicle Weight";
+CM_ BO_ 2563833649 "PGN 53248 Cab Illumination Message";
+CM_ BO_ 2566844721 "PGN 65265 Cruise Control Vehicle Speed";
+CM_ BO_ 2566805041 "PGN 65110 Aftertreatment 1 Diesel Exhaust Fluid Tank 1 Information 1
+";
+CM_ BO_ 2566845745 "PGN 65269 Ambient Conditions";
+CM_ BO_ 2566827569 "PGN 65198 Air Supply Pressure,";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "GenSigCycleTimeActive" INT 0 0;
+BA_DEF_ SG_  "GenSigCycleTime" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed";
+BA_DEF_  "Baudrate" INT 0 1000000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "VersionYear" INT 0 99;
+BA_DEF_  "VersionNumber" INT 0 99;
+BA_DEF_  "VersionMonth" INT 1 12;
+BA_DEF_  "VersionDay" INT 1 31;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BU_  "TpOwnSystemEcuNumber" HEX 0 255;
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl";
+BA_DEF_ SG_  "SeToolVersion_SIGNAL" STRING ;
+BA_DEF_ SG_  "SeToolUniqueID_SIGNAL" STRING ;
+BA_DEF_ SG_  "SeToolOwnerSigGroup_SIGNAL" STRING ;
+BA_DEF_ SG_  "SeToolOwnerSigGroupID_SIGNAL" STRING ;
+BA_DEF_ SG_  "SeToolName_SIGNAL" STRING ;
+BA_DEF_ SG_  "SeToolItemID_SIGNAL" STRING ;
+BA_DEF_ SG_  "SeToolAncestorID_SIGNAL" STRING ;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ SG_  "Platform_Vivis2_Sig" ENUM  "No","Yes";
+BA_DEF_ SG_  "Platform_Vivis1_Sig" ENUM  "No","Yes";
+BA_DEF_ SG_  "Platform_VMCU1_Sig" ENUM  "No","Yes";
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "NmMessage" ENUM  "no","yes";
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_  "NmAsrWaitBusSleepTime" INT 0 65535;
+BA_DEF_  "NmAsrTimeoutTime" INT 0 65535;
+BA_DEF_  "NmAsrRepeatMessageTime" INT 0 65535;
+BA_DEF_ BU_  "NmAsrNodeIdentifier" HEX 0 253;
+BA_DEF_ BU_  "NmAsrNode" ENUM  "No","Yes";
+BA_DEF_  "NmAsrMessageCount" INT 1 256;
+BA_DEF_ BO_  "NmAsrMessage" ENUM  "No","Yes";
+BA_DEF_  "NmAsrCanMsgCycleTime" INT 0 65535;
+BA_DEF_ BU_  "NmAsrCanMsgCycleOffset" INT 0 65535;
+BA_DEF_  "NmAsrBaseAddress" HEX 0 536870911;
+BA_DEF_  "NetworkExportIndices_0" STRING ;
+BA_DEF_  "NetworkExportIndices" STRING ;
+BA_DEF_ SG_  "NeedsUpdateBit" ENUM  "No","Yes";
+BA_DEF_ SG_  "MmAnSignal" ENUM  "No","Yes";
+BA_DEF_ BU_  "MmAnMaster" ENUM  "No","Yes";
+BA_DEF_ BU_  "IsOBDrelevant" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigMaxLatency" INT 0 65535;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "Yes","No";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "DiagnosticClientAddress" HEX 0 255;
+BA_DEF_ BO_  "DiagUUDTResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_  "DiagRoutingPriority" INT 0 0;
+BA_DEF_ BU_  "DiagRole" ENUM  "None","OBDTester","ExternalTester","InternalTester";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagConnection" HEX 0 65535;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ BO_  "CanTpSTmin" INT 0 255;
+BA_DEF_ BO_  "CanTpFcFrameId" HEX 0 2147483647;
+BA_DEF_ BO_  "CanTpBs" INT 0 255;
+BA_DEF_REL_ BU_SG_REL_  "GenSigTimeoutTime" INT 0 65535;
+BA_DEF_REL_ BU_SG_REL_  "GenSigFirstTimeoutTime" INT 0 65535;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigCycleTimeActive" 0;
+BA_DEF_DEF_  "GenSigCycleTime" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "Baudrate" 500000;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "Manufacturer" "VOLVO_AB";
+BA_DEF_DEF_  "VersionYear" 0;
+BA_DEF_DEF_  "VersionNumber" 0;
+BA_DEF_DEF_  "VersionMonth" 1;
+BA_DEF_DEF_  "VersionDay" 1;
+BA_DEF_DEF_  "VFrameFormat" "ExtendedCAN";
+BA_DEF_DEF_  "TpOwnSystemEcuNumber" 0;
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "SeToolVersion_SIGNAL" "";
+BA_DEF_DEF_  "SeToolUniqueID_SIGNAL" "";
+BA_DEF_DEF_  "SeToolOwnerSigGroup_SIGNAL" "";
+BA_DEF_DEF_  "SeToolOwnerSigGroupID_SIGNAL" "";
+BA_DEF_DEF_  "SeToolName_SIGNAL" "";
+BA_DEF_DEF_  "SeToolItemID_SIGNAL" "";
+BA_DEF_DEF_  "SeToolAncestorID_SIGNAL" "";
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "Platform_Vivis2_Sig" "No";
+BA_DEF_DEF_  "Platform_Vivis1_Sig" "No";
+BA_DEF_DEF_  "Platform_VMCU1_Sig" "No";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "NmMessage" "no";
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmAsrWaitBusSleepTime" 750;
+BA_DEF_DEF_  "NmAsrTimeoutTime" 5000;
+BA_DEF_DEF_  "NmAsrRepeatMessageTime" 300;
+BA_DEF_DEF_  "NmAsrNodeIdentifier" 0;
+BA_DEF_DEF_  "NmAsrNode" "Yes";
+BA_DEF_DEF_  "NmAsrMessageCount" 256;
+BA_DEF_DEF_  "NmAsrMessage" "No";
+BA_DEF_DEF_  "NmAsrCanMsgCycleTime" 200;
+BA_DEF_DEF_  "NmAsrCanMsgCycleOffset" 0;
+BA_DEF_DEF_  "NmAsrBaseAddress" 486506496;
+BA_DEF_DEF_  "NetworkExportIndices_0" "";
+BA_DEF_DEF_  "NetworkExportIndices" "";
+BA_DEF_DEF_  "NeedsUpdateBit" "No";
+BA_DEF_DEF_  "MmAnSignal" "No";
+BA_DEF_DEF_  "MmAnMaster" "No";
+BA_DEF_DEF_  "IsOBDrelevant" "No";
+BA_DEF_DEF_  "GenSigMaxLatency" 0;
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "DiagnosticClientAddress" 0;
+BA_DEF_DEF_  "DiagUUDTResponse" "No";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "DiagRoutingPriority" 0;
+BA_DEF_DEF_  "DiagRole" "None";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagConnection" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "CanTpSTmin" 0;
+BA_DEF_DEF_  "CanTpFcFrameId" 2147483647;
+BA_DEF_DEF_  "CanTpBs" 255;
+BA_DEF_DEF_REL_ "GenSigTimeoutTime" 0;
+BA_DEF_DEF_REL_ "GenSigFirstTimeoutTime" 0;
+BA_ "Manufacturer" "VOLVO_AB";
+BA_ "NmType" "";
+BA_ "BusType" "CAN";
+BA_ "Baudrate" 250000;
+BA_ "ProtocolType" "J1939";
+BA_ "VersionDay" 17;
+BA_ "VersionMonth" 1;
+BA_ "VersionNumber" 1;
+BA_ "VersionYear" 18;
+BA_ "DBName" "FMSNet";
+BA_ "NmAsrNode" BU_ FMSU 0;
+BA_ "TpOwnSystemEcuNumber" BU_ ERAU 75;
+BA_ "NmAsrNode" BU_ ERAU 0;
+BA_ "NmAsrNodeIdentifier" BU_ ERAU 75;
+BA_ "NmJ1939IdentityNumber" BU_ ERAU 75;
+BA_ "NmStationAddress" BU_ ERAU 75;
+BA_ "TpOwnSystemEcuNumber" BU_ CIOM 64;
+BA_ "NmAsrNode" BU_ CIOM 0;
+BA_ "NmAsrNodeIdentifier" BU_ CIOM 49;
+BA_ "NmJ1939IdentityNumber" BU_ CIOM 49;
+BA_ "NmStationAddress" BU_ CIOM 49;
+BA_ "GenMsgSendType" BO_ 2566842929 0;
+BA_ "GenMsgCycleTime" BO_ 2566842929 1000;
+BA_ "GenMsgStartDelayTime" BO_ 2566842929 95;
+BA_ "VFrameFormat" BO_ 2566842929 3;
+BA_ "GenMsgSendType" BO_ 2566908977 0;
+BA_ "GenMsgCycleTime" BO_ 2566908977 5000;
+BA_ "VFrameFormat" BO_ 2566908977 3;
+BA_ "GenMsgSendType" BO_ 2566907979 0;
+BA_ "GenMsgCycleTime" BO_ 2566907979 1000;
+BA_ "GenMsgDelayTime" BO_ 2566907979 100;
+BA_ "VFrameFormat" BO_ 2566907979 3;
+BA_ "GenMsgSendType" BO_ 2566843441 0;
+BA_ "GenMsgCycleTime" BO_ 2566843441 10000;
+BA_ "GenMsgStartDelayTime" BO_ 2566843441 5;
+BA_ "VFrameFormat" BO_ 2566843441 3;
+BA_ "GenMsgSendType" BO_ 2566832433 0;
+BA_ "GenMsgCycleTime" BO_ 2566832433 1000;
+BA_ "GenMsgStartDelayTime" BO_ 2566832433 65;
+BA_ "VFrameFormat" BO_ 2566832433 3;
+BA_ "GenMsgILSupport" BO_ 2565603121 0;
+BA_ "GenMsgSendType" BO_ 2565603121 8;
+BA_ "VFrameFormat" BO_ 2565603121 3;
+BA_ "GenMsgILSupport" BO_ 2565668657 0;
+BA_ "GenMsgSendType" BO_ 2565668657 8;
+BA_ "VFrameFormat" BO_ 2565668657 3;
+BA_ "GenMsgSendType" BO_ 2365484081 0;
+BA_ "GenMsgCycleTime" BO_ 2365484081 20;
+BA_ "GenMsgStartDelayTime" BO_ 2365484081 10;
+BA_ "VFrameFormat" BO_ 2365484081 3;
+BA_ "GenMsgSendType" BO_ 2566832177 0;
+BA_ "GenMsgCycleTime" BO_ 2566832177 1000;
+BA_ "GenMsgStartDelayTime" BO_ 2566832177 45;
+BA_ "VFrameFormat" BO_ 2566832177 3;
+BA_ "GenMsgSendType" BO_ 2566759473 0;
+BA_ "GenMsgCycleTime" BO_ 2566759473 100;
+BA_ "GenMsgStartDelayTime" BO_ 2566759473 35;
+BA_ "VFrameFormat" BO_ 2566759473 3;
+BA_ "GenMsgSendType" BO_ 2566844977 0;
+BA_ "GenMsgCycleTime" BO_ 2566844977 100;
+BA_ "GenMsgStartDelayTime" BO_ 2566844977 20;
+BA_ "VFrameFormat" BO_ 2566844977 3;
+BA_ "GenMsgSendType" BO_ 2566842673 0;
+BA_ "GenMsgCycleTime" BO_ 2566842673 1000;
+BA_ "GenMsgStartDelayTime" BO_ 2566842673 85;
+BA_ "VFrameFormat" BO_ 2566842673 3;
+BA_ "GenMsgSendType" BO_ 2566719793 0;
+BA_ "GenMsgCycleTime" BO_ 2566719793 1000;
+BA_ "GenMsgStartDelayTime" BO_ 2566719793 55;
+BA_ "VFrameFormat" BO_ 2566719793 3;
+BA_ "GenMsgSendType" BO_ 2566841649 0;
+BA_ "GenMsgCycleTime" BO_ 2566841649 1000;
+BA_ "GenMsgStartDelayTime" BO_ 2566841649 75;
+BA_ "VFrameFormat" BO_ 2566841649 3;
+BA_ "GenMsgSendType" BO_ 2633879857 0;
+BA_ "GenMsgCycleTime" BO_ 2633879857 10000;
+BA_ "GenMsgStartDelayTime" BO_ 2633879857 235;
+BA_ "VFrameFormat" BO_ 2633879857 3;
+BA_ "GenMsgSendType" BO_ 2566749489 0;
+BA_ "GenMsgCycleTime" BO_ 2566749489 1000;
+BA_ "GenMsgStartDelayTime" BO_ 2566749489 110;
+BA_ "VFrameFormat" BO_ 2566749489 3;
+BA_ "GenMsgSendType" BO_ 2566843953 0;
+BA_ "GenMsgCycleTime" BO_ 2566843953 1000;
+BA_ "GenMsgStartDelayTime" BO_ 2566843953 105;
+BA_ "VFrameFormat" BO_ 2566843953 3;
+BA_ "GenMsgSendType" BO_ 2565865488 0;
+BA_ "GenMsgCycleTime" BO_ 2565865488 100;
+BA_ "GenMsgStartDelayTime" BO_ 2565865488 50;
+BA_ "VFrameFormat" BO_ 2565865488 3;
+BA_ "GenMsgSendType" BO_ 2565865487 0;
+BA_ "GenMsgCycleTime" BO_ 2565865487 100;
+BA_ "GenMsgStartDelayTime" BO_ 2565865487 25;
+BA_ "VFrameFormat" BO_ 2565865487 3;
+BA_ "GenMsgSendType" BO_ 2364539697 0;
+BA_ "GenMsgCycleTime" BO_ 2364539697 50;
+BA_ "GenMsgStartDelayTime" BO_ 2364539697 15;
+BA_ "VFrameFormat" BO_ 2364539697 3;
+BA_ "GenMsgSendType" BO_ 2364539953 0;
+BA_ "GenMsgCycleTime" BO_ 2364539953 20;
+BA_ "VFrameFormat" BO_ 2364539953 3;
+BA_ "GenMsgSendType" BO_ 2566767153 0;
+BA_ "GenMsgCycleTime" BO_ 2566767153 5000;
+BA_ "VFrameFormat" BO_ 2566767153 3;
+BA_ "TpJ1939VarDlc" BO_ 2566810417 1;
+BA_ "GenMsgSendType" BO_ 2566810417 0;
+BA_ "GenMsgCycleTime" BO_ 2566810417 10000;
+BA_ "GenMsgStartDelayTime" BO_ 2566810417 2500;
+BA_ "VFrameFormat" BO_ 2566810417 3;
+BA_ "GenMsgSendType" BO_ 2566847537 0;
+BA_ "GenMsgCycleTime" BO_ 2566847537 1000;
+BA_ "GenMsgStartDelayTime" BO_ 2566847537 70;
+BA_ "VFrameFormat" BO_ 2566847537 3;
+BA_ "GenMsgSendType" BO_ 2566811697 0;
+BA_ "GenMsgCycleTime" BO_ 2566811697 10000;
+BA_ "GenMsgStartDelayTime" BO_ 2566811697 220;
+BA_ "VFrameFormat" BO_ 2566811697 3;
+BA_ "GenMsgSendType" BO_ 2563833649 0;
+BA_ "GenMsgCycleTime" BO_ 2563833649 1000;
+BA_ "VFrameFormat" BO_ 2563833649 3;
+BA_ "GenMsgSendType" BO_ 2566844721 0;
+BA_ "GenMsgCycleTime" BO_ 2566844721 100;
+BA_ "GenMsgStartDelayTime" BO_ 2566844721 25;
+BA_ "VFrameFormat" BO_ 2566844721 3;
+BA_ "GenMsgSendType" BO_ 2566805041 0;
+BA_ "GenMsgCycleTime" BO_ 2566805041 1000;
+BA_ "GenMsgStartDelayTime" BO_ 2566805041 130;
+BA_ "VFrameFormat" BO_ 2566805041 3;
+BA_ "GenMsgSendType" BO_ 2566845745 0;
+BA_ "GenMsgCycleTime" BO_ 2566845745 1000;
+BA_ "GenMsgStartDelayTime" BO_ 2566845745 80;
+BA_ "VFrameFormat" BO_ 2566845745 3;
+BA_ "GenMsgSendType" BO_ 2566827569 0;
+BA_ "GenMsgCycleTime" BO_ 2566827569 1000;
+BA_ "GenMsgStartDelayTime" BO_ 2566827569 125;
+BA_ "VFrameFormat" BO_ 2566827569 3;
+BA_ "GenSigSendType" SG_ 2566842929 FMSAxleLocation 0;
+BA_ "GenSigCycleTime" SG_ 2566842929 FMSAxleLocation 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566842929 FMSAxleLocation 100;
+BA_ "GenSigStartValue" SG_ 2566842929 FMSAxleLocation 255;
+BA_ "SPN" SG_ 2566842929 FMSAxleLocation 928;
+BA_ "GenSigSendType" SG_ 2566842929 FMSAxleWeight 0;
+BA_ "GenSigCycleTime" SG_ 2566842929 FMSAxleWeight 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566842929 FMSAxleWeight 100;
+BA_ "GenSigStartValue" SG_ 2566842929 FMSAxleWeight 65535;
+BA_ "SPN" SG_ 2566842929 FMSAxleWeight 582;
+BA_ "GenSigSendType" SG_ 2566908977 WeightClass 0;
+BA_ "GenSigCycleTime" SG_ 2566908977 WeightClass 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566908977 WeightClass 100;
+BA_ "GenSigStartValue" SG_ 2566908977 WeightClass 15;
+BA_ "GenSigSendType" SG_ 2566908977 FuncIndIlluminationLevel_ISig_30 3;
+BA_ "GenSigStartValue" SG_ 2566908977 FuncIndIlluminationLevel_ISig_30 1;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2566908977 FuncIndIlluminationLevel_ISig_30 "x0000001D043A8396";
+BA_ "SeToolItemID_SIGNAL" SG_ 2566908977 FuncIndIlluminationLevel_ISig_30 "x0000001D043A8396";
+BA_ "SeToolName_SIGNAL" SG_ 2566908977 FuncIndIlluminationLevel_ISig_30 "FuncIndIlluminationLevel";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2566908977 FuncIndIlluminationLevel_ISig_30 "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2566908977 FuncIndIlluminationLevel_ISig_30 "1";
+BA_ "GenSigSendType" SG_ 2566907979 DiagInfoERAU 1;
+BA_ "GenSigSendType" SG_ 2566843441 FMSVehicleIdentNumber 0;
+BA_ "GenSigCycleTime" SG_ 2566843441 FMSVehicleIdentNumber 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566843441 FMSVehicleIdentNumber 100;
+BA_ "SPN" SG_ 2566843441 FMSVehicleIdentNumber 237;
+BA_ "GenSigSendType" SG_ 2566832433 TotalVehicleDistanceHiRes_fms 0;
+BA_ "GenSigCycleTime" SG_ 2566832433 TotalVehicleDistanceHiRes_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566832433 TotalVehicleDistanceHiRes_fms 100;
+BA_ "GenSigStartValue" SG_ 2566832433 TotalVehicleDistanceHiRes_fms 4294967295;
+BA_ "SPN" SG_ 2566832433 TotalVehicleDistanceHiRes_fms 917;
+BA_ "GenSigSendType" SG_ 2565603121 TPDT_SeqNo_CIOMFMS 7;
+BA_ "GenSigSendType" SG_ 2565668657 TPCM_ControlByte_CIOMFMS 7;
+BA_ "GenSigSendType" SG_ 2365484081 TachographPerformance_fms 0;
+BA_ "GenSigCycleTime" SG_ 2365484081 TachographPerformance_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2365484081 TachographPerformance_fms 100;
+BA_ "GenSigStartValue" SG_ 2365484081 TachographPerformance_fms 3;
+BA_ "SPN" SG_ 2365484081 TachographPerformance_fms 1620;
+BA_ "GenSigSendType" SG_ 2365484081 DriverCardDriver1_fms 0;
+BA_ "GenSigCycleTime" SG_ 2365484081 DriverCardDriver1_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2365484081 DriverCardDriver1_fms 100;
+BA_ "GenSigStartValue" SG_ 2365484081 DriverCardDriver1_fms 3;
+BA_ "SPN" SG_ 2365484081 DriverCardDriver1_fms 1615;
+BA_ "GenSigSendType" SG_ 2365484081 Driver2TimeRelatedStates_fms 0;
+BA_ "GenSigCycleTime" SG_ 2365484081 Driver2TimeRelatedStates_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2365484081 Driver2TimeRelatedStates_fms 100;
+BA_ "GenSigStartValue" SG_ 2365484081 Driver2TimeRelatedStates_fms 15;
+BA_ "SPN" SG_ 2365484081 Driver2TimeRelatedStates_fms 1618;
+BA_ "GenSigSendType" SG_ 2365484081 HandlingInformation_fms 0;
+BA_ "GenSigCycleTime" SG_ 2365484081 HandlingInformation_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2365484081 HandlingInformation_fms 100;
+BA_ "GenSigStartValue" SG_ 2365484081 HandlingInformation_fms 3;
+BA_ "SPN" SG_ 2365484081 HandlingInformation_fms 1621;
+BA_ "GenSigSendType" SG_ 2365484081 VehicleMotion_fms 0;
+BA_ "GenSigCycleTime" SG_ 2365484081 VehicleMotion_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2365484081 VehicleMotion_fms 100;
+BA_ "GenSigStartValue" SG_ 2365484081 VehicleMotion_fms 3;
+BA_ "SPN" SG_ 2365484081 VehicleMotion_fms 1611;
+BA_ "GenSigSendType" SG_ 2365484081 Driver1WorkingState_fms 0;
+BA_ "GenSigCycleTime" SG_ 2365484081 Driver1WorkingState_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2365484081 Driver1WorkingState_fms 100;
+BA_ "GenSigStartValue" SG_ 2365484081 Driver1WorkingState_fms 7;
+BA_ "SPN" SG_ 2365484081 Driver1WorkingState_fms 1612;
+BA_ "GenSigSendType" SG_ 2365484081 DriverCardDriver2_fms 0;
+BA_ "GenSigCycleTime" SG_ 2365484081 DriverCardDriver2_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2365484081 DriverCardDriver2_fms 100;
+BA_ "GenSigStartValue" SG_ 2365484081 DriverCardDriver2_fms 3;
+BA_ "SPN" SG_ 2365484081 DriverCardDriver2_fms 1616;
+BA_ "GenSigSendType" SG_ 2365484081 Driver1TimeRelatedStates_fms 0;
+BA_ "GenSigCycleTime" SG_ 2365484081 Driver1TimeRelatedStates_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2365484081 Driver1TimeRelatedStates_fms 100;
+BA_ "GenSigStartValue" SG_ 2365484081 Driver1TimeRelatedStates_fms 15;
+BA_ "SPN" SG_ 2365484081 Driver1TimeRelatedStates_fms 1617;
+BA_ "GenSigSendType" SG_ 2365484081 SystemEvent_fms 0;
+BA_ "GenSigCycleTime" SG_ 2365484081 SystemEvent_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2365484081 SystemEvent_fms 100;
+BA_ "GenSigStartValue" SG_ 2365484081 SystemEvent_fms 3;
+BA_ "SPN" SG_ 2365484081 SystemEvent_fms 1622;
+BA_ "GenSigSendType" SG_ 2365484081 Driver2WorkingState_fms 0;
+BA_ "GenSigCycleTime" SG_ 2365484081 Driver2WorkingState_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2365484081 Driver2WorkingState_fms 100;
+BA_ "GenSigStartValue" SG_ 2365484081 Driver2WorkingState_fms 7;
+BA_ "SPN" SG_ 2365484081 Driver2WorkingState_fms 1613;
+BA_ "GenSigSendType" SG_ 2365484081 TachographVehicleSpeed_fms 0;
+BA_ "GenSigCycleTime" SG_ 2365484081 TachographVehicleSpeed_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2365484081 TachographVehicleSpeed_fms 100;
+BA_ "GenSigStartValue" SG_ 2365484081 TachographVehicleSpeed_fms 65535;
+BA_ "SPN" SG_ 2365484081 TachographVehicleSpeed_fms 1624;
+BA_ "GenSigSendType" SG_ 2365484081 VehicleOverspeed_fms 0;
+BA_ "GenSigCycleTime" SG_ 2365484081 VehicleOverspeed_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2365484081 VehicleOverspeed_fms 100;
+BA_ "GenSigStartValue" SG_ 2365484081 VehicleOverspeed_fms 3;
+BA_ "SPN" SG_ 2365484081 VehicleOverspeed_fms 1614;
+BA_ "GenSigSendType" SG_ 2365484081 DirectionIndicator_fms 0;
+BA_ "GenSigCycleTime" SG_ 2365484081 DirectionIndicator_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2365484081 DirectionIndicator_fms 100;
+BA_ "GenSigStartValue" SG_ 2365484081 DirectionIndicator_fms 3;
+BA_ "SPN" SG_ 2365484081 DirectionIndicator_fms 1619;
+BA_ "GenSigSendType" SG_ 2566832177 FMSServiceDistance 0;
+BA_ "GenSigCycleTime" SG_ 2566832177 FMSServiceDistance 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566832177 FMSServiceDistance 100;
+BA_ "GenSigStartValue" SG_ 2566832177 FMSServiceDistance 65535;
+BA_ "SPN" SG_ 2566832177 FMSServiceDistance 914;
+BA_ "GenSigSendType" SG_ 2566759473 FMSAtLeastOnePTOEngaged 0;
+BA_ "GenSigCycleTime" SG_ 2566759473 FMSAtLeastOnePTOEngaged 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566759473 FMSAtLeastOnePTOEngaged 100;
+BA_ "GenSigStartValue" SG_ 2566759473 FMSAtLeastOnePTOEngaged 3;
+BA_ "SPN" SG_ 2566759473 FMSAtLeastOnePTOEngaged 3948;
+BA_ "GenSigSendType" SG_ 2566844977 EngineFuelRate_fms 0;
+BA_ "GenSigCycleTime" SG_ 2566844977 EngineFuelRate_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566844977 EngineFuelRate_fms 100;
+BA_ "GenSigStartValue" SG_ 2566844977 EngineFuelRate_fms 65535;
+BA_ "SPN" SG_ 2566844977 EngineFuelRate_fms 183;
+BA_ "GenSigSendType" SG_ 2566844977 FMSInstantFuelEconomy 0;
+BA_ "GenSigCycleTime" SG_ 2566844977 FMSInstantFuelEconomy 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566844977 FMSInstantFuelEconomy 100;
+BA_ "GenSigStartValue" SG_ 2566844977 FMSInstantFuelEconomy 65535;
+BA_ "SPN" SG_ 2566844977 FMSInstantFuelEconomy 184;
+BA_ "GenSigSendType" SG_ 2566842673 FMSEngineTotalFuelUsed 0;
+BA_ "GenSigCycleTime" SG_ 2566842673 FMSEngineTotalFuelUsed 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566842673 FMSEngineTotalFuelUsed 100;
+BA_ "GenSigStartValue" SG_ 2566842673 FMSEngineTotalFuelUsed 4294967295;
+BA_ "SPN" SG_ 2566842673 FMSEngineTotalFuelUsed 250;
+BA_ "GenSigSendType" SG_ 2566719793 FMSHiResEngineTotalFuelUsed 0;
+BA_ "GenSigCycleTime" SG_ 2566719793 FMSHiResEngineTotalFuelUsed 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566719793 FMSHiResEngineTotalFuelUsed 100;
+BA_ "GenSigStartValue" SG_ 2566719793 FMSHiResEngineTotalFuelUsed 4294967295;
+BA_ "SPN" SG_ 2566719793 FMSHiResEngineTotalFuelUsed 5054;
+BA_ "GenSigSendType" SG_ 2566841649 FMSEngineTotHoursOfOp 0;
+BA_ "GenSigCycleTime" SG_ 2566841649 FMSEngineTotHoursOfOp 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566841649 FMSEngineTotHoursOfOp 100;
+BA_ "GenSigStartValue" SG_ 2566841649 FMSEngineTotHoursOfOp 4294967295;
+BA_ "SPN" SG_ 2566841649 FMSEngineTotHoursOfOp 247;
+BA_ "GenSigSendType" SG_ 2633879857 FMSDiagnosisSupported 0;
+BA_ "GenSigCycleTime" SG_ 2633879857 FMSDiagnosisSupported 100;
+BA_ "GenSigCycleTimeActive" SG_ 2633879857 FMSDiagnosisSupported 100;
+BA_ "GenSigStartValue" SG_ 2633879857 FMSDiagnosisSupported 3;
+BA_ "SPN" SG_ 2633879857 FMSDiagnosisSupported 2804;
+BA_ "GenSigSendType" SG_ 2633879857 FMSSoftwareVersionSupported 0;
+BA_ "GenSigCycleTime" SG_ 2633879857 FMSSoftwareVersionSupported 100;
+BA_ "GenSigCycleTimeActive" SG_ 2633879857 FMSSoftwareVersionSupported 100;
+BA_ "SPN" SG_ 2633879857 FMSSoftwareVersionSupported 2806;
+BA_ "GenSigSendType" SG_ 2633879857 FMSRequestsSupported 0;
+BA_ "GenSigCycleTime" SG_ 2633879857 FMSRequestsSupported 100;
+BA_ "GenSigCycleTimeActive" SG_ 2633879857 FMSRequestsSupported 100;
+BA_ "GenSigStartValue" SG_ 2633879857 FMSRequestsSupported 3;
+BA_ "SPN" SG_ 2633879857 FMSRequestsSupported 2805;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_TellTaleStatus12 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_TellTaleStatus12 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_TellTaleStatus12 100;
+BA_ "GenSigStartValue" SG_ 2566749489 FMS1_fms_TellTaleStatus12 7;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_TellTaleStatus5 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_TellTaleStatus5 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_TellTaleStatus5 100;
+BA_ "GenSigStartValue" SG_ 2566749489 FMS1_fms_TellTaleStatus5 7;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_TellTaleStatus1 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_TellTaleStatus1 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_TellTaleStatus1 100;
+BA_ "GenSigStartValue" SG_ 2566749489 FMS1_fms_TellTaleStatus1 7;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_TellTaleStatus9 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_TellTaleStatus9 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_TellTaleStatus9 100;
+BA_ "GenSigStartValue" SG_ 2566749489 FMS1_fms_TellTaleStatus9 7;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_TellTaleStatus4 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_TellTaleStatus4 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_TellTaleStatus4 100;
+BA_ "GenSigStartValue" SG_ 2566749489 FMS1_fms_TellTaleStatus4 7;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_TellTaleStatus6 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_TellTaleStatus6 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_TellTaleStatus6 100;
+BA_ "GenSigStartValue" SG_ 2566749489 FMS1_fms_TellTaleStatus6 7;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_TellTaleStatus13 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_TellTaleStatus13 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_TellTaleStatus13 100;
+BA_ "GenSigStartValue" SG_ 2566749489 FMS1_fms_TellTaleStatus13 7;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_Blockid 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_Blockid 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_Blockid 100;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_TellTaleStatus8 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_TellTaleStatus8 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_TellTaleStatus8 100;
+BA_ "GenSigStartValue" SG_ 2566749489 FMS1_fms_TellTaleStatus8 7;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_TellTaleStatus11 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_TellTaleStatus11 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_TellTaleStatus11 100;
+BA_ "GenSigStartValue" SG_ 2566749489 FMS1_fms_TellTaleStatus11 7;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_TellTaleStatus15 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_TellTaleStatus15 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_TellTaleStatus15 100;
+BA_ "GenSigStartValue" SG_ 2566749489 FMS1_fms_TellTaleStatus15 7;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_TellTaleStatus10 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_TellTaleStatus10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_TellTaleStatus10 100;
+BA_ "GenSigStartValue" SG_ 2566749489 FMS1_fms_TellTaleStatus10 7;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_TellTaleStatus14 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_TellTaleStatus14 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_TellTaleStatus14 100;
+BA_ "GenSigStartValue" SG_ 2566749489 FMS1_fms_TellTaleStatus14 7;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_TellTaleStatus2 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_TellTaleStatus2 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_TellTaleStatus2 100;
+BA_ "GenSigStartValue" SG_ 2566749489 FMS1_fms_TellTaleStatus2 7;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_TellTaleStatus3 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_TellTaleStatus3 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_TellTaleStatus3 100;
+BA_ "GenSigStartValue" SG_ 2566749489 FMS1_fms_TellTaleStatus3 7;
+BA_ "GenSigSendType" SG_ 2566749489 FMS1_fms_TellTaleStatus7 0;
+BA_ "GenSigCycleTime" SG_ 2566749489 FMS1_fms_TellTaleStatus7 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566749489 FMS1_fms_TellTaleStatus7 100;
+BA_ "GenSigStartValue" SG_ 2566749489 FMS1_fms_TellTaleStatus7 7;
+BA_ "GenSigSendType" SG_ 2566843953 EngineCoolantTemp_stat_fms 0;
+BA_ "GenSigCycleTime" SG_ 2566843953 EngineCoolantTemp_stat_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566843953 EngineCoolantTemp_stat_fms 100;
+BA_ "GenSigStartValue" SG_ 2566843953 EngineCoolantTemp_stat_fms 255;
+BA_ "SPN" SG_ 2566843953 EngineCoolantTemp_stat_fms 110;
+BA_ "GenSigSendType" SG_ 2565865488 ActualDrvlnRetdrPctTrq_fms 0;
+BA_ "GenSigCycleTime" SG_ 2565865488 ActualDrvlnRetdrPctTrq_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2565865488 ActualDrvlnRetdrPctTrq_fms 100;
+BA_ "GenSigStartValue" SG_ 2565865488 ActualDrvlnRetdrPctTrq_fms 255;
+BA_ "GenSigSendType" SG_ 2565865488 RetarderTorqueMode_fms 0;
+BA_ "GenSigCycleTime" SG_ 2565865488 RetarderTorqueMode_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2565865488 RetarderTorqueMode_fms 100;
+BA_ "GenSigStartValue" SG_ 2565865488 RetarderTorqueMode_fms 15;
+BA_ "GenSigSendType" SG_ 2565865487 EngineRetarderTorqueMode_fms 0;
+BA_ "GenSigCycleTime" SG_ 2565865487 EngineRetarderTorqueMode_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2565865487 EngineRetarderTorqueMode_fms 100;
+BA_ "GenSigStartValue" SG_ 2565865487 EngineRetarderTorqueMode_fms 15;
+BA_ "GenSigSendType" SG_ 2565865487 ActualEngRetdrPercentTrq_fms 0;
+BA_ "GenSigCycleTime" SG_ 2565865487 ActualEngRetdrPercentTrq_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2565865487 ActualEngRetdrPercentTrq_fms 100;
+BA_ "GenSigStartValue" SG_ 2565865487 ActualEngRetdrPercentTrq_fms 255;
+BA_ "GenSigSendType" SG_ 2364539697 AcceleratorPedalPosition1_fms 0;
+BA_ "GenSigCycleTime" SG_ 2364539697 AcceleratorPedalPosition1_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2364539697 AcceleratorPedalPosition1_fms 100;
+BA_ "GenSigStartValue" SG_ 2364539697 AcceleratorPedalPosition1_fms 255;
+BA_ "SPN" SG_ 2364539697 AcceleratorPedalPosition1_fms 91;
+BA_ "GenSigSendType" SG_ 2364539697 EnginePctLoadAtCurrentSpd_fms 0;
+BA_ "GenSigCycleTime" SG_ 2364539697 EnginePctLoadAtCurrentSpd_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2364539697 EnginePctLoadAtCurrentSpd_fms 100;
+BA_ "GenSigStartValue" SG_ 2364539697 EnginePctLoadAtCurrentSpd_fms 255;
+BA_ "SPN" SG_ 2364539697 EnginePctLoadAtCurrentSpd_fms 92;
+BA_ "GenSigSendType" SG_ 2364539953 EngineSpeed_fms 0;
+BA_ "GenSigCycleTime" SG_ 2364539953 EngineSpeed_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2364539953 EngineSpeed_fms 100;
+BA_ "GenSigStartValue" SG_ 2364539953 EngineSpeed_fms 65535;
+BA_ "SPN" SG_ 2364539953 EngineSpeed_fms 190;
+BA_ "GenSigSendType" SG_ 2364539953 ActualEnginePercentTorque_fms 0;
+BA_ "GenSigCycleTime" SG_ 2364539953 ActualEnginePercentTorque_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2364539953 ActualEnginePercentTorque_fms 100;
+BA_ "GenSigStartValue" SG_ 2364539953 ActualEnginePercentTorque_fms 255;
+BA_ "GenSigSendType" SG_ 2566767153 FuelType 0;
+BA_ "GenSigCycleTime" SG_ 2566767153 FuelType 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566767153 FuelType 100;
+BA_ "GenSigStartValue" SG_ 2566767153 FuelType 255;
+BA_ "GenSigSendType" SG_ 2566810417 FMSDriversIdentifications 0;
+BA_ "GenSigCycleTime" SG_ 2566810417 FMSDriversIdentifications 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566810417 FMSDriversIdentifications 100;
+BA_ "GenSigSendType" SG_ 2566847537 FuelLevel_fms 0;
+BA_ "GenSigCycleTime" SG_ 2566847537 FuelLevel_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566847537 FuelLevel_fms 100;
+BA_ "GenSigStartValue" SG_ 2566847537 FuelLevel_fms 255;
+BA_ "SPN" SG_ 2566847537 FuelLevel_fms 96;
+BA_ "GenSigSendType" SG_ 2566811697 GrossCombVehicleWeight_fms 0;
+BA_ "GenSigCycleTime" SG_ 2566811697 GrossCombVehicleWeight_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566811697 GrossCombVehicleWeight_fms 100;
+BA_ "GenSigStartValue" SG_ 2566811697 GrossCombVehicleWeight_fms 65535;
+BA_ "GenSigSendType" SG_ 2563833649 BacklightLevelHighRes2_ISig_30 0;
+BA_ "GenSigCycleTime" SG_ 2563833649 BacklightLevelHighRes2_ISig_30 100;
+BA_ "GenSigCycleTimeActive" SG_ 2563833649 BacklightLevelHighRes2_ISig_30 100;
+BA_ "GenSigStartValue" SG_ 2563833649 BacklightLevelHighRes2_ISig_30 255;
+BA_ "GenSigSendType" SG_ 2566844721 BrakeSwitch_fms 0;
+BA_ "GenSigCycleTime" SG_ 2566844721 BrakeSwitch_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566844721 BrakeSwitch_fms 100;
+BA_ "GenSigStartValue" SG_ 2566844721 BrakeSwitch_fms 3;
+BA_ "SPN" SG_ 2566844721 BrakeSwitch_fms 597;
+BA_ "GenSigSendType" SG_ 2566844721 CCActive_fms 0;
+BA_ "GenSigCycleTime" SG_ 2566844721 CCActive_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566844721 CCActive_fms 100;
+BA_ "GenSigStartValue" SG_ 2566844721 CCActive_fms 3;
+BA_ "SPN" SG_ 2566844721 CCActive_fms 595;
+BA_ "GenSigSendType" SG_ 2566844721 WheelBasedVehicleSpeed_fms 0;
+BA_ "GenSigCycleTime" SG_ 2566844721 WheelBasedVehicleSpeed_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566844721 WheelBasedVehicleSpeed_fms 100;
+BA_ "GenSigStartValue" SG_ 2566844721 WheelBasedVehicleSpeed_fms 65535;
+BA_ "SPN" SG_ 2566844721 WheelBasedVehicleSpeed_fms 84;
+BA_ "GenSigSendType" SG_ 2566844721 ClutchSwitch_fms 0;
+BA_ "GenSigCycleTime" SG_ 2566844721 ClutchSwitch_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566844721 ClutchSwitch_fms 100;
+BA_ "GenSigStartValue" SG_ 2566844721 ClutchSwitch_fms 3;
+BA_ "SPN" SG_ 2566844721 ClutchSwitch_fms 598;
+BA_ "GenSigSendType" SG_ 2566844721 FMSPtoState 0;
+BA_ "GenSigCycleTime" SG_ 2566844721 FMSPtoState 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566844721 FMSPtoState 100;
+BA_ "GenSigStartValue" SG_ 2566844721 FMSPtoState 31;
+BA_ "SPN" SG_ 2566844721 FMSPtoState 976;
+BA_ "GenSigSendType" SG_ 2566805041 CatalystTankLevel_fms 0;
+BA_ "GenSigCycleTime" SG_ 2566805041 CatalystTankLevel_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566805041 CatalystTankLevel_fms 100;
+BA_ "GenSigStartValue" SG_ 2566805041 CatalystTankLevel_fms 255;
+BA_ "GenSigSendType" SG_ 2566845745 AmbientAirTemperature_fms 0;
+BA_ "GenSigCycleTime" SG_ 2566845745 AmbientAirTemperature_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566845745 AmbientAirTemperature_fms 100;
+BA_ "GenSigStartValue" SG_ 2566845745 AmbientAirTemperature_fms 65535;
+BA_ "SPN" SG_ 2566845745 AmbientAirTemperature_fms 171;
+BA_ "GenSigSendType" SG_ 2566827569 ServiceBrakeAirPrsCircuit1_fms 0;
+BA_ "GenSigCycleTime" SG_ 2566827569 ServiceBrakeAirPrsCircuit1_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566827569 ServiceBrakeAirPrsCircuit1_fms 100;
+BA_ "GenSigStartValue" SG_ 2566827569 ServiceBrakeAirPrsCircuit1_fms 255;
+BA_ "GenSigSendType" SG_ 2566827569 ServiceBrakeAirPrsCircuit2_fms 0;
+BA_ "GenSigCycleTime" SG_ 2566827569 ServiceBrakeAirPrsCircuit2_fms 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566827569 ServiceBrakeAirPrsCircuit2_fms 100;
+BA_ "GenSigStartValue" SG_ 2566827569 ServiceBrakeAirPrsCircuit2_fms 255;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566842929 FMSAxleLocation 24000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566842929 FMSAxleLocation 6000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566842929 FMSAxleWeight 24000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566842929 FMSAxleWeight 6000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ ERAU SG_ 2566908977 WeightClass 60000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ ERAU SG_ 2566908977 WeightClass 30000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ ERAU SG_ 2566908977 FuncIndIlluminationLevel_ISig_30 60000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ ERAU SG_ 2566908977 FuncIndIlluminationLevel_ISig_30 3000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ CIOM SG_ 2566907979 DiagInfoERAU 24000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ CIOM SG_ 2566907979 DiagInfoERAU 6000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566843441 FMSVehicleIdentNumber 60000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566843441 FMSVehicleIdentNumber 60000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ ERAU SG_ 2566843441 FMSVehicleIdentNumber 60000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ ERAU SG_ 2566843441 FMSVehicleIdentNumber 60000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566832433 TotalVehicleDistanceHiRes_fms 24000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566832433 TotalVehicleDistanceHiRes_fms 6000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 TachographPerformance_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 TachographPerformance_fms 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 DriverCardDriver1_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 DriverCardDriver1_fms 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 Driver2TimeRelatedStates_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 Driver2TimeRelatedStates_fms 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 HandlingInformation_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 HandlingInformation_fms 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 VehicleMotion_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 VehicleMotion_fms 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 Driver1WorkingState_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 Driver1WorkingState_fms 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 DriverCardDriver2_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 DriverCardDriver2_fms 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 Driver1TimeRelatedStates_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 Driver1TimeRelatedStates_fms 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 SystemEvent_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 SystemEvent_fms 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 Driver2WorkingState_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 Driver2WorkingState_fms 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 TachographVehicleSpeed_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 TachographVehicleSpeed_fms 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 VehicleOverspeed_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 VehicleOverspeed_fms 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 DirectionIndicator_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2365484081 DirectionIndicator_fms 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566832177 FMSServiceDistance 24000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566832177 FMSServiceDistance 6000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566759473 FMSAtLeastOnePTOEngaged 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566759473 FMSAtLeastOnePTOEngaged 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566844977 EngineFuelRate_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566844977 EngineFuelRate_fms 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566844977 FMSInstantFuelEconomy 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566844977 FMSInstantFuelEconomy 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566842673 FMSEngineTotalFuelUsed 24000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566842673 FMSEngineTotalFuelUsed 6000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566719793 FMSHiResEngineTotalFuelUsed 24000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566719793 FMSHiResEngineTotalFuelUsed 6000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566841649 FMSEngineTotHoursOfOp 24000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566841649 FMSEngineTotHoursOfOp 6000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2633879857 FMSDiagnosisSupported 60000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2633879857 FMSDiagnosisSupported 60000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2633879857 FMSSoftwareVersionSupported 60000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2633879857 FMSSoftwareVersionSupported 60000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2633879857 FMSRequestsSupported 60000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2633879857 FMSRequestsSupported 60000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566843953 EngineCoolantTemp_stat_fms 24000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566843953 EngineCoolantTemp_stat_fms 6000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2364539697 AcceleratorPedalPosition1_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2364539697 AcceleratorPedalPosition1_fms 300;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2364539697 EnginePctLoadAtCurrentSpd_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2364539697 EnginePctLoadAtCurrentSpd_fms 300;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2364539953 EngineSpeed_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2364539953 EngineSpeed_fms 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ ERAU SG_ 2566767153 FuelType 60000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ ERAU SG_ 2566767153 FuelType 30000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566810417 FMSDriversIdentifications 60000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566810417 FMSDriversIdentifications 60000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566847537 FuelLevel_fms 24000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566847537 FuelLevel_fms 6000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ ERAU SG_ 2563833649 BacklightLevelHighRes2_ISig_30 24000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ ERAU SG_ 2563833649 BacklightLevelHighRes2_ISig_30 6000;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566844721 BrakeSwitch_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566844721 BrakeSwitch_fms 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566844721 CCActive_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566844721 CCActive_fms 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566844721 WheelBasedVehicleSpeed_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566844721 WheelBasedVehicleSpeed_fms 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566844721 ClutchSwitch_fms 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566844721 ClutchSwitch_fms 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566844721 FMSPtoState 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566844721 FMSPtoState 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ FMSU SG_ 2566845745 AmbientAirTemperature_fms 24000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ FMSU SG_ 2566845745 AmbientAirTemperature_fms 6000;
+VAL_ 2566908977 WeightClass 15 "WeightClass_NotAvailable" 14 "WeightClass_Error" 13 "WeightClass_Spare7" 12 "WeightClass_Spare6" 11 "WeightClass_Spare5" 10 "WeightClass_Spare4" 9 "WeightClass_Spare3" 8 "WeightClass_Spare2" 7 "WeightClass_Spare1" 6 "WeightClass_HeavyDutyVehiclesClassN3" 5 "WeightClass_HeavyDutyVehiclesClassN2" 4 "WeightClass_LightCommercialVehiclesClassN1" 3 "WeightClass_PassengerVehicleClassM3" 2 "WeightClass_PassengerVehicleClassM2" 1 "WeightClass_PassengerVehicleClassM1" 0 "WeightClass_Spare0" ;
+VAL_ 2566908977 FuncIndIlluminationLevel_ISig_30 7 "FuncIndIlluminationLevel_NotAvailable" 6 "FuncIndIlluminationLevel_Error" 5 "FuncIndIlluminationLevel_Spare" 4 "FuncIndIlluminationLevel_IlluminationLevel4" 3 "FuncIndIlluminationLevel_IlluminationLevel3" 2 "FuncIndIlluminationLevel_IlluminationLevel2" 1 "FuncIndIlluminationLevel_IlluminationLevel1" 0 "FuncIndIlluminationLevel_IlluminationOff" ;
+VAL_ 2365484081 TachographPerformance_fms 3 "TachographPerformance_NotAvailable" 2 "TachographPerformance_Error" 1 "TachographPerformance_PerformanceAnalysis" 0 "TachographPerformance_NormalPerformance" ;
+VAL_ 2365484081 DriverCardDriver1_fms 3 "NotPresentPresent_NotAvailable" 2 "NotPresentPresent_ErrorIndicator" 1 "NotPresentPresent_Present" 0 "NotPresentPresent_NotPresent" ;
+VAL_ 2365484081 Driver2TimeRelatedStates_fms 15 "DriverTimeRelatedStates_NotAvailable" 14 "DriverTimeRelatedStates_Error" 13 "DriverTimeRelatedStates_Other" 12 "DriverTimeRelatedStates_Reserved_05" 11 "DriverTimeRelatedStates_Reserved_04" 10 "DriverTimeRelatedStates_Reserved_03" 9 "DriverTimeRelatedStates_Reserved_02" 8 "DriverTimeRelatedStates_Reserved_01" 7 "DriverTimeRelatedStates_Reserved" 6 "DriverTimeRelatedStates_Limit6_16hReached" 5 "DriverTimeRelatedStates_Limit5_15MinutesBefore16h" 4 "DriverTimeRelatedStates_Limit4_9hReached" 3 "DriverTimeRelatedStates_Limit3_15MinutesBefore9h" 2 "DriverTimeRelatedStates_Limit2_4h30minReached" 1 "DriverTimeRelatedStates_Limit1_15minBefore4h30min" 0 "DriverTimeRelatedStates_NormalNoLimitsReached" ;
+VAL_ 2365484081 HandlingInformation_fms 3 "HandlingInformation_NotAvailable" 2 "HandlingInformation_Error" 1 "HandlingInformation_HandlingInformation" 0 "HandlingInformation_NoHandlingInformation" ;
+VAL_ 2365484081 VehicleMotion_fms 3 "NotDetected_NotAvaliable" 2 "NotDetected_Error" 1 "NotDetected_Detected" 0 "NotDetected_NotDetected" ;
+VAL_ 2365484081 Driver1WorkingState_fms 7 "DriverWorkingState_NotAvailable" 6 "DriverWorkingState_ErrorIndicator" 5 "DriverWorkingState_Reserved_01" 4 "DriverWorkingState_Reserved" 3 "DriverWorkingState_DriveBehindWheel" 2 "DriverWorkingState_WorkLoadingUnloadingWorkingInAnOffice" 1 "DriverWorkingState_DriverAvailableShortBreak" 0 "DriverWorkingState_RestSleeping" ;
+VAL_ 2365484081 DriverCardDriver2_fms 3 "NotPresentPresent_NotAvailable" 2 "NotPresentPresent_ErrorIndicator" 1 "NotPresentPresent_Present" 0 "NotPresentPresent_NotPresent" ;
+VAL_ 2365484081 Driver1TimeRelatedStates_fms 15 "Driver1TimeRelatedStates_NotAvailable" 14 "Driver1TimeRelatedStates_Error" 13 "Driver1TimeRelatedStates_Other" 12 "Driver1TimeRelatedStates_NextMandatoryDriver1CardDownload" 11 "Driver1TimeRelatedStates_Driver1CardExpiryWarning" 10 "Driver1TimeRelatedStates_2WeekDrivingTimeWarning" 9 "Driver1TimeRelatedStates_2WeekDrivingTimePreWarning" 8 "Driver1TimeRelatedStates_WeeklyDrivingTimeWarning" 7 "Driver1TimeRelatedStates_WeeklyDrivingTimePreWarning" 6 "Driver1TimeRelatedStates_DailyWeeklyRestWarning" 5 "Driver1TimeRelatedStates_DailyWeeklyRestPreWarning" 4 "Driver1TimeRelatedStates_DailyDrivingTimeWarning" 3 "Driver1TimeRelatedStates_DailyDrivingTimePreWarning" 2 "Driver1TimeRelatedStates_4h30minReached" 1 "Driver1TimeRelatedStates_15minBefore4h30min" 0 "Driver1TimeRelatedStates_NormalNoLimitsReached" ;
+VAL_ 2365484081 SystemEvent_fms 3 "SystemEvent_NotAvailable" 2 "SystemEvent_Error" 1 "SystemEvent_TachographEvent" 0 "SystemEvent_NoTachographEvent" ;
+VAL_ 2365484081 Driver2WorkingState_fms 7 "DriverWorkingState_NotAvailable" 6 "DriverWorkingState_ErrorIndicator" 5 "DriverWorkingState_Reserved_01" 4 "DriverWorkingState_Reserved" 3 "DriverWorkingState_DriveBehindWheel" 2 "DriverWorkingState_WorkLoadingUnloadingWorkingInAnOffice" 1 "DriverWorkingState_DriverAvailableShortBreak" 0 "DriverWorkingState_RestSleeping" ;
+VAL_ 2365484081 VehicleOverspeed_fms 3 "VehicleOverspeed_NotAvailable" 2 "VehicleOverspeed_PreOverspeed" 1 "VehicleOverspeed_Overspeed" 0 "VehicleOverspeed_NoOverspeed" ;
+VAL_ 2365484081 DirectionIndicator_fms 3 "DirectionIndicator_NotAvailable" 2 "DirectionIndicator_Error" 1 "DirectionIndicator_Reverse" 0 "DirectionIndicator_Forward" ;
+VAL_ 2566759473 FMSAtLeastOnePTOEngaged 3 "OffOn_NotAvailable" 2 "OffOn_Error" 1 "OffOn_On" 0 "OffOn_Off" ;
+VAL_ 2633879857 FMSDiagnosisSupported 3 "Supported_DontCare" 2 "Supported_Reserved" 1 "Supported_Supported" 0 "Supported_NotSupported" ;
+VAL_ 2633879857 FMSRequestsSupported 3 "Supported_DontCare" 2 "Supported_Reserved" 1 "Supported_Supported" 0 "Supported_NotSupported" ;
+VAL_ 2566749489 FMS1_fms_TellTaleStatus12 7 "TellTaleStatus_NotAvailable" 6 "TellTaleStatus_Reserved3" 5 "TellTaleStatus_Reserved2" 4 "TellTaleStatus_Reserved1" 3 "TellTaleStatus_Info" 2 "TellTaleStatus_Yellow" 1 "TellTaleStatus_Red" 0 "TellTaleStatus_Off" ;
+VAL_ 2566749489 FMS1_fms_TellTaleStatus5 7 "TellTaleStatus_NotAvailable" 6 "TellTaleStatus_Reserved3" 5 "TellTaleStatus_Reserved2" 4 "TellTaleStatus_Reserved1" 3 "TellTaleStatus_Info" 2 "TellTaleStatus_Yellow" 1 "TellTaleStatus_Red" 0 "TellTaleStatus_Off" ;
+VAL_ 2566749489 FMS1_fms_TellTaleStatus1 7 "TellTaleStatus_NotAvailable" 6 "TellTaleStatus_Reserved3" 5 "TellTaleStatus_Reserved2" 4 "TellTaleStatus_Reserved1" 3 "TellTaleStatus_Info" 2 "TellTaleStatus_Yellow" 1 "TellTaleStatus_Red" 0 "TellTaleStatus_Off" ;
+VAL_ 2566749489 FMS1_fms_TellTaleStatus9 7 "TellTaleStatus_NotAvailable" 6 "TellTaleStatus_Reserved3" 5 "TellTaleStatus_Reserved2" 4 "TellTaleStatus_Reserved1" 3 "TellTaleStatus_Info" 2 "TellTaleStatus_Yellow" 1 "TellTaleStatus_Red" 0 "TellTaleStatus_Off" ;
+VAL_ 2566749489 FMS1_fms_TellTaleStatus4 7 "TellTaleStatus_NotAvailable" 6 "TellTaleStatus_Reserved3" 5 "TellTaleStatus_Reserved2" 4 "TellTaleStatus_Reserved1" 3 "TellTaleStatus_Info" 2 "TellTaleStatus_Yellow" 1 "TellTaleStatus_Red" 0 "TellTaleStatus_Off" ;
+VAL_ 2566749489 FMS1_fms_TellTaleStatus6 7 "TellTaleStatus_NotAvailable" 6 "TellTaleStatus_Reserved3" 5 "TellTaleStatus_Reserved2" 4 "TellTaleStatus_Reserved1" 3 "TellTaleStatus_Info" 2 "TellTaleStatus_Yellow" 1 "TellTaleStatus_Red" 0 "TellTaleStatus_Off" ;
+VAL_ 2566749489 FMS1_fms_TellTaleStatus13 7 "TellTaleStatus_NotAvailable" 6 "TellTaleStatus_Reserved3" 5 "TellTaleStatus_Reserved2" 4 "TellTaleStatus_Reserved1" 3 "TellTaleStatus_Info" 2 "TellTaleStatus_Yellow" 1 "TellTaleStatus_Red" 0 "TellTaleStatus_Off" ;
+VAL_ 2566749489 FMS1_fms_TellTaleStatus8 7 "TellTaleStatus_NotAvailable" 6 "TellTaleStatus_Reserved3" 5 "TellTaleStatus_Reserved2" 4 "TellTaleStatus_Reserved1" 3 "TellTaleStatus_Info" 2 "TellTaleStatus_Yellow" 1 "TellTaleStatus_Red" 0 "TellTaleStatus_Off" ;
+VAL_ 2566749489 FMS1_fms_TellTaleStatus11 7 "TellTaleStatus_NotAvailable" 6 "TellTaleStatus_Reserved3" 5 "TellTaleStatus_Reserved2" 4 "TellTaleStatus_Reserved1" 3 "TellTaleStatus_Info" 2 "TellTaleStatus_Yellow" 1 "TellTaleStatus_Red" 0 "TellTaleStatus_Off" ;
+VAL_ 2566749489 FMS1_fms_TellTaleStatus15 7 "TellTaleStatus_NotAvailable" 6 "TellTaleStatus_Reserved3" 5 "TellTaleStatus_Reserved2" 4 "TellTaleStatus_Reserved1" 3 "TellTaleStatus_Info" 2 "TellTaleStatus_Yellow" 1 "TellTaleStatus_Red" 0 "TellTaleStatus_Off" ;
+VAL_ 2566749489 FMS1_fms_TellTaleStatus10 7 "TellTaleStatus_NotAvailable" 6 "TellTaleStatus_Reserved3" 5 "TellTaleStatus_Reserved2" 4 "TellTaleStatus_Reserved1" 3 "TellTaleStatus_Info" 2 "TellTaleStatus_Yellow" 1 "TellTaleStatus_Red" 0 "TellTaleStatus_Off" ;
+VAL_ 2566749489 FMS1_fms_TellTaleStatus14 7 "TellTaleStatus_NotAvailable" 6 "TellTaleStatus_Reserved3" 5 "TellTaleStatus_Reserved2" 4 "TellTaleStatus_Reserved1" 3 "TellTaleStatus_Info" 2 "TellTaleStatus_Yellow" 1 "TellTaleStatus_Red" 0 "TellTaleStatus_Off" ;
+VAL_ 2566749489 FMS1_fms_TellTaleStatus2 7 "TellTaleStatus_NotAvailable" 6 "TellTaleStatus_Reserved3" 5 "TellTaleStatus_Reserved2" 4 "TellTaleStatus_Reserved1" 3 "TellTaleStatus_Info" 2 "TellTaleStatus_Yellow" 1 "TellTaleStatus_Red" 0 "TellTaleStatus_Off" ;
+VAL_ 2566749489 FMS1_fms_TellTaleStatus3 7 "TellTaleStatus_NotAvailable" 6 "TellTaleStatus_Reserved3" 5 "TellTaleStatus_Reserved2" 4 "TellTaleStatus_Reserved1" 3 "TellTaleStatus_Info" 2 "TellTaleStatus_Yellow" 1 "TellTaleStatus_Red" 0 "TellTaleStatus_Off" ;
+VAL_ 2566749489 FMS1_fms_TellTaleStatus7 7 "TellTaleStatus_NotAvailable" 6 "TellTaleStatus_Reserved3" 5 "TellTaleStatus_Reserved2" 4 "TellTaleStatus_Reserved1" 3 "TellTaleStatus_Info" 2 "TellTaleStatus_Yellow" 1 "TellTaleStatus_Red" 0 "TellTaleStatus_Off" ;
+VAL_ 2565865488 RetarderTorqueMode_fms 15 "RetarderTorqueMode_NotAvailable" 14 "RetarderTorqueMode_Other" 13 "RetarderTorqueMode_NotDefined" 12 "RetarderTorqueMode_ServiceProcedure" 11 "RetarderTorqueMode_RemoteAccelerator" 10 "RetarderTorqueMode_BrakingSystem" 9 "RetarderTorqueMode_HighSpeedGovernor" 8 "RetarderTorqueMode_TorqueLimiting" 7 "RetarderTorqueMode_ABSControl" 6 "RetarderTorqueMode_TransmissionControl" 5 "RetarderTorqueMode_ASRControl" 4 "RetarderTorqueMode_RoadSpeedGovernor" 3 "RetarderTorqueMode_PTOGovernor" 2 "RetarderTorqueMode_CruiseControl" 1 "RetarderTorqueMode_AcceleratorPedalOperatorSelection" 0 "RetarderTorqueMode_LowIdleGovernorNoRequestDefaultMode" ;
+VAL_ 2565865487 EngineRetarderTorqueMode_fms 15 "EngineRetarderTorqueMode_NotAvailable" 14 "EngineRetarderTorqueMode_Other" 13 "EngineRetarderTorqueMode_NotDefined" 12 "EngineRetarderTorqueMode_ServiceProcedure" 11 "EngineRetarderTorqueMode_RemoteAccelerator" 10 "EngineRetarderTorqueMode_BrakingSystem" 9 "EngineRetarderTorqueMode_HighSpeedGovernor" 8 "EngineRetarderTorqueMode_TorqueLimiting" 7 "EngineRetarderTorqueMode_ABSControl" 6 "EngineRetarderTorqueMode_TransmissionControl" 5 "EngineRetarderTorqueMode_ASRControl" 4 "EngineRetarderTorqueMode_RoadSpeedGovernor" 3 "EngineRetarderTorqueMode_PTOGovernor" 2 "EngineRetarderTorqueMode_CruiseControl" 1 "EngineRetarderTorqueMode_AcceleratorPedalOperatorSelection" 0 "EngineRetarderTorqueMode_LowIdleGovernorNoRequestDefaultMode" ;
+VAL_ 2566767153 FuelType 255 "FuelType_NotAvailable" 254 "FuelType_Error" 28 "FuelType_DualFuel_DieselAndLNG" 27 "FuelType_DualFuel_DieselAndCNG" 26 "FuelType_NaturalGasCompressedOrLiquefied" 25 "FuelType_BifuelDiesel" 24 "FuelType_BifuelVehicleNG_BI_NG" 23 "FuelType_NaturalGas_NG" 22 "FuelType_HybridVehicleRegenerationMode_HYB_REG" 21 "FuelType_HybridVehicleBatteryAndCombustion_HYB_MIX" 20 "FuelType_HybridVehicleBattery_HYB_ELEC" 19 "FuelType_HybridVehicleDiesel_HYB_DSL" 18 "FuelType_HybridVehicleEthanol_HYB_ETH" 17 "FuelType_HybridVehicleGasoline_HYB_GAS" 16 "FuelType_BifuelVehicleBatteryCombustion_BI_MIX" 15 "FuelType_BifuelVehicleBattery_BI_ELEC" 14 "FuelType_BifuelVehiclePropane_BI_PROP" 13 "FuelType_BifuelVehicleCNG_BI_CNG" 12 "FuelType_BifuelVehicleLPG_BI_LPG" 11 "FuelType_BifuelVehicleEthanol_BI_ETH" 10 "FuelType_BifuelVehicleMethanol_BI_METH" 9 "FuelType_BifuelVehicleGasoline_BI_GAS" 8 "FuelType_BatteryElectric_ELEC" 7 "FuelType_Propane_PROP" 6 "FuelType_CompressedNaturalGas_CNG" 5 "FuelType_LiquefiedPetroleumGas_LPG" 4 "FuelType_Diesel_DSL" 3 "FuelType_Ethanol_ETH" 2 "FuelType_Methanol_METH" 1 "FuelType_GasolinePetrol_GAS" 0 "FuelType_NotAvailable_NONE" ;
+VAL_ 2566844721 BrakeSwitch_fms 3 "BrakeSwitch_NotAvailable" 2 "BrakeSwitch_Error" 1 "BrakeSwitch_BrakePedalDepressed" 0 "BrakeSwitch_BrakePedalReleased" ;
+VAL_ 2566844721 CCActive_fms 3 "OffOn_NotAvailable" 2 "OffOn_Error" 1 "OffOn_On" 0 "OffOn_Off" ;
+VAL_ 2566844721 ClutchSwitch_fms 3 "ClutchSwitch_NotAvailable" 2 "ClutchSwitch_Error" 1 "ClutchSwitch_ClutchPedalDepressed" 0 "ClutchSwitch_ClutchPedalReleased" ;
+VAL_ 2566844721 FMSPtoState 31 "PtoState_NotAvailable" 30 "PtoState_NotDefined10" 29 "PtoState_NotDefined09" 28 "PtoState_NotDefined08" 27 "PtoState_NotDefined07" 26 "PtoState_NotDefined06" 25 "PtoState_NotDefined05" 24 "PtoState_NotDefined04" 23 "PtoState_NotDefined03" 22 "PtoState_NotDefined02" 21 "PtoState_NotDefined01" 20 "PtoState_NotDefined" 19 "PtoState_PTOSetSpeedMemory2" 18 "PtoState_PTOSetSpeedMemory1" 17 "PtoState_PreprogramSetSpeed8" 16 "PtoState_PreprogramSetSpeed7" 15 "PtoState_PreprogramSetSpeed6" 14 "PtoState_PreprogramSetSpeed5" 13 "PtoState_PreprogramSetSpeed4" 12 "PtoState_PreprogramSetSpeed3" 11 "PtoState_PreprogramSetSpeed2" 10 "PtoState_PreprogramSetSpeed1" 9 "PtoState_AcceleratorOverride" 8 "PtoState_Accelerate" 7 "PtoState_Resume" 6 "PtoState_DecelerateCoast" 5 "PtoState_Set" 4 "PtoState_RemoteStandby" 3 "PtoState_Standby" 2 "PtoState_RemoteHold" 1 "PtoState_Hold" 0 "PtoState_OffDisabled" ;
+SIG_GROUP_ 2566749489 FMS1_fms_sg 1 : FMS1_fms_TellTaleStatus12 FMS1_fms_TellTaleStatus5 FMS1_fms_TellTaleStatus1 FMS1_fms_TellTaleStatus9 FMS1_fms_TellTaleStatus4 FMS1_fms_TellTaleStatus6 FMS1_fms_TellTaleStatus13 FMS1_fms_Blockid FMS1_fms_TellTaleStatus8 FMS1_fms_TellTaleStatus11 FMS1_fms_TellTaleStatus15 FMS1_fms_TellTaleStatus10 FMS1_fms_TellTaleStatus14 FMS1_fms_TellTaleStatus2 FMS1_fms_TellTaleStatus3 FMS1_fms_TellTaleStatus7;
+

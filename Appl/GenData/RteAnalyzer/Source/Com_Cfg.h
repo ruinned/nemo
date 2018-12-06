@@ -1,0 +1,649 @@
+/**********************************************************************************************************************
+ *  COPYRIGHT
+ *  -------------------------------------------------------------------------------------------------------------------
+ *
+ *                This software is copyright protected and proprietary to Vector Informatik GmbH.
+ *                Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+ *                All other rights remain with Vector Informatik GmbH.
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  FILE DESCRIPTION
+ *  -------------------------------------------------------------------------------------------------------------------
+ *          File:  Com_Cfg.h
+ *        Config:  SCIM_BP.dpa
+ *   ECU-Project:  CIOM
+ *
+ *     Generator:  MICROSAR RTE Generator Version 4.18.0
+ *                 RTE Core Version 1.18.0
+ *       License:  Unlimited license CBD1800194 for Volvo Group Trucks Technology
+ *
+ *   Description:  Com Signal definitions
+ *********************************************************************************************************************/
+
+#ifndef _COM_CFG_H_
+# define _COM_CFG_H_
+
+
+# define ComConf_ComSignal_ABSInhibitRqstDenied_oCIOM_BB2_25P_oBackbone2_b939a8e2_Tx 0
+
+# define ComConf_ComSignal_ABS_Indication_oMastertoTCP_oLIN02_826b948e_Tx 1
+
+# define ComConf_ComSignal_ATC_Indication_oMastertoTCP_oLIN02_f0d69bff_Tx 2
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_AntCtrl_stat_oDebug15_SCIM_BB2_oBackbone2_2877d1d6_Tx 3
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_AntP1_X_Ctrl_oDebugCtrl9_SCIM_BB2_oBackbone2_fb66dba7_Rx 4
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_AntP1_X_oDebug22_SCIM_BB2_oBackbone2_3e4f02fb_Tx 5
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_AntP1_Y_Ctrl_oDebugCtrl9_SCIM_BB2_oBackbone2_76ee2645_Rx 6
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_AntP1_Y_oDebug22_SCIM_BB2_oBackbone2_022fe1f3_Tx 7
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_AntPi_X_Ctrl_oDebugCtrl9_SCIM_BB2_oBackbone2_108c5adc_Rx 8
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_AntPi_X_oDebug22_SCIM_BB2_oBackbone2_b567e3e2_Tx 9
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_AntPi_Y_Ctrl_oDebugCtrl9_SCIM_BB2_oBackbone2_9d04a73e_Rx 10
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_AntPi_Y_oDebug22_SCIM_BB2_oBackbone2_890700ea_Tx 11
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_Ant_Ctrl_oDebugCtrl3_SCIM_BB2_oBackbone2_f212143a_Rx 12
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_GainP1_Ctrl_oDebugCtrl3_SCIM_BB2_oBackbone2_7b701f8e_Rx 13
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_GainP1_stat_oDebug15_SCIM_BB2_oBackbone2_7d778ea0_Tx 14
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_GainP2_Ctrl_oDebugCtrl3_SCIM_BB2_oBackbone2_36981fe9_Rx 15
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_GainP2_stat_oDebug15_SCIM_BB2_oBackbone2_f6a4b0b9_Tx 16
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_GainP3_Ctrl_oDebugCtrl3_SCIM_BB2_oBackbone2_bb10e20b_Rx 17
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_GainP3_stat_oDebug15_SCIM_BB2_oBackbone2_393aa771_Tx 18
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_GainP4_Ctrl_oDebugCtrl3_SCIM_BB2_oBackbone2_ad481f27_Rx 19
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_GainP4_stat_oDebug15_SCIM_BB2_oBackbone2_3a73caca_Tx 20
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_Logic_Ctrl_oDebugCtrl3_SCIM_BB2_oBackbone2_f1a79db4_Rx 21
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_Logic_stat_oDebug15_SCIM_BB2_oBackbone2_19626c75_Tx 22
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_P1_MaxRSSI_oDebug16_SCIM_BB2_oBackbone2_6c5ea403_Tx 23
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_P2_MaxRSSI_oDebug16_SCIM_BB2_oBackbone2_21b6a464_Tx 24
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_P3_MaxRSSI_oDebug16_SCIM_BB2_oBackbone2_ac3e5986_Tx 25
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_P4_MaxRSSI_oDebug16_SCIM_BB2_oBackbone2_ba66a4aa_Tx 26
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_VDSI_Ctrl_oDebugCtrl3_SCIM_BB2_oBackbone2_e74c4cec_Rx 27
+
+# define ComConf_ComSignal_Debug_PVT_PEPS_VDSI_stat_oDebug15_SCIM_BB2_oBackbone2_cba0b8aa_Tx 28
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_12VDCDC_oDebugCtrl1_SCIM_BB2_oBackbone2_052e0dec_Rx 29
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_12VLiving_oDebugCtrl1_SCIM_BB2_oBackbone2_1cf3479b_Rx 30
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_12VParked_oDebugCtrl1_SCIM_BB2_oBackbone2_2cd9a2ad_Rx 31
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_BHS1_oDebugCtrl1_SCIM_BB2_oBackbone2_e91d1062_Rx 32
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_BHS2_oDebugCtrl1_SCIM_BB2_oBackbone2_b20aa177_Rx 33
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_BHS3_oDebugCtrl1_SCIM_BB2_oBackbone2_84f83184_Rx 34
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_BHS4_oDebugCtrl1_SCIM_BB2_oBackbone2_0425c35d_Rx 35
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_DAIPullUp_oDebugCtrl1_SCIM_BB2_oBackbone2_2731869d_Rx 36
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_LivingPullUp_oDebugCtrl1_SCIM_BB2_oBackbone2_666b21d3_Rx 37
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_ParkedPullUp_oDebugCtrl1_SCIM_BB2_oBackbone2_bf982706_Rx 38
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_WHS1_Duty_oDebugCtrl1_SCIM_BB2_oBackbone2_aec1e12e_Rx 39
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_WHS1_Freq_oDebugCtrl1_SCIM_BB2_oBackbone2_31c9eab2_Rx 40
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_WHS1_oDebugCtrl1_SCIM_BB2_oBackbone2_a57cfe3c_Rx 41
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_WHS2_Duty_oDebugCtrl1_SCIM_BB2_oBackbone2_e329e149_Rx 42
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_WHS2_Freq_oDebugCtrl1_SCIM_BB2_oBackbone2_7c21ead5_Rx 43
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_WHS2_oDebugCtrl1_SCIM_BB2_oBackbone2_fe6b4f29_Rx 44
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_WLS1_Duty_oDebugCtrl2_SCIM_BB2_oBackbone2_055e2012_Rx 45
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_WLS1_Freq_oDebugCtrl2_SCIM_BB2_oBackbone2_9a562b8e_Rx 46
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_WLS1_oDebugCtrl2_SCIM_BB2_oBackbone2_56f82f7d_Rx 47
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_WLS2Duty_oDebugCtrl2_SCIM_BB2_oBackbone2_1529858b_Rx 48
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_WLS2Freq_oDebugCtrl2_SCIM_BB2_oBackbone2_8a218e17_Rx 49
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_WLS2_oDebugCtrl2_SCIM_BB2_oBackbone2_0def9e68_Rx 50
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_WLS3Duty_oDebugCtrl2_SCIM_BB2_oBackbone2_95d99294_Rx 51
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_WLS3Freq_oDebugCtrl2_SCIM_BB2_oBackbone2_0ad19908_Rx 52
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_Ctrl_WLS3_oDebugCtrl2_SCIM_BB2_oBackbone2_3b1d0e9b_Rx 53
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_12VDCDCFault_oDebug2_SCIM_BB2_oBackbone2_a76feb3e_Tx 54
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_12VDCDCVolt_oDebug2_SCIM_BB2_oBackbone2_cecf5c09_Tx 55
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_12VLivingVolt_oDebug2_SCIM_BB2_oBackbone2_74d816f4_Tx 56
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_12VParkedVolt_oDebug2_SCIM_BB2_oBackbone2_44f2f3c2_Tx 57
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI01_oDebug7_SCIM_BB2_oBackbone2_d2059597_Tx 58
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI02_oDebug7_SCIM_BB2_oBackbone2_770dfefb_Tx 59
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI03_oDebug7_SCIM_BB2_oBackbone2_140a27df_Tx 60
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI04_oDebug7_SCIM_BB2_oBackbone2_e66c2e62_Tx 61
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI05_oDebug7_SCIM_BB2_oBackbone2_856bf746_Tx 62
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI06_oDebug7_SCIM_BB2_oBackbone2_20639c2a_Tx 63
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI07_oDebug8_SCIM_BB2_oBackbone2_0f71ca20_Tx 64
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI08_oDebug8_SCIM_BB2_oBackbone2_53cb063f_Tx 65
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI09_oDebug8_SCIM_BB2_oBackbone2_30ccdf1b_Tx 66
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI10_oDebug8_SCIM_BB2_oBackbone2_c1772095_Tx 67
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI11_oDebug8_SCIM_BB2_oBackbone2_a270f9b1_Tx 68
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI12_oDebug8_SCIM_BB2_oBackbone2_077892dd_Tx 69
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI13_oDebug28_SCIM_BB2_oBackbone2_f1e56b1c_Tx 70
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI14_oDebug28_SCIM_BB2_oBackbone2_44c7c224_Tx 71
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI15_oDebug28_SCIM_BB2_oBackbone2_78a7212c_Tx 72
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_ADI16_oDebug28_SCIM_BB2_oBackbone2_3c060434_Tx 73
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_BHS1_Fault_oDebug3_SCIM_BB2_oBackbone2_66b07d64_Tx 74
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_BHS1_Volt_oDebug3_SCIM_BB2_oBackbone2_8af915ef_Tx 75
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_BHS2_Fault_oDebug3_SCIM_BB2_oBackbone2_ed63437d_Tx 76
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_BHS2_Volt_oDebug3_SCIM_BB2_oBackbone2_e77fe6b5_Tx 77
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_BHS3_Fault_oDebug3_SCIM_BB2_oBackbone2_22fd54b5_Tx 78
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_BHS3_Volt_oDebug3_SCIM_BB2_oBackbone2_c3fdb783_Tx 79
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_BHS4_Fault_oDebug3_SCIM_BB2_oBackbone2_21b4390e_Tx 80
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_BHS4_Volt_oDebug3_SCIM_BB2_oBackbone2_3c720001_Tx 81
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_DAI1_oDebug9_SCIM_BB2_oBackbone2_179e2272_Tx 82
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_DAI2_oDebug9_SCIM_BB2_oBackbone2_b296491e_Tx 83
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_VBAT_oDebug2_SCIM_BB2_oBackbone2_d3887400_Tx 84
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WHS1_Duty_oDebug10_SCIM_BB2_oBackbone2_e4964bec_Tx 85
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WHS1_Fault_oDebug10_SCIM_BB2_oBackbone2_7f82e8ff_Tx 86
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WHS1_Freq_oDebug10_SCIM_BB2_oBackbone2_e909035f_Tx 87
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WHS1_Volt_oDebug10_SCIM_BB2_oBackbone2_fae484a1_Tx 88
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WHS2_Duty_oDebug10_SCIM_BB2_oBackbone2_6f4575f5_Tx 89
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WHS2_Fault_oDebug10_SCIM_BB2_oBackbone2_1b629301_Tx 90
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WHS2_Freq_oDebug10_SCIM_BB2_oBackbone2_62da3d46_Tx 91
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WHS2_Volt_oDebug10_SCIM_BB2_oBackbone2_7137bab8_Tx 92
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WLS1_Duty_oDebug11_SCIM_BB2_oBackbone2_151f9ecd_Tx 93
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WLS1_Fault_oDebug11_SCIM_BB2_oBackbone2_bbe8962a_Tx 94
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WLS1_Freq_oDebug11_SCIM_BB2_oBackbone2_1880d67e_Tx 95
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WLS1_Volt_oDebug11_SCIM_BB2_oBackbone2_0b6d5180_Tx 96
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WLS2_Duty_oDebug11_SCIM_BB2_oBackbone2_9ecca0d4_Tx 97
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WLS2_Fault_oDebug11_SCIM_BB2_oBackbone2_df08edd4_Tx 98
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WLS2_Freq_oDebug11_SCIM_BB2_oBackbone2_9353e867_Tx 99
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WLS2_Volt_oDebug11_SCIM_BB2_oBackbone2_80be6f99_Tx 100
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WLS3_Duty_oDebug9_SCIM_BB2_oBackbone2_c539df90_Tx 101
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WLS3_Fault_oDebug9_SCIM_BB2_oBackbone2_ee12f9c5_Tx 102
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WLS3_Freq_oDebug9_SCIM_BB2_oBackbone2_371b521a_Tx 103
+
+# define ComConf_ComSignal_Debug_PVT_SCIM_RD_WLS3_Volt_oDebug9_SCIM_BB2_oBackbone2_b604fa02_Tx 104
+
+# define ComConf_ComSignal_DiagInfoCCFW_oCCFWtoCIOM_L4_oLIN03_69083ad8_Rx 105
+
+# define ComConf_ComSignal_DiagInfoDLFW_oDLFWtoCIOM_L4_oLIN03_f14b1ebc_Rx 106
+
+# define ComConf_ComSignal_DiagInfoELCP1_oELCP1toCIOM_L4_oLIN03_e88000c8_Rx 107
+
+# define ComConf_ComSignal_DiagInfoELCP2_oELCP2toCIOM_L4_oLIN03_e304f264_Rx 108
+
+# define ComConf_ComSignal_DiagInfoILCP1_oILCP1toCIOM_L1_oLIN00_051a4e47_Rx 109
+
+# define ComConf_ComSignal_DiagInfoILCP2_oILCP2toCIOM_L4_oLIN03_df77e335_Rx 110
+
+# define ComConf_ComSignal_DiagInfoLECM2_oLECM2toCIOM_FR1_L1_oLIN00_427132ed_Rx 111
+
+# define ComConf_ComSignal_DiagInfoLECMBasic_oLECMBasic2CIOM_L1_oLIN00_209584a0_Rx 112
+
+# define ComConf_ComSignal_DiagInfoRCECS_oRCECStoCIOM_L5_oLIN04_46e60a03_Rx 113
+
+# define ComConf_ComSignal_DiagInfoTCP_oTCPtoMaster_oLIN02_23eac2a6_Rx 114
+
+# define ComConf_ComSignal_DoorLock_stat_ISig_13_oCIOMtoSlaves2_FR1_L1_oLIN00_66228e20_Tx 115
+
+# define ComConf_ComSignal_DoorLock_stat_ISig_4_oCIOM_BB2_06P_oBackbone2_3a170244_Tx 116
+
+# define ComConf_ComSignal_DoorLock_stat_ISig_5_oCIOM_Cab_06P_oCabSubnet_61085ef5_Tx 117
+
+# define ComConf_ComSignal_DynamicCode_value_oCIOM_BB2_21S_oBackbone2_04b10010_Tx 118
+
+# define ComConf_ComSignal_ESC_Indication_oMastertoTCP_oLIN02_e2022dfe_Tx 119
+
+# define ComConf_ComSignal_EngineGasRate_oEMS_BB2_05P_oBackbone2_96ec243f_Rx 120
+
+# define ComConf_ComSignal_FSP1DiagInfoL1_oFSP1_Frame_L1_oLIN00_f04712d6_Rx 121
+
+# define ComConf_ComSignal_FSP1DiagInfoL2_oFSP1_Frame_L2_oLIN01_7f2a1c9e_Rx 122
+
+# define ComConf_ComSignal_FSP1DiagInfoL3_oFSP1_Frame_L3_oLIN02_b1faa76e_Rx 123
+
+# define ComConf_ComSignal_FSP1DiagInfoL4_oFSP1_Frame_L4_oLIN03_ba81064f_Rx 124
+
+# define ComConf_ComSignal_FSP1DiagInfoL5_oFSP1_Frame_L5_oLIN04_733c79a6_Rx 125
+
+# define ComConf_ComSignal_FSP1IndicationCmdL1_oFSP_1_2_Req_L1_oLIN00_c2c0fe90_Tx 126
+
+# define ComConf_ComSignal_FSP1IndicationCmdL2_oFSP_1_2_Req_L2_oLIN01_635660cd_Tx 127
+
+# define ComConf_ComSignal_FSP1IndicationCmdL3_oFSP_1_2_Req_L3_oLIN02_b7d054ce_Tx 128
+
+# define ComConf_ComSignal_FSP1IndicationCmdL4_oFSP_1_2_Req_L4_oLIN03_fb0a5a36_Tx 129
+
+# define ComConf_ComSignal_FSP1IndicationCmdL5_oFSP_1_2_Req_L5_oLIN04_28e1aa2c_Tx 130
+
+# define ComConf_ComSignal_FSP1ResponseErrorL1_oFSP1_Frame_L1_oLIN00_b9e1fc6c_Rx 131
+
+# define ComConf_ComSignal_FSP1ResponseErrorL2_oFSP1_Frame_L2_oLIN01_368cf224_Rx 132
+
+# define ComConf_ComSignal_FSP1ResponseErrorL3_oFSP1_Frame_L3_oLIN02_f85c49d4_Rx 133
+
+# define ComConf_ComSignal_FSP1ResponseErrorL4_oFSP1_Frame_L4_oLIN03_f327e8f5_Rx 134
+
+# define ComConf_ComSignal_FSP1ResponseErrorL5_oFSP1_Frame_L5_oLIN04_3a9a971c_Rx 135
+
+# define ComConf_ComSignal_FSP1SwitchStatusL2_oFSP1_Frame_L2_oLIN01_68e68ffa_Rx 136
+
+# define ComConf_ComSignal_FSP1SwitchStatusL3_oFSP1_Frame_L3_oLIN02_a636340a_Rx 137
+
+# define ComConf_ComSignal_FSP1SwitchStatusL4_oFSP1_Frame_L4_oLIN03_ad4d952b_Rx 138
+
+# define ComConf_ComSignal_FSP1SwitchStatusL5_oFSP1_Frame_L5_oLIN04_64f0eac2_Rx 139
+
+# define ComConf_ComSignal_FSP2DiagInfoL1_oFSP2_Frame_L1_oLIN00_f8caf847_Rx 140
+
+# define ComConf_ComSignal_FSP2DiagInfoL2_oFSP2_Frame_L2_oLIN01_77a7f60f_Rx 141
+
+# define ComConf_ComSignal_FSP2DiagInfoL3_oFSP2_Frame_L3_oLIN02_b9774dff_Rx 142
+
+# define ComConf_ComSignal_FSP2IndicationCmdL1_oFSP_1_2_Req_L1_oLIN00_115be26b_Tx 143
+
+# define ComConf_ComSignal_FSP2IndicationCmdL2_oFSP_1_2_Req_L2_oLIN01_b0cd7c36_Tx 144
+
+# define ComConf_ComSignal_FSP2IndicationCmdL3_oFSP_1_2_Req_L3_oLIN02_644b4835_Tx 145
+
+# define ComConf_ComSignal_FSP2ResponseErrorL1_oFSP2_Frame_L1_oLIN00_a793a78f_Rx 146
+
+# define ComConf_ComSignal_FSP2ResponseErrorL2_oFSP2_Frame_L2_oLIN01_28fea9c7_Rx 147
+
+# define ComConf_ComSignal_FSP2ResponseErrorL3_oFSP2_Frame_L3_oLIN02_e62e1237_Rx 148
+
+# define ComConf_ComSignal_FSP2SwitchStatusL1_oFSP2_Frame_L1_oLIN00_ee70e556_Rx 149
+
+# define ComConf_ComSignal_FSP2SwitchStatusL2_oFSP2_Frame_L2_oLIN01_611deb1e_Rx 150
+
+# define ComConf_ComSignal_FSP2SwitchStatusL3_oFSP2_Frame_L3_oLIN02_afcd50ee_Rx 151
+
+# define ComConf_ComSignal_FSP3DiagInfoL2_oFSP3_Frame_L2_oLIN01_c6f3adbf_Rx 152
+
+# define ComConf_ComSignal_FSP3IndicationCmdL2_oFSP_3_4_Req_L2_oLIN01_088233aa_Tx 153
+
+# define ComConf_ComSignal_FSP3ResponseErrorL2_oFSP3_Frame_L2_oLIN01_22d09f66_Rx 154
+
+# define ComConf_ComSignal_FSP3SwitchStatusL2_oFSP3_Frame_L2_oLIN01_664b3742_Rx 155
+
+# define ComConf_ComSignal_FSP4DiagInfoL2_oFSP4_Frame_L2_oLIN01_66bc232d_Rx 156
+
+# define ComConf_ComSignal_FSP4IndicationCmdL2_oFSP_3_4_Req_L2_oLIN01_3a4c07b4_Tx 157
+
+# define ComConf_ComSignal_FSP4ResponseErrorL2_oFSP4_Frame_L2_oLIN01_141a1e01_Rx 158
+
+# define ComConf_ComSignal_FSP4SwitchStatusL2_oFSP4_Frame_L2_oLIN01_72eb22d6_Rx 159
+
+# define ComConf_ComSignal_LIN_ACCOrCCIndication_oCIOMtoSlaves2_L4_oLIN03_9dcb84e7_Tx 160
+
+# define ComConf_ComSignal_LIN_ASLIndication_oCIOMtoSlaves2_L4_oLIN03_70f56c35_Tx 161
+
+# define ComConf_ComSignal_LIN_AdjustButtonStatus_oRCECStoCIOM_L5_oLIN04_52fa0034_Rx 162
+
+# define ComConf_ComSignal_LIN_Adjust_DeviceIndication_oCIOMtoSlaves_L5_oLIN04_2e36f0fb_Tx 163
+
+# define ComConf_ComSignal_LIN_AudioSystemStatus_oCIOMtoSlaves2_FR1_L1_oLIN00_13393810_Tx 164
+
+# define ComConf_ComSignal_LIN_AudioVolumeIndicationCmd_oCIOMtoSlaves2_FR1_L1_oLIN00_e9108a0f_Tx 165
+
+# define ComConf_ComSignal_LIN_BTStatus_oCIOMtoSlaves2_FR2_L1_oLIN00_71f34a0b_Tx 166
+
+# define ComConf_ComSignal_LIN_BackButtonStatus_oRCECStoCIOM_L5_oLIN04_91249976_Rx 167
+
+# define ComConf_ComSignal_LIN_BackLightDimming_Status_oELCP1toCIOM_L4_oLIN03_ff25f41e_Rx 168
+
+# define ComConf_ComSignal_LIN_BlackPanelMode_ButtonStat_oELCP1toCIOM_L4_oLIN03_dece2221_Rx 169
+
+# define ComConf_ComSignal_LIN_BunkBAudioOnOff_ButtonStat_oLECMBasic2CIOM_L1_oLIN00_a735a09a_Rx 170
+
+# define ComConf_ComSignal_LIN_BunkBIntLightActvnBtn_stat_oLECMBasic2CIOM_L1_oLIN00_5d53684c_Rx 171
+
+# define ComConf_ComSignal_LIN_BunkBParkHeater_ButtonStat_oLECMBasic2CIOM_L1_oLIN00_0c567d49_Rx 172
+
+# define ComConf_ComSignal_LIN_BunkBTempDec_ButtonStat_oLECMBasic2CIOM_L1_oLIN00_bad7c8e9_Rx 173
+
+# define ComConf_ComSignal_LIN_BunkBTempInc_ButtonStat_oLECMBasic2CIOM_L1_oLIN00_7521d3fe_Rx 174
+
+# define ComConf_ComSignal_LIN_BunkBVolumeDown_ButtonStat_oLECMBasic2CIOM_L1_oLIN00_c7ff11cb_Rx 175
+
+# define ComConf_ComSignal_LIN_BunkBVolumeUp_ButtonStat_oLECMBasic2CIOM_L1_oLIN00_4fd90c4b_Rx 176
+
+# define ComConf_ComSignal_LIN_BunkH2AudioOnOff_ButtonSta_oLECM2toCIOM_FR1_L1_oLIN00_8085e670_Rx 177
+
+# define ComConf_ComSignal_LIN_BunkH2Fade_ButtonStatus_oLECM2toCIOM_FR1_L1_oLIN00_64ae31ec_Rx 178
+
+# define ComConf_ComSignal_LIN_BunkH2IntLightActvnBtn_sta_oLECM2toCIOM_FR1_L1_oLIN00_7ae32ea6_Rx 179
+
+# define ComConf_ComSignal_LIN_BunkH2IntLightDecBtn_stat_oLECM2toCIOM_FR1_L1_oLIN00_445fc32a_Rx 180
+
+# define ComConf_ComSignal_LIN_BunkH2IntLightIncBtn_stat_oLECM2toCIOM_FR1_L1_oLIN00_a3c1ab0b_Rx 181
+
+# define ComConf_ComSignal_LIN_BunkH2LockButtonStatus_oLECM2toCIOM_FR1_L1_oLIN00_d71d2857_Rx 182
+
+# define ComConf_ComSignal_LIN_BunkH2OnOFF_ButtonStatus_oLECM2toCIOM_FR1_L1_oLIN00_6a259b90_Rx 183
+
+# define ComConf_ComSignal_LIN_BunkH2ParkHeater_ButtonSta_oLECM2toCIOM_FR1_L1_oLIN00_2be63ba3_Rx 184
+
+# define ComConf_ComSignal_LIN_BunkH2Phone_ButtonStatus_oLECM2toCIOM_FR1_L1_oLIN00_99e0fe87_Rx 185
+
+# define ComConf_ComSignal_LIN_BunkH2PowerWinCloseDSBtn_s_oLECM2toCIOM_FR2_L1_oLIN00_9fa2715d_Rx 186
+
+# define ComConf_ComSignal_LIN_BunkH2PowerWinClosePSBtn_s_oLECM2toCIOM_FR2_L1_oLIN00_281d2c26_Rx 187
+
+# define ComConf_ComSignal_LIN_BunkH2PowerWinOpenDSBtn_st_oLECM2toCIOM_FR2_L1_oLIN00_0df6d397_Rx 188
+
+# define ComConf_ComSignal_LIN_BunkH2PowerWinOpenPSBtn_st_oLECM2toCIOM_FR2_L1_oLIN00_ca96c47e_Rx 189
+
+# define ComConf_ComSignal_LIN_BunkH2RoofhatchCloseBtn_St_oLECM2toCIOM_FR1_L1_oLIN00_c184d263_Rx 190
+
+# define ComConf_ComSignal_LIN_BunkH2RoofhatchOpenBtn_Sta_oLECM2toCIOM_FR1_L1_oLIN00_dd2458bc_Rx 191
+
+# define ComConf_ComSignal_LIN_BunkH2TempDec_ButtonStatus_oLECM2toCIOM_FR1_L1_oLIN00_857664ae_Rx 192
+
+# define ComConf_ComSignal_LIN_BunkH2TempInc_ButtonStatus_oLECM2toCIOM_FR1_L1_oLIN00_61f74d27_Rx 193
+
+# define ComConf_ComSignal_LIN_BunkH2VolumeDown_ButtonSta_oLECM2toCIOM_FR1_L1_oLIN00_e04f5721_Rx 194
+
+# define ComConf_ComSignal_LIN_BunkH2VolumeUp_ButtonStatu_oLECM2toCIOM_FR1_L1_oLIN00_92cefa8d_Rx 195
+
+# define ComConf_ComSignal_LIN_DRL_ButtonStatus_oELCP2toCIOM_L4_oLIN03_e8cb5735_Rx 196
+
+# define ComConf_ComSignal_LIN_DaytimeRunningLight_Indica_oCIOMtoSlaves1_L4_oLIN03_f7c9701b_Tx 197
+
+# define ComConf_ComSignal_LIN_DifflockDeactivationBtn_st_oDLFWtoCIOM_L4_oLIN03_7700113d_Rx 198
+
+# define ComConf_ComSignal_LIN_DifflockMode_Wheelstatus_oDLFWtoCIOM_L4_oLIN03_80a746c7_Rx 199
+
+# define ComConf_ComSignal_LIN_DifflockOnOff_Indication_oCIOMtoSlaves2_L4_oLIN03_eaa1e19e_Tx 200
+
+# define ComConf_ComSignal_LIN_DoorAutoFuncBtn_stat_oILCP1toCIOM_L1_oLIN00_0dc2e67f_Rx 201
+
+# define ComConf_ComSignal_LIN_DoorAutoFuncInd_cmd_oCIOMtoSlaves1_L1_oLIN00_52fafc3c_Tx 202
+
+# define ComConf_ComSignal_LIN_Down_DeviceIndication_oCIOMtoSlaves_L5_oLIN04_c9ef6b77_Tx 203
+
+# define ComConf_ComSignal_LIN_DrivingLightPlus_Indicatio_oCIOMtoSlaves1_L4_oLIN03_e75acc52_Tx 204
+
+# define ComConf_ComSignal_LIN_DrivingLight_Indication_oCIOMtoSlaves1_L4_oLIN03_e3d131c9_Tx 205
+
+# define ComConf_ComSignal_LIN_EscButtonMuddySiteDeviceIn_oCIOMtoSlaves2_L4_oLIN03_b87af696_Tx 206
+
+# define ComConf_ComSignal_LIN_EscButtonMuddySiteStatus_oDLFWtoCIOM_L4_oLIN03_ac37f393_Rx 207
+
+# define ComConf_ComSignal_LIN_FCWPushButton_oCCFWtoCIOM_L4_oLIN03_242f5462_Rx 208
+
+# define ComConf_ComSignal_LIN_FCW_DeviceIndication_oCIOMtoSlaves2_L4_oLIN03_246586c3_Tx 209
+
+# define ComConf_ComSignal_LIN_FogLightFront_ButtonStat_1_oELCP1toCIOM_L4_oLIN03_e1a5bfc2_Rx 210
+
+# define ComConf_ComSignal_LIN_FogLightFront_ButtonStat_2_oELCP2toCIOM_L4_oLIN03_ea214d6e_Rx 211
+
+# define ComConf_ComSignal_LIN_FogLightRear_ButtonStat_1_oELCP1toCIOM_L4_oLIN03_14baadea_Rx 212
+
+# define ComConf_ComSignal_LIN_FogLightRear_ButtonStat_2_oELCP2toCIOM_L4_oLIN03_1f3e5f46_Rx 213
+
+# define ComConf_ComSignal_LIN_FrontFog_Indication_oCIOMtoSlaves1_L4_oLIN03_890ecb12_Tx 214
+
+# define ComConf_ComSignal_LIN_HeadLampUpDown_SwitchStatu_oELCP2toCIOM_L4_oLIN03_ea48cea1_Rx 215
+
+# define ComConf_ComSignal_LIN_IntLghtCenterBtnFreeWhl_s_oILCP2toCIOM_L4_oLIN03_27a7dc09_Rx 216
+
+# define ComConf_ComSignal_LIN_IntLghtDimmingLvlDecBtn_s_oILCP1toCIOM_L1_oLIN00_0a50c243_Rx 217
+
+# define ComConf_ComSignal_LIN_IntLghtDimmingLvlFreeWhl_s_oILCP2toCIOM_L4_oLIN03_9d9afdd7_Rx 218
+
+# define ComConf_ComSignal_LIN_IntLghtDimmingLvlIncBtn_s_oILCP1toCIOM_L1_oLIN00_34c0f447_Rx 219
+
+# define ComConf_ComSignal_LIN_IntLghtLvlIndScaled_cmd_oCIOMtoSlaves2_FR1_L1_oLIN00_9d28ed83_Tx 220
+
+# define ComConf_ComSignal_LIN_IntLghtMaxModeBtnPnl2_s_oILCP2toCIOM_L4_oLIN03_eeb895fc_Rx 221
+
+# define ComConf_ComSignal_LIN_IntLghtModeSelrFreeWheel_s_oILCP1toCIOM_L1_oLIN00_98c2e509_Rx 222
+
+# define ComConf_ComSignal_LIN_IntLghtNightModeBt2_s_oILCP2toCIOM_L4_oLIN03_c1a85f21_Rx 223
+
+# define ComConf_ComSignal_LIN_IntLghtOffModeInd_cmd_oCIOMtoSlaves1_L1_oLIN00_00d309d6_Tx 224
+
+# define ComConf_ComSignal_LIN_IntLghtRestModeBtnPnl2_s_oILCP2toCIOM_L4_oLIN03_46e1f77a_Rx 225
+
+# define ComConf_ComSignal_LIN_IntLightMaxModeInd_cmd_oCIOMtoSlaves1_L1_oLIN00_523a53e3_Tx 226
+
+# define ComConf_ComSignal_LIN_IntLightNightModeInd_cmd_oCIOMtoSlaves1_L1_oLIN00_8c1fb2a2_Tx 227
+
+# define ComConf_ComSignal_LIN_IntLightRestingModeInd_cmd_oCIOMtoSlaves1_L1_oLIN00_df4802bd_Tx 228
+
+# define ComConf_ComSignal_LIN_LKSPushButton_oCCFWtoCIOM_L4_oLIN03_8e8e108b_Rx 229
+
+# define ComConf_ComSignal_LIN_LKS_DeviceIndication_oCIOMtoSlaves2_L4_oLIN03_e9d09941_Tx 230
+
+# define ComConf_ComSignal_LIN_LevelingThumbwheel_stat_oELCP1toCIOM_L4_oLIN03_cb03d712_Rx 231
+
+# define ComConf_ComSignal_LIN_LightMode_Status_1_oELCP1toCIOM_L4_oLIN03_c62c6da2_Rx 232
+
+# define ComConf_ComSignal_LIN_LightMode_Status_2_oELCP2toCIOM_L4_oLIN03_cda89f0e_Rx 233
+
+# define ComConf_ComSignal_LIN_M1_DeviceIndication_oCIOMtoSlaves_L5_oLIN04_d4ecc99f_Tx 234
+
+# define ComConf_ComSignal_LIN_M2_DeviceIndication_oCIOMtoSlaves_L5_oLIN04_ecd742ec_Tx 235
+
+# define ComConf_ComSignal_LIN_M3_DeviceIndication_oCIOMtoSlaves_L5_oLIN04_4deec602_Tx 236
+
+# define ComConf_ComSignal_LIN_MemButtonStatus_oRCECStoCIOM_L5_oLIN04_0975e3a6_Rx 237
+
+# define ComConf_ComSignal_LIN_Offroad_ButtonStatus_oDLFWtoCIOM_L4_oLIN03_2199360f_Rx 238
+
+# define ComConf_ComSignal_LIN_Offroad_Indication_oCIOMtoSlaves2_L4_oLIN03_f70e4ef2_Tx 239
+
+# define ComConf_ComSignal_LIN_ParkingLight_Indication_oCIOMtoSlaves1_L4_oLIN03_de9a5a8c_Tx 240
+
+# define ComConf_ComSignal_LIN_PhoneButtonIndication_cmd_oCIOMtoSlaves2_FR1_L1_oLIN00_a04041c2_Tx 241
+
+# define ComConf_ComSignal_LIN_RearFog_Indication_oCIOMtoSlaves1_L4_oLIN03_9af57169_Tx 242
+
+# define ComConf_ComSignal_LIN_RearWorkProjector_BtnStat_oELCP2toCIOM_L4_oLIN03_bb9bb1f8_Rx 243
+
+# define ComConf_ComSignal_LIN_RearWorkProjector_Indicati_oCIOMtoSlaves2_L4_oLIN03_d4496a61_Tx 244
+
+# define ComConf_ComSignal_LIN_SelectButtonStatus_oRCECStoCIOM_L5_oLIN04_07d81d0f_Rx 245
+
+# define ComConf_ComSignal_LIN_ShortPulseMaxLength_oCIOMtoSlaves_L5_oLIN04_83fa06d3_Tx 246
+
+# define ComConf_ComSignal_LIN_SpeedControlModeButtonStat_oCCFWtoCIOM_L4_oLIN03_0f6013d7_Rx 247
+
+# define ComConf_ComSignal_LIN_SpeedControlModeWheelStat_oCCFWtoCIOM_L4_oLIN03_cc9e59ce_Rx 248
+
+# define ComConf_ComSignal_LIN_StopButtonStatus_oRCECStoCIOM_L5_oLIN04_c8659d40_Rx 249
+
+# define ComConf_ComSignal_LIN_TCP_ABS_ButtonStatus_oTCPtoMaster_oLIN02_7968eb64_Rx 250
+
+# define ComConf_ComSignal_LIN_TCP_ATC_ButtonStatus_oTCPtoMaster_oLIN02_dff3ccff_Rx 251
+
+# define ComConf_ComSignal_LIN_TCP_ESC_ButtonStatus_oTCPtoMaster_oLIN02_e4eaf9d3_Rx 252
+
+# define ComConf_ComSignal_LIN_TCP_KnobPostionStatus_oTCPtoMaster_oLIN02_d1058f2b_Rx 253
+
+# define ComConf_ComSignal_LIN_TCP_TCS_ButtonStatus_oTCPtoMaster_oLIN02_fa9712f2_Rx 254
+
+# define ComConf_ComSignal_LIN_Up_DeviceIndication_oCIOMtoSlaves_L5_oLIN04_c6192fe4_Tx 255
+
+# define ComConf_ComSignal_LIN_WRDownButtonStatus_oRCECStoCIOM_L5_oLIN04_48a8dab2_Rx 256
+
+# define ComConf_ComSignal_LIN_WRUpButtonStatus_oRCECStoCIOM_L5_oLIN04_a2873536_Rx 257
+
+# define ComConf_ComSignal_PinCode_validity_time_oCIOM_BB2_10P_oBackbone2_d8b8c81c_Tx 258
+
+# define ComConf_ComSignal_ResponseErrorCCFW_oCCFWtoCIOM_L4_oLIN03_38ff59f8_Rx 259
+
+# define ComConf_ComSignal_ResponseErrorDLFW_oDLFWtoCIOM_L4_oLIN03_a0bc7d9c_Rx 260
+
+# define ComConf_ComSignal_ResponseErrorELCP1_oELCP1toCIOM_L4_oLIN03_a9bf457f_Rx 261
+
+# define ComConf_ComSignal_ResponseErrorELCP2_oELCP2toCIOM_L4_oLIN03_a23bb7d3_Rx 262
+
+# define ComConf_ComSignal_ResponseErrorILCP1_oILCP1toCIOM_L1_oLIN00_44250bf0_Rx 263
+
+# define ComConf_ComSignal_ResponseErrorILCP2_oILCP2toCIOM_L4_oLIN03_9e48a682_Rx 264
+
+# define ComConf_ComSignal_ResponseErrorLECM2_oLECM2toCIOM_FR1_L1_oLIN00_ed8050df_Rx 265
+
+# define ComConf_ComSignal_ResponseErrorLECMBasic_oLECMBasic2CIOM_L1_oLIN00_9a0b7e5e_Rx 266
+
+# define ComConf_ComSignal_ResponseErrorRCECS_oRCECStoCIOM_L5_oLIN04_07d94fb4_Rx 267
+
+# define ComConf_ComSignal_ResponseErrorTCP_oTCPtoMaster_oLIN02_2075be52_Rx 268
+
+# define ComConf_ComSignalGroup_SG_LIN_AlmClkCurAlarm_stat_sg_oCIOMtoSlaves2_FR2_L1_oLIN00_ff5b96ab_Tx 269
+
+# define ComConf_ComGroupSignal_LIN_AlmClkCurAlarm_stat_ID_oCIOMtoSlaves2_FR2_L1_oLIN00_19fc9ce3_Tx 270
+
+# define ComConf_ComGroupSignal_LIN_AlmClkCurAlarm_stat_SetHr_oCIOMtoSlaves2_FR2_L1_oLIN00_88ecba00_Tx 271
+
+# define ComConf_ComGroupSignal_LIN_AlmClkCurAlarm_stat_SetMin_oCIOMtoSlaves2_FR2_L1_oLIN00_ffefc0f0_Tx 272
+
+# define ComConf_ComGroupSignal_LIN_AlmClkCurAlarm_stat_Stat_oCIOMtoSlaves2_FR2_L1_oLIN00_a5dbc118_Tx 273
+
+# define ComConf_ComGroupSignal_LIN_AlmClkCurAlarm_stat_Type_oCIOMtoSlaves2_FR2_L1_oLIN00_ea57a2de_Tx 274
+
+# define ComConf_ComSignalGroup_SG_LIN_AlmClkSetCurAlm_rqst_sg_oLECM2toCIOM_FR1_L1_oLIN00_05d68799_Rx 275
+
+# define ComConf_ComGroupSignal_LIN_AlmClkSetCurAlm_rqst_ID_oLECM2toCIOM_FR1_L1_oLIN00_6f7167c5_Rx 276
+
+# define ComConf_ComGroupSignal_LIN_AlmClkSetCurAlm_rqst_SetHr_oLECM2toCIOM_FR1_L1_oLIN00_a212d04d_Rx 277
+
+# define ComConf_ComGroupSignal_LIN_AlmClkSetCurAlm_rqst_SetMin_oLECM2toCIOM_FR1_L1_oLIN00_ef20f768_Rx 278
+
+# define ComConf_ComGroupSignal_LIN_AlmClkSetCurAlm_rqst_Stat_oLECM2toCIOM_FR1_L1_oLIN00_2711b94b_Rx 279
+
+# define ComConf_ComGroupSignal_LIN_AlmClkSetCurAlm_rqst_Type_oLECM2toCIOM_FR1_L1_oLIN00_05162ab9_Rx 280
+
+# define ComConf_ComSignalGroup_SG_LIN_BunkH2PHTi_rqs_sg_oLECM2toCIOM_FR3_L1_oLIN00_0bf5fe80_Rx 281
+
+# define ComConf_ComGroupSignal_LIN_BunkH2PHTi_rqs_DurnTimeHr_oLECM2toCIOM_FR3_L1_oLIN00_5d2e274e_Rx 282
+
+# define ComConf_ComGroupSignal_LIN_BunkH2PHTi_rqs_DurnTimeMin_oLECM2toCIOM_FR3_L1_oLIN00_c281bd7b_Rx 283
+
+# define ComConf_ComGroupSignal_LIN_BunkH2PHTi_rqs_StartTimeHr_oLECM2toCIOM_FR3_L1_oLIN00_68595ad8_Rx 284
+
+# define ComConf_ComGroupSignal_LIN_BunkH2PHTi_rqs_StartTimeMin_oLECM2toCIOM_FR3_L1_oLIN00_dbd8fc77_Rx 285
+
+# define ComConf_ComGroupSignal_LIN_BunkH2PHTi_rqs_Timer_cmd_oLECM2toCIOM_FR3_L1_oLIN00_f01ce601_Rx 286
+
+# define ComConf_ComSignalGroup_SG_LIN_IntLghtModeInd_cmd_sg_oCIOMtoSlaves2_FR1_L1_oLIN00_daaab64c_Tx 287
+
+# define ComConf_ComGroupSignal_LIN_IntLghtModeInd_cmd_EventFlag_oCIOMtoSlaves2_FR1_L1_oLIN00_b8366a71_Tx 288
+
+# define ComConf_ComGroupSignal_LIN_IntLghtModeInd_cmd_IL_Mode_oCIOMtoSlaves2_FR1_L1_oLIN00_dfc63d22_Tx 289
+
+# define ComConf_ComSignal_SwitchDetectionNeeded1L1_oFSP1_Frame_L1_oLIN00_099b825d_Rx 290
+
+# define ComConf_ComSignal_SwitchDetectionNeeded1L2_oFSP1_Frame_L2_oLIN01_86f68c15_Rx 291
+
+# define ComConf_ComSignal_SwitchDetectionNeeded1L3_oFSP1_Frame_L3_oLIN02_482637e5_Rx 292
+
+# define ComConf_ComSignal_SwitchDetectionNeeded1L4_oFSP1_Frame_L4_oLIN03_435d96c4_Rx 293
+
+# define ComConf_ComSignal_SwitchDetectionNeeded1L5_oFSP1_Frame_L5_oLIN04_8ae0e92d_Rx 294
+
+# define ComConf_ComSignal_SwitchDetectionNeeded2L1_oFSP2_Frame_L1_oLIN00_6fec6f8a_Rx 295
+
+# define ComConf_ComSignal_SwitchDetectionNeeded2L2_oFSP2_Frame_L2_oLIN01_e08161c2_Rx 296
+
+# define ComConf_ComSignal_SwitchDetectionNeeded2L3_oFSP2_Frame_L3_oLIN02_2e51da32_Rx 297
+
+# define ComConf_ComSignal_SwitchDetectionNeeded3L2_oFSP3_Frame_L2_oLIN01_c2ac3a8f_Rx 298
+
+# define ComConf_ComSignal_SwitchDetectionNeeded4L2_oFSP4_Frame_L2_oLIN01_2c6eba6c_Rx 299
+
+# define ComConf_ComSignal_SwitchDetectionResp1L1_oFSP1_SwitchDetResp_L1_oLIN00_e8a163d5_Rx 300
+
+# define ComConf_ComSignal_SwitchDetectionResp1L2_oFSP1_SwitchDetResp_L2_oLIN01_02016dd3_Rx 301
+
+# define ComConf_ComSignal_SwitchDetectionResp1L3_oFSP1_SwitchDetResp_L3_oLIN02_5945d426_Rx 302
+
+# define ComConf_ComSignal_SwitchDetectionResp1L4_oFSP1_SwitchDetResp_L4_oLIN03_0c30779e_Rx 303
+
+# define ComConf_ComSignal_SwitchDetectionResp1L5_oFSP1_SwitchDetResp_L5_oLIN04_50190a72_Rx 304
+
+# define ComConf_ComSignal_SwitchDetectionResp2L1_oFSP2_SwitchDetResp_L1_oLIN00_865b6493_Rx 305
+
+# define ComConf_ComSignal_SwitchDetectionResp2L2_oFSP2_SwitchDetResp_L2_oLIN01_6cfb6a95_Rx 306
+
+# define ComConf_ComSignal_SwitchDetectionResp2L3_oFSP2_SwitchDetResp_L3_oLIN02_37bfd360_Rx 307
+
+# define ComConf_ComSignal_SwitchDetectionResp3L2_oFSP3_SwitchDetResp_L2_oLIN01_ff826a68_Rx 308
+
+# define ComConf_ComSignal_SwitchDetectionResp4L2_oFSP4_SwitchDetResp_L2_oLIN01_b10f6419_Rx 309
+
+# define ComConf_ComSignal_TCS_Indication_oMastertoTCP_oLIN02_27a40830_Tx 310
+
+
+#endif /* _COM_CFG_H_ */

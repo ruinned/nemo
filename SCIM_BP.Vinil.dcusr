@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Settings>
+    <Settings Name="com.vector.cfg.gui.moduleexport.history">
+        <Settings Name="1539239015268">
+            <Settings Name="0">
+                <Setting Value="/Mcu/Mcu" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="1">
+                <Setting Value="/Base/Base" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="2">
+                <Setting Value="/Mcl/Mcl" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="3">
+                <Setting Value="/Resource/Resource" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="4">
+                <Setting Value="/Port/Port" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="5">
+                <Setting Value="/Dio/Dio" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="6">
+                <Setting Value="/Pwm/Pwm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="7">
+                <Setting Value="/Spi/Spi" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="8">
+                <Setting Value="/Adc/Adc" Name="moduleEcucPath"/>
+            </Settings>
+            <Setting Value="C:\Seoyon\08_Projects\01_Development\05_SCIM\Inputs_Korea\20181011\OneDrive_2018-10-11\SPI for Radio\MCAL.arxml" Name="filePath"/>
+        </Settings>
+        <Settings Name="1541392464388">
+            <Settings Name="0">
+                <Setting Value="/Gpt/Gpt" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="1">
+                <Setting Value="/Mcu/Mcu" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="10">
+                <Setting Value="/Port/Port" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="11">
+                <Setting Value="/ActiveEcuC/Fee" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="12">
+                <Setting Value="/Fls/Fls" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="13">
+                <Setting Value="/Wdg/Wdg" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="2">
+                <Setting Value="/Mcl/Mcl" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="3">
+                <Setting Value="/Resource/Resource" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="4">
+                <Setting Value="/Base/Base" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="5">
+                <Setting Value="/Spi/Spi" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="6">
+                <Setting Value="/Dio/Dio" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="7">
+                <Setting Value="/Pwm/Pwm" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="8">
+                <Setting Value="/Icu/Icu" Name="moduleEcucPath"/>
+            </Settings>
+            <Settings Name="9">
+                <Setting Value="/Adc/Adc" Name="moduleEcucPath"/>
+            </Settings>
+            <Setting Value="C:\Users\Vinil\Desktop\Mcal_NewBoard.arxml" Name="filePath"/>
+        </Settings>
+    </Settings>
+    <Settings Name="com.vector.cfg.gui.moduleimport.history">
+        <Settings Name="1540545572263">
+            <Settings Name="0">
+                <Settings Name="0">
+                    <Setting Value="true" Name="active"/>
+                    <Setting Value="/Spi/Spi" Name="ecucPath"/>
+                    <Setting Value="Merge" Name="importMode"/>
+                </Settings>
+                <Setting Value="C:\Vector\CBD1800194_D01_Mpc57xx\Applications\SipAddon\SCIM_BP_181025_IOHWAB_PVT_PWM\Config\ECUC\CBD1800194D00_Spi_ecuc.arxml" Name="filePath"/>
+            </Settings>
+        </Settings>
+        <Settings Name="1541400177243">
+            <Settings Name="0">
+                <Settings Name="0">
+                    <Setting Value="false" Name="active"/>
+                    <Setting Value="/Resource/Resource" Name="ecucPath"/>
+                    <Setting Value="Merge" Name="importMode"/>
+                </Settings>
+                <Settings Name="1">
+                    <Setting Value="false" Name="active"/>
+                    <Setting Value="/Spi/Spi" Name="ecucPath"/>
+                    <Setting Value="Merge" Name="importMode"/>
+                </Settings>
+                <Settings Name="10">
+                    <Setting Value="false" Name="active"/>
+                    <Setting Value="/Icu/Icu" Name="ecucPath"/>
+                    <Setting Value="Merge" Name="importMode"/>
+                </Settings>
+                <Settings Name="11">
+                    <Setting Value="true" Name="active"/>
+                    <Setting Value="/Mcu/Mcu" Name="ecucPath"/>
+                    <Setting Value="Replace" Name="importMode"/>
+                </Settings>
+                <Settings Name="12">
+                    <Setting Value="false" Name="active"/>
+                    <Setting Value="/Port/Port" Name="ecucPath"/>
+                    <Setting Value="Merge" Name="importMode"/>
+                </Settings>
+                <Settings Name="13">
+                    <Setting Value="false" Name="active"/>
+                    <Setting Value="/Pwm/Pwm" Name="ecucPath"/>
+                    <Setting Value="Merge" Name="importMode"/>
+                </Settings>
+                <Settings Name="2">
+                    <Setting Value="false" Name="active"/>
+                    <Setting Value="/Wdg/Wdg" Name="ecucPath"/>
+                    <Setting Value="Merge" Name="importMode"/>
+                </Settings>
+                <Settings Name="3">
+                    <Setting Value="false" Name="active"/>
+                    <Setting Value="/Adc/Adc" Name="ecucPath"/>
+                    <Setting Value="Merge" Name="importMode"/>
+                </Settings>
+                <Settings Name="4">
+                    <Setting Value="false" Name="active"/>
+                    <Setting Value="/Base/Base" Name="ecucPath"/>
+                    <Setting Value="Merge" Name="importMode"/>
+                </Settings>
+                <Settings Name="5">
+                    <Setting Value="false" Name="active"/>
+                    <Setting Value="/Dem/Dem" Name="ecucPath"/>
+                    <Setting Value="Replace" Name="importMode"/>
+                </Settings>
+                <Settings Name="6">
+                    <Setting Value="false" Name="active"/>
+                    <Setting Value="/Dio/Dio" Name="ecucPath"/>
+                    <Setting Value="Merge" Name="importMode"/>
+                </Settings>
+                <Settings Name="7">
+                    <Setting Value="false" Name="active"/>
+                    <Setting Value="/EcuM/EcuM" Name="ecucPath"/>
+                    <Setting Value="Replace" Name="importMode"/>
+                </Settings>
+                <Settings Name="8">
+                    <Setting Value="false" Name="active"/>
+                    <Setting Value="/Fls/Fls" Name="ecucPath"/>
+                    <Setting Value="Merge" Name="importMode"/>
+                </Settings>
+                <Settings Name="9">
+                    <Setting Value="false" Name="active"/>
+                    <Setting Value="/Gpt/Gpt" Name="ecucPath"/>
+                    <Setting Value="Merge" Name="importMode"/>
+                </Settings>
+                <Setting Value="C:\Users\Vinil\Desktop\MCU_EXPORT.arxml" Name="filePath"/>
+            </Settings>
+        </Settings>
+        <Settings Name="1542800192366">
+            <Settings Name="0">
+                <Settings Name="0">
+                    <Setting Value="true" Name="active"/>
+                    <Setting Value="/ActiveEcuC/Brs" Name="ecucPath"/>
+                    <Setting Value="Add" Name="importMode"/>
+                </Settings>
+                <Setting Value="C:\Vector\CBD1800194_D01_Mpc57xx\Applications\SipAddon\SCIM_BP_181116\Config\ECUC\CBD1800194D00_Brs_ecuc.arxml" Name="filePath"/>
+            </Settings>
+        </Settings>
+    </Settings>
+</Settings>

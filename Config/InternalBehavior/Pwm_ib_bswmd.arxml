@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="05214e7a-ff95-4a21-b3a6-f53e64c26fea">
+      <SHORT-NAME>TS_T2D35M10I0R0</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="b7878e60-4d6d-43c1-bd03-61b23ddbda2e">
+          <SHORT-NAME>Pwm_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="2eef79e1-a4db-4b77-a5b8-15eb634bc258">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="6958a1c6-5147-4865-bf07-976b929c3d94">
+                  <SHORT-NAME>Pwm</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="3d2926eb-0d7e-4e11-b900-ad6b7295f966">
+                      <SHORT-NAME>PwmBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="394dd089-d9b9-4bad-808e-d22f98695aa0">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_00</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="0fa417a3-f2f4-49f5-ba29-7178f1376b30">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_01</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="39576e32-d0ff-449a-99b6-db18d1d01bb0">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_02</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="b6eb06d0-0c69-465f-a7c7-5dc723ecd1c9">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_03</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="15d8cec5-08d2-45db-a9f4-612e1087e41f">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_04</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="02ab4f71-3a23-462f-9206-51eca0e47452">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_05</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="4e66aa19-379d-487d-99ba-30e375d95957">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_06</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="8f3110e2-d3b4-4526-8c41-dcd5ee7796bc">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_07</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="0e693444-af5d-4b75-aa13-d5ea5024d0c0">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_08</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="049d3c81-6360-4ee8-8d43-39e07ec288cb">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_09</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="486f5c2b-0edf-4280-9401-b80d9903ee75">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_10</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="f7b9227a-2205-427a-a55e-dabf64c85624">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_11</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="62ed8039-5de4-4236-8d3a-b0fe7014f963">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_12</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="fd633099-079a-44a4-bec2-d4b7071248ec">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_13</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="7049da78-7159-45af-a406-097174cd9725">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_14</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="e9df6449-8820-4d90-9d41-0ad96f9b7076">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_15</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="167e2e36-7fb0-4169-9fd0-bb3caaf44b0b">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_16</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="4d2c3936-b376-47f9-b7a5-9b55f827349b">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_17</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="6d3084ad-aff6-4647-a164-52e6baeca20f">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_18</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="b77c97a5-8cfc-41ed-8654-ddbfd1b6f4bb">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_19</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="dbd8f48a-d355-40f0-ade6-51b2b613f5d9">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_20</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="179d29ba-8b6a-4f59-88a5-979ccea19e66">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_21</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="53c11b0b-5144-44b1-8106-63da2f72ea18">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_22</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="04583416-2ee4-4c4e-8ec9-e6f8a567e452">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_23</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="fe520121-7969-4d3d-8468-a97291ec0879">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_24</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="91a258bf-289d-4af2-b8f3-b98682f0994c">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_25</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="7b8a03a3-7e33-4429-9810-444889e33f1a">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_26</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="d5352f49-c318-469c-b56b-33096606bfec">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_27</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="a905b84c-14ee-4d0f-ba86-50d9064591b5">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_28</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="71f84ae0-92b9-4fd6-a208-b3a396675919">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_29</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="65e7b717-be12-4685-955e-4e884915219a">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_30</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="2b137c54-fe1f-402b-bc1c-2c9bd175566d">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_31</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="e71c079d-c1ea-430a-af5e-61194a6e0018">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_32</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="9697b980-6a11-4f88-8660-693fc8ce2fe1">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_33</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="10f7e8f5-15e2-4b84-8b1f-7c43d7a4e9e1">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_34</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="42e33142-13d7-4a1e-9dfe-b0599eae8b2f">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_35</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="c6a7326c-6733-497e-bc4d-b0dec78b52f6">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_36</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="837b89b3-4501-463c-9ba8-751f0b1846d6">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_37</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="a244f112-16c8-48f2-96a2-e98d7a18ef52">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_38</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="4a769da8-cc28-4dd4-bf92-02fcd15a4598">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_39</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="fd385aee-06fb-4dbd-b8d4-20daa037220b">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_40</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="1ddfba0b-07ff-49ab-be59-2e3c4081980d">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_41</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="10658f7e-1bfd-415f-8c11-5a776084b445">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_42</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="a0515912-018f-4796-adbd-ea5049dcbb44">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_43</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="f42874a2-5d40-464d-8d31-3b66fa8134b7">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_44</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="d1a65ddf-7471-4637-84c9-fc7935ce5f67">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_45</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="55a56c11-3901-47e6-8c38-4b30341437ad">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_46</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="38f11da5-c4be-43eb-a61b-045c315ef993">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_47</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="952af399-8869-45ce-8cc1-0e7213fae725">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_48</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="507cde53-2a0f-4e40-90de-bfaaeba6f59f">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_49</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="b7957bec-f0e7-4782-85af-a9cd4b3f98df">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_50</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="ee7bfb91-ef3c-4909-ae10-86dae20c4736">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_51</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="105ef24e-3b83-42ef-884b-be3f3151bbae">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_52</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="3c5f0553-025b-42c0-bba1-88d169e8a14d">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_53</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="cbe6db97-7e67-44c8-a529-333f815d6102">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_54</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="502cdbab-08e2-427a-9de6-5994b231b02f">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_55</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="aace104c-582b-4806-994b-ecbb7c711f35">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_56</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="20a7d6df-601b-48f0-bdff-93053ff240b8">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_57</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="3fde2591-14dc-4b57-96ff-49027e6a98a3">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_58</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="27357e84-abb4-4cf5-b716-d18af9d9c96f">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_59</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="a6035748-f299-4bf3-ad64-21b48a7b1770">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_60</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="3b82b5fc-5019-4557-88f1-f76f4ad2a4b5">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_61</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="29ca795e-2c14-45df-917d-a40bc858df9c">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_62</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="e5cae390-8d34-460c-8750-9fd612a41322">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_63</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="1212363d-5240-4bd7-838a-681cd7a3a9fb">
+                          <SHORT-NAME>PWM_EXCLUSIVE_AREA_64</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

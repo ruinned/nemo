@@ -1,0 +1,397 @@
+#######################################################################################################################
+# File Name  : Makefile.static                                                                                        #
+# Description: This makefile contains the platform/compiler specific static settings (will be included by Makefile)   #
+# Project    : Vector Basic Runtime System                                                                            #
+# Module     : BrsHw for platform Freescale/ST MPC57xx                                                                #
+#              and Compiler DiabData,                                                                                 #
+#              using Vector PES Makesupport 3.13                                                                      #
+#                                                                                                                     #
+#---------------------------------------------------------------------------------------------------------------------#
+# COPYRIGHT                                                                                                           #
+#---------------------------------------------------------------------------------------------------------------------#
+# Copyright (c) 2018 by Vector Informatik GmbH.                                                  All rights reserved. #
+#                                                                                                                     #
+#---------------------------------------------------------------------------------------------------------------------#
+# AUTHOR IDENTITY                                                                                                     #
+#---------------------------------------------------------------------------------------------------------------------#
+# Name                          Initials      Company                                                                 #
+# ----------------------------  ------------  ------------------------------------------------------------------------#
+# Benjamin Walter               visbwa        Vector Informatik GmbH                                                  #
+# Ivo Georigev                  visivg        Vector Informatik GmbH                                                  #
+#---------------------------------------------------------------------------------------------------------------------#
+# REVISION HISTORY                                                                                                    #
+#---------------------------------------------------------------------------------------------------------------------#
+# Version   Date        Author  Description                                                                           #
+# --------  ----------  ------  --------------------------------------------------------------------------------------#
+# 01.00.00  2017-06-28  visivg  Initial creation according to Brs_Template 2.01.02                                    #
+# 01.00.01  2017-07-18  visbwa  Review according to Brs_Template 2.01.04, harmonized with Brs_Spc58xx                 #
+# 01.00.02  2018-03-20  vismaa  Replaced sections ivortable with intvect_CoreExceptions and intvect with              #
+#                               intvect_ExtExceptions within RESOURCE_FETCH_SCRIPT                                    #
+#######################################################################################################################
+
+#------------------------------------------------------------------------------
+# Include the project specific settings
+#------------------------------------------------------------------------------
+include Makefile.config
+include Makefile.project.part.defines
+
+#------------------------------------------------------------------------------
+# Version of MakeSupport used (current version is 3)
+#------------------------------------------------------------------------------
+VERSION     = 3
+SUB_VERSION = 13
+
+ifeq ($(OS_USECASE),)
+#Default is BRS
+OS_USECASE = BRS
+endif
+
+###############################################################################
+# Platform/compiler/derivative/emulator are relevant for the include of       #
+# linker and symbol preprocessor command file identified by name.             #
+# Vector standard names have to be used                                       #
+###############################################################################
+#------------------------------------------------------------------------------
+# Compiler Manufacturer used in this project
+#   E.g.: ARM, DIABDATA, GHS, GNU, HIGHTEC, IAR, KEIL, RENESAS, TASKING, TI
+#------------------------------------------------------------------------------
+COMPILER_MANUFACTURER = DIABDATA
+
+#------------------------------------------------------------------------------
+# Platform used for this project
+#   E.g.: 78K0, AURIX, MPC, RH850, SH2, SPC58xx, TMS570, TRAVEO
+#------------------------------------------------------------------------------
+PLATFORM = MPC57XX
+
+#------------------------------------------------------------------------------
+# Emulator used for this project
+#   E.g.: GHSPROBE, ISYSTEMS, LAUTERBACH, MULTI
+#       ALL is special for "all derivatives are supported in this file"
+#------------------------------------------------------------------------------
+EMULATOR = ALL
+
+#------------------------------------------------------------------------------
+# Include settings files that require the settings above 
+# (e.g. COMPILER_MANUFACTURER)
+#------------------------------------------------------------------------------
+include Makefile.derivative.settings
+
+#------------------------------------------------------------------------------
+# $(OBJ_OUTPUT) defines the way, how to generate error files
+# It should be one of:
+#     MOVE  - Object files are generated by compiler/linker and will be moved
+#             to $(OBJ_PATH) after generation by external tool
+#     FLAGS - Object file path definition is supported by compiler.
+#             Therefore the $(CFLAGS) have to be adjusted.
+#------------------------------------------------------------------------------
+OBJ_OUTPUT = FLAGS
+
+#------------------------------------------------------------------------------
+# $(ERR_OUTPUT) defines the way, how to generate error files
+# It should be one of:
+#     MOVE  - Error files are generated by compiler/linker and will be moved
+#             to $(ERR_PATH) after generation by external tool
+#     PIPE  - Error will be printed to sterr/stdout and redirected to
+#             $(ERR_PATH)
+#     FLAGS - Error file generation with path definition is supported by
+#             compiler. Therefore e.g. the $(CFLAGS) have to be adjusted.
+#------------------------------------------------------------------------------
+ERR_OUTPUT = FLAGS
+
+#------------------------------------------------------------------------------
+# $(LIB_OUTPUT) defines the way, how to generate lib files
+# It should be one of:
+#     MOVE  - Lib files are generated by compiler/linker and will be moved
+#             to $(LIB_PATH) after generation.
+#     FLAGS - Object file path definition is supported by compiler.
+#             Therefore the $(LB_FLAGS) have to be adjusted.
+#------------------------------------------------------------------------------
+LIB_OUTPUT = FLAGS
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Suffix of generated object files. Generated objects are then *.$(OBJ_SUFFIX)
+#------------------------------------------------------------------------------
+OBJ_SUFFIX = o
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Suffix of assembler files.
+#------------------------------------------------------------------------------
+ASM_SUFFIX = asm
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Suffix of generated list files. Generated list files are then *.$(LST_SUFFIX)
+#------------------------------------------------------------------------------
+LST_SUFFIX = s
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Suffix linker command file.
+#------------------------------------------------------------------------------
+LNK_SUFFIX = dld
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Suffix binary output file.
+#------------------------------------------------------------------------------
+BINARY_SUFFIX = elf
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Suffix of generated library files. Generated objects are then *.$(LIB_SUFFIX)
+#------------------------------------------------------------------------------
+LIB_SUFFIX = lib
+
+#------------------------------------------------------------------------------
+# Suffixes of generated error files which are placed in $(ERR_PATH)
+# (necessary for Visual Studio / Codewright project file generation)
+# Default (nothing entered) is err
+# E.g. ERR_SUFFIX_LIST = err
+#------------------------------------------------------------------------------
+ERR_SUFFIX_LIST = err
+
+#------------------------------------------------------------------------------
+# Suffixes of generated asm/list files which are placed in $(LST_PATH)
+# (necessary for Visual Studio / Codewright project file generation)
+# Default (nothing entered) is lst
+# E.g. LST_SUFFIX_LIST = lst asm
+#------------------------------------------------------------------------------
+LST_SUFFIX_LIST = s
+
+#------------------------------------------------------------------------------
+# The following define overrides the rule - how to assemble a file -
+# implemented in Global.Makefile.target.make.
+#------------------------------------------------------------------------------
+override define ASSEMBLE_RULE
+  if [ -n "$(MKVERBOSE)" ] ; then \
+    $(ECHO) "    $(AS) $(ASFLAGS) -o $@ $<"; \
+  fi; \
+  $(subst \,/,$(AS) $(ASFLAGS)) $<;
+endef
+
+#------------------------------------------------------------------------------
+# The following define overrides the rule - how to compile a file -
+# implemented in Global.Makefile.target.make.
+#------------------------------------------------------------------------------
+override define COMPILE_RULE
+  if [ -n "$(MKVERBOSE)" ] ; then \
+    $(ECHO) "    $(CC) $(filter-out $(FILTER_$(call _toUpper,$*)),$(CFLAGS)) $(CFLAGS_$(call _toUpper,$*)) $(INCLUDES_UNIX) $< $(REDIRECT_OUTPUT)"; \
+  fi; \
+  $(CC_ENV) \
+  if $(subst \,/,$(CC_ENV) $(CC) $(filter-out $(FILTER_$(call _toUpper,$*)),$(CFLAGS)) $(CFLAGS_$(call _toUpper,$*))) $(INCLUDES_UNIX) $< $(REDIRECT_OUTPUT); then \
+    if [ -f $*.s ]; then $(MV) $*.s $(LST_PATH); fi; \
+  else \
+    if [ -f $*.s ]; then $(MV) $*.s $(LST_PATH); fi; exit 1; \
+  fi;
+endef
+
+#------------------------------------------------------------------------------
+# The following define overrides the rule - how to link the object files -
+# implemented in Global.Makefile.target.make.
+#------------------------------------------------------------------------------
+override define LINK_RULE
+  $(ECHO) "Linking with $(LINKER_COMMAND_FILE) ..."; \
+  if [ -n "$(MKVERBOSE)" ] ; then \
+    $(ECHO) ""; \
+    $(ECHO) "$(subst \,/,$(LD_ENV) $(LD) $(LDFLAGS) $(OBJECTS))"; \
+  fi; \
+  $(ECHO) ""; \
+  $(subst \,/,$(LD_ENV) $(LD) $(LDFLAGS) $(OBJECTS))
+endef
+
+#------------------------------------------------------------------------------
+# The following define overrides the rule - how to build a lib file -
+# implemented in Global.Makefile.target.make.
+#------------------------------------------------------------------------------
+#override define LIB_RULE
+#  if [ -n "$(MKVERBOSE)" ] ; then \
+#    $(ECHO) "    $(LB) $(LBFLAGS) $^ $(REDIRECT_OUTPUT)"; \
+#  fi; \
+#  $(subst \,/,$(LB_ENV) $(LB) $(LBFLAGS) $^ ) $(REDIRECT_OUTPUT);
+#endef
+
+#------------------------------------------------------------------------------
+# make builds the whole project by default
+# To make another target you have to add it to the prerequisites of default.
+# E.g.: default: all $(PROJECT_NAME).opt
+#------------------------------------------------------------------------------
+default: all hex
+
+hex: $(PROJECT_NAME).$(BINARY_SUFFIX)
+	$(subst \,/,$(COMPILER_BIN)\ddump -R $(PROJECT_NAME).$(BINARY_SUFFIX) -o $(PROJECT_NAME).hex)
+
+#------------------------------------------------------------------------------
+# If platform specific rules exist, they can be described here to be shown
+# in the usage output of the help target
+# E.g.: PLATFORM_HELP = \
+#           $(ECHO) "m mytarget ................ -- build mytarget"; \
+#           $(ECHO) "                               nextline";
+#------------------------------------------------------------------------------
+PLATFORM_HELP = \
+    $(ECHO) "m lauterbach.............. -- build lauterbach emulation files";
+
+#------------------------------------------------------------------------------
+# List of (regexp) pattern used by the clean target.
+# Deleted by default are:
+#    $(PROJECT_NAME).$(LNK_SUFFIX)
+#    $(PROJECT_NAME).dep
+#    $(PROJECT_NAME).hex
+#    $(PROJECT_NAME).ilk
+#    $(OBJ_PATH)\*.*
+#    $(ERR_PATH)\*.*
+#    $(LST_PATH)\*.*
+#    $(LIB_PATH)\*.*
+#    $(LOG_PATH)\*.*
+#------------------------------------------------------------------------------
+MAKE_CLEAN_PATTERN_LIST = $(PROJECT_NAME)_Unprocessed.$(LNK_SUFFIX)
+
+#------------------------------------------------------------------------------
+# List of (regexp) pattern used by the distclean target.
+# Deleted by default are:
+#    ~vssc
+#    vssver.scc
+#    *~
+#    *.*~
+#    *.~*
+#    *.bak
+#    *.log
+#    $(GENDATA_DIR)\*.txt
+#    $(ERR_LIST_WOP)
+#    $(PROJECT_NAME).map
+#    $(PROJECT_NAME).dep
+#    $(PROJECT_NAME).dsw
+#    $(PROJECT_NAME).dsp
+#    $(PROJECT_NAME).sln
+#    $(PROJECT_NAME).vcproj
+#    $(PROJECT_NAME).suo
+#    $(PROJECT_NAME).ncb
+#    $(PROJECT_NAME).opt
+#    $(PROJECT_NAME).plg
+#    $(PROJECT_NAME).doc.cfg
+#    $(GENDATA_DIR)\BrsVInfo.h
+#------------------------------------------------------------------------------
+DIST_CLEAN_PATTERN_LIST =
+
+###############################################################################
+# resource information generation
+###############################################################################
+
+#------------------------------------------------------------------------------
+# Select the source, which contains the memory information
+# E.g.: RESOURCE_FILE = LIST
+#       RESOURCE_FILE = MAP
+#       RESOURCE_FILE = NONE
+#------------------------------------------------------------------------------
+RESOURCE_FILE = MAP
+
+#------------------------------------------------------------------------------
+# The extension of the map or list file.
+# E.g.: RESOURCE_FILE_EXT = map
+#       RESOURCE_FILE_EXT = lst
+#------------------------------------------------------------------------------
+RESOURCE_FILE_EXT = map
+
+#------------------------------------------------------------------------------
+# This is the main resource script written in the language AWK.
+# For more information about AWK see the following resources:
+#   http://torvalds.cs.mtsu.edu/~neal/awkcard.pdf (recommendable)
+#   http://www.uni-magdeburg.de/urzs/awk/
+#   http://de.wikipedia.org/wiki/AWK
+# Note: The character '$' must be escaped with a second '$'. So write '$$'.
+#       Also the character '#' must be escaped using a backslash -> \#.
+# For a more detailed description about what is going on in this script look
+# at the file:  fetch-memory-info-template-documented.awk
+# In order to see what the ressource scanner is doing it is highly recommended
+# to set the environment variable GAWK_DEBUG=1. This option will generate a
+# further file ($(PROJECT_NAME)_resource_debug.txt) in your log directory.
+# Here is a short description about the instructions which has to be configured:
+# RS means Record Separator and is set to a char which is used to split the
+#   files into records. For each record the processing instructions are done.
+#   The record string is assigned to the variable $0 (remember to access via $$0).
+# FS means Field Separator and splits each record into fields. These fields
+#   are referenced from $1, $2... $NF, where NF is the number of fields.
+#   If FIELDWIDTHS is set, the value of FS is ignored.
+# FIELDWIDTHS is a space separated list, each field is expected to have a fixed
+#   width. The value of FS is ignored.
+# IGNORECASE is a bool variable. When set to 1 comparsions are made case-
+#   insensitive in comparsions with '==' and regular expressions.
+# memoryTable maps the second argument of addEntry() to the according section.
+# startProcessing() and stopProcessing() implements a little restriction
+#   to which section of the file the instructions are executed.
+# addEntry(module, memory, size, isHex) is the main API function you have to
+#   use. It adds an entry to the internal array. You specify with the param.
+#   how many bytes (param:size) to which module (param:module) and to which
+#   type of memory (param:memory) you want to add. If you set the param
+#   isHex to 1 the param size is treated as being hexadecimal.
+# Other API functions are: trim(str), getStringWithinParentheses(str),
+#   getStringWithinBrackets(str)
+#------------------------------------------------------------------------------
+RESOURCE_FETCH_SCRIPT = BEGIN {                                                     \
+  RS  = "\n";                                                                       \
+  FS  = " ";                                                                        \
+  IGNORECASE = 1;                                                                   \
+  memoryTable["ram"]    = "bss|sbss|sdata";                                         \
+  memoryTable["iram"]   = "data";                                                   \
+  memoryTable["const"]  = "sdata2|const";                                           \
+  memoryTable["code"]   = "fini|abs|text|init|resetword|startup|intvect_CoreExceptions|intvect_ExtExceptions"; \
+  memoryTable["ignore"] = "debug|line|.PPC.EMB.apuinfo|ctors|dtors";                \
+  memoryTableOrder      = "const,code,ram,iram,ignore";                             \
+}                                                                                   \
+                                                                                    \
+/Link Editor Memory Map/                { startProcessing() }                       \
+/Cross Reference Table/                 { stopProcessing() }                        \
+                                        { process() }                               \
+                                                                                    \
+NF == 4 && $$1 ~ /^\./ && $$3 ~ /^[0-9a-f]+$$/ {                                    \
+  addEntry($$4, $$1, $$3, 1);                                                       \
+}
+
+#------------------------------------------------------------------------------
+# Check if all necessary variables are set
+#------------------------------------------------------------------------------
+ifeq ($(MAKESUPPORT_DIR),)
+  $(error MAKESUPPORT_DIR not set in m.bat or m.bat not called)
+endif
+
+ifeq ($(PLATFORM),)
+  $(error Variable PLATFORM is not defined)
+endif
+
+ifeq ($(COMPILER_MANUFACTURER),)
+  $(error Variable COMPILER_MANUFACTURER is not defined)
+endif
+
+ifeq ($(EMULATOR),)
+  $(error Variable EMULATOR is not defined)
+endif
+
+ifeq ($(VERSION),)
+  $(error Variable VERSION is not defined)
+endif
+
+ifeq ($(MAKESUPPORT_DIR),)
+  $(error Variable MAKESUPPORT_DIR is not defined)
+endif
+
+ifeq ($(CPU_STARTUP_ID),)
+  $(error Variable CPU_STARTUP_ID is not defined)
+endif
+
+ifeq ($(DIAB_PROC_$(DERIVATIVE)),)
+  $(error COMPILEROPTIONERROR: The DiabData compiler option (-t<value>) is not defined! Please set DIAB_PROC_$(DERIVATIVE)= with a valid compiler option in makefile.derivative.setting.)
+endif
+
+#------------------------------------------------------------------------------
+# List of variables in Makefile.config which are required and must be set by
+# user. Check is performed by global makefile
+#------------------------------------------------------------------------------
+REQUIRED_MK_CONF_VARS = DERIVATIVE      \
+                        MAIN_OSC_CLK    \
+                        TIMEBASE_CLOCK  \
+                        LENGTH_ENCODING \
+                        FLOAT_SUPPORT   \
+                        OBJECT_FORMAT
+
+#End of Makefile.static

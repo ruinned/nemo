@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="05214e7a-ff95-4a21-b3a6-f53e64c26fea">
+      <SHORT-NAME>TS_T2D35M10I0R0</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="c9b9311e-383b-421a-8f46-b95cd8050e94">
+          <SHORT-NAME>Icu_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="78136d02-7564-4889-9fad-6ffd47e10e8b">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="c5561a85-d21b-461d-b5f5-d6a5d784de94">
+                  <SHORT-NAME>Icu</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="32518995-53c9-472c-93d7-23ce00a044f5">
+                      <SHORT-NAME>IcuBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="efd4ec04-3504-45b1-ab37-11cad0ea1e87">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_00</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="1600f8c2-3583-448f-aae3-87bc36845e32">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_01</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="5a692961-f9f2-48d5-ab55-49937aa2c842">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_02</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="6196f72c-e3f6-4885-8344-e479ee9234e6">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_03</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="5ec9091f-db86-4f79-9d11-9cc50dc7b586">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_04</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="2f09575b-90ae-47d0-ad5b-6a770c930128">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_05</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="9061c37b-06fb-4531-a454-ccc00036f8ed">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_06</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="f401a466-d297-4021-a7d6-80c8dff5466f">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_07</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="e348bf9b-8f16-4e36-a900-e77f29b930fa">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_08</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="edaf2b67-db49-44a2-85eb-d59ae515bc77">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_09</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="e3193320-c651-4a8c-baca-0961b2d389b7">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_10</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="6137cdb6-d59b-4d8d-9034-8f86a5e996f1">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_11</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="70ae180e-831b-452c-a4bb-a5dd86626a0c">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_12</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="5c7236b1-6e2c-4086-858f-605406ac40d1">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_13</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="ea84088d-5029-4c79-9f2d-8df160192ce0">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_14</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="de61c09d-9d26-48b2-b5bb-330a68ce68b9">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_15</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="fba035cf-2db8-4124-b7ce-f548771264f8">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_16</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="22037278-ebf8-41e2-8c87-c0b2771ceea0">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_17</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="9963601b-9310-4cb6-9003-d06def20b5fe">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_18</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="09f3b047-7d2c-4e79-8c78-052b2693e1aa">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_19</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="1698e939-9b2b-427e-b69d-af472a1d62e8">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_20</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="12b4bb34-e40e-4a09-b501-7be1048d1a1f">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_21</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="f94169a4-1bab-4b33-837e-60e9d1a3abe3">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_22</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="188d8769-273d-49a8-b66b-8b86d095a23f">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_23</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="d933caa4-84d5-44f2-af7c-cfd070ae8fcd">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_24</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="68f5b09e-ee5d-465d-8141-e0bd7f1f926e">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_25</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="bb6ebbef-968a-466e-a043-cbac660b9cbd">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_26</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="7d982961-76bd-442f-9e3c-ce7ad4d65dab">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_27</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="ed655f0e-3306-46b9-b919-455154b6760f">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_28</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="f6638a29-6a08-470f-98fa-eac0165e3ad8">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_29</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="eeda4fa4-9b8d-4137-aa19-40fb8b018a19">
+                          <SHORT-NAME>ICU_EXCLUSIVE_AREA_30</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,1354 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<testmodule starttime="2018-05-30 09:10:37" timestamp="   3.203618" verdicts="2_basic">
+  <testgroup>
+    <testgroup>
+      <testcase starttime="2018-05-30 09:10:37" timestamp="   3.203618">
+        <preparation starttime="2018-05-30 09:10:37" timestamp="   3.203618">
+          <testpattern timestamp="   3.203618" name="set" type="testprimitive">
+            <title>Clear error log</title>
+            <details timestamp="   3.203618">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ErrorLog&apos;</name>
+                <description></description>
+              </info>
+            </details>
+            <teststep timestamp="   3.203618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="   3.203618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   3.203618" name="statechange" type="testpattern">
+            <title>Activate COM Tx Only Use Case</title>
+            <teststep timestamp="   3.203618" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::UseCaseActivator&apos;: 3 (Com_TxOnly)</teststep>
+            <teststep timestamp="   3.203618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <teststep timestamp="   4.403618" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=1200ms (max=1200ms)</teststep>
+            <teststep timestamp="   4.403618" level="2" type="auto" ident="2" result="pass">Waited for 1200 ms.</teststep>
+            <teststep timestamp="   4.403618" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::UseCaseActivator&apos; value passed: = 3 (Com_TxOnly), condition: == 3 (Com_TxOnly)</teststep>
+            <teststep timestamp="   4.403618" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+            <result timestamp="   4.403618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   4.403618" name="awaitvaluematch" type="testprimitive">
+            <title>Verify that the current CANoe version is suitable for the Start Application</title>
+            <teststep timestamp="   4.403618" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+            <teststep timestamp="   4.403618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+            <teststep timestamp="   4.403618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::CANoeVersionInfo&apos;: = 90006, condition: &gt;= 80200</teststep>
+            <result timestamp="   4.403618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   4.403618" name="set" type="testprimitive">
+            <title>Initialize variables</title>
+            <details timestamp="   4.403618">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ComSignalPairSelector&apos;</name>
+                <description>0 (CAN_Backbone2_to_CAN_Backbone2) </description>
+              </info>
+            </details>
+            <details timestamp="   4.403618">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ComSendCtrl&apos;</name>
+                <description>2</description>
+              </info>
+            </details>
+            <teststep timestamp="   4.403618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="   4.403618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   4.403618" name="set" type="testprimitive">
+            <title>Initialize ComInput</title>
+            <details timestamp="   4.403618">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ComInput&apos;</name>
+                <description>0</description>
+              </info>
+            </details>
+            <teststep timestamp="   4.403618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="   4.403618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   4.403618" name="awaitvaluematch" type="testprimitive">
+            <title>Wait for rx data processing on ECU side.</title>
+            <teststep timestamp="   4.478242" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComActualOutput&apos; Elapsed time=74.6246ms (max=10000ms)</teststep>
+            <teststep timestamp="   4.478242" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 3 value condition(s).</teststep>
+            <teststep timestamp="   4.478242" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+            <teststep timestamp="   4.478242" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComActualOutput&apos;: = 0, condition: == 0</teststep>
+            <teststep timestamp="   4.478242" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComExpectedOutput&apos;: = 0, condition: == 0</teststep>
+            <result timestamp="   4.478242" result="pass"/>
+          </testpattern>
+          <prepend endtime="2018-05-30 09:10:38" endtimestamp="   4.478242" />
+        </preparation>
+        <testpattern timestamp="   4.478242" name="set" type="testprimitive">
+          <title>Set sensor value to 254, this will be scaled to the maximum value of the Rx signal</title>
+          <details timestamp="   4.478242">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::ComInput&apos;</name>
+              <description>254</description>
+            </info>
+          </details>
+          <teststep timestamp="   4.478242" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="   4.478242" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   4.478242" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet.</title>
+          <teststep timestamp="   4.480126" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=1.884ms (max=10000ms)</teststep>
+          <teststep timestamp="   4.480126" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   4.480126" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = -254, condition: != 0</teststep>
+          <result timestamp="   4.480126" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   4.480126" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal</title>
+          <teststep timestamp="   4.778290" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=298.164ms (max=10000ms)</teststep>
+          <teststep timestamp="   4.778290" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   4.778290" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+          <result timestamp="   4.778290" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   4.778290" name="set" type="testprimitive">
+          <title>Set sensor value to 128, this will be scaled to the median value of the Rx signal</title>
+          <details timestamp="   4.778290">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::ComInput&apos;</name>
+              <description>128</description>
+            </info>
+          </details>
+          <teststep timestamp="   4.778290" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="   4.778290" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   4.778290" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet.</title>
+          <teststep timestamp="   4.779378" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=1.088ms (max=10000ms)</teststep>
+          <teststep timestamp="   4.779378" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   4.779378" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 126, condition: != 0</teststep>
+          <result timestamp="   4.779378" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   4.779378" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal</title>
+          <teststep timestamp="   4.978289" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=198.911ms (max=10000ms)</teststep>
+          <teststep timestamp="   4.978289" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   4.978289" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+          <result timestamp="   4.978289" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   4.978289" name="set" type="testprimitive">
+          <title>Set sensor value to 0, this will be scaled to the minimum value of the Rx signal</title>
+          <details timestamp="   4.978289">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::ComInput&apos;</name>
+              <description>0</description>
+            </info>
+          </details>
+          <teststep timestamp="   4.978289" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="   4.978289" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   4.978289" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet.</title>
+          <teststep timestamp="   4.979607" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=1.318ms (max=10000ms)</teststep>
+          <teststep timestamp="   4.979607" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   4.979607" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 128, condition: != 0</teststep>
+          <result timestamp="   4.979607" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   4.979607" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal</title>
+          <teststep timestamp="   5.278319" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=298.712ms (max=10000ms)</teststep>
+          <teststep timestamp="   5.278319" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   5.278319" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+          <result timestamp="   5.278319" result="pass"/>
+        </testpattern>
+        <completion starttime="2018-05-30 09:10:39" timestamp="   5.278319">
+          <testpattern timestamp="   5.278319" name="set" type="testprimitive">
+            <title>Switch back to Com Rx/Tx use case</title>
+            <details timestamp="   5.278319">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::UseCaseActivator&apos;</name>
+                <description>0 (Com_RxTx) </description>
+              </info>
+            </details>
+            <teststep timestamp="   5.278319" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="   5.278319" result="pass"/>
+          </testpattern>
+          <comment timestamp="   5.278319">
+            <text>Value of system variable &apos;StartApplication::ErrorLog&apos;  is </text>
+          </comment>
+          <compend endtime="2018-05-30 09:10:39" endtimestamp="   5.278319" />
+        </completion>
+        <verdict time="2018-05-30 09:10:39" timestamp="   5.278319" endtime="2018-05-30 09:10:39" endtimestamp="   5.278319" result="pass" />
+        <title>CAN Data Transmission ( CAN_Backbone2 )</title>
+        <ident>TCASE-375705</ident>
+        <description>Verify that the application can transmit data on CAN using signals or signal groups.\n                        Ecu Rx signal: &apos;EngineGasRate_oEMS_BB2_05P_oBackbone2_96ec243f_Rx&apos;,\n                        Ecu Tx signal: &apos;PinCode_validity_time_oCIOM_BB2_10P_oBackbone2_d8b8c81c_Tx&apos;.</description>
+      </testcase>
+      <testcase starttime="2018-05-30 09:10:39" timestamp="   5.278319">
+        <preparation starttime="2018-05-30 09:10:39" timestamp="   5.278319">
+          <testpattern timestamp="   5.278319" name="set" type="testprimitive">
+            <title>Clear error log</title>
+            <details timestamp="   5.278319">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ErrorLog&apos;</name>
+                <description></description>
+              </info>
+            </details>
+            <teststep timestamp="   5.278319" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="   5.278319" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   5.278319" name="statechange" type="testpattern">
+            <title>Activate COM Use Case</title>
+            <teststep timestamp="   5.278319" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::UseCaseActivator&apos;: 0 (Com_RxTx)</teststep>
+            <teststep timestamp="   5.278319" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <teststep timestamp="   6.478319" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=1200ms (max=1200ms)</teststep>
+            <teststep timestamp="   6.478319" level="2" type="auto" ident="2" result="pass">Waited for 1200 ms.</teststep>
+            <teststep timestamp="   6.478319" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::UseCaseActivator&apos; value passed: = 0 (Com_RxTx), condition: == 0 (Com_RxTx)</teststep>
+            <teststep timestamp="   6.478319" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+            <result timestamp="   6.478319" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   6.478319" name="awaitvaluematch" type="testprimitive">
+            <title>Verify that the current CANoe version is suitable for the Start Application</title>
+            <teststep timestamp="   6.478319" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+            <teststep timestamp="   6.478319" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+            <teststep timestamp="   6.478319" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::CANoeVersionInfo&apos;: = 90006, condition: &gt;= 80200</teststep>
+            <result timestamp="   6.478319" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   6.478319" name="set" type="testprimitive">
+            <title>Initialize variables</title>
+            <details timestamp="   6.478319">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ComSignalPairSelector&apos;</name>
+                <description>0 (CAN_Backbone2_to_CAN_Backbone2) </description>
+              </info>
+            </details>
+            <details timestamp="   6.478319">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ComSendCtrl&apos;</name>
+                <description>2</description>
+              </info>
+            </details>
+            <teststep timestamp="   6.478319" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="   6.478319" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   6.478319" name="set" type="testprimitive">
+            <title>Initialize ComInput</title>
+            <details timestamp="   6.478319">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ComInput&apos;</name>
+                <description>0</description>
+              </info>
+            </details>
+            <teststep timestamp="   6.478319" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="   6.478319" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   6.478319" name="awaitvaluematch" type="testprimitive">
+            <title>Wait for rx data processing on ECU side.</title>
+            <teststep timestamp="   6.478319" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+            <teststep timestamp="   6.478319" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 3 value condition(s).</teststep>
+            <teststep timestamp="   6.478319" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+            <teststep timestamp="   6.478319" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComActualOutput&apos;: = 0, condition: == 0</teststep>
+            <teststep timestamp="   6.478319" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComExpectedOutput&apos;: = 0, condition: == 0</teststep>
+            <result timestamp="   6.478319" result="pass"/>
+          </testpattern>
+          <prepend endtime="2018-05-30 09:10:40" endtimestamp="   6.478319" />
+        </preparation>
+        <testpattern timestamp="   6.478319" name="set" type="testprimitive">
+          <title>Set sensor value to 254, this will be scaled to the maximum value of the Rx signal</title>
+          <details timestamp="   6.478319">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::ComInput&apos;</name>
+              <description>254</description>
+            </info>
+          </details>
+          <teststep timestamp="   6.478319" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="   6.478319" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   6.478319" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet.</title>
+          <teststep timestamp="   6.480942" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=2.62274ms (max=10000ms)</teststep>
+          <teststep timestamp="   6.480942" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   6.480942" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = -254, condition: != 0</teststep>
+          <result timestamp="   6.480942" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   6.480942" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal</title>
+          <teststep timestamp="   6.778458" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=297.516ms (max=10000ms)</teststep>
+          <teststep timestamp="   6.778458" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   6.778458" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+          <result timestamp="   6.778458" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   6.778458" name="set" type="testprimitive">
+          <title>Set sensor value to 128, this will be scaled to the median value of the Rx signal</title>
+          <details timestamp="   6.778458">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::ComInput&apos;</name>
+              <description>128</description>
+            </info>
+          </details>
+          <teststep timestamp="   6.778458" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="   6.778458" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   6.778458" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet.</title>
+          <teststep timestamp="   6.779978" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=1.52ms (max=10000ms)</teststep>
+          <teststep timestamp="   6.779978" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   6.779978" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 126, condition: != 0</teststep>
+          <result timestamp="   6.779978" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   6.779978" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal</title>
+          <teststep timestamp="   7.078488" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=298.51ms (max=10000ms)</teststep>
+          <teststep timestamp="   7.078488" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   7.078488" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+          <result timestamp="   7.078488" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   7.078488" name="set" type="testprimitive">
+          <title>Set sensor value to 0, this will be scaled to the minimum value of the Rx signal</title>
+          <details timestamp="   7.078488">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::ComInput&apos;</name>
+              <description>0</description>
+            </info>
+          </details>
+          <teststep timestamp="   7.078488" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="   7.078488" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   7.078488" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet.</title>
+          <teststep timestamp="   7.080198" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=1.71ms (max=10000ms)</teststep>
+          <teststep timestamp="   7.080198" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   7.080198" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 128, condition: != 0</teststep>
+          <result timestamp="   7.080198" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   7.080198" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal</title>
+          <teststep timestamp="   7.378520" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=298.322ms (max=10000ms)</teststep>
+          <teststep timestamp="   7.378520" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   7.378520" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+          <result timestamp="   7.378520" result="pass"/>
+        </testpattern>
+        <completion starttime="2018-05-30 09:10:41" timestamp="   7.378520">
+          <comment timestamp="   7.378520">
+            <text>Value of system variable &apos;StartApplication::ErrorLog&apos;  is </text>
+          </comment>
+          <compend endtime="2018-05-30 09:10:41" endtimestamp="   7.378520" />
+        </completion>
+        <verdict time="2018-05-30 09:10:41" timestamp="   7.378520" endtime="2018-05-30 09:10:41" endtimestamp="   7.378520" result="pass" />
+        <title>CAN Data Reception ( CAN_Backbone2 )</title>
+        <ident>TCASE-375706</ident>
+        <description>Verify that the application can receive data on CAN using signals or signal groups.\n                        Ecu Rx signal: &apos;EngineGasRate_oEMS_BB2_05P_oBackbone2_96ec243f_Rx&apos;,\n                        Ecu Tx signal: &apos;PinCode_validity_time_oCIOM_BB2_10P_oBackbone2_d8b8c81c_Tx&apos;.</description>
+      </testcase>
+      <title>CAN Data Transmission and Reception</title>
+    </testgroup>
+    <testgroup>
+      <testcase starttime="2018-05-30 09:10:41" timestamp="   7.378520">
+        <preparation starttime="2018-05-30 09:10:41" timestamp="   7.378520">
+          <testpattern timestamp="   7.378520" name="set" type="testprimitive">
+            <title>Clear error log</title>
+            <details timestamp="   7.378520">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ErrorLog&apos;</name>
+                <description></description>
+              </info>
+            </details>
+            <teststep timestamp="   7.378520" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="   7.378520" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   7.378520" name="statechange" type="testpattern">
+            <title>Activate COM Tx Only Use Case</title>
+            <teststep timestamp="   7.378520" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::UseCaseActivator&apos;: 3 (Com_TxOnly)</teststep>
+            <teststep timestamp="   7.378520" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <teststep timestamp="   8.578520" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=1200ms (max=1200ms)</teststep>
+            <teststep timestamp="   8.578520" level="2" type="auto" ident="2" result="pass">Waited for 1200 ms.</teststep>
+            <teststep timestamp="   8.578520" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::UseCaseActivator&apos; value passed: = 3 (Com_TxOnly), condition: == 3 (Com_TxOnly)</teststep>
+            <teststep timestamp="   8.578520" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+            <result timestamp="   8.578520" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   8.578520" name="awaitvaluematch" type="testprimitive">
+            <title>Verify that the current CANoe version is suitable for the Start Application</title>
+            <teststep timestamp="   8.578520" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+            <teststep timestamp="   8.578520" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+            <teststep timestamp="   8.578520" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::CANoeVersionInfo&apos;: = 90006, condition: &gt;= 80200</teststep>
+            <result timestamp="   8.578520" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   8.578520" name="set" type="testprimitive">
+            <title>Initialize variables</title>
+            <details timestamp="   8.578520">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ComSignalPairSelector&apos;</name>
+                <description>1 (LIN1_CIOM_to_LIN1_CIOM) </description>
+              </info>
+            </details>
+            <details timestamp="   8.578520">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ComSendCtrl&apos;</name>
+                <description>2</description>
+              </info>
+            </details>
+            <teststep timestamp="   8.578520" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="   8.578520" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   8.578520" name="set" type="testprimitive">
+            <title>Initialize ComInput</title>
+            <details timestamp="   8.578520">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ComInput&apos;</name>
+                <description>0</description>
+              </info>
+            </details>
+            <teststep timestamp="   8.578520" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="   8.578520" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   8.578520" name="awaitvaluematch" type="testprimitive">
+            <title>Wait for rx data processing on ECU side.</title>
+            <teststep timestamp="   8.578520" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+            <teststep timestamp="   8.578520" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 3 value condition(s).</teststep>
+            <teststep timestamp="   8.578520" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+            <teststep timestamp="   8.578520" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComActualOutput&apos;: = 0, condition: == 0</teststep>
+            <teststep timestamp="   8.578520" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComExpectedOutput&apos;: = 0, condition: == 0</teststep>
+            <result timestamp="   8.578520" result="pass"/>
+          </testpattern>
+          <prepend endtime="2018-05-30 09:10:43" endtimestamp="   8.578520" />
+        </preparation>
+        <testpattern timestamp="   8.578520" name="set" type="testprimitive">
+          <title>Set sensor value to 254, this will be scaled to the maximum value of the Rx signal</title>
+          <details timestamp="   8.578520">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::ComInput&apos;</name>
+              <description>254</description>
+            </info>
+          </details>
+          <teststep timestamp="   8.578520" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="   8.578520" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   8.578520" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet.</title>
+          <teststep timestamp="   8.581131" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=2.61073ms (max=10000ms)</teststep>
+          <teststep timestamp="   8.581131" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   8.581131" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = -254, condition: != 0</teststep>
+          <result timestamp="   8.581131" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   8.581131" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal</title>
+          <teststep timestamp="   8.724618" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=143.487ms (max=10000ms)</teststep>
+          <teststep timestamp="   8.724618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   8.724618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+          <result timestamp="   8.724618" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   8.724618" name="set" type="testprimitive">
+          <title>Set sensor value to 128, this will be scaled to the median value of the Rx signal</title>
+          <details timestamp="   8.724618">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::ComInput&apos;</name>
+              <description>128</description>
+            </info>
+          </details>
+          <teststep timestamp="   8.724618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="   8.724618" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   8.724618" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet.</title>
+          <teststep timestamp="   8.726872" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=2.25481ms (max=10000ms)</teststep>
+          <teststep timestamp="   8.726872" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   8.726872" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 126, condition: != 0</teststep>
+          <result timestamp="   8.726872" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   8.726872" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal</title>
+          <teststep timestamp="   9.004618" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=277.745ms (max=10000ms)</teststep>
+          <teststep timestamp="   9.004618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   9.004618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+          <result timestamp="   9.004618" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   9.004618" name="set" type="testprimitive">
+          <title>Set sensor value to 0, this will be scaled to the minimum value of the Rx signal</title>
+          <details timestamp="   9.004618">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::ComInput&apos;</name>
+              <description>0</description>
+            </info>
+          </details>
+          <teststep timestamp="   9.004618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="   9.004618" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   9.004618" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet.</title>
+          <teststep timestamp="   9.007134" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=2.51678ms (max=10000ms)</teststep>
+          <teststep timestamp="   9.007134" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   9.007134" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 128, condition: != 0</teststep>
+          <result timestamp="   9.007134" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="   9.007134" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal</title>
+          <teststep timestamp="   9.214618" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=207.483ms (max=10000ms)</teststep>
+          <teststep timestamp="   9.214618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="   9.214618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+          <result timestamp="   9.214618" result="pass"/>
+        </testpattern>
+        <completion starttime="2018-05-30 09:10:43" timestamp="   9.214618">
+          <testpattern timestamp="   9.214618" name="set" type="testprimitive">
+            <title>Switch back to Com Rx/Tx use case</title>
+            <details timestamp="   9.214618">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::UseCaseActivator&apos;</name>
+                <description>0 (Com_RxTx) </description>
+              </info>
+            </details>
+            <teststep timestamp="   9.214618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="   9.214618" result="pass"/>
+          </testpattern>
+          <comment timestamp="   9.214618">
+            <text>Value of system variable &apos;StartApplication::ErrorLog&apos;  is </text>
+          </comment>
+          <compend endtime="2018-05-30 09:10:43" endtimestamp="   9.214618" />
+        </completion>
+        <verdict time="2018-05-30 09:10:43" timestamp="   9.214618" endtime="2018-05-30 09:10:43" endtimestamp="   9.214618" result="pass" />
+        <title>LIN Data Transmission ( LIN1_CIOM )</title>
+        <ident>TCASE-375709</ident>
+        <description>Verify that the application can transmit data on LIN using signals.\n                        Ecu Rx signal: &apos;EngineGasRate_oEMS_BB2_05P_oBackbone2_96ec243f_Rx&apos;,\n                        Ecu Tx signal: &apos;FSP1IndicationCmdL1_oFSP_1_2_Req_L1_oLIN00_c2c0fe90_Tx&apos;.</description>
+      </testcase>
+      <testcase starttime="2018-05-30 09:10:43" timestamp="   9.214618">
+        <preparation starttime="2018-05-30 09:10:43" timestamp="   9.214618">
+          <testpattern timestamp="   9.214618" name="set" type="testprimitive">
+            <title>Clear error log</title>
+            <details timestamp="   9.214618">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ErrorLog&apos;</name>
+                <description></description>
+              </info>
+            </details>
+            <teststep timestamp="   9.214618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="   9.214618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="   9.214618" name="statechange" type="testpattern">
+            <title>Activate COM Use Case</title>
+            <teststep timestamp="   9.214618" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::UseCaseActivator&apos;: 0 (Com_RxTx)</teststep>
+            <teststep timestamp="   9.214618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <teststep timestamp="  10.414618" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=1200ms (max=1200ms)</teststep>
+            <teststep timestamp="  10.414618" level="2" type="auto" ident="2" result="pass">Waited for 1200 ms.</teststep>
+            <teststep timestamp="  10.414618" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::UseCaseActivator&apos; value passed: = 0 (Com_RxTx), condition: == 0 (Com_RxTx)</teststep>
+            <teststep timestamp="  10.414618" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+            <result timestamp="  10.414618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  10.414618" name="awaitvaluematch" type="testprimitive">
+            <title>Verify that the current CANoe version is suitable for the Start Application</title>
+            <teststep timestamp="  10.414618" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+            <teststep timestamp="  10.414618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+            <teststep timestamp="  10.414618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::CANoeVersionInfo&apos;: = 90006, condition: &gt;= 80200</teststep>
+            <result timestamp="  10.414618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  10.414618" name="set" type="testprimitive">
+            <title>Initialize variables</title>
+            <details timestamp="  10.414618">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ComSignalPairSelector&apos;</name>
+                <description>1 (LIN1_CIOM_to_LIN1_CIOM) </description>
+              </info>
+            </details>
+            <details timestamp="  10.414618">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ComSendCtrl&apos;</name>
+                <description>2</description>
+              </info>
+            </details>
+            <teststep timestamp="  10.414618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="  10.414618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  10.414618" name="set" type="testprimitive">
+            <title>Initialize ComInput</title>
+            <details timestamp="  10.414618">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ComInput&apos;</name>
+                <description>0</description>
+              </info>
+            </details>
+            <teststep timestamp="  10.414618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="  10.414618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  10.414618" name="awaitvaluematch" type="testprimitive">
+            <title>Wait for rx data processing on ECU side.</title>
+            <teststep timestamp="  10.414618" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+            <teststep timestamp="  10.414618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 3 value condition(s).</teststep>
+            <teststep timestamp="  10.414618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+            <teststep timestamp="  10.414618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComActualOutput&apos;: = 0, condition: == 0</teststep>
+            <teststep timestamp="  10.414618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComExpectedOutput&apos;: = 0, condition: == 0</teststep>
+            <result timestamp="  10.414618" result="pass"/>
+          </testpattern>
+          <prepend endtime="2018-05-30 09:10:44" endtimestamp="  10.414618" />
+        </preparation>
+        <testpattern timestamp="  10.414618" name="set" type="testprimitive">
+          <title>Set sensor value to 254, this will be scaled to the maximum value of the Rx signal</title>
+          <details timestamp="  10.414618">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::ComInput&apos;</name>
+              <description>254</description>
+            </info>
+          </details>
+          <teststep timestamp="  10.414618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="  10.414618" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  10.414618" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet.</title>
+          <teststep timestamp="  10.425683" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=11.065ms (max=10000ms)</teststep>
+          <teststep timestamp="  10.425683" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="  10.425683" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = -254, condition: != 0</teststep>
+          <result timestamp="  10.425683" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  10.425683" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal</title>
+          <teststep timestamp="  10.474618" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=48.935ms (max=10000ms)</teststep>
+          <teststep timestamp="  10.474618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="  10.474618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+          <result timestamp="  10.474618" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  10.474618" name="set" type="testprimitive">
+          <title>Set sensor value to 128, this will be scaled to the median value of the Rx signal</title>
+          <details timestamp="  10.474618">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::ComInput&apos;</name>
+              <description>128</description>
+            </info>
+          </details>
+          <teststep timestamp="  10.474618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="  10.474618" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  10.474618" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet.</title>
+          <teststep timestamp="  10.495618" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=21ms (max=10000ms)</teststep>
+          <teststep timestamp="  10.495618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="  10.495618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 126, condition: != 0</teststep>
+          <result timestamp="  10.495618" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  10.495618" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal</title>
+          <teststep timestamp="  10.754618" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=259ms (max=10000ms)</teststep>
+          <teststep timestamp="  10.754618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="  10.754618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+          <result timestamp="  10.754618" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  10.754618" name="set" type="testprimitive">
+          <title>Set sensor value to 0, this will be scaled to the minimum value of the Rx signal</title>
+          <details timestamp="  10.754618">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::ComInput&apos;</name>
+              <description>0</description>
+            </info>
+          </details>
+          <teststep timestamp="  10.754618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="  10.754618" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  10.754618" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet.</title>
+          <teststep timestamp="  10.775708" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=21.0899ms (max=10000ms)</teststep>
+          <teststep timestamp="  10.775708" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="  10.775708" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 128, condition: != 0</teststep>
+          <result timestamp="  10.775708" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  10.775708" name="awaitvaluematch" type="testprimitive">
+          <title>Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal</title>
+          <teststep timestamp="  10.964618" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;ComCmpOutputs&apos; Elapsed time=188.91ms (max=10000ms)</teststep>
+          <teststep timestamp="  10.964618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="  10.964618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::ComCmpOutputs&apos;: = 0, condition: == 0</teststep>
+          <result timestamp="  10.964618" result="pass"/>
+        </testpattern>
+        <completion starttime="2018-05-30 09:10:45" timestamp="  10.964618">
+          <comment timestamp="  10.964618">
+            <text>Value of system variable &apos;StartApplication::ErrorLog&apos;  is </text>
+          </comment>
+          <compend endtime="2018-05-30 09:10:45" endtimestamp="  10.964618" />
+        </completion>
+        <verdict time="2018-05-30 09:10:45" timestamp="  10.964618" endtime="2018-05-30 09:10:45" endtimestamp="  10.964618" result="pass" />
+        <title>LIN Data Reception ( LIN1_CIOM )</title>
+        <ident>TCASE-375710</ident>
+        <description>Verify that the application can receive data on LIN using signals.\n                        Ecu Rx signal: &apos;FSP2SwitchStatusL1_oFSP2_Frame_L1_oLIN00_ee70e556_Rx&apos;,\n                        Ecu Tx signal: &apos;FSP1IndicationCmdL1_oFSP_1_2_Req_L1_oLIN00_c2c0fe90_Tx&apos;.</description>
+      </testcase>
+      <title>LIN Data Transmission and Reception</title>
+    </testgroup>
+    <title>Usecase COM</title>
+  </testgroup>
+  <testgroup>
+    <testgroup>
+      <testcase starttime="2018-05-30 09:10:45" timestamp="  10.964618">
+        <preparation starttime="2018-05-30 09:10:45" timestamp="  10.964618">
+          <testpattern timestamp="  10.964618" name="set" type="testprimitive">
+            <title>Clear error log</title>
+            <details timestamp="  10.964618">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ErrorLog&apos;</name>
+                <description></description>
+              </info>
+            </details>
+            <teststep timestamp="  10.964618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="  10.964618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  10.964618" name="statechange" type="testpattern">
+            <title>Activate DIAG Use Case</title>
+            <teststep timestamp="  10.964618" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::UseCaseActivator&apos;: 2 (Diag)</teststep>
+            <teststep timestamp="  10.964618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <teststep timestamp="  12.164618" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=1200ms (max=1200ms)</teststep>
+            <teststep timestamp="  12.164618" level="2" type="auto" ident="2" result="pass">Waited for 1200 ms.</teststep>
+            <teststep timestamp="  12.164618" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::UseCaseActivator&apos; value passed: = 2 (Diag), condition: == 2 (Diag)</teststep>
+            <teststep timestamp="  12.164618" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+            <result timestamp="  12.164618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  12.164618" name="awaitvaluematch" type="testprimitive">
+            <title>Verify that the current CANoe version is suitable for the Start Application</title>
+            <teststep timestamp="  12.164618" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+            <teststep timestamp="  12.164618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+            <teststep timestamp="  12.164618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::CANoeVersionInfo&apos;: = 90006, condition: &gt;= 80200</teststep>
+            <result timestamp="  12.164618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  12.164618" name="set" type="testprimitive">
+            <title>Initialize variables</title>
+            <details timestamp="  12.164618">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::DiagChannel&apos;</name>
+                <description>0 (CAN_Backbone2) </description>
+              </info>
+            </details>
+            <details timestamp="  12.164618">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::DiagActivateDefaultSession&apos;</name>
+                <description>0</description>
+              </info>
+            </details>
+            <teststep timestamp="  12.164618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="  12.164618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  12.164618" name="wait" type="controlfunction">
+            <title>Wait to allow System Variables to change</title>
+            <teststep timestamp="  12.174618" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=10ms (max=10ms)</teststep>
+            <teststep timestamp="  12.174618" level="1" type="auto" ident="1" result="pass">Waited for 10 ms.</teststep>
+            <result timestamp="  12.174618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  12.174618" name="awaitvaluematch" type="testprimitive">
+            <title>Wait until there is no diagnostic request active and no further requests are queued.</title>
+            <teststep timestamp="  12.174618" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+            <teststep timestamp="  12.174618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+            <teststep timestamp="  12.174618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::DiagRequestState&apos;: = 0 (QUEUE_EMPTY_REQUEST_NOT_ACTIVE), condition: == 0 (QUEUE_EMPTY_REQUEST_NOT_ACTIVE)</teststep>
+            <result timestamp="  12.174618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  12.174618" name="statechange" type="testpattern">
+            <title>Reset response code</title>
+            <teststep timestamp="  12.174618" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::DiagResponseCode&apos;: 0 (0x00: No Response received)</teststep>
+            <teststep timestamp="  12.174618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <teststep timestamp="  12.184618" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=10ms (max=10ms)</teststep>
+            <teststep timestamp="  12.184618" level="2" type="auto" ident="2" result="pass">Waited for 10 ms.</teststep>
+            <teststep timestamp="  12.184618" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::DiagResponseCode&apos; value passed: = 0 (0x00: No Response received), condition: == 0 (0x00: No Response received)</teststep>
+            <teststep timestamp="  12.184618" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+            <result timestamp="  12.184618" result="pass"/>
+          </testpattern>
+          <prepend endtime="2018-05-30 09:10:46" endtimestamp="  12.184618" />
+        </preparation>
+        <testpattern timestamp="  12.184618" name="statechange" type="testpattern">
+          <title>Try to activate default session via DSC</title>
+          <teststep timestamp="  12.184618" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::DiagActivateDefaultSession&apos;: 1</teststep>
+          <teststep timestamp="  12.184618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <teststep timestamp="  13.184618" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=1000ms (max=1000ms)</teststep>
+          <teststep timestamp="  13.184618" level="2" type="auto" ident="2" result="pass">Waited for 1000 ms.</teststep>
+          <teststep timestamp="  13.184618" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::DiagActivateDefaultSession&apos; value passed: = 1, condition: == 1</teststep>
+          <teststep timestamp="  13.184618" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+          <result timestamp="  13.184618" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  13.184618" name="awaitvaluematch" type="testprimitive">
+          <title>Verify that a response can be received: either positive response (0x50) or negative response (0x7F)</title>
+          <teststep timestamp="  13.184618" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+          <teststep timestamp="  13.184618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of any of 2 value condition(s).</teststep>
+          <teststep timestamp="  13.184618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::DiagResponseCode&apos;: = 127 (0x7F: Negative Response), condition: == 80 (0x50: Positive Response DSC)</teststep>
+          <teststep timestamp="  13.184618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::DiagResponseCode&apos;: = 127 (0x7F: Negative Response), condition: == 127 (0x7F: Negative Response)</teststep>
+          <result timestamp="  13.184618" result="pass"/>
+        </testpattern>
+        <completion starttime="2018-05-30 09:10:47" timestamp="  13.184618">
+          <comment timestamp="  13.184618">
+            <text>Value of system variable &apos;StartApplication::ErrorLog&apos;  is </text>
+          </comment>
+          <compend endtime="2018-05-30 09:10:47" endtimestamp="  13.184618" />
+        </completion>
+        <verdict time="2018-05-30 09:10:47" timestamp="  13.184618" endtime="2018-05-30 09:10:47" endtimestamp="  13.184618" result="pass" />
+        <title>Basic Request/Response via UDS over CAN ( CAN_Backbone2 )</title>
+        <ident>TCASE-478915</ident>
+        <description>Verify that a DCM request can be sent and a response can be received via UDS over CAN</description>
+      </testcase>
+      <title>Diagnostics over CAN</title>
+    </testgroup>
+    <title>Usecase DIAG</title>
+  </testgroup>
+  <testgroup>
+    <testgroup>
+      <testcase starttime="2018-05-30 09:10:47" timestamp="  13.184618">
+        <preparation starttime="2018-05-30 09:10:47" timestamp="  13.184618">
+          <testpattern timestamp="  13.184618" name="set" type="testprimitive">
+            <title>Clear error log</title>
+            <details timestamp="  13.184618">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ErrorLog&apos;</name>
+                <description></description>
+              </info>
+            </details>
+            <teststep timestamp="  13.184618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="  13.184618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  13.184618" name="statechange" type="testpattern">
+            <title>Activate NM Use Case</title>
+            <teststep timestamp="  13.184618" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::UseCaseActivator&apos;: 10 (Nm)</teststep>
+            <teststep timestamp="  13.184618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <teststep timestamp="  14.384618" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=1200ms (max=1200ms)</teststep>
+            <teststep timestamp="  14.384618" level="2" type="auto" ident="2" result="pass">Waited for 1200 ms.</teststep>
+            <teststep timestamp="  14.384618" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::UseCaseActivator&apos; value passed: = 10 (Nm), condition: == 10 (Nm)</teststep>
+            <teststep timestamp="  14.384618" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+            <result timestamp="  14.384618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  14.384618" name="awaitvaluematch" type="testprimitive">
+            <title>Verify that the current CANoe version is suitable for the Start Application</title>
+            <teststep timestamp="  14.384618" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+            <teststep timestamp="  14.384618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+            <teststep timestamp="  14.384618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::CANoeVersionInfo&apos;: = 90006, condition: &gt;= 80200</teststep>
+            <result timestamp="  14.384618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  14.384618" name="statechange" type="testpattern">
+            <title>Initialize variables</title>
+            <teststep timestamp="  14.384618" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::NmCurrentChannel&apos;: 0 (CAN_Backbone2)</teststep>
+            <teststep timestamp="  14.384618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <teststep timestamp="  14.484618" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=100ms (max=100ms)</teststep>
+            <teststep timestamp="  14.484618" level="2" type="auto" ident="2" result="pass">Waited for 100 ms.</teststep>
+            <teststep timestamp="  14.484618" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::NmCurrentChannel&apos; value passed: = 0 (CAN_Backbone2), condition: == 0 (CAN_Backbone2)</teststep>
+            <teststep timestamp="  14.484618" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+            <result timestamp="  14.484618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  14.484618" name="awaitvaluematch" type="testprimitive">
+            <title>Verify that the channel is in FullCom mode</title>
+            <teststep timestamp="  14.484618" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+            <teststep timestamp="  14.484618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+            <teststep timestamp="  14.484618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::NmTesterComMode&apos;: = 1 (TESTER_COMM_MODE_FULL_COMMUNICATION), condition: == 1 (TESTER_COMM_MODE_FULL_COMMUNICATION)</teststep>
+            <result timestamp="  14.484618" result="pass"/>
+          </testpattern>
+          <prepend endtime="2018-05-30 09:10:48" endtimestamp="  14.484618" />
+        </preparation>
+        <testpattern timestamp="  14.484618" name="statechange" type="testpattern">
+          <title>Request NoCom for Tester and ECU</title>
+          <teststep timestamp="  14.484618" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::NmTesterNetworkRequest&apos;: 0 (COMM_NO_COMMUNICATION)</teststep>
+          <teststep timestamp="  14.484618" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::NmEcuNetworkRequest&apos;: 0 (COMM_NO_COMMUNICATION)</teststep>
+          <teststep timestamp="  14.484618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <teststep timestamp="  14.584618" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=100ms (max=100ms)</teststep>
+          <teststep timestamp="  14.584618" level="2" type="auto" ident="2" result="pass">Waited for 100 ms.</teststep>
+          <teststep timestamp="  14.584618" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::NmTesterNetworkRequest&apos; value passed: = 0 (COMM_NO_COMMUNICATION), condition: == 0 (COMM_NO_COMMUNICATION)</teststep>
+          <teststep timestamp="  14.584618" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::NmEcuNetworkRequest&apos; value passed: = 0 (COMM_NO_COMMUNICATION), condition: == 0 (COMM_NO_COMMUNICATION)</teststep>
+          <teststep timestamp="  14.584618" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+          <result timestamp="  14.584618" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  14.584618" name="awaitvaluematch" type="testprimitive">
+          <title>Wait for transition into bus sleep mode</title>
+          <teststep timestamp="  20.324238" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;NmTesterComMode&apos; Elapsed time=5739.62ms (max=20000ms)</teststep>
+          <teststep timestamp="  20.324238" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="  20.324238" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::NmTesterComMode&apos;: = 2 (TESTER_COMM_MODE_NO_COMMUNICATION), condition: == 2 (TESTER_COMM_MODE_NO_COMMUNICATION)</teststep>
+          <result timestamp="  20.324238" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  20.324238" name="statechange" type="testpattern">
+          <title>Reset ECU NM message counter</title>
+          <teststep timestamp="  20.324238" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::NmNmMsgCounterEcu&apos;: 0</teststep>
+          <teststep timestamp="  20.324238" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <teststep timestamp="  20.424238" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=100ms (max=100ms)</teststep>
+          <teststep timestamp="  20.424238" level="2" type="auto" ident="2" result="pass">Waited for 100 ms.</teststep>
+          <teststep timestamp="  20.424238" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::NmNmMsgCounterEcu&apos; value passed: = 0, condition: == 0</teststep>
+          <teststep timestamp="  20.424238" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+          <result timestamp="  20.424238" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  20.424238" name="awaitvaluematch" type="testprimitive">
+          <title>Verify that the test application request FullCom for all ComM users</title>
+          <teststep timestamp="  27.687676" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;NmEcuTimerNetworkRequestState&apos; Elapsed time=7263.44ms (max=120000ms)</teststep>
+          <teststep timestamp="  27.687676" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 2 value condition(s).</teststep>
+          <teststep timestamp="  27.687676" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::NmEcuTimerNetworkRequestState&apos;: = 1 (COMM_FULL_COMMUNICATION), condition: == 1 (COMM_FULL_COMMUNICATION)</teststep>
+          <teststep timestamp="  27.687676" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::NmTesterComMode&apos;: = 1 (TESTER_COMM_MODE_FULL_COMMUNICATION), condition: == 1 (TESTER_COMM_MODE_FULL_COMMUNICATION)</teststep>
+          <result timestamp="  27.687676" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  27.687676" name="awaitvaluematch" type="testprimitive">
+          <title>Check appearance of NM messages from ECU</title>
+          <teststep timestamp="  27.687676" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+          <teststep timestamp="  27.687676" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="  27.687676" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::NmNmMsgCounterEcu&apos;: = 11, condition: &gt; 0</teststep>
+          <result timestamp="  27.687676" result="pass"/>
+        </testpattern>
+        <completion starttime="2018-05-30 09:11:02" timestamp="  27.687676">
+          <testpattern timestamp="  27.687676" name="statechange" type="testpattern">
+            <title>Request FullCom for Tester and ECU</title>
+            <teststep timestamp="  27.687676" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::NmTesterNetworkRequest&apos;: 1 (COMM_FULL_COMMUNICATION)</teststep>
+            <teststep timestamp="  27.687676" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::NmEcuNetworkRequest&apos;: 1 (COMM_FULL_COMMUNICATION)</teststep>
+            <teststep timestamp="  27.687676" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <teststep timestamp="  27.787676" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=100ms (max=100ms)</teststep>
+            <teststep timestamp="  27.787676" level="2" type="auto" ident="2" result="pass">Waited for 100 ms.</teststep>
+            <teststep timestamp="  27.787676" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::NmTesterNetworkRequest&apos; value passed: = 1 (COMM_FULL_COMMUNICATION), condition: == 1 (COMM_FULL_COMMUNICATION)</teststep>
+            <teststep timestamp="  27.787676" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::NmEcuNetworkRequest&apos; value passed: = 1 (COMM_FULL_COMMUNICATION), condition: == 1 (COMM_FULL_COMMUNICATION)</teststep>
+            <teststep timestamp="  27.787676" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+            <result timestamp="  27.787676" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  27.787676" name="awaitvaluematch" type="testprimitive">
+            <title>Wait up to 10s for FullCom on channel</title>
+            <teststep timestamp="  31.480911" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;NmEcuUserNetworkRequestState&apos; Elapsed time=3693.24ms (max=10000ms)</teststep>
+            <teststep timestamp="  31.480911" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 2 value condition(s).</teststep>
+            <teststep timestamp="  31.480911" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::NmTesterComMode&apos;: = 1 (TESTER_COMM_MODE_FULL_COMMUNICATION), condition: == 1 (TESTER_COMM_MODE_FULL_COMMUNICATION)</teststep>
+            <teststep timestamp="  31.480911" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::NmEcuUserNetworkRequestState&apos;: = 1 (COMM_FULL_COMMUNICATION), condition: == 1 (COMM_FULL_COMMUNICATION)</teststep>
+            <result timestamp="  31.480911" result="pass"/>
+          </testpattern>
+          <comment timestamp="  31.480911">
+            <text>Value of system variable &apos;StartApplication::ErrorLog&apos;  is </text>
+          </comment>
+          <compend endtime="2018-05-30 09:11:05" endtimestamp="  31.480911" />
+        </completion>
+        <verdict time="2018-05-30 09:11:05" timestamp="  31.480911" endtime="2018-05-30 09:11:05" endtimestamp="  31.480911" result="pass" />
+        <title>Internal Wakeup on CAN with Autosar NM ( CAN_Backbone2 )</title>
+        <ident>TCASE-393480</ident>
+        <description>Verify that the application can trigger the transition from Bus Sleep to Normal Operation on CAN</description>
+      </testcase>
+      <testcase starttime="2018-05-30 09:11:05" timestamp="  31.480911">
+        <preparation starttime="2018-05-30 09:11:05" timestamp="  31.480911">
+          <testpattern timestamp="  31.480911" name="set" type="testprimitive">
+            <title>Clear error log</title>
+            <details timestamp="  31.480911">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ErrorLog&apos;</name>
+                <description></description>
+              </info>
+            </details>
+            <teststep timestamp="  31.480911" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="  31.480911" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  31.480911" name="statechange" type="testpattern">
+            <title>Activate NM Use Case</title>
+            <teststep timestamp="  31.480911" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::UseCaseActivator&apos;: 10 (Nm)</teststep>
+            <teststep timestamp="  31.480911" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <teststep timestamp="  32.680911" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=1200ms (max=1200ms)</teststep>
+            <teststep timestamp="  32.680911" level="2" type="auto" ident="2" result="pass">Waited for 1200 ms.</teststep>
+            <teststep timestamp="  32.680911" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::UseCaseActivator&apos; value passed: = 10 (Nm), condition: == 10 (Nm)</teststep>
+            <teststep timestamp="  32.680911" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+            <result timestamp="  32.680911" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  32.680911" name="awaitvaluematch" type="testprimitive">
+            <title>Verify that the current CANoe version is suitable for the Start Application</title>
+            <teststep timestamp="  32.680911" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+            <teststep timestamp="  32.680911" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+            <teststep timestamp="  32.680911" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::CANoeVersionInfo&apos;: = 90006, condition: &gt;= 80200</teststep>
+            <result timestamp="  32.680911" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  32.680911" name="statechange" type="testpattern">
+            <title>Initialize variables</title>
+            <teststep timestamp="  32.680911" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::NmCurrentChannel&apos;: 0 (CAN_Backbone2)</teststep>
+            <teststep timestamp="  32.680911" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <teststep timestamp="  32.780911" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=100ms (max=100ms)</teststep>
+            <teststep timestamp="  32.780911" level="2" type="auto" ident="2" result="pass">Waited for 100 ms.</teststep>
+            <teststep timestamp="  32.780911" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::NmCurrentChannel&apos; value passed: = 0 (CAN_Backbone2), condition: == 0 (CAN_Backbone2)</teststep>
+            <teststep timestamp="  32.780911" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+            <result timestamp="  32.780911" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  32.780911" name="awaitvaluematch" type="testprimitive">
+            <title>Verify that the channel is in FullCom mode</title>
+            <teststep timestamp="  32.780911" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+            <teststep timestamp="  32.780911" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+            <teststep timestamp="  32.780911" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::NmTesterComMode&apos;: = 1 (TESTER_COMM_MODE_FULL_COMMUNICATION), condition: == 1 (TESTER_COMM_MODE_FULL_COMMUNICATION)</teststep>
+            <result timestamp="  32.780911" result="pass"/>
+          </testpattern>
+          <prepend endtime="2018-05-30 09:11:07" endtimestamp="  32.780911" />
+        </preparation>
+        <testpattern timestamp="  32.780911" name="statechange" type="testpattern">
+          <title>Request NoCom for ECU and FullCom for Tester</title>
+          <teststep timestamp="  32.780911" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::NmTesterNetworkRequest&apos;: 1 (COMM_FULL_COMMUNICATION)</teststep>
+          <teststep timestamp="  32.780911" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::NmEcuNetworkRequest&apos;: 0 (COMM_NO_COMMUNICATION)</teststep>
+          <teststep timestamp="  32.780911" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <teststep timestamp="  32.880911" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=100ms (max=100ms)</teststep>
+          <teststep timestamp="  32.880911" level="2" type="auto" ident="2" result="pass">Waited for 100 ms.</teststep>
+          <teststep timestamp="  32.880911" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::NmTesterNetworkRequest&apos; value passed: = 1 (COMM_FULL_COMMUNICATION), condition: == 1 (COMM_FULL_COMMUNICATION)</teststep>
+          <teststep timestamp="  32.880911" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::NmEcuNetworkRequest&apos; value passed: = 0 (COMM_NO_COMMUNICATION), condition: == 0 (COMM_NO_COMMUNICATION)</teststep>
+          <teststep timestamp="  32.880911" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+          <result timestamp="  32.880911" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  32.880911" name="awaitvaluematch" type="testprimitive">
+          <title>Verify that ECU stops the transmission of Nm messages</title>
+          <teststep timestamp="  33.384618" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;NmTimeSinceLastEcuNmMsg&apos; Elapsed time=503.706ms (max=60000ms)</teststep>
+          <teststep timestamp="  33.384618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 1 value condition(s).</teststep>
+          <teststep timestamp="  33.384618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::NmTimeSinceLastEcuNmMsg&apos;: = 508, condition: &gt; 400</teststep>
+          <result timestamp="  33.384618" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  33.384618" name="statechange" type="testpattern">
+          <title>Reset ECU timer/user network request counter</title>
+          <teststep timestamp="  33.384618" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::NmEcuTimerNetworkRequestCounter&apos;: 0</teststep>
+          <teststep timestamp="  33.384618" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::NmEcuUserNetworkRequestCounter&apos;: 0</teststep>
+          <teststep timestamp="  33.384618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <teststep timestamp="  33.484618" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=100ms (max=100ms)</teststep>
+          <teststep timestamp="  33.484618" level="2" type="auto" ident="2" result="pass">Waited for 100 ms.</teststep>
+          <teststep timestamp="  33.484618" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::NmEcuTimerNetworkRequestCounter&apos; value passed: = 0, condition: == 0</teststep>
+          <teststep timestamp="  33.484618" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::NmEcuUserNetworkRequestCounter&apos; value passed: = 0, condition: == 0</teststep>
+          <teststep timestamp="  33.484618" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+          <result timestamp="  33.484618" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  33.484618" name="wait" type="controlfunction">
+          <title>Wait before evaluation of ECU timer/user network request state</title>
+          <teststep timestamp="  58.484618" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=25000ms (max=25000ms)</teststep>
+          <teststep timestamp="  58.484618" level="1" type="auto" ident="1" result="pass">Waited for 25000 ms.</teststep>
+          <result timestamp="  58.484618" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  58.484618" name="awaitvaluematch" type="testprimitive">
+          <title>Verify that the channel is in FullCom mode and the ECU did not request the network</title>
+          <teststep timestamp="  58.484618" level="1" type="auto" ident="Resume reason" result="na">Immediately resumed on setup of wait condition.</teststep>
+          <teststep timestamp="  58.484618" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 3 value condition(s).</teststep>
+          <teststep timestamp="  58.484618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::NmEcuTimerNetworkRequestCounter&apos;: = 0, condition: == 0</teststep>
+          <teststep timestamp="  58.484618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::NmEcuUserNetworkRequestCounter&apos;: = 0, condition: == 0</teststep>
+          <teststep timestamp="  58.484618" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::NmTesterComMode&apos;: = 1 (TESTER_COMM_MODE_FULL_COMMUNICATION), condition: == 1 (TESTER_COMM_MODE_FULL_COMMUNICATION)</teststep>
+          <result timestamp="  58.484618" result="pass"/>
+        </testpattern>
+        <completion starttime="2018-05-30 09:11:32" timestamp="  58.484618">
+          <testpattern timestamp="  58.484618" name="statechange" type="testpattern">
+            <title>Request FullCom for Tester and ECU</title>
+            <teststep timestamp="  58.484618" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::NmTesterNetworkRequest&apos;: 1 (COMM_FULL_COMMUNICATION)</teststep>
+            <teststep timestamp="  58.484618" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::NmEcuNetworkRequest&apos;: 1 (COMM_FULL_COMMUNICATION)</teststep>
+            <teststep timestamp="  58.484618" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <teststep timestamp="  58.584618" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=100ms (max=100ms)</teststep>
+            <teststep timestamp="  58.584618" level="2" type="auto" ident="2" result="pass">Waited for 100 ms.</teststep>
+            <teststep timestamp="  58.584618" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::NmTesterNetworkRequest&apos; value passed: = 1 (COMM_FULL_COMMUNICATION), condition: == 1 (COMM_FULL_COMMUNICATION)</teststep>
+            <teststep timestamp="  58.584618" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::NmEcuNetworkRequest&apos; value passed: = 1 (COMM_FULL_COMMUNICATION), condition: == 1 (COMM_FULL_COMMUNICATION)</teststep>
+            <teststep timestamp="  58.584618" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+            <result timestamp="  58.584618" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  58.584618" name="awaitvaluematch" type="testprimitive">
+            <title>Wait up to 10s for FullCom on channel</title>
+            <teststep timestamp="  63.391079" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;NmEcuUserNetworkRequestState&apos; Elapsed time=4806.46ms (max=10000ms)</teststep>
+            <teststep timestamp="  63.391079" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 2 value condition(s).</teststep>
+            <teststep timestamp="  63.391079" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::NmTesterComMode&apos;: = 1 (TESTER_COMM_MODE_FULL_COMMUNICATION), condition: == 1 (TESTER_COMM_MODE_FULL_COMMUNICATION)</teststep>
+            <teststep timestamp="  63.391079" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::NmEcuUserNetworkRequestState&apos;: = 1 (COMM_FULL_COMMUNICATION), condition: == 1 (COMM_FULL_COMMUNICATION)</teststep>
+            <result timestamp="  63.391079" result="pass"/>
+          </testpattern>
+          <comment timestamp="  63.391079">
+            <text>Value of system variable &apos;StartApplication::ErrorLog&apos;  is </text>
+          </comment>
+          <compend endtime="2018-05-30 09:11:37" endtimestamp="  63.391079" />
+        </completion>
+        <verdict time="2018-05-30 09:11:37" timestamp="  63.391079" endtime="2018-05-30 09:11:37" endtimestamp="  63.391079" result="pass" />
+        <title>NM Vote Reception on CAN with Autosar NM ( CAN_Backbone2 )</title>
+        <ident>TCASE-393482</ident>
+        <description>Verify that the DUT keeps the CAN channel awake as long as it receives NM messages.</description>
+      </testcase>
+      <title>Wakeup and Sleep on CAN</title>
+    </testgroup>
+    <title>Usecase NM</title>
+  </testgroup>
+  <testgroup>
+    <testgroup>
+      <testcase starttime="2018-05-30 09:11:37" timestamp="  63.391079">
+        <preparation starttime="2018-05-30 09:11:37" timestamp="  63.391079">
+          <testpattern timestamp="  63.391079" name="set" type="testprimitive">
+            <title>Clear error log</title>
+            <details timestamp="  63.391079">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::ErrorLog&apos;</name>
+                <description></description>
+              </info>
+            </details>
+            <teststep timestamp="  63.391079" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="  63.391079" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  63.391079" name="statechange" type="testpattern">
+            <title>Activate MEMORYPROTECTION Use Case</title>
+            <teststep timestamp="  63.391079" level="0" type="auto" ident="" result="na">Successfully set system variable &apos;StartApplication::UseCaseActivator&apos;: 9 (MemoryProtection)</teststep>
+            <teststep timestamp="  63.391079" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <teststep timestamp="  64.591079" level="1" type="auto" ident="Resume reason" result="na"> Elapsed time=1200ms (max=1200ms)</teststep>
+            <teststep timestamp="  64.591079" level="2" type="auto" ident="2" result="pass">Waited for 1200 ms.</teststep>
+            <teststep timestamp="  64.591079" level="0" type="auto" ident="" result="na">Check system variable &apos;StartApplication::UseCaseActivator&apos; value passed: = 9 (MemoryProtection), condition: == 9 (MemoryProtection)</teststep>
+            <teststep timestamp="  64.591079" level="2" type="auto" ident="3" result="pass">Validation of the expected parameters</teststep>
+            <result timestamp="  64.591079" result="pass"/>
+          </testpattern>
+          <testpattern timestamp="  64.591079" name="set" type="testprimitive">
+            <title>Initialize variables</title>
+            <details timestamp="  64.591079">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::MemoryProtectionAccessMode&apos;</name>
+                <description>0 (Valid) </description>
+              </info>
+            </details>
+            <details timestamp="  64.591079">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::MemoryProtectionPlayStatus&apos;</name>
+                <description>0 (Pause) </description>
+              </info>
+            </details>
+            <details timestamp="  64.591079">
+              <title>Set specified value.</title>
+              <info>
+                <name>System variable &apos;StartApplication::MemoryProtectionInput&apos;</name>
+                <description>63</description>
+              </info>
+            </details>
+            <teststep timestamp="  64.591079" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+            <result timestamp="  64.591079" result="pass"/>
+          </testpattern>
+          <prepend endtime="2018-05-30 09:11:39" endtimestamp="  64.591079" />
+        </preparation>
+        <testpattern timestamp="  64.591079" name="set" type="testprimitive">
+          <title>Set sensor value to 48, triggers writing of IRV from a valid context</title>
+          <details timestamp="  64.591079">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::MemoryProtectionInput&apos;</name>
+              <description>48</description>
+            </info>
+          </details>
+          <teststep timestamp="  64.591079" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="  64.591079" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  64.591079" name="awaitvaluematch" type="testprimitive">
+          <title>Verify that the read IRV value is equal to the written value and no memory access violation occurred</title>
+          <teststep timestamp="  64.781039" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;MemoryProtectionOutput&apos; Elapsed time=189.96ms (max=2000ms)</teststep>
+          <teststep timestamp="  64.781039" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 2 value condition(s).</teststep>
+          <teststep timestamp="  64.781039" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::MemoryProtectionOutput&apos;: = 48, condition: == 48</teststep>
+          <teststep timestamp="  64.781039" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::MemoryProtectionAccessState&apos;: = 0 (OK), condition: == 0 (OK)</teststep>
+          <result timestamp="  64.781039" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  64.781039" name="set" type="testprimitive">
+          <title>Set sensor value to 32, triggers writing of IRV from a valid context</title>
+          <details timestamp="  64.781039">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::MemoryProtectionInput&apos;</name>
+              <description>32</description>
+            </info>
+          </details>
+          <teststep timestamp="  64.781039" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="  64.781039" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  64.781039" name="awaitvaluematch" type="testprimitive">
+          <title>Verify that the read IRV value is equal to the written value and no memory access violation occurred</title>
+          <teststep timestamp="  64.981049" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;MemoryProtectionOutput&apos; Elapsed time=200.009ms (max=2000ms)</teststep>
+          <teststep timestamp="  64.981049" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 2 value condition(s).</teststep>
+          <teststep timestamp="  64.981049" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::MemoryProtectionOutput&apos;: = 32, condition: == 32</teststep>
+          <teststep timestamp="  64.981049" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::MemoryProtectionAccessState&apos;: = 0 (OK), condition: == 0 (OK)</teststep>
+          <result timestamp="  64.981049" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  64.981049" name="set" type="testprimitive">
+          <title>Set memory access mode to an invalid context</title>
+          <details timestamp="  64.981049">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::MemoryProtectionAccessMode&apos;</name>
+              <description>1 (Invalid) </description>
+            </info>
+          </details>
+          <teststep timestamp="  64.981049" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="  64.981049" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  64.981049" name="set" type="testprimitive">
+          <title>Set sensor value to 16, triggers writing of IRV from an invalid context</title>
+          <details timestamp="  64.981049">
+            <title>Set specified value.</title>
+            <info>
+              <name>System variable &apos;StartApplication::MemoryProtectionInput&apos;</name>
+              <description>16</description>
+            </info>
+          </details>
+          <teststep timestamp="  64.981049" level="2" type="auto" ident="1" result="pass">Stimulation of the input parameters</teststep>
+          <result timestamp="  64.981049" result="pass"/>
+        </testpattern>
+        <testpattern timestamp="  64.981049" name="awaitvaluematch" type="testprimitive">
+          <title>Verify that the IRV value does not change and a memory access violation was detected</title>
+          <teststep timestamp="  65.281081" level="1" type="auto" ident="Resume reason" result="na">Resumed on sysvar &apos;MemoryProtectionOutput&apos; Elapsed time=300.032ms (max=2000ms)</teststep>
+          <teststep timestamp="  65.281081" level="2" type="auto" ident="1" result="pass">Waited for occurrence of 2 value condition(s).</teststep>
+          <teststep timestamp="  65.281081" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::MemoryProtectionOutput&apos;: = 32, condition: == 32</teststep>
+          <teststep timestamp="  65.281081" level="0" type="auto" ident="" result="na">System variable &apos;StartApplication::MemoryProtectionAccessState&apos;: = 1 (MemoryAccessViolation), condition: == 1 (MemoryAccessViolation)</teststep>
+          <result timestamp="  65.281081" result="pass"/>
+        </testpattern>
+        <completion starttime="2018-05-30 09:11:39" timestamp="  65.281081">
+          <comment timestamp="  65.281081">
+            <text>Value of system variable &apos;StartApplication::ErrorLog&apos;  is </text>
+          </comment>
+          <compend endtime="2018-05-30 09:11:39" endtimestamp="  65.281081" />
+        </completion>
+        <verdict time="2018-05-30 09:11:39" timestamp="  65.281081" endtime="2018-05-30 09:11:39" endtimestamp="  65.281081" result="pass" />
+        <title>Memory Access Violation Detection</title>
+        <ident>TCASE-580499</ident>
+        <description>Verify that the MPU detects a memory access violation and the OS protection hook is called.</description>
+      </testcase>
+      <title>Valid and Invalid Memory Access</title>
+    </testgroup>
+    <title>Usecase MEMORYPROTECTION</title>
+  </testgroup>
+  <verdict time="2018-05-30 09:11:39" timestamp="  65.281081" endtime="2018-05-30 09:11:39" endtimestamp="  65.281081" result="pass" />
+  <title>StartApplication</title>
+  <testlogfiles>
+    <testlogfile file="" />
+  </testlogfiles>
+  <engineer>
+    <xinfo>
+      <name>Windows Login Name</name>
+      <description>vissmd</description>
+    </xinfo>
+  </engineer>
+  <testsetup>
+    <xinfo>
+      <name>Version</name>
+      <description>CANoe.ISO11783.J1939.CANaero.CANopen.LIN.MOST.FlexRay.J1587.Ethernet.Car2x.AFDX.A429.XCP.AMD.Scope 9.0.133 (SP6)</description>
+    </xinfo>
+    <xinfo>
+      <name>Configuration</name>
+      <description>E:\Delivery\CBD18x\CBD1800194\D00\internal\StartApplication\Canoe\StartApplication\StartApplication.cfg</description>
+    </xinfo>
+    <xinfo>
+      <name>Configuration Comment</name>
+      <description></description>
+    </xinfo>
+    <xinfo>
+      <name>Test Module Name</name>
+      <description>TestScript</description>
+    </xinfo>
+    <xinfo>
+      <name>Test Module File</name>
+      <description>E:\Delivery\CBD18x\CBD1800194\D00\internal\StartApplication\Appl\Source\Capl\StartApplicationTest.xml</description>
+    </xinfo>
+    <xinfo>
+      <name>Last modification of Test Module File</name>
+      <description>2018-05-29, 18:15:20</description>
+    </xinfo>
+    <xinfo>
+      <name>Windows Computer Name</name>
+      <description>VISSMD5426PCH</description>
+    </xinfo>
+    <xinfo>
+      <name>Nodelayer Module LINtp</name>
+      <description>1.2.0.6, E:\Delivery\CBD18x\CBD1800194\D00\internal\StartApplication\Canoe\Exec32\LINtp.dll</description>
+    </xinfo>
+    <xinfo>
+      <name>Nodelayer Module osek_tp</name>
+      <description>OSEK_TP (VC12, Version 5.31.63 MSC12.0, Build 63), C:\Program Files\Vector CANwin 9.0\Exec32\osek_tp.dll</description>
+    </xinfo>
+    <xinfo>
+      <name>Nodelayer Module J1939TestServiceLibraryNL</name>
+      <description>J1939 Test Service Library for CANoe, Version 9.0.133.0, C:\Program Files\Vector CANwin 9.0\Exec32\J1939TestServiceLibraryNL.dll</description>
+    </xinfo>
+  </testsetup>
+  <hardware name="CAN Channel Interfaces" category="CategoryCANIF">
+    <xinfoset type="device">
+      <xinfoobject type="device">
+      <xinfo key="channel">
+        <name>Channel</name>
+        <description>1</description>
+      </xinfo>
+      <xinfo key="device">
+        <name>Device</name>
+        <description>VN1630</description>
+      </xinfo>
+      <xinfo key="serialnumber">
+        <name>Serial number</name>
+        <description>4922</description>
+      </xinfo>
+      <xinfo key="driverdllversion">
+        <name>Driver DLL version</name>
+        <description>10.6.14</description>
+      </xinfo>
+      <xinfo key="driverversion">
+        <name>Driver version</name>
+        <description>8.9.22</description>
+      </xinfo>
+      </xinfoobject>
+      <xinfoobject type="device">
+      <xinfo key="channel">
+        <name>Channel</name>
+        <description>2</description>
+      </xinfo>
+      <xinfo key="device">
+        <name>Device</name>
+        <description>VN1630</description>
+      </xinfo>
+      <xinfo key="serialnumber">
+        <name>Serial number</name>
+        <description>4922</description>
+      </xinfo>
+      <xinfo key="driverdllversion">
+        <name>Driver DLL version</name>
+        <description>10.6.14</description>
+      </xinfo>
+      <xinfo key="driverversion">
+        <name>Driver version</name>
+        <description>8.9.22</description>
+      </xinfo>
+      </xinfoobject>
+      <xinfoobject type="device">
+      <xinfo key="channel">
+        <name>Channel</name>
+        <description>3</description>
+      </xinfo>
+      <xinfo key="device">
+        <name>Device</name>
+        <description>VN1630</description>
+      </xinfo>
+      <xinfo key="serialnumber">
+        <name>Serial number</name>
+        <description>4922</description>
+      </xinfo>
+      <xinfo key="driverdllversion">
+        <name>Driver DLL version</name>
+        <description>10.6.14</description>
+      </xinfo>
+      <xinfo key="driverversion">
+        <name>Driver version</name>
+        <description>8.9.22</description>
+      </xinfo>
+      </xinfoobject>
+    </xinfoset>
+  </hardware>
+  <hardware name="LIN Channel Interfaces" category="CategoryLINIF">
+    <xinfoset type="device">
+      <xinfoobject type="device">
+      <xinfo key="channel">
+        <name>Channel</name>
+        <description>1</description>
+      </xinfo>
+      <xinfo key="device">
+        <name>Device</name>
+        <description>VN1630</description>
+      </xinfo>
+      <xinfo key="serialnumber">
+        <name>Serial number</name>
+        <description>4922</description>
+      </xinfo>
+      <xinfo key="driverdllversion">
+        <name>Driver DLL version</name>
+        <description>10.6.14</description>
+      </xinfo>
+      <xinfo key="driverversion">
+        <name>Driver version</name>
+        <description>8.9.22</description>
+      </xinfo>
+      <xinfo key="firmwareversion">
+        <name>LIN Firmware version</name>
+        <description>1.57</description>
+      </xinfo>
+      </xinfoobject>
+    </xinfoset>
+  </hardware>
+  <miscinfo>
+    <title>Please note</title>
+    <info>
+      <name></name>
+      <description>EXAMPLE CODE ONLY\n\n                This Example Code is only intended for illustrating an example of a possible BSW integration and BSW\n                configuration. The Example Code has not passed any quality control measures and may be incomplete. The\n                Example Code is neither intended nor qualified for use in series production. The Example Code as well\n                as any of its modifications and/or implementations must be tested with diligent care and must comply\n                with all quality requirements which are necessary according to the state of the art before their use.\n            </description>
+    </info>
+  </miscinfo>
+</testmodule>
+<!--footprint="e6501e11893db5768afbf7c3f68e0b0e" version="1"-->

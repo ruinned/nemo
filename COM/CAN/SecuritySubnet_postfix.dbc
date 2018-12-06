@@ -1,0 +1,1597 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: PDM ECUspare5 DDM CIOM Alarm
+
+
+BO_ 2671902706 TesterFuncDiagMsg_Sec: 8 CIOM
+ SG_ FuncDiagDataTester_ISig_10 : 0|64@1+ (1,0) [0|0] ""  Alarm,DDM,PDM
+
+BO_ 2671833792 PhysDiagRespMsg_F2_C0_Sec: 8 Alarm
+ SG_ PhysDiagRespSig_F2_C0_ISig_10 : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2671833761 PhysDiagRespMsg_F2_A1_Sec: 8 PDM
+ SG_ PhysDiagRespSig_F2_A1_ISig_10 : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2671833760 PhysDiagRespMsg_F2_A0_Sec: 8 DDM
+ SG_ PhysDiagRespSig_F2_A0_ISig_10 : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2671821042 PhysDiagReqMsg_C0_F2_Sec: 8 CIOM
+ SG_ PhysDiagReqSig_C0_F2_ISig_10 : 0|64@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2671813106 PhysDiagReqMsg_A1_F2_Sec: 8 CIOM
+ SG_ PhysDiagReqSig_A1_F2_ISig_10 : 0|64@1+ (1,0) [0|0] ""  PDM
+
+BO_ 2671812850 PhysDiagReqMsg_A0_F2_Sec: 8 CIOM
+ SG_ PhysDiagReqSig_A0_F2_ISig_10 : 0|64@1+ (1,0) [0|0] ""  DDM
+
+BO_ 2499801762 PDM_Sec_04S_FCM: 8 CIOM
+ SG_ PDM_Sec_04S_FCS : 0|64@1+ (1,0) [0|0] ""  PDM
+
+BO_ 2499801761 PDM_Sec_04S: 16 PDM
+ SG_ PassengerDoorKeyCylTurned_stat : 0|128@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499795106 PDM_Sec_03S_FCM: 8 CIOM
+ SG_ PDM_Sec_03S_FCS : 0|64@1+ (1,0) [0|0] ""  PDM
+
+BO_ 2499795105 PDM_Sec_03S: 16 PDM
+ SG_ KeyID_PassengerDoorLatch_rqst : 0|128@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499796768 PDM_Sec_02S_FCM: 8 Alarm
+ SG_ PDM_Sec_02S_FCS : 0|64@1+ (1,0) [0|0] ""  PDM
+
+BO_ 2499796767 PDM_Sec_02S: 16 PDM
+ SG_ EncryptedPassDoorAjar_stat : 0|128@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2432690593 PDM_Sec_01P: 8 PDM
+ SG_ PassengerDoorLatch_stat : 0|3@1+ (1,0) [0|0] ""  CIOM
+ SG_ PSWindowPosition_ISig_10 : 8|3@1+ (1,0) [0|0] ""  CIOM
+ SG_ PassengerDoorAjar_stat_ISig_10 : 3|3@1+ (1,0) [0|0] ""  CIOM
+ SG_ ChildLock_DeviceIndication : 6|2@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2633990305 NmAsr_PDM_Sec: 1 PDM
+
+BO_ 2633990304 NmAsr_DDM_Sec: 1 DDM
+
+BO_ 2633990208 NmAsr_CIOM_Sec: 1 CIOM
+
+BO_ 2633990336 NmAsr_Alarm_Sec: 1 Alarm
+
+BO_ 2671902708 IntTesterTGW2FuncDiagMsg_Sec: 8 CIOM
+ SG_ FuncDiagDataIntTesterTGW2_ISig_1 : 0|64@1+ (1,0) [0|0] ""  DDM,Alarm,PDM
+
+BO_ 2671964864 DiagUUDTRespMsg1_F2_C0_Sec: 8 Alarm
+ SG_ DiagUUDTRespSig_F2_C0_ISig_10 : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2671964833 DiagUUDTRespMsg1_F2_A1_Sec: 8 PDM
+ SG_ DiagUUDTRespSig_F2_A1_ISig_10 : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2671964832 DiagUUDTRespMsg1_F2_A0_Sec: 8 DDM
+ SG_ DiagUUDTRespSig_F2_A0_ISig_10 : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2671834304 DiagRespMsgIntTGW2_F4_C0_Sec: 8 Alarm
+ SG_ InternalTesterDiagSig_F4_C0_ISig : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2671834273 DiagRespMsgIntTGW2_F4_A1_Sec: 8 PDM
+ SG_ InternalTesterDiagSig_F4_A1_ISig : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2671834272 DiagRespMsgIntTGW2_F4_A0_Sec: 8 DDM
+ SG_ InternalTesterDiagSig_F4_A0_ISig : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2671834048 DiagRespMsgIntHMIIOM_F3_C0_Sec: 8 Alarm
+ SG_ InternalTesterDiagSig_F3_C0_ISig : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2671834017 DiagRespMsgIntHMIIOM_F3_A1_Sec: 8 PDM
+ SG_ InternalTesterDiagSig_F3_A1_ISig : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2671834016 DiagRespMsgIntHMIIOM_F3_A0_Sec: 8 DDM
+ SG_ InternalTesterDiagSig_F3_A0_ISig : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2671821044 DiagReqMsgIntTGW2_C0_F4_Sec: 8 CIOM
+ SG_ InternalTesterDiagSig_C0_F4_ISig : 0|64@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2671813108 DiagReqMsgIntTGW2_A1_F4_Sec: 8 CIOM
+ SG_ InternalTesterDiagSig_A1_F4_ISig : 0|64@1+ (1,0) [0|0] ""  PDM
+
+BO_ 2671812852 DiagReqMsgIntTGW2_A0_F4_Sec: 8 CIOM
+ SG_ InternalTesterDiagSig_A0_F4_ISig : 0|64@1+ (1,0) [0|0] ""  DDM
+
+BO_ 2671821043 DiagReqMsgIntHMIIOM_C0_F3_Sec: 8 CIOM
+ SG_ InternalTesterDiagSig_C0_F3_ISig : 0|64@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2671813107 DiagReqMsgIntHMIIOM_A1_F3_Sec: 8 CIOM
+ SG_ InternalTesterDiagSig_A1_F3_ISig : 0|64@1+ (1,0) [0|0] ""  PDM
+
+BO_ 2671812851 DiagReqMsgIntHMIIOM_A0_F3_Sec: 8 CIOM
+ SG_ InternalTesterDiagSig_A0_F3_ISig : 0|64@1+ (1,0) [0|0] ""  DDM
+
+BO_ 2583680161 DiagFaultStat_PDM_Sec: 8 PDM
+ SG_ DiagFaultStat_PDM_DtcIdA_ISig_10 : 8|16@1+ (1,0) [0|65535] ""  CIOM
+ SG_ DiagFaultStat_PDM_sg_UB_ISig_10 : 56|1@1+ (1,0) [0|0] ""  CIOM
+ SG_ DiagFaultStat_PDM_EcuAdr_ISig_10 : 0|8@1+ (1,0) [0|255] ""  CIOM
+ SG_ DiagFaultStat_PDM_DtcIdB_ISig_10 : 32|16@1+ (1,0) [0|65535] ""  CIOM
+ SG_ DiagFaultStat_PDM_FailTA_ISig_10 : 24|8@1+ (1,0) [0|255] ""  CIOM
+ SG_ DiagFaultStat_PDM_FailTB_ISig_10 : 48|8@1+ (1,0) [0|255] ""  CIOM
+
+BO_ 2583658400 DiagFaultStat_DDM_Sec: 8 DDM
+ SG_ DiagFaultStat_DDM_DtcIdA_ISig_10 : 8|16@1+ (1,0) [0|65535] ""  CIOM
+ SG_ DiagFaultStat_DDM_sg_UB_ISig_10 : 56|1@1+ (1,0) [0|0] ""  CIOM
+ SG_ DiagFaultStat_DDM_FailTA_ISig_10 : 24|8@1+ (1,0) [0|255] ""  CIOM
+ SG_ DiagFaultStat_DDM_DtcIdB_ISig_10 : 32|16@1+ (1,0) [0|65535] ""  CIOM
+ SG_ DiagFaultStat_DDM_FailTB_ISig_10 : 48|8@1+ (1,0) [0|255] ""  CIOM
+ SG_ DiagFaultStat_DDM_EcuAdr_ISig_10 : 0|8@1+ (1,0) [0|255] ""  CIOM
+
+BO_ 2583636672 DiagFaultStat_Alarm_Sec: 8 Alarm
+ SG_ DiagFaultStat_Alarm_sg_UB_ISig_1 : 56|1@1+ (1,0) [0|0] ""  CIOM
+ SG_ DiagFaultStat_Alarm_DtcIdA_ISig_ : 8|16@1+ (1,0) [0|65535] ""  CIOM
+ SG_ DiagFaultStat_Alarm_DtcIdB_ISig_ : 32|16@1+ (1,0) [0|65535] ""  CIOM
+ SG_ DiagFaultStat_Alarm_FailTA_ISig_ : 24|8@1+ (1,0) [0|255] ""  CIOM
+ SG_ DiagFaultStat_Alarm_FailTB_ISig_ : 48|8@1+ (1,0) [0|255] ""  CIOM
+ SG_ DiagFaultStat_Alarm_EcuAdr_ISig_ : 0|8@1+ (1,0) [0|255] ""  CIOM
+
+BO_ 2634020513 Debug6_PDM_Sec: 8 PDM
+ SG_ Debug_6_PDM : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2634020512 Debug6_DDM_Sec: 8 DDM
+ SG_ Debug_6_DDM : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2634020544 Debug6_Alarm_Sec: 8 Alarm
+ SG_ Debug_6_Alarm : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2634020257 Debug5_PDM_Sec: 8 PDM
+ SG_ Debug_5_PDM : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2634020256 Debug5_DDM_Sec: 8 DDM
+ SG_ Debug_5_DDM : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2634020288 Debug5_Alarm_Sec: 8 Alarm
+ SG_ Debug_5_Alarm : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2634020001 Debug4_PDM_Sec: 8 PDM
+ SG_ Debug_4_PDM : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2634020000 Debug4_DDM_Sec: 8 DDM
+ SG_ Debug_4_DDM : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2634020032 Debug4_Alarm_Sec: 8 Alarm
+ SG_ Debug_4_Alarm : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2634019745 Debug3_PDM_Sec: 8 PDM
+ SG_ Debug_3_PDM : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2634019744 Debug3_DDM_Sec: 8 DDM
+ SG_ Debug_3_DDM : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2634019776 Debug3_Alarm_Sec: 8 Alarm
+ SG_ Debug_3_Alarm : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2634019489 Debug2_PDM_Sec: 8 PDM
+ SG_ Debug_2_PDM : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2634019488 Debug2_DDM_Sec: 8 DDM
+ SG_ Debug_2_DDM : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2634019520 Debug2_Alarm_Sec: 8 Alarm
+ SG_ Debug_2_Alarm : 0|64@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2634019233 Debug1_PDM_Sec: 8 Vector__XXX
+ SG_ Debug_1_PDM : 0|64@1+ (1,0) [0|0] ""  PDM
+
+BO_ 2634019232 Debug1_DDM_Sec: 8 Vector__XXX
+ SG_ Debug_1_DDM : 0|64@1+ (1,0) [0|0] ""  DDM
+
+BO_ 2634019264 Debug1_Alarm_Sec: 8 Vector__XXX
+ SG_ Debug_1_Alarm : 0|64@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2499788705 DDM_Sec_05S_FCM: 8 CIOM
+ SG_ DDM_Sec_05S_FCS : 0|64@1+ (1,0) [0|0] ""  DDM
+
+BO_ 2499788704 DDM_Sec_05S: 16 DDM
+ SG_ KeyID_DriverDoorLatch_rqst : 0|128@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499782049 DDM_Sec_04S_FCM: 8 CIOM
+ SG_ DDM_Sec_04S_FCS : 0|64@1+ (1,0) [0|0] ""  DDM
+
+BO_ 2499782048 DDM_Sec_04S: 16 DDM
+ SG_ DriverDoorKeyCylTurned_stat : 0|128@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499775649 DDM_Sec_03S_FCM: 8 CIOM
+ SG_ DDM_Sec_03S_FCS : 0|64@1+ (1,0) [0|0] ""  DDM
+
+BO_ 2499775648 DDM_Sec_03S: 16 DDM
+ SG_ Locking_Switch_stat : 0|128@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499780448 DDM_Sec_02S_FCM: 8 Alarm
+ SG_ DDM_Sec_02S_FCS : 0|64@1+ (1,0) [0|0] ""  DDM
+
+BO_ 2499780447 DDM_Sec_02S: 16 DDM
+ SG_ EncryptedDriverDoorAjar_stat : 0|128@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2432679840 DDM_Sec_01P: 8 DDM
+ SG_ DriverDoorLatch_stat : 27|3@1+ (1,0) [0|0] ""  CIOM
+ SG_ PS_MirrorSelection_cmd : 8|3@1+ (1,0) [0|0] ""  PDM
+ SG_ MirrorHeatNormalModeInd_cmd_2_IS : 45|2@1+ (1,0) [0|0] ""  CIOM
+ SG_ PS_MirrorDirection_cmd : 16|3@1+ (1,0) [0|0] ""  PDM
+ SG_ PW_DS_Passenger_SwStatus : 5|3@1+ (1,0) [0|0] ""  PDM
+ SG_ DriverDoorAjar_stat_ISig_10 : 19|3@1+ (1,0) [0|0] ""  CIOM
+ SG_ MirrorHeat_rqst_ddm : 24|3@1+ (1,0) [0|0] ""  CIOM
+ SG_ DSWindowPosition_ISig_10 : 2|3@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499768897 CIOM_Sec_12S_FCM: 8 DDM
+ SG_ CIOM_Sec_12S_FCS : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499768896 CIOM_Sec_12S: 16 CIOM
+ SG_ DriverDoorLatch_rqst : 0|128@1+ (1,0) [0|0] ""  DDM
+
+BO_ 2499762497 CIOM_Sec_11S_FCM: 8 PDM
+ SG_ CIOM_Sec_11S_FCS : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499762496 CIOM_Sec_11S: 16 CIOM
+ SG_ KeyID_PassDoorKeyCylinderStat : 0|128@1+ (1,0) [0|0] ""  PDM
+
+BO_ 2499755841 CIOM_Sec_10S_FCM: 8 PDM
+ SG_ CIOM_Sec_10S_FCS : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499755840 CIOM_Sec_10S: 16 CIOM
+ SG_ PassengerDoorLatch_rqst : 0|128@1+ (1,0) [0|0] ""  PDM
+
+BO_ 2499749441 CIOM_Sec_09S_FCM: 8 DDM
+ SG_ CIOM_Sec_09S_FCS : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499749440 CIOM_Sec_09S: 16 CIOM
+ SG_ KeyID_DrivDoorKeyCylinderStat : 0|128@1+ (1,0) [0|0] ""  DDM
+
+BO_ 2499742785 CIOM_Sec_08S_FCM: 8 DDM
+ SG_ CIOM_Sec_08S_FCS : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499742784 CIOM_Sec_08S: 16 CIOM
+ SG_ KeyID_Locking_Switch_stat : 0|128@1+ (1,0) [0|0] ""  DDM
+
+BO_ 2499764128 CIOM_Sec_07S_FCM: 8 Alarm
+ SG_ CIOM_Sec_07S_FCS : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499764127 CIOM_Sec_07S: 16 CIOM
+ SG_ TheftAlarmActivation_rqst : 0|128@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2499747808 CIOM_Sec_06S_FCM: 8 Alarm
+ SG_ CIOM_Sec_06S_FCS : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499747807 CIOM_Sec_06S: 16 CIOM
+ SG_ ReducedSetMode_rqst : 0|128@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2499799488 CIOM_Sec_05S_FCM: 8 Alarm
+ SG_ CIOM_Sec_05S_FCS : 0|64@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499799487 CIOM_Sec_05S: 16 CIOM
+ SG_ LuggageCompartment_stat : 0|128@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2432662336 CIOM_Sec_04P: 8 CIOM
+ SG_ AutoRelock_rqst : 6|2@1+ (1,0) [0|0] ""  Alarm
+ SG_ KeyPosition_ISig_10 : 8|3@1+ (1,0) [0|0] ""  Alarm
+ SG_ ParkingHeater_IndicationCmd_ISig : 14|1@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2566886464 CIOM_Sec_03P: 8 CIOM
+ SG_ WheelBasedVehicleSpeedLowRes_ISi : 48|8@1+ (1,0) [0|255] "Km_per_h"  PDM,DDM
+ SG_ AmbientAirTemperature_ISig_10 : 0|16@1+ (0.03125,-273) [-273|1774.96875] "DegreeC"  Alarm,PDM,DDM
+ SG_ TotalVehicleDistanceHighRes_ISig : 16|32@1+ (5,0) [0|21474836475] "m"  DDM,PDM,Alarm
+ SG_ ExitPreDeliveryModeHMI_rqst_ISig : 56|2@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2566892096 CIOM_Sec_02P: 8 CIOM
+ SG_ YearUTC_ISig_10 : 24|8@1+ (1,1985) [1985|2240] "Years"  PDM,Alarm,DDM
+ SG_ DayUTC_ISig_10 : 40|8@1+ (0.25,0) [0|63.75] "Days"  Alarm,PDM,DDM
+ SG_ MinutesUTC_ISig_10 : 8|8@1+ (1,0) [0|255] "min"  PDM,Alarm,DDM
+ SG_ HoursUTC_ISig_10 : 16|8@1+ (1,0) [0|255] "h"  DDM,PDM,Alarm
+ SG_ SecondsUTC_ISig_10 : 0|8@1+ (0.25,0) [0|63.75] "s"  PDM,DDM,Alarm
+ SG_ MonthUTC_ISig_10 : 32|8@1+ (1,0) [0|255] "Months"  PDM,DDM,Alarm
+
+BO_ 2432642880 CIOM_Sec_01P: 8 CIOM
+ SG_ VehicleMode_ISig_10 : 44|4@1+ (1,0) [0|0] ""  PDM,Alarm,DDM
+ SG_ BunkH2PowerWinOpenDSBtn_stat : 28|2@1+ (1,0) [0|0] ""  DDM
+ SG_ BacklightCmd_ISig_10 : 48|5@1+ (1,0) [0|0] ""  DDM,PDM
+ SG_ FuncIndIlluminationLevel_ISig_10 : 8|3@1+ (1,0) [0|0] ""  DDM
+ SG_ ElectricalLoadReduction_rqst_ISi : 32|3@1+ (1,0) [0|0] ""  DDM,PDM
+ SG_ BunkH1PowerWinCloseDSBtn_stat_UB : 0|1@1+ (1,0) [0|0] ""  DDM
+ SG_ DoorWarningLight_cmd_ISig_10 : 40|2@1+ (1,0) [0|0] ""  DDM,PDM
+ SG_ BunkH2PowerWinOpenPSBtn_stat : 24|2@1+ (1,0) [0|0] ""  PDM
+ SG_ ElectricalLoadReduction_rqst_UB_ : 54|1@1+ (1,0) [0|0] ""  DDM,PDM
+ SG_ BunkH1PowerWinClosePSBtn_stat_IS : 18|2@1+ (1,0) [0|0] ""  PDM
+ SG_ VehicleMode_UB_ISig_10 : 53|1@1+ (1,0) [0|0] ""  DDM,PDM,Alarm
+ SG_ DoorInstepLight_cmd_ISig_10 : 14|2@1+ (1,0) [0|0] ""  PDM,DDM
+ SG_ FlexSwitchChildLockButton_stat : 56|3@1+ (1,0) [0|0] ""  PDM
+ SG_ MainSwitchButton_Status_ISig_10 : 42|2@1+ (1,0) [0|0] ""  PDM,DDM
+ SG_ BunkH1PowerWinOpenDSBtn_stat_ISi : 20|2@1+ (1,0) [0|0] ""  DDM
+ SG_ BunkH2PowerWinClosePSBtn_stat : 26|2@1+ (1,0) [0|0] ""  PDM
+ SG_ BunkH1PowerWinCloseDSBtn_stat_IS : 22|2@1+ (1,0) [0|0] ""  DDM
+ SG_ BunkH1PowerWinOpenPSBtn_stat_UB_ : 3|1@1+ (1,0) [0|0] ""  PDM
+ SG_ BunkH1PowerWinClosePSBtn_stat_UB : 1|1@1+ (1,0) [0|0] ""  PDM
+ SG_ KeyfobLockBtn_DoublePress_ISig_1 : 38|2@1+ (1,0) [0|0] ""  DDM,PDM
+ SG_ BunkH1PowerWinOpenPSBtn_stat_ISi : 16|2@1+ (1,0) [0|0] ""  PDM
+ SG_ BunkH1PowerWinOpenDSBtn_stat_UB_ : 2|1@1+ (1,0) [0|0] ""  DDM
+ SG_ MirrorHeatingMode_ISig_10 : 11|3@1+ (1,0) [0|0] ""  DDM
+ SG_ MirrorHeatNormModeBtn_stat_ISig_ : 6|2@1+ (1,0) [0|0] ""  DDM
+ SG_ BunkH2PowerWinCloseDSBtn_stat : 30|2@1+ (1,0) [0|0] ""  DDM
+
+BO_ 2633994281 AnmMsg_PDM_SecuritySubnet: 4 PDM
+ SG_ AnmSig_PDM_SecuritySubnet : 0|32@1+ (1,0) [0|4294967295] ""  DDM,ECUspare5,Alarm,CIOM
+
+BO_ 2633994313 AnmMsg_ECUspare5_SecuritySubnet: 4 ECUspare5
+ SG_ AnmSig_ECUspare5_SecuritySubnet : 0|32@1+ (1,0) [0|4294967295] ""  DDM,CIOM,PDM,Alarm
+
+BO_ 2633994279 AnmMsg_DDM_SecuritySubnet: 4 DDM
+ SG_ AnmSig_DDM_SecuritySubnet : 0|32@1+ (1,0) [0|4294967295] ""  Alarm,PDM,ECUspare5,CIOM
+
+BO_ 2633994304 AnmMsg_CIOM_SecuritySubnet: 4 CIOM
+ SG_ AnmSig_CIOM_SecuritySubnet : 0|32@1+ (1,0) [0|4294967295] ""  Alarm,ECUspare5,PDM,DDM
+
+BO_ 2633994276 AnmMsg_Alarm_SecuritySubnet: 4 Alarm
+ SG_ AnmSig_Alarm_SecuritySubnet : 0|32@1+ (1,0) [0|4294967295] ""  DDM,ECUspare5,CIOM,PDM
+
+BO_ 2499788608 Alarm_Sec_07S_FCM: 8 CIOM
+ SG_ Alarm_Sec_07S_FCS : 0|64@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2499788607 Alarm_Sec_07S: 16 Alarm
+ SG_ KeyID_LuggageCompartment_stat : 0|128@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499777728 Alarm_Sec_06S_FCM: 8 CIOM
+ SG_ Alarm_Sec_06S_FCS : 0|64@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2499777727 Alarm_Sec_06S: 16 Alarm
+ SG_ KeyID_TheftAlarmActivation : 0|128@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2499766848 Alarm_Sec_05S_FCM: 8 PDM
+ SG_ Alarm_Sec_05S_FCS : 0|64@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2499766847 Alarm_Sec_05S: 16 Alarm
+ SG_ KeyID_EncryptedPassDoorAjar : 0|128@1+ (1,0) [0|0] ""  PDM
+
+BO_ 2499755968 Alarm_Sec_04S_FCM: 8 DDM
+ SG_ Alarm_Sec_04S_FCS : 0|64@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2499755967 Alarm_Sec_04S: 16 Alarm
+ SG_ KeyID_EncryptedDriverDoorAjar : 0|128@1+ (1,0) [0|0] ""  DDM
+
+BO_ 2499745088 Alarm_Sec_03S_FCM: 8 CIOM
+ SG_ Alarm_Sec_03S_FCS : 0|64@1+ (1,0) [0|0] ""  Alarm
+
+BO_ 2499745087 Alarm_Sec_03S: 16 Alarm
+ SG_ KeyID_ReducedSetMode : 0|128@1+ (1,0) [0|0] ""  CIOM
+
+BO_ 2432644544 Alarm_Sec_02P: 8 Alarm
+ SG_ AutorelockingMovements_stat : 8|3@1+ (1,0) [0|0] ""  CIOM
+ SG_ AlarmTriggeringCause_stat_ISig_1 : 4|4@1+ (1,0) [0|0] ""  CIOM
+ SG_ AlarmStatus_stat_ISig_10 : 0|4@1+ (1,0) [0|0] ""  PDM,CIOM,DDM
+ SG_ Indicator_Lights_Alarm_rqst_ISig : 11|3@1+ (1,0) [0|0] ""  CIOM
+
+
+
+CM_ "COM_MATRIX_1.29.X0";
+CM_ SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi "254 Error ; 255 Not available";
+CM_ SG_ 2566886464 AmbientAirTemperature_ISig_10 "65024 - 65279 Error ; 65280 - 65535 Not available";
+CM_ SG_ 2566886464 TotalVehicleDistanceHighRes_ISig "4261412864 - 4278190079 Error ; 4278190080 - 4294967295 Not available";
+CM_ SG_ 2566892096 YearUTC_ISig_10 "254 Error ; 255 Not available";
+CM_ SG_ 2566892096 DayUTC_ISig_10 "254 Error ; 255 Not available";
+CM_ SG_ 2566892096 MinutesUTC_ISig_10 "254 Error ; 255 Not available";
+CM_ SG_ 2566892096 HoursUTC_ISig_10 "254 Error ; 255 Not available";
+CM_ SG_ 2566892096 SecondsUTC_ISig_10 "254 Error ; 255 Not available";
+CM_ SG_ 2566892096 MonthUTC_ISig_10 "254 Error ; 255 Not available";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "GenSigCycleTimeActive" INT 0 0;
+BA_DEF_ SG_  "GenSigCycleTime" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed";
+BA_DEF_  "Baudrate" INT 0 1000000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "VersionYear" INT 0 99;
+BA_DEF_  "VersionNumber" INT 0 99;
+BA_DEF_  "VersionMonth" INT 1 12;
+BA_DEF_  "VersionDay" INT 1 31;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BU_  "TpOwnSystemEcuNumber" HEX 0 255;
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl";
+BA_DEF_ SG_  "SeToolVersion_SIGNAL" STRING ;
+BA_DEF_ SG_  "SeToolUniqueID_SIGNAL" STRING ;
+BA_DEF_ SG_  "SeToolOwnerSigGroup_SIGNAL" STRING ;
+BA_DEF_ SG_  "SeToolOwnerSigGroupID_SIGNAL" STRING ;
+BA_DEF_ SG_  "SeToolName_SIGNAL" STRING ;
+BA_DEF_ SG_  "SeToolItemID_SIGNAL" STRING ;
+BA_DEF_ SG_  "SeToolAncestorID_SIGNAL" STRING ;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ SG_  "Platform_Vivis2_Sig" ENUM  "No","Yes";
+BA_DEF_ SG_  "Platform_Vivis1_Sig" ENUM  "No","Yes";
+BA_DEF_ SG_  "Platform_VMCU1_Sig" ENUM  "No","Yes";
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "NmMessage" ENUM  "no","yes";
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_  "NmAsrWaitBusSleepTime" INT 0 65535;
+BA_DEF_  "NmAsrTimeoutTime" INT 0 65535;
+BA_DEF_  "NmAsrRepeatMessageTime" INT 0 65535;
+BA_DEF_ BU_  "NmAsrNodeIdentifier" HEX 0 253;
+BA_DEF_ BU_  "NmAsrNode" ENUM  "No","Yes";
+BA_DEF_  "NmAsrMessageCount" INT 1 256;
+BA_DEF_ BO_  "NmAsrMessage" ENUM  "No","Yes";
+BA_DEF_  "NmAsrCanMsgCycleTime" INT 0 65535;
+BA_DEF_ BU_  "NmAsrCanMsgCycleOffset" INT 0 65535;
+BA_DEF_  "NmAsrBaseAddress" HEX 0 536870911;
+BA_DEF_  "NetworkExportIndices_0" STRING ;
+BA_DEF_  "NetworkExportIndices" STRING ;
+BA_DEF_ SG_  "NeedsUpdateBit" ENUM  "No","Yes";
+BA_DEF_ SG_  "MmAnSignal" ENUM  "No","Yes";
+BA_DEF_ BU_  "MmAnMaster" ENUM  "No","Yes";
+BA_DEF_ BU_  "IsOBDrelevant" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigMaxLatency" INT 0 65535;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "Yes","No";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "DiagnosticClientAddress" HEX 0 255;
+BA_DEF_ BO_  "DiagUUDTResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_  "DiagRoutingPriority" INT 0 0;
+BA_DEF_ BU_  "DiagRole" ENUM  "None","OBDTester","ExternalTester","InternalTester";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagConnection" HEX 0 65535;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ BO_  "CanTpSTmin" INT 0 255;
+BA_DEF_ BO_  "CanTpFcFrameId" HEX 0 2147483647;
+BA_DEF_ BO_  "CanTpBs" INT 0 255;
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_REL_ BU_SG_REL_  "GenSigTimeoutTime" INT 0 65535;
+BA_DEF_REL_ BU_SG_REL_  "GenSigFirstTimeoutTime" INT 0 65535;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigCycleTimeActive" 0;
+BA_DEF_DEF_  "GenSigCycleTime" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "Baudrate" 500000;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "Manufacturer" "VOLVO_AB";
+BA_DEF_DEF_  "VersionYear" 0;
+BA_DEF_DEF_  "VersionNumber" 0;
+BA_DEF_DEF_  "VersionMonth" 1;
+BA_DEF_DEF_  "VersionDay" 1;
+BA_DEF_DEF_  "VFrameFormat" "ExtendedCAN";
+BA_DEF_DEF_  "TpOwnSystemEcuNumber" 0;
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "SeToolVersion_SIGNAL" "";
+BA_DEF_DEF_  "SeToolUniqueID_SIGNAL" "";
+BA_DEF_DEF_  "SeToolOwnerSigGroup_SIGNAL" "";
+BA_DEF_DEF_  "SeToolOwnerSigGroupID_SIGNAL" "";
+BA_DEF_DEF_  "SeToolName_SIGNAL" "";
+BA_DEF_DEF_  "SeToolItemID_SIGNAL" "";
+BA_DEF_DEF_  "SeToolAncestorID_SIGNAL" "";
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "Platform_Vivis2_Sig" "No";
+BA_DEF_DEF_  "Platform_Vivis1_Sig" "No";
+BA_DEF_DEF_  "Platform_VMCU1_Sig" "No";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "NmMessage" "no";
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmAsrWaitBusSleepTime" 750;
+BA_DEF_DEF_  "NmAsrTimeoutTime" 5000;
+BA_DEF_DEF_  "NmAsrRepeatMessageTime" 300;
+BA_DEF_DEF_  "NmAsrNodeIdentifier" 0;
+BA_DEF_DEF_  "NmAsrNode" "Yes";
+BA_DEF_DEF_  "NmAsrMessageCount" 256;
+BA_DEF_DEF_  "NmAsrMessage" "No";
+BA_DEF_DEF_  "NmAsrCanMsgCycleTime" 200;
+BA_DEF_DEF_  "NmAsrCanMsgCycleOffset" 0;
+BA_DEF_DEF_  "NmAsrBaseAddress" 486506496;
+BA_DEF_DEF_  "NetworkExportIndices_0" "";
+BA_DEF_DEF_  "NetworkExportIndices" "";
+BA_DEF_DEF_  "NeedsUpdateBit" "No";
+BA_DEF_DEF_  "MmAnSignal" "No";
+BA_DEF_DEF_  "MmAnMaster" "No";
+BA_DEF_DEF_  "IsOBDrelevant" "No";
+BA_DEF_DEF_  "GenSigMaxLatency" 0;
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "DiagnosticClientAddress" 0;
+BA_DEF_DEF_  "DiagUUDTResponse" "No";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "DiagRoutingPriority" 0;
+BA_DEF_DEF_  "DiagRole" "None";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagConnection" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "CanTpSTmin" 0;
+BA_DEF_DEF_  "CanTpFcFrameId" 2147483647;
+BA_DEF_DEF_  "CanTpBs" 255;
+BA_DEF_DEF_REL_ "GenSigTimeoutTime" 0;
+BA_DEF_DEF_REL_ "GenSigFirstTimeoutTime" 0;
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "Manufacturer" "VOLVO_AB";
+BA_ "NmType" "NmAsr";
+BA_ "BusType" "CAN";
+BA_ "Baudrate" 500000;
+BA_ "NmAsrCanMsgCycleTime" 20;
+BA_ "NmAsrRepeatMessageTime" 60;
+BA_ "NmAsrTimeoutTime" 60;
+BA_ "NmAsrWaitBusSleepTime" 60;
+BA_ "VersionDay" 12;
+BA_ "VersionMonth" 10;
+BA_ "VersionNumber" 1;
+BA_ "VersionYear" 17;
+BA_ "DBName" "SecuritySubnet";
+BA_ "TpOwnSystemEcuNumber" BU_ PDM 161;
+BA_ "NmAsrNodeIdentifier" BU_ PDM 161;
+BA_ "TpOwnSystemEcuNumber" BU_ DDM 160;
+BA_ "NmAsrNodeIdentifier" BU_ DDM 160;
+BA_ "TpOwnSystemEcuNumber" BU_ CIOM 64;
+BA_ "NmAsrNodeIdentifier" BU_ CIOM 64;
+BA_ "TpOwnSystemEcuNumber" BU_ Alarm 192;
+BA_ "NmAsrNodeIdentifier" BU_ Alarm 192;
+BA_ "DiagConnection" BO_ 2671902706 62144;
+BA_ "DiagState" BO_ 2671902706 1;
+BA_ "GenMsgILSupport" BO_ 2671902706 0;
+BA_ "GenMsgSendType" BO_ 2671902706 8;
+BA_ "DiagConnection" BO_ 2671833792 62144;
+BA_ "DiagResponse" BO_ 2671833792 1;
+BA_ "GenMsgILSupport" BO_ 2671833792 0;
+BA_ "GenMsgSendType" BO_ 2671833792 8;
+BA_ "DiagConnection" BO_ 2671833761 62113;
+BA_ "DiagResponse" BO_ 2671833761 1;
+BA_ "GenMsgILSupport" BO_ 2671833761 0;
+BA_ "GenMsgSendType" BO_ 2671833761 8;
+BA_ "DiagConnection" BO_ 2671833760 62112;
+BA_ "DiagResponse" BO_ 2671833760 1;
+BA_ "GenMsgILSupport" BO_ 2671833760 0;
+BA_ "GenMsgSendType" BO_ 2671833760 8;
+BA_ "DiagConnection" BO_ 2671821042 62144;
+BA_ "DiagRequest" BO_ 2671821042 1;
+BA_ "GenMsgILSupport" BO_ 2671821042 0;
+BA_ "GenMsgSendType" BO_ 2671821042 8;
+BA_ "DiagConnection" BO_ 2671813106 62113;
+BA_ "DiagRequest" BO_ 2671813106 1;
+BA_ "GenMsgILSupport" BO_ 2671813106 0;
+BA_ "GenMsgSendType" BO_ 2671813106 8;
+BA_ "DiagConnection" BO_ 2671812850 62112;
+BA_ "DiagRequest" BO_ 2671812850 1;
+BA_ "GenMsgILSupport" BO_ 2671812850 0;
+BA_ "GenMsgSendType" BO_ 2671812850 8;
+BA_ "GenMsgILSupport" BO_ 2499801762 0;
+BA_ "GenMsgSendType" BO_ 2499801762 8;
+BA_ "CanTpFcFrameId" BO_ 2499801761 352318114;
+BA_ "GenMsgSendType" BO_ 2499801761 8;
+BA_ "GenMsgDelayTime" BO_ 2499801761 20;
+BA_ "GenMsgILSupport" BO_ 2499795106 0;
+BA_ "GenMsgSendType" BO_ 2499795106 8;
+BA_ "CanTpFcFrameId" BO_ 2499795105 352311458;
+BA_ "GenMsgSendType" BO_ 2499795105 8;
+BA_ "GenMsgDelayTime" BO_ 2499795105 70;
+BA_ "GenMsgILSupport" BO_ 2499796768 0;
+BA_ "GenMsgSendType" BO_ 2499796768 8;
+BA_ "CanTpFcFrameId" BO_ 2499796767 352313120;
+BA_ "GenMsgSendType" BO_ 2499796767 8;
+BA_ "GenMsgDelayTime" BO_ 2499796767 20;
+BA_ "GenMsgSendType" BO_ 2432690593 0;
+BA_ "GenMsgCycleTime" BO_ 2432690593 20;
+BA_ "GenMsgILSupport" BO_ 2633990305 0;
+BA_ "NmAsrMessage" BO_ 2633990305 1;
+BA_ "GenMsgSendType" BO_ 2633990305 8;
+BA_ "GenMsgILSupport" BO_ 2633990304 0;
+BA_ "NmAsrMessage" BO_ 2633990304 1;
+BA_ "GenMsgSendType" BO_ 2633990304 8;
+BA_ "GenMsgILSupport" BO_ 2633990208 0;
+BA_ "NmAsrMessage" BO_ 2633990208 1;
+BA_ "GenMsgSendType" BO_ 2633990208 8;
+BA_ "GenMsgILSupport" BO_ 2633990336 0;
+BA_ "NmAsrMessage" BO_ 2633990336 1;
+BA_ "GenMsgSendType" BO_ 2633990336 8;
+BA_ "DiagConnection" BO_ 2671902708 62719;
+BA_ "DiagState" BO_ 2671902708 1;
+BA_ "GenMsgILSupport" BO_ 2671902708 0;
+BA_ "GenMsgSendType" BO_ 2671902708 8;
+BA_ "DiagConnection" BO_ 2671964864 62144;
+BA_ "DiagUUDTResponse" BO_ 2671964864 1;
+BA_ "GenMsgILSupport" BO_ 2671964864 0;
+BA_ "GenMsgSendType" BO_ 2671964864 8;
+BA_ "DiagConnection" BO_ 2671964833 62113;
+BA_ "DiagUUDTResponse" BO_ 2671964833 1;
+BA_ "GenMsgILSupport" BO_ 2671964833 0;
+BA_ "GenMsgSendType" BO_ 2671964833 8;
+BA_ "DiagConnection" BO_ 2671964832 62112;
+BA_ "DiagUUDTResponse" BO_ 2671964832 1;
+BA_ "GenMsgILSupport" BO_ 2671964832 0;
+BA_ "GenMsgSendType" BO_ 2671964832 8;
+BA_ "DiagConnection" BO_ 2671834304 62656;
+BA_ "DiagResponse" BO_ 2671834304 1;
+BA_ "GenMsgILSupport" BO_ 2671834304 0;
+BA_ "GenMsgSendType" BO_ 2671834304 8;
+BA_ "DiagConnection" BO_ 2671834273 62625;
+BA_ "DiagResponse" BO_ 2671834273 1;
+BA_ "GenMsgILSupport" BO_ 2671834273 0;
+BA_ "GenMsgSendType" BO_ 2671834273 8;
+BA_ "DiagConnection" BO_ 2671834272 62624;
+BA_ "DiagResponse" BO_ 2671834272 1;
+BA_ "GenMsgILSupport" BO_ 2671834272 0;
+BA_ "GenMsgSendType" BO_ 2671834272 8;
+BA_ "DiagConnection" BO_ 2671834048 62400;
+BA_ "DiagResponse" BO_ 2671834048 1;
+BA_ "GenMsgILSupport" BO_ 2671834048 0;
+BA_ "GenMsgSendType" BO_ 2671834048 8;
+BA_ "DiagConnection" BO_ 2671834017 62369;
+BA_ "DiagResponse" BO_ 2671834017 1;
+BA_ "GenMsgILSupport" BO_ 2671834017 0;
+BA_ "GenMsgSendType" BO_ 2671834017 8;
+BA_ "DiagConnection" BO_ 2671834016 62368;
+BA_ "DiagResponse" BO_ 2671834016 1;
+BA_ "GenMsgILSupport" BO_ 2671834016 0;
+BA_ "GenMsgSendType" BO_ 2671834016 8;
+BA_ "DiagConnection" BO_ 2671821044 62656;
+BA_ "DiagRequest" BO_ 2671821044 1;
+BA_ "GenMsgILSupport" BO_ 2671821044 0;
+BA_ "GenMsgSendType" BO_ 2671821044 8;
+BA_ "DiagConnection" BO_ 2671813108 62625;
+BA_ "DiagRequest" BO_ 2671813108 1;
+BA_ "GenMsgILSupport" BO_ 2671813108 0;
+BA_ "GenMsgSendType" BO_ 2671813108 8;
+BA_ "DiagConnection" BO_ 2671812852 62624;
+BA_ "DiagRequest" BO_ 2671812852 1;
+BA_ "GenMsgILSupport" BO_ 2671812852 0;
+BA_ "GenMsgSendType" BO_ 2671812852 8;
+BA_ "DiagConnection" BO_ 2671821043 62400;
+BA_ "DiagRequest" BO_ 2671821043 1;
+BA_ "GenMsgILSupport" BO_ 2671821043 0;
+BA_ "GenMsgSendType" BO_ 2671821043 8;
+BA_ "DiagConnection" BO_ 2671813107 62369;
+BA_ "DiagRequest" BO_ 2671813107 1;
+BA_ "GenMsgILSupport" BO_ 2671813107 0;
+BA_ "GenMsgSendType" BO_ 2671813107 8;
+BA_ "DiagConnection" BO_ 2671812851 62368;
+BA_ "DiagRequest" BO_ 2671812851 1;
+BA_ "GenMsgILSupport" BO_ 2671812851 0;
+BA_ "GenMsgSendType" BO_ 2671812851 8;
+BA_ "GenMsgSendType" BO_ 2583680161 0;
+BA_ "GenMsgCycleTime" BO_ 2583680161 1000;
+BA_ "GenMsgDelayTime" BO_ 2583680161 90;
+BA_ "GenMsgStartDelayTime" BO_ 2583680161 5;
+BA_ "GenMsgSendType" BO_ 2583658400 0;
+BA_ "GenMsgCycleTime" BO_ 2583658400 1000;
+BA_ "GenMsgDelayTime" BO_ 2583658400 95;
+BA_ "GenMsgStartDelayTime" BO_ 2583658400 5;
+BA_ "GenMsgSendType" BO_ 2583636672 0;
+BA_ "GenMsgCycleTime" BO_ 2583636672 1000;
+BA_ "GenMsgDelayTime" BO_ 2583636672 95;
+BA_ "GenMsgStartDelayTime" BO_ 2583636672 10;
+BA_ "GenMsgSendType" BO_ 2634020513 8;
+BA_ "GenMsgDelayTime" BO_ 2634020513 50;
+BA_ "GenMsgStartDelayTime" BO_ 2634020513 50;
+BA_ "GenMsgSendType" BO_ 2634020512 8;
+BA_ "GenMsgDelayTime" BO_ 2634020512 50;
+BA_ "GenMsgStartDelayTime" BO_ 2634020512 50;
+BA_ "GenMsgSendType" BO_ 2634020544 8;
+BA_ "GenMsgDelayTime" BO_ 2634020544 50;
+BA_ "GenMsgStartDelayTime" BO_ 2634020544 50;
+BA_ "GenMsgSendType" BO_ 2634020257 8;
+BA_ "GenMsgDelayTime" BO_ 2634020257 50;
+BA_ "GenMsgStartDelayTime" BO_ 2634020257 50;
+BA_ "GenMsgSendType" BO_ 2634020256 8;
+BA_ "GenMsgDelayTime" BO_ 2634020256 50;
+BA_ "GenMsgStartDelayTime" BO_ 2634020256 50;
+BA_ "GenMsgSendType" BO_ 2634020288 8;
+BA_ "GenMsgDelayTime" BO_ 2634020288 50;
+BA_ "GenMsgStartDelayTime" BO_ 2634020288 50;
+BA_ "GenMsgSendType" BO_ 2634020001 8;
+BA_ "GenMsgDelayTime" BO_ 2634020001 50;
+BA_ "GenMsgStartDelayTime" BO_ 2634020001 50;
+BA_ "GenMsgSendType" BO_ 2634020000 8;
+BA_ "GenMsgDelayTime" BO_ 2634020000 50;
+BA_ "GenMsgStartDelayTime" BO_ 2634020000 50;
+BA_ "GenMsgSendType" BO_ 2634020032 8;
+BA_ "GenMsgDelayTime" BO_ 2634020032 50;
+BA_ "GenMsgStartDelayTime" BO_ 2634020032 50;
+BA_ "GenMsgSendType" BO_ 2634019745 8;
+BA_ "GenMsgDelayTime" BO_ 2634019745 50;
+BA_ "GenMsgStartDelayTime" BO_ 2634019745 50;
+BA_ "GenMsgSendType" BO_ 2634019744 8;
+BA_ "GenMsgDelayTime" BO_ 2634019744 50;
+BA_ "GenMsgStartDelayTime" BO_ 2634019744 50;
+BA_ "GenMsgSendType" BO_ 2634019776 8;
+BA_ "GenMsgDelayTime" BO_ 2634019776 50;
+BA_ "GenMsgStartDelayTime" BO_ 2634019776 50;
+BA_ "GenMsgSendType" BO_ 2634019489 8;
+BA_ "GenMsgDelayTime" BO_ 2634019489 50;
+BA_ "GenMsgStartDelayTime" BO_ 2634019489 50;
+BA_ "GenMsgSendType" BO_ 2634019488 8;
+BA_ "GenMsgDelayTime" BO_ 2634019488 50;
+BA_ "GenMsgStartDelayTime" BO_ 2634019488 50;
+BA_ "GenMsgSendType" BO_ 2634019520 8;
+BA_ "GenMsgDelayTime" BO_ 2634019520 50;
+BA_ "GenMsgStartDelayTime" BO_ 2634019520 50;
+BA_ "GenMsgILSupport" BO_ 2499788705 0;
+BA_ "GenMsgSendType" BO_ 2499788705 8;
+BA_ "CanTpFcFrameId" BO_ 2499788704 352305057;
+BA_ "GenMsgSendType" BO_ 2499788704 8;
+BA_ "GenMsgDelayTime" BO_ 2499788704 70;
+BA_ "GenMsgILSupport" BO_ 2499782049 0;
+BA_ "GenMsgSendType" BO_ 2499782049 8;
+BA_ "CanTpFcFrameId" BO_ 2499782048 352298401;
+BA_ "GenMsgSendType" BO_ 2499782048 8;
+BA_ "GenMsgDelayTime" BO_ 2499782048 20;
+BA_ "GenMsgILSupport" BO_ 2499775649 0;
+BA_ "GenMsgSendType" BO_ 2499775649 8;
+BA_ "CanTpFcFrameId" BO_ 2499775648 352292001;
+BA_ "GenMsgSendType" BO_ 2499775648 8;
+BA_ "GenMsgDelayTime" BO_ 2499775648 20;
+BA_ "GenMsgILSupport" BO_ 2499780448 0;
+BA_ "GenMsgSendType" BO_ 2499780448 8;
+BA_ "CanTpFcFrameId" BO_ 2499780447 352296800;
+BA_ "GenMsgSendType" BO_ 2499780447 8;
+BA_ "GenMsgDelayTime" BO_ 2499780447 20;
+BA_ "GenMsgSendType" BO_ 2432679840 0;
+BA_ "GenMsgCycleTime" BO_ 2432679840 20;
+BA_ "GenMsgILSupport" BO_ 2499768897 0;
+BA_ "GenMsgSendType" BO_ 2499768897 8;
+BA_ "CanTpFcFrameId" BO_ 2499768896 352285249;
+BA_ "GenMsgSendType" BO_ 2499768896 8;
+BA_ "GenMsgDelayTime" BO_ 2499768896 20;
+BA_ "GenMsgILSupport" BO_ 2499762497 0;
+BA_ "GenMsgSendType" BO_ 2499762497 8;
+BA_ "CanTpFcFrameId" BO_ 2499762496 352278849;
+BA_ "GenMsgSendType" BO_ 2499762496 8;
+BA_ "GenMsgDelayTime" BO_ 2499762496 80;
+BA_ "GenMsgILSupport" BO_ 2499755841 0;
+BA_ "GenMsgSendType" BO_ 2499755841 8;
+BA_ "CanTpFcFrameId" BO_ 2499755840 352272193;
+BA_ "GenMsgSendType" BO_ 2499755840 8;
+BA_ "GenMsgDelayTime" BO_ 2499755840 20;
+BA_ "GenMsgILSupport" BO_ 2499749441 0;
+BA_ "GenMsgSendType" BO_ 2499749441 8;
+BA_ "CanTpFcFrameId" BO_ 2499749440 352265793;
+BA_ "GenMsgSendType" BO_ 2499749440 8;
+BA_ "GenMsgDelayTime" BO_ 2499749440 90;
+BA_ "GenMsgILSupport" BO_ 2499742785 0;
+BA_ "GenMsgSendType" BO_ 2499742785 8;
+BA_ "CanTpFcFrameId" BO_ 2499742784 352259137;
+BA_ "GenMsgSendType" BO_ 2499742784 8;
+BA_ "GenMsgDelayTime" BO_ 2499742784 90;
+BA_ "GenMsgILSupport" BO_ 2499764128 0;
+BA_ "GenMsgSendType" BO_ 2499764128 8;
+BA_ "CanTpFcFrameId" BO_ 2499764127 352280480;
+BA_ "GenMsgSendType" BO_ 2499764127 8;
+BA_ "GenMsgDelayTime" BO_ 2499764127 20;
+BA_ "GenMsgILSupport" BO_ 2499747808 0;
+BA_ "GenMsgSendType" BO_ 2499747808 8;
+BA_ "CanTpFcFrameId" BO_ 2499747807 352264160;
+BA_ "GenMsgSendType" BO_ 2499747807 8;
+BA_ "GenMsgDelayTime" BO_ 2499747807 20;
+BA_ "GenMsgILSupport" BO_ 2499799488 0;
+BA_ "GenMsgSendType" BO_ 2499799488 8;
+BA_ "CanTpFcFrameId" BO_ 2499799487 352315840;
+BA_ "GenMsgSendType" BO_ 2499799487 8;
+BA_ "GenMsgDelayTime" BO_ 2499799487 20;
+BA_ "GenMsgSendType" BO_ 2432662336 0;
+BA_ "GenMsgCycleTime" BO_ 2432662336 20;
+BA_ "GenMsgStartDelayTime" BO_ 2432662336 5;
+BA_ "GenMsgSendType" BO_ 2566886464 0;
+BA_ "GenMsgCycleTime" BO_ 2566886464 100;
+BA_ "GenMsgStartDelayTime" BO_ 2566886464 15;
+BA_ "GenMsgSendType" BO_ 2566892096 0;
+BA_ "GenMsgCycleTime" BO_ 2566892096 250;
+BA_ "GenMsgStartDelayTime" BO_ 2566892096 25;
+BA_ "GenMsgSendType" BO_ 2432642880 0;
+BA_ "GenMsgCycleTime" BO_ 2432642880 10;
+BA_ "GenMsgSendType" BO_ 2633994281 0;
+BA_ "GenMsgCycleTime" BO_ 2633994281 20;
+BA_ "GenMsgSendType" BO_ 2633994313 0;
+BA_ "GenMsgCycleTime" BO_ 2633994313 100;
+BA_ "GenMsgSendType" BO_ 2633994279 0;
+BA_ "GenMsgCycleTime" BO_ 2633994279 20;
+BA_ "GenMsgSendType" BO_ 2633994304 0;
+BA_ "GenMsgCycleTime" BO_ 2633994304 20;
+BA_ "GenMsgSendType" BO_ 2633994276 0;
+BA_ "GenMsgCycleTime" BO_ 2633994276 20;
+BA_ "GenMsgILSupport" BO_ 2499788608 0;
+BA_ "GenMsgSendType" BO_ 2499788608 8;
+BA_ "CanTpFcFrameId" BO_ 2499788607 352304960;
+BA_ "GenMsgSendType" BO_ 2499788607 8;
+BA_ "GenMsgDelayTime" BO_ 2499788607 50;
+BA_ "GenMsgILSupport" BO_ 2499777728 0;
+BA_ "GenMsgSendType" BO_ 2499777728 8;
+BA_ "CanTpFcFrameId" BO_ 2499777727 352294080;
+BA_ "GenMsgSendType" BO_ 2499777727 8;
+BA_ "GenMsgDelayTime" BO_ 2499777727 50;
+BA_ "GenMsgILSupport" BO_ 2499766848 0;
+BA_ "GenMsgSendType" BO_ 2499766848 8;
+BA_ "CanTpFcFrameId" BO_ 2499766847 352283200;
+BA_ "GenMsgSendType" BO_ 2499766847 8;
+BA_ "GenMsgDelayTime" BO_ 2499766847 50;
+BA_ "GenMsgILSupport" BO_ 2499755968 0;
+BA_ "GenMsgSendType" BO_ 2499755968 8;
+BA_ "CanTpFcFrameId" BO_ 2499755967 352272320;
+BA_ "GenMsgSendType" BO_ 2499755967 8;
+BA_ "GenMsgDelayTime" BO_ 2499755967 50;
+BA_ "GenMsgILSupport" BO_ 2499745088 0;
+BA_ "GenMsgSendType" BO_ 2499745088 8;
+BA_ "CanTpFcFrameId" BO_ 2499745087 352261440;
+BA_ "GenMsgSendType" BO_ 2499745087 8;
+BA_ "GenMsgDelayTime" BO_ 2499745087 50;
+BA_ "GenMsgSendType" BO_ 2432644544 0;
+BA_ "GenMsgCycleTime" BO_ 2432644544 20;
+BA_ "GenMsgStartDelayTime" BO_ 2432644544 5;
+BA_ "GenSigSendType" SG_ 2671902706 FuncDiagDataTester_ISig_10 7;
+BA_ "GenSigSendType" SG_ 2671833792 PhysDiagRespSig_F2_C0_ISig_10 7;
+BA_ "GenSigSendType" SG_ 2671833761 PhysDiagRespSig_F2_A1_ISig_10 7;
+BA_ "GenSigSendType" SG_ 2671833760 PhysDiagRespSig_F2_A0_ISig_10 7;
+BA_ "GenSigSendType" SG_ 2671821042 PhysDiagReqSig_C0_F2_ISig_10 7;
+BA_ "GenSigSendType" SG_ 2671813106 PhysDiagReqSig_A1_F2_ISig_10 7;
+BA_ "GenSigSendType" SG_ 2671812850 PhysDiagReqSig_A0_F2_ISig_10 7;
+BA_ "GenSigSendType" SG_ 2499801762 PDM_Sec_04S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499801761 PassengerDoorKeyCylTurned_stat 1;
+BA_ "GenSigMaxLatency" SG_ 2499801761 PassengerDoorKeyCylTurned_stat 100;
+BA_ "GenSigSendType" SG_ 2499795106 PDM_Sec_03S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499795105 KeyID_PassengerDoorLatch_rqst 1;
+BA_ "GenSigMaxLatency" SG_ 2499795105 KeyID_PassengerDoorLatch_rqst 100;
+BA_ "GenSigSendType" SG_ 2499796768 PDM_Sec_02S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499796767 EncryptedPassDoorAjar_stat 1;
+BA_ "GenSigMaxLatency" SG_ 2499796767 EncryptedPassDoorAjar_stat 100;
+BA_ "GenSigSendType" SG_ 2432690593 PassengerDoorLatch_stat 0;
+BA_ "GenSigCycleTime" SG_ 2432690593 PassengerDoorLatch_stat 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432690593 PassengerDoorLatch_stat 100;
+BA_ "GenSigStartValue" SG_ 2432690593 PassengerDoorLatch_stat 7;
+BA_ "GenSigMaxLatency" SG_ 2432690593 PassengerDoorLatch_stat 26;
+BA_ "GenSigSendType" SG_ 2432690593 PSWindowPosition_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2432690593 PSWindowPosition_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432690593 PSWindowPosition_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2432690593 PSWindowPosition_ISig_10 7;
+BA_ "GenSigMaxLatency" SG_ 2432690593 PSWindowPosition_ISig_10 26;
+BA_ "GenSigSendType" SG_ 2432690593 PassengerDoorAjar_stat_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2432690593 PassengerDoorAjar_stat_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432690593 PassengerDoorAjar_stat_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2432690593 PassengerDoorAjar_stat_ISig_10 7;
+BA_ "GenSigMaxLatency" SG_ 2432690593 PassengerDoorAjar_stat_ISig_10 26;
+BA_ "GenSigSendType" SG_ 2432690593 ChildLock_DeviceIndication 0;
+BA_ "GenSigCycleTime" SG_ 2432690593 ChildLock_DeviceIndication 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432690593 ChildLock_DeviceIndication 100;
+BA_ "GenSigSendType" SG_ 2671902708 FuncDiagDataIntTesterTGW2_ISig_1 7;
+BA_ "SystemSignalLongSymbol" SG_ 2671902708 FuncDiagDataIntTesterTGW2_ISig_1 "FuncDiagDataIntTesterTGW2_ISig_10";
+BA_ "GenSigSendType" SG_ 2671964864 DiagUUDTRespSig_F2_C0_ISig_10 7;
+BA_ "GenSigSendType" SG_ 2671964833 DiagUUDTRespSig_F2_A1_ISig_10 7;
+BA_ "GenSigSendType" SG_ 2671964832 DiagUUDTRespSig_F2_A0_ISig_10 7;
+BA_ "GenSigSendType" SG_ 2671834304 InternalTesterDiagSig_F4_C0_ISig 7;
+BA_ "SystemSignalLongSymbol" SG_ 2671834304 InternalTesterDiagSig_F4_C0_ISig "InternalTesterDiagSig_F4_C0_ISig_10";
+BA_ "GenSigSendType" SG_ 2671834273 InternalTesterDiagSig_F4_A1_ISig 7;
+BA_ "SystemSignalLongSymbol" SG_ 2671834273 InternalTesterDiagSig_F4_A1_ISig "InternalTesterDiagSig_F4_A1_ISig_10";
+BA_ "GenSigSendType" SG_ 2671834272 InternalTesterDiagSig_F4_A0_ISig 7;
+BA_ "SystemSignalLongSymbol" SG_ 2671834272 InternalTesterDiagSig_F4_A0_ISig "InternalTesterDiagSig_F4_A0_ISig_10";
+BA_ "GenSigSendType" SG_ 2671834048 InternalTesterDiagSig_F3_C0_ISig 7;
+BA_ "SystemSignalLongSymbol" SG_ 2671834048 InternalTesterDiagSig_F3_C0_ISig "InternalTesterDiagSig_F3_C0_ISig_10";
+BA_ "GenSigSendType" SG_ 2671834017 InternalTesterDiagSig_F3_A1_ISig 7;
+BA_ "SystemSignalLongSymbol" SG_ 2671834017 InternalTesterDiagSig_F3_A1_ISig "InternalTesterDiagSig_F3_A1_ISig_10";
+BA_ "GenSigSendType" SG_ 2671834016 InternalTesterDiagSig_F3_A0_ISig 7;
+BA_ "SystemSignalLongSymbol" SG_ 2671834016 InternalTesterDiagSig_F3_A0_ISig "InternalTesterDiagSig_F3_A0_ISig_10";
+BA_ "GenSigSendType" SG_ 2671821044 InternalTesterDiagSig_C0_F4_ISig 7;
+BA_ "SystemSignalLongSymbol" SG_ 2671821044 InternalTesterDiagSig_C0_F4_ISig "InternalTesterDiagSig_C0_F4_ISig_10";
+BA_ "GenSigSendType" SG_ 2671813108 InternalTesterDiagSig_A1_F4_ISig 7;
+BA_ "SystemSignalLongSymbol" SG_ 2671813108 InternalTesterDiagSig_A1_F4_ISig "InternalTesterDiagSig_A1_F4_ISig_10";
+BA_ "GenSigSendType" SG_ 2671812852 InternalTesterDiagSig_A0_F4_ISig 7;
+BA_ "SystemSignalLongSymbol" SG_ 2671812852 InternalTesterDiagSig_A0_F4_ISig "InternalTesterDiagSig_A0_F4_ISig_10";
+BA_ "GenSigSendType" SG_ 2671821043 InternalTesterDiagSig_C0_F3_ISig 7;
+BA_ "SystemSignalLongSymbol" SG_ 2671821043 InternalTesterDiagSig_C0_F3_ISig "InternalTesterDiagSig_C0_F3_ISig_10";
+BA_ "GenSigSendType" SG_ 2671813107 InternalTesterDiagSig_A1_F3_ISig 7;
+BA_ "SystemSignalLongSymbol" SG_ 2671813107 InternalTesterDiagSig_A1_F3_ISig "InternalTesterDiagSig_A1_F3_ISig_10";
+BA_ "GenSigSendType" SG_ 2671812851 InternalTesterDiagSig_A0_F3_ISig 7;
+BA_ "SystemSignalLongSymbol" SG_ 2671812851 InternalTesterDiagSig_A0_F3_ISig "InternalTesterDiagSig_A0_F3_ISig_10";
+BA_ "GenSigSendType" SG_ 2583680161 DiagFaultStat_PDM_DtcIdA_ISig_10 3;
+BA_ "NeedsUpdateBit" SG_ 2583680161 DiagFaultStat_PDM_DtcIdA_ISig_10 1;
+BA_ "GenSigSendType" SG_ 2583680161 DiagFaultStat_PDM_sg_UB_ISig_10 7;
+BA_ "GenSigSendType" SG_ 2583680161 DiagFaultStat_PDM_EcuAdr_ISig_10 3;
+BA_ "GenSigStartValue" SG_ 2583680161 DiagFaultStat_PDM_EcuAdr_ISig_10 255;
+BA_ "NeedsUpdateBit" SG_ 2583680161 DiagFaultStat_PDM_EcuAdr_ISig_10 1;
+BA_ "GenSigSendType" SG_ 2583680161 DiagFaultStat_PDM_DtcIdB_ISig_10 3;
+BA_ "NeedsUpdateBit" SG_ 2583680161 DiagFaultStat_PDM_DtcIdB_ISig_10 1;
+BA_ "GenSigSendType" SG_ 2583680161 DiagFaultStat_PDM_FailTA_ISig_10 3;
+BA_ "NeedsUpdateBit" SG_ 2583680161 DiagFaultStat_PDM_FailTA_ISig_10 1;
+BA_ "GenSigSendType" SG_ 2583680161 DiagFaultStat_PDM_FailTB_ISig_10 3;
+BA_ "NeedsUpdateBit" SG_ 2583680161 DiagFaultStat_PDM_FailTB_ISig_10 1;
+BA_ "GenSigSendType" SG_ 2583658400 DiagFaultStat_DDM_DtcIdA_ISig_10 3;
+BA_ "NeedsUpdateBit" SG_ 2583658400 DiagFaultStat_DDM_DtcIdA_ISig_10 1;
+BA_ "GenSigSendType" SG_ 2583658400 DiagFaultStat_DDM_sg_UB_ISig_10 7;
+BA_ "GenSigSendType" SG_ 2583658400 DiagFaultStat_DDM_FailTA_ISig_10 3;
+BA_ "NeedsUpdateBit" SG_ 2583658400 DiagFaultStat_DDM_FailTA_ISig_10 1;
+BA_ "GenSigSendType" SG_ 2583658400 DiagFaultStat_DDM_DtcIdB_ISig_10 3;
+BA_ "NeedsUpdateBit" SG_ 2583658400 DiagFaultStat_DDM_DtcIdB_ISig_10 1;
+BA_ "GenSigSendType" SG_ 2583658400 DiagFaultStat_DDM_FailTB_ISig_10 3;
+BA_ "NeedsUpdateBit" SG_ 2583658400 DiagFaultStat_DDM_FailTB_ISig_10 1;
+BA_ "GenSigSendType" SG_ 2583658400 DiagFaultStat_DDM_EcuAdr_ISig_10 3;
+BA_ "GenSigStartValue" SG_ 2583658400 DiagFaultStat_DDM_EcuAdr_ISig_10 255;
+BA_ "NeedsUpdateBit" SG_ 2583658400 DiagFaultStat_DDM_EcuAdr_ISig_10 1;
+BA_ "GenSigSendType" SG_ 2583636672 DiagFaultStat_Alarm_sg_UB_ISig_1 7;
+BA_ "SystemSignalLongSymbol" SG_ 2583636672 DiagFaultStat_Alarm_sg_UB_ISig_1 "DiagFaultStat_Alarm_sg_UB_ISig_10";
+BA_ "GenSigSendType" SG_ 2583636672 DiagFaultStat_Alarm_DtcIdA_ISig_ 3;
+BA_ "NeedsUpdateBit" SG_ 2583636672 DiagFaultStat_Alarm_DtcIdA_ISig_ 1;
+BA_ "SystemSignalLongSymbol" SG_ 2583636672 DiagFaultStat_Alarm_DtcIdA_ISig_ "DiagFaultStat_Alarm_DtcIdA_ISig_10";
+BA_ "GenSigSendType" SG_ 2583636672 DiagFaultStat_Alarm_DtcIdB_ISig_ 3;
+BA_ "NeedsUpdateBit" SG_ 2583636672 DiagFaultStat_Alarm_DtcIdB_ISig_ 1;
+BA_ "SystemSignalLongSymbol" SG_ 2583636672 DiagFaultStat_Alarm_DtcIdB_ISig_ "DiagFaultStat_Alarm_DtcIdB_ISig_10";
+BA_ "GenSigSendType" SG_ 2583636672 DiagFaultStat_Alarm_FailTA_ISig_ 3;
+BA_ "NeedsUpdateBit" SG_ 2583636672 DiagFaultStat_Alarm_FailTA_ISig_ 1;
+BA_ "SystemSignalLongSymbol" SG_ 2583636672 DiagFaultStat_Alarm_FailTA_ISig_ "DiagFaultStat_Alarm_FailTA_ISig_10";
+BA_ "GenSigSendType" SG_ 2583636672 DiagFaultStat_Alarm_FailTB_ISig_ 3;
+BA_ "NeedsUpdateBit" SG_ 2583636672 DiagFaultStat_Alarm_FailTB_ISig_ 1;
+BA_ "SystemSignalLongSymbol" SG_ 2583636672 DiagFaultStat_Alarm_FailTB_ISig_ "DiagFaultStat_Alarm_FailTB_ISig_10";
+BA_ "GenSigSendType" SG_ 2583636672 DiagFaultStat_Alarm_EcuAdr_ISig_ 3;
+BA_ "GenSigStartValue" SG_ 2583636672 DiagFaultStat_Alarm_EcuAdr_ISig_ 255;
+BA_ "NeedsUpdateBit" SG_ 2583636672 DiagFaultStat_Alarm_EcuAdr_ISig_ 1;
+BA_ "SystemSignalLongSymbol" SG_ 2583636672 DiagFaultStat_Alarm_EcuAdr_ISig_ "DiagFaultStat_Alarm_EcuAdr_ISig_10";
+BA_ "GenSigSendType" SG_ 2634020513 Debug_6_PDM 1;
+BA_ "GenSigMaxLatency" SG_ 2634020513 Debug_6_PDM 59;
+BA_ "GenSigSendType" SG_ 2634020512 Debug_6_DDM 1;
+BA_ "GenSigMaxLatency" SG_ 2634020512 Debug_6_DDM 59;
+BA_ "GenSigSendType" SG_ 2634020544 Debug_6_Alarm 1;
+BA_ "GenSigMaxLatency" SG_ 2634020544 Debug_6_Alarm 59;
+BA_ "GenSigSendType" SG_ 2634020257 Debug_5_PDM 1;
+BA_ "GenSigMaxLatency" SG_ 2634020257 Debug_5_PDM 59;
+BA_ "GenSigSendType" SG_ 2634020256 Debug_5_DDM 1;
+BA_ "GenSigMaxLatency" SG_ 2634020256 Debug_5_DDM 59;
+BA_ "GenSigSendType" SG_ 2634020288 Debug_5_Alarm 1;
+BA_ "GenSigMaxLatency" SG_ 2634020288 Debug_5_Alarm 59;
+BA_ "GenSigSendType" SG_ 2634020001 Debug_4_PDM 1;
+BA_ "GenSigMaxLatency" SG_ 2634020001 Debug_4_PDM 59;
+BA_ "GenSigSendType" SG_ 2634020000 Debug_4_DDM 1;
+BA_ "GenSigMaxLatency" SG_ 2634020000 Debug_4_DDM 59;
+BA_ "GenSigSendType" SG_ 2634020032 Debug_4_Alarm 1;
+BA_ "GenSigMaxLatency" SG_ 2634020032 Debug_4_Alarm 59;
+BA_ "GenSigSendType" SG_ 2634019745 Debug_3_PDM 1;
+BA_ "GenSigMaxLatency" SG_ 2634019745 Debug_3_PDM 59;
+BA_ "GenSigSendType" SG_ 2634019744 Debug_3_DDM 1;
+BA_ "GenSigMaxLatency" SG_ 2634019744 Debug_3_DDM 59;
+BA_ "GenSigSendType" SG_ 2634019776 Debug_3_Alarm 1;
+BA_ "GenSigMaxLatency" SG_ 2634019776 Debug_3_Alarm 59;
+BA_ "GenSigSendType" SG_ 2634019489 Debug_2_PDM 1;
+BA_ "GenSigMaxLatency" SG_ 2634019489 Debug_2_PDM 59;
+BA_ "GenSigSendType" SG_ 2634019488 Debug_2_DDM 1;
+BA_ "GenSigMaxLatency" SG_ 2634019488 Debug_2_DDM 59;
+BA_ "GenSigSendType" SG_ 2634019520 Debug_2_Alarm 1;
+BA_ "GenSigMaxLatency" SG_ 2634019520 Debug_2_Alarm 59;
+BA_ "GenSigSendType" SG_ 2634019233 Debug_1_PDM 1;
+BA_ "GenSigSendType" SG_ 2634019232 Debug_1_DDM 1;
+BA_ "GenSigSendType" SG_ 2634019264 Debug_1_Alarm 1;
+BA_ "GenSigSendType" SG_ 2499788705 DDM_Sec_05S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499788704 KeyID_DriverDoorLatch_rqst 1;
+BA_ "GenSigMaxLatency" SG_ 2499788704 KeyID_DriverDoorLatch_rqst 100;
+BA_ "GenSigSendType" SG_ 2499782049 DDM_Sec_04S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499782048 DriverDoorKeyCylTurned_stat 1;
+BA_ "GenSigMaxLatency" SG_ 2499782048 DriverDoorKeyCylTurned_stat 100;
+BA_ "GenSigSendType" SG_ 2499775649 DDM_Sec_03S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499775648 Locking_Switch_stat 1;
+BA_ "GenSigMaxLatency" SG_ 2499775648 Locking_Switch_stat 100;
+BA_ "GenSigSendType" SG_ 2499780448 DDM_Sec_02S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499780447 EncryptedDriverDoorAjar_stat 1;
+BA_ "GenSigMaxLatency" SG_ 2499780447 EncryptedDriverDoorAjar_stat 100;
+BA_ "GenSigSendType" SG_ 2432679840 DriverDoorLatch_stat 0;
+BA_ "GenSigCycleTime" SG_ 2432679840 DriverDoorLatch_stat 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432679840 DriverDoorLatch_stat 100;
+BA_ "GenSigStartValue" SG_ 2432679840 DriverDoorLatch_stat 7;
+BA_ "GenSigMaxLatency" SG_ 2432679840 DriverDoorLatch_stat 26;
+BA_ "GenSigSendType" SG_ 2432679840 PS_MirrorSelection_cmd 0;
+BA_ "GenSigCycleTime" SG_ 2432679840 PS_MirrorSelection_cmd 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432679840 PS_MirrorSelection_cmd 100;
+BA_ "GenSigStartValue" SG_ 2432679840 PS_MirrorSelection_cmd 7;
+BA_ "GenSigMaxLatency" SG_ 2432679840 PS_MirrorSelection_cmd 26;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2432679840 PS_MirrorSelection_cmd "x0000001D042196E2";
+BA_ "SeToolItemID_SIGNAL" SG_ 2432679840 PS_MirrorSelection_cmd "x0000001D042196E2";
+BA_ "SeToolName_SIGNAL" SG_ 2432679840 PS_MirrorSelection_cmd "PS_MirrorSelection_cmd";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2432679840 PS_MirrorSelection_cmd "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2432679840 PS_MirrorSelection_cmd "1";
+BA_ "GenSigSendType" SG_ 2432679840 MirrorHeatNormalModeInd_cmd_2_IS 0;
+BA_ "GenSigCycleTime" SG_ 2432679840 MirrorHeatNormalModeInd_cmd_2_IS 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432679840 MirrorHeatNormalModeInd_cmd_2_IS 100;
+BA_ "SystemSignalLongSymbol" SG_ 2432679840 MirrorHeatNormalModeInd_cmd_2_IS "MirrorHeatNormalModeInd_cmd_2_ISig_10";
+BA_ "GenSigSendType" SG_ 2432679840 PS_MirrorDirection_cmd 0;
+BA_ "GenSigCycleTime" SG_ 2432679840 PS_MirrorDirection_cmd 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432679840 PS_MirrorDirection_cmd 100;
+BA_ "GenSigStartValue" SG_ 2432679840 PS_MirrorDirection_cmd 7;
+BA_ "GenSigMaxLatency" SG_ 2432679840 PS_MirrorDirection_cmd 26;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2432679840 PS_MirrorDirection_cmd "x0000001D042196E0";
+BA_ "SeToolItemID_SIGNAL" SG_ 2432679840 PS_MirrorDirection_cmd "x0000001D042196E0";
+BA_ "SeToolName_SIGNAL" SG_ 2432679840 PS_MirrorDirection_cmd "PS_MirrorDirection_cmd";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2432679840 PS_MirrorDirection_cmd "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2432679840 PS_MirrorDirection_cmd "1";
+BA_ "GenSigSendType" SG_ 2432679840 PW_DS_Passenger_SwStatus 0;
+BA_ "GenSigCycleTime" SG_ 2432679840 PW_DS_Passenger_SwStatus 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432679840 PW_DS_Passenger_SwStatus 100;
+BA_ "GenSigStartValue" SG_ 2432679840 PW_DS_Passenger_SwStatus 7;
+BA_ "GenSigMaxLatency" SG_ 2432679840 PW_DS_Passenger_SwStatus 26;
+BA_ "GenSigSendType" SG_ 2432679840 DriverDoorAjar_stat_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2432679840 DriverDoorAjar_stat_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432679840 DriverDoorAjar_stat_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2432679840 DriverDoorAjar_stat_ISig_10 7;
+BA_ "GenSigMaxLatency" SG_ 2432679840 DriverDoorAjar_stat_ISig_10 26;
+BA_ "GenSigSendType" SG_ 2432679840 MirrorHeat_rqst_ddm 0;
+BA_ "GenSigCycleTime" SG_ 2432679840 MirrorHeat_rqst_ddm 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432679840 MirrorHeat_rqst_ddm 100;
+BA_ "GenSigStartValue" SG_ 2432679840 MirrorHeat_rqst_ddm 7;
+BA_ "GenSigMaxLatency" SG_ 2432679840 MirrorHeat_rqst_ddm 26;
+BA_ "GenSigSendType" SG_ 2432679840 DSWindowPosition_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2432679840 DSWindowPosition_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432679840 DSWindowPosition_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2432679840 DSWindowPosition_ISig_10 7;
+BA_ "GenSigMaxLatency" SG_ 2432679840 DSWindowPosition_ISig_10 26;
+BA_ "GenSigSendType" SG_ 2499768897 CIOM_Sec_12S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499768896 DriverDoorLatch_rqst 1;
+BA_ "GenSigMaxLatency" SG_ 2499768896 DriverDoorLatch_rqst 100;
+BA_ "GenSigSendType" SG_ 2499762497 CIOM_Sec_11S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499762496 KeyID_PassDoorKeyCylinderStat 1;
+BA_ "GenSigMaxLatency" SG_ 2499762496 KeyID_PassDoorKeyCylinderStat 100;
+BA_ "GenSigSendType" SG_ 2499755841 CIOM_Sec_10S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499755840 PassengerDoorLatch_rqst 1;
+BA_ "GenSigMaxLatency" SG_ 2499755840 PassengerDoorLatch_rqst 100;
+BA_ "GenSigSendType" SG_ 2499749441 CIOM_Sec_09S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499749440 KeyID_DrivDoorKeyCylinderStat 1;
+BA_ "GenSigMaxLatency" SG_ 2499749440 KeyID_DrivDoorKeyCylinderStat 100;
+BA_ "GenSigSendType" SG_ 2499742785 CIOM_Sec_08S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499742784 KeyID_Locking_Switch_stat 1;
+BA_ "GenSigMaxLatency" SG_ 2499742784 KeyID_Locking_Switch_stat 100;
+BA_ "GenSigSendType" SG_ 2499764128 CIOM_Sec_07S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499764127 TheftAlarmActivation_rqst 1;
+BA_ "GenSigMaxLatency" SG_ 2499764127 TheftAlarmActivation_rqst 100;
+BA_ "GenSigSendType" SG_ 2499747808 CIOM_Sec_06S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499747807 ReducedSetMode_rqst 1;
+BA_ "GenSigMaxLatency" SG_ 2499747807 ReducedSetMode_rqst 100;
+BA_ "GenSigSendType" SG_ 2499799488 CIOM_Sec_05S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499799487 LuggageCompartment_stat 1;
+BA_ "GenSigMaxLatency" SG_ 2499799487 LuggageCompartment_stat 100;
+BA_ "GenSigSendType" SG_ 2432662336 AutoRelock_rqst 0;
+BA_ "GenSigCycleTime" SG_ 2432662336 AutoRelock_rqst 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432662336 AutoRelock_rqst 100;
+BA_ "GenSigStartValue" SG_ 2432662336 AutoRelock_rqst 3;
+BA_ "GenSigSendType" SG_ 2432662336 KeyPosition_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2432662336 KeyPosition_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432662336 KeyPosition_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2432662336 KeyPosition_ISig_10 7;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2432662336 KeyPosition_ISig_10 "x0000001D0410D5F7";
+BA_ "SeToolItemID_SIGNAL" SG_ 2432662336 KeyPosition_ISig_10 "x0000001D0410D5F7";
+BA_ "SeToolName_SIGNAL" SG_ 2432662336 KeyPosition_ISig_10 "KeyPosition";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2432662336 KeyPosition_ISig_10 "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2432662336 KeyPosition_ISig_10 "1";
+BA_ "GenSigSendType" SG_ 2432662336 ParkingHeater_IndicationCmd_ISig 0;
+BA_ "GenSigCycleTime" SG_ 2432662336 ParkingHeater_IndicationCmd_ISig 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432662336 ParkingHeater_IndicationCmd_ISig 100;
+BA_ "SystemSignalLongSymbol" SG_ 2432662336 ParkingHeater_IndicationCmd_ISig "ParkingHeater_IndicationCmd_ISig_10";
+BA_ "GenSigSendType" SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi 0;
+BA_ "GenSigCycleTime" SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi 100;
+BA_ "GenSigStartValue" SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi 255;
+BA_ "GenSigMaxLatency" SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi 26;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi "x0000001D041F9CE4";
+BA_ "SeToolItemID_SIGNAL" SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi "x0000001D041F9CE4";
+BA_ "SeToolName_SIGNAL" SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi "Wheel-BasedVehicleSpeedLowRes";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi "1";
+BA_ "SystemSignalLongSymbol" SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi "WheelBasedVehicleSpeedLowRes_ISig_10";
+BA_ "GenSigSendType" SG_ 2566886464 AmbientAirTemperature_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2566886464 AmbientAirTemperature_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566886464 AmbientAirTemperature_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2566886464 AmbientAirTemperature_ISig_10 65535;
+BA_ "GenSigMaxLatency" SG_ 2566886464 AmbientAirTemperature_ISig_10 26;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2566886464 AmbientAirTemperature_ISig_10 "x0000001D040FEBC8";
+BA_ "SeToolItemID_SIGNAL" SG_ 2566886464 AmbientAirTemperature_ISig_10 "x0000001D040FEBC8";
+BA_ "SeToolName_SIGNAL" SG_ 2566886464 AmbientAirTemperature_ISig_10 "AmbientAirTemperature";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2566886464 AmbientAirTemperature_ISig_10 "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2566886464 AmbientAirTemperature_ISig_10 "1";
+BA_ "GenSigSendType" SG_ 2566886464 TotalVehicleDistanceHighRes_ISig 0;
+BA_ "GenSigCycleTime" SG_ 2566886464 TotalVehicleDistanceHighRes_ISig 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566886464 TotalVehicleDistanceHighRes_ISig 100;
+BA_ "GenSigStartValue" SG_ 2566886464 TotalVehicleDistanceHighRes_ISig 4294967295;
+BA_ "GenSigMaxLatency" SG_ 2566886464 TotalVehicleDistanceHighRes_ISig 26;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2566886464 TotalVehicleDistanceHighRes_ISig "x0000001D04109E2B";
+BA_ "SeToolItemID_SIGNAL" SG_ 2566886464 TotalVehicleDistanceHighRes_ISig "x0000001D04109E2B";
+BA_ "SeToolName_SIGNAL" SG_ 2566886464 TotalVehicleDistanceHighRes_ISig "HighResolutionTotalVehicleDistance";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2566886464 TotalVehicleDistanceHighRes_ISig "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2566886464 TotalVehicleDistanceHighRes_ISig "1";
+BA_ "SystemSignalLongSymbol" SG_ 2566886464 TotalVehicleDistanceHighRes_ISig "TotalVehicleDistanceHighRes_ISig_10";
+BA_ "GenSigSendType" SG_ 2566886464 ExitPreDeliveryModeHMI_rqst_ISig 0;
+BA_ "GenSigCycleTime" SG_ 2566886464 ExitPreDeliveryModeHMI_rqst_ISig 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566886464 ExitPreDeliveryModeHMI_rqst_ISig 100;
+BA_ "GenSigStartValue" SG_ 2566886464 ExitPreDeliveryModeHMI_rqst_ISig 3;
+BA_ "GenSigMaxLatency" SG_ 2566886464 ExitPreDeliveryModeHMI_rqst_ISig 26;
+BA_ "SystemSignalLongSymbol" SG_ 2566886464 ExitPreDeliveryModeHMI_rqst_ISig "ExitPreDeliveryModeHMI_rqst_ISig_10";
+BA_ "GenSigSendType" SG_ 2566892096 YearUTC_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2566892096 YearUTC_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566892096 YearUTC_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2566892096 YearUTC_ISig_10 255;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2566892096 YearUTC_ISig_10 "x0000001D0412FACB";
+BA_ "SeToolItemID_SIGNAL" SG_ 2566892096 YearUTC_ISig_10 "x0000001D041EBCEF";
+BA_ "SeToolName_SIGNAL" SG_ 2566892096 YearUTC_ISig_10 "YearUTC";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2566892096 YearUTC_ISig_10 "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2566892096 YearUTC_ISig_10 "2";
+BA_ "GenSigSendType" SG_ 2566892096 DayUTC_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2566892096 DayUTC_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566892096 DayUTC_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2566892096 DayUTC_ISig_10 255;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2566892096 DayUTC_ISig_10 "x0000001D0412FAC4";
+BA_ "SeToolItemID_SIGNAL" SG_ 2566892096 DayUTC_ISig_10 "x0000001D041EBD81";
+BA_ "SeToolName_SIGNAL" SG_ 2566892096 DayUTC_ISig_10 "DayUTC";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2566892096 DayUTC_ISig_10 "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2566892096 DayUTC_ISig_10 "2";
+BA_ "GenSigSendType" SG_ 2566892096 MinutesUTC_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2566892096 MinutesUTC_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566892096 MinutesUTC_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2566892096 MinutesUTC_ISig_10 255;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2566892096 MinutesUTC_ISig_10 "x0000001D0412FAC0";
+BA_ "SeToolItemID_SIGNAL" SG_ 2566892096 MinutesUTC_ISig_10 "x0000001D041EBD29";
+BA_ "SeToolName_SIGNAL" SG_ 2566892096 MinutesUTC_ISig_10 "MinutesUTC";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2566892096 MinutesUTC_ISig_10 "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2566892096 MinutesUTC_ISig_10 "2";
+BA_ "GenSigSendType" SG_ 2566892096 HoursUTC_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2566892096 HoursUTC_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566892096 HoursUTC_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2566892096 HoursUTC_ISig_10 255;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2566892096 HoursUTC_ISig_10 "x0000001D0412FAC2";
+BA_ "SeToolItemID_SIGNAL" SG_ 2566892096 HoursUTC_ISig_10 "x0000001D041EBD20";
+BA_ "SeToolName_SIGNAL" SG_ 2566892096 HoursUTC_ISig_10 "HoursUTC";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2566892096 HoursUTC_ISig_10 "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2566892096 HoursUTC_ISig_10 "2";
+BA_ "GenSigSendType" SG_ 2566892096 SecondsUTC_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2566892096 SecondsUTC_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566892096 SecondsUTC_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2566892096 SecondsUTC_ISig_10 255;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2566892096 SecondsUTC_ISig_10 "x0000001D0412FABE";
+BA_ "SeToolItemID_SIGNAL" SG_ 2566892096 SecondsUTC_ISig_10 "x0000001D041EBD32";
+BA_ "SeToolName_SIGNAL" SG_ 2566892096 SecondsUTC_ISig_10 "SecondsUTC";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2566892096 SecondsUTC_ISig_10 "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2566892096 SecondsUTC_ISig_10 "2";
+BA_ "GenSigSendType" SG_ 2566892096 MonthUTC_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2566892096 MonthUTC_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2566892096 MonthUTC_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2566892096 MonthUTC_ISig_10 255;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2566892096 MonthUTC_ISig_10 "x0000001D0412FAC9";
+BA_ "SeToolItemID_SIGNAL" SG_ 2566892096 MonthUTC_ISig_10 "x0000001D041EBD16";
+BA_ "SeToolName_SIGNAL" SG_ 2566892096 MonthUTC_ISig_10 "MonthUTC";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2566892096 MonthUTC_ISig_10 "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2566892096 MonthUTC_ISig_10 "2";
+BA_ "GenSigSendType" SG_ 2432642880 VehicleMode_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 VehicleMode_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 VehicleMode_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2432642880 VehicleMode_ISig_10 15;
+BA_ "GenSigMaxLatency" SG_ 2432642880 VehicleMode_ISig_10 26;
+BA_ "NeedsUpdateBit" SG_ 2432642880 VehicleMode_ISig_10 1;
+BA_ "GenSigSendType" SG_ 2432642880 BunkH2PowerWinOpenDSBtn_stat 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 BunkH2PowerWinOpenDSBtn_stat 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 BunkH2PowerWinOpenDSBtn_stat 100;
+BA_ "GenSigStartValue" SG_ 2432642880 BunkH2PowerWinOpenDSBtn_stat 3;
+BA_ "GenSigMaxLatency" SG_ 2432642880 BunkH2PowerWinOpenDSBtn_stat 26;
+BA_ "GenSigSendType" SG_ 2432642880 BacklightCmd_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 BacklightCmd_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 BacklightCmd_ISig_10 100;
+BA_ "GenSigMaxLatency" SG_ 2432642880 BacklightCmd_ISig_10 26;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2432642880 BacklightCmd_ISig_10 "x0000001D0439DDD1";
+BA_ "SeToolItemID_SIGNAL" SG_ 2432642880 BacklightCmd_ISig_10 "x0000001D043A84D3";
+BA_ "SeToolName_SIGNAL" SG_ 2432642880 BacklightCmd_ISig_10 "BacklightCmd";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2432642880 BacklightCmd_ISig_10 "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2432642880 BacklightCmd_ISig_10 "2";
+BA_ "GenSigSendType" SG_ 2432642880 FuncIndIlluminationLevel_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 FuncIndIlluminationLevel_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 FuncIndIlluminationLevel_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2432642880 FuncIndIlluminationLevel_ISig_10 1;
+BA_ "GenSigMaxLatency" SG_ 2432642880 FuncIndIlluminationLevel_ISig_10 26;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2432642880 FuncIndIlluminationLevel_ISig_10 "x0000001D043A8396";
+BA_ "SeToolItemID_SIGNAL" SG_ 2432642880 FuncIndIlluminationLevel_ISig_10 "x0000001D043A8396";
+BA_ "SeToolName_SIGNAL" SG_ 2432642880 FuncIndIlluminationLevel_ISig_10 "FuncIndIlluminationLevel";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2432642880 FuncIndIlluminationLevel_ISig_10 "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2432642880 FuncIndIlluminationLevel_ISig_10 "1";
+BA_ "GenSigSendType" SG_ 2432642880 ElectricalLoadReduction_rqst_ISi 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 ElectricalLoadReduction_rqst_ISi 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 ElectricalLoadReduction_rqst_ISi 100;
+BA_ "GenSigStartValue" SG_ 2432642880 ElectricalLoadReduction_rqst_ISi 7;
+BA_ "NeedsUpdateBit" SG_ 2432642880 ElectricalLoadReduction_rqst_ISi 1;
+BA_ "SystemSignalLongSymbol" SG_ 2432642880 ElectricalLoadReduction_rqst_ISi "ElectricalLoadReduction_rqst_ISig_10";
+BA_ "GenSigSendType" SG_ 2432642880 BunkH1PowerWinCloseDSBtn_stat_UB 7;
+BA_ "SystemSignalLongSymbol" SG_ 2432642880 BunkH1PowerWinCloseDSBtn_stat_UB "BunkH1PowerWinCloseDSBtn_stat_UB_ISig_10";
+BA_ "GenSigSendType" SG_ 2432642880 DoorWarningLight_cmd_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 DoorWarningLight_cmd_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 DoorWarningLight_cmd_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2432642880 DoorWarningLight_cmd_ISig_10 3;
+BA_ "GenSigSendType" SG_ 2432642880 BunkH2PowerWinOpenPSBtn_stat 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 BunkH2PowerWinOpenPSBtn_stat 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 BunkH2PowerWinOpenPSBtn_stat 100;
+BA_ "GenSigStartValue" SG_ 2432642880 BunkH2PowerWinOpenPSBtn_stat 3;
+BA_ "GenSigMaxLatency" SG_ 2432642880 BunkH2PowerWinOpenPSBtn_stat 26;
+BA_ "GenSigSendType" SG_ 2432642880 ElectricalLoadReduction_rqst_UB_ 7;
+BA_ "SystemSignalLongSymbol" SG_ 2432642880 ElectricalLoadReduction_rqst_UB_ "ElectricalLoadReduction_rqst_UB_ISig_10";
+BA_ "GenSigSendType" SG_ 2432642880 BunkH1PowerWinClosePSBtn_stat_IS 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 BunkH1PowerWinClosePSBtn_stat_IS 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 BunkH1PowerWinClosePSBtn_stat_IS 100;
+BA_ "GenSigStartValue" SG_ 2432642880 BunkH1PowerWinClosePSBtn_stat_IS 3;
+BA_ "GenSigMaxLatency" SG_ 2432642880 BunkH1PowerWinClosePSBtn_stat_IS 26;
+BA_ "NeedsUpdateBit" SG_ 2432642880 BunkH1PowerWinClosePSBtn_stat_IS 1;
+BA_ "SystemSignalLongSymbol" SG_ 2432642880 BunkH1PowerWinClosePSBtn_stat_IS "BunkH1PowerWinClosePSBtn_stat_ISig_10";
+BA_ "GenSigSendType" SG_ 2432642880 VehicleMode_UB_ISig_10 7;
+BA_ "GenSigSendType" SG_ 2432642880 DoorInstepLight_cmd_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 DoorInstepLight_cmd_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 DoorInstepLight_cmd_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2432642880 DoorInstepLight_cmd_ISig_10 3;
+BA_ "GenSigSendType" SG_ 2432642880 FlexSwitchChildLockButton_stat 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 FlexSwitchChildLockButton_stat 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 FlexSwitchChildLockButton_stat 100;
+BA_ "GenSigStartValue" SG_ 2432642880 FlexSwitchChildLockButton_stat 7;
+BA_ "GenSigSendType" SG_ 2432642880 MainSwitchButton_Status_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 MainSwitchButton_Status_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 MainSwitchButton_Status_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2432642880 MainSwitchButton_Status_ISig_10 3;
+BA_ "GenSigMaxLatency" SG_ 2432642880 MainSwitchButton_Status_ISig_10 26;
+BA_ "GenSigSendType" SG_ 2432642880 BunkH1PowerWinOpenDSBtn_stat_ISi 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 BunkH1PowerWinOpenDSBtn_stat_ISi 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 BunkH1PowerWinOpenDSBtn_stat_ISi 100;
+BA_ "GenSigStartValue" SG_ 2432642880 BunkH1PowerWinOpenDSBtn_stat_ISi 3;
+BA_ "GenSigMaxLatency" SG_ 2432642880 BunkH1PowerWinOpenDSBtn_stat_ISi 26;
+BA_ "NeedsUpdateBit" SG_ 2432642880 BunkH1PowerWinOpenDSBtn_stat_ISi 1;
+BA_ "SystemSignalLongSymbol" SG_ 2432642880 BunkH1PowerWinOpenDSBtn_stat_ISi "BunkH1PowerWinOpenDSBtn_stat_ISig_10";
+BA_ "GenSigSendType" SG_ 2432642880 BunkH2PowerWinClosePSBtn_stat 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 BunkH2PowerWinClosePSBtn_stat 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 BunkH2PowerWinClosePSBtn_stat 100;
+BA_ "GenSigStartValue" SG_ 2432642880 BunkH2PowerWinClosePSBtn_stat 3;
+BA_ "GenSigMaxLatency" SG_ 2432642880 BunkH2PowerWinClosePSBtn_stat 26;
+BA_ "GenSigSendType" SG_ 2432642880 BunkH1PowerWinCloseDSBtn_stat_IS 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 BunkH1PowerWinCloseDSBtn_stat_IS 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 BunkH1PowerWinCloseDSBtn_stat_IS 100;
+BA_ "GenSigStartValue" SG_ 2432642880 BunkH1PowerWinCloseDSBtn_stat_IS 3;
+BA_ "GenSigMaxLatency" SG_ 2432642880 BunkH1PowerWinCloseDSBtn_stat_IS 26;
+BA_ "NeedsUpdateBit" SG_ 2432642880 BunkH1PowerWinCloseDSBtn_stat_IS 1;
+BA_ "SystemSignalLongSymbol" SG_ 2432642880 BunkH1PowerWinCloseDSBtn_stat_IS "BunkH1PowerWinCloseDSBtn_stat_ISig_10";
+BA_ "GenSigSendType" SG_ 2432642880 BunkH1PowerWinOpenPSBtn_stat_UB_ 7;
+BA_ "SystemSignalLongSymbol" SG_ 2432642880 BunkH1PowerWinOpenPSBtn_stat_UB_ "BunkH1PowerWinOpenPSBtn_stat_UB_ISig_10";
+BA_ "GenSigSendType" SG_ 2432642880 BunkH1PowerWinClosePSBtn_stat_UB 7;
+BA_ "SystemSignalLongSymbol" SG_ 2432642880 BunkH1PowerWinClosePSBtn_stat_UB "BunkH1PowerWinClosePSBtn_stat_UB_ISig_10";
+BA_ "GenSigSendType" SG_ 2432642880 KeyfobLockBtn_DoublePress_ISig_1 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 KeyfobLockBtn_DoublePress_ISig_1 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 KeyfobLockBtn_DoublePress_ISig_1 100;
+BA_ "GenSigStartValue" SG_ 2432642880 KeyfobLockBtn_DoublePress_ISig_1 3;
+BA_ "GenSigMaxLatency" SG_ 2432642880 KeyfobLockBtn_DoublePress_ISig_1 26;
+BA_ "SystemSignalLongSymbol" SG_ 2432642880 KeyfobLockBtn_DoublePress_ISig_1 "KeyfobLockBtn_DoublePress_ISig_10";
+BA_ "GenSigSendType" SG_ 2432642880 BunkH1PowerWinOpenPSBtn_stat_ISi 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 BunkH1PowerWinOpenPSBtn_stat_ISi 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 BunkH1PowerWinOpenPSBtn_stat_ISi 100;
+BA_ "GenSigStartValue" SG_ 2432642880 BunkH1PowerWinOpenPSBtn_stat_ISi 3;
+BA_ "GenSigMaxLatency" SG_ 2432642880 BunkH1PowerWinOpenPSBtn_stat_ISi 26;
+BA_ "NeedsUpdateBit" SG_ 2432642880 BunkH1PowerWinOpenPSBtn_stat_ISi 1;
+BA_ "SystemSignalLongSymbol" SG_ 2432642880 BunkH1PowerWinOpenPSBtn_stat_ISi "BunkH1PowerWinOpenPSBtn_stat_ISig_10";
+BA_ "GenSigSendType" SG_ 2432642880 BunkH1PowerWinOpenDSBtn_stat_UB_ 7;
+BA_ "SystemSignalLongSymbol" SG_ 2432642880 BunkH1PowerWinOpenDSBtn_stat_UB_ "BunkH1PowerWinOpenDSBtn_stat_UB_ISig_10";
+BA_ "GenSigSendType" SG_ 2432642880 MirrorHeatingMode_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 MirrorHeatingMode_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 MirrorHeatingMode_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2432642880 MirrorHeatingMode_ISig_10 7;
+BA_ "GenSigMaxLatency" SG_ 2432642880 MirrorHeatingMode_ISig_10 26;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2432642880 MirrorHeatingMode_ISig_10 "x0000001D0412C1DB";
+BA_ "SeToolItemID_SIGNAL" SG_ 2432642880 MirrorHeatingMode_ISig_10 "x0000001D0412C1DB";
+BA_ "SeToolName_SIGNAL" SG_ 2432642880 MirrorHeatingMode_ISig_10 "MirrorHeatingMode";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2432642880 MirrorHeatingMode_ISig_10 "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2432642880 MirrorHeatingMode_ISig_10 "1";
+BA_ "GenSigSendType" SG_ 2432642880 MirrorHeatNormModeBtn_stat_ISig_ 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 MirrorHeatNormModeBtn_stat_ISig_ 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 MirrorHeatNormModeBtn_stat_ISig_ 100;
+BA_ "GenSigStartValue" SG_ 2432642880 MirrorHeatNormModeBtn_stat_ISig_ 3;
+BA_ "GenSigMaxLatency" SG_ 2432642880 MirrorHeatNormModeBtn_stat_ISig_ 26;
+BA_ "SeToolAncestorID_SIGNAL" SG_ 2432642880 MirrorHeatNormModeBtn_stat_ISig_ "x0000001D0423D932";
+BA_ "SeToolItemID_SIGNAL" SG_ 2432642880 MirrorHeatNormModeBtn_stat_ISig_ "x0000001D0429669B";
+BA_ "SeToolName_SIGNAL" SG_ 2432642880 MirrorHeatNormModeBtn_stat_ISig_ "EM_MirrorHeatNormalMode_ButtonStatus";
+BA_ "SeToolUniqueID_SIGNAL" SG_ 2432642880 MirrorHeatNormModeBtn_stat_ISig_ "";
+BA_ "SeToolVersion_SIGNAL" SG_ 2432642880 MirrorHeatNormModeBtn_stat_ISig_ "4";
+BA_ "SystemSignalLongSymbol" SG_ 2432642880 MirrorHeatNormModeBtn_stat_ISig_ "MirrorHeatNormModeBtn_stat_ISig_10";
+BA_ "GenSigSendType" SG_ 2432642880 BunkH2PowerWinCloseDSBtn_stat 0;
+BA_ "GenSigCycleTime" SG_ 2432642880 BunkH2PowerWinCloseDSBtn_stat 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432642880 BunkH2PowerWinCloseDSBtn_stat 100;
+BA_ "GenSigStartValue" SG_ 2432642880 BunkH2PowerWinCloseDSBtn_stat 3;
+BA_ "GenSigMaxLatency" SG_ 2432642880 BunkH2PowerWinCloseDSBtn_stat 26;
+BA_ "GenSigSendType" SG_ 2633994281 AnmSig_PDM_SecuritySubnet 1;
+BA_ "GenSigCycleTime" SG_ 2633994281 AnmSig_PDM_SecuritySubnet 100;
+BA_ "GenSigCycleTimeActive" SG_ 2633994281 AnmSig_PDM_SecuritySubnet 100;
+BA_ "MmAnSignal" SG_ 2633994281 AnmSig_PDM_SecuritySubnet 1;
+BA_ "GenSigSendType" SG_ 2633994313 AnmSig_ECUspare5_SecuritySubnet 1;
+BA_ "GenSigCycleTime" SG_ 2633994313 AnmSig_ECUspare5_SecuritySubnet 100;
+BA_ "GenSigCycleTimeActive" SG_ 2633994313 AnmSig_ECUspare5_SecuritySubnet 100;
+BA_ "MmAnSignal" SG_ 2633994313 AnmSig_ECUspare5_SecuritySubnet 1;
+BA_ "GenSigSendType" SG_ 2633994279 AnmSig_DDM_SecuritySubnet 1;
+BA_ "GenSigCycleTime" SG_ 2633994279 AnmSig_DDM_SecuritySubnet 100;
+BA_ "GenSigCycleTimeActive" SG_ 2633994279 AnmSig_DDM_SecuritySubnet 100;
+BA_ "MmAnSignal" SG_ 2633994279 AnmSig_DDM_SecuritySubnet 1;
+BA_ "GenSigSendType" SG_ 2633994304 AnmSig_CIOM_SecuritySubnet 1;
+BA_ "GenSigCycleTime" SG_ 2633994304 AnmSig_CIOM_SecuritySubnet 100;
+BA_ "GenSigCycleTimeActive" SG_ 2633994304 AnmSig_CIOM_SecuritySubnet 100;
+BA_ "MmAnSignal" SG_ 2633994304 AnmSig_CIOM_SecuritySubnet 1;
+BA_ "GenSigSendType" SG_ 2633994276 AnmSig_Alarm_SecuritySubnet 1;
+BA_ "GenSigCycleTime" SG_ 2633994276 AnmSig_Alarm_SecuritySubnet 100;
+BA_ "GenSigCycleTimeActive" SG_ 2633994276 AnmSig_Alarm_SecuritySubnet 100;
+BA_ "MmAnSignal" SG_ 2633994276 AnmSig_Alarm_SecuritySubnet 1;
+BA_ "GenSigSendType" SG_ 2499788608 Alarm_Sec_07S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499788607 KeyID_LuggageCompartment_stat 1;
+BA_ "GenSigMaxLatency" SG_ 2499788607 KeyID_LuggageCompartment_stat 100;
+BA_ "GenSigSendType" SG_ 2499777728 Alarm_Sec_06S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499777727 KeyID_TheftAlarmActivation 1;
+BA_ "GenSigMaxLatency" SG_ 2499777727 KeyID_TheftAlarmActivation 100;
+BA_ "GenSigSendType" SG_ 2499766848 Alarm_Sec_05S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499766847 KeyID_EncryptedPassDoorAjar 1;
+BA_ "GenSigMaxLatency" SG_ 2499766847 KeyID_EncryptedPassDoorAjar 100;
+BA_ "GenSigSendType" SG_ 2499755968 Alarm_Sec_04S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499755967 KeyID_EncryptedDriverDoorAjar 1;
+BA_ "GenSigMaxLatency" SG_ 2499755967 KeyID_EncryptedDriverDoorAjar 100;
+BA_ "GenSigSendType" SG_ 2499745088 Alarm_Sec_03S_FCS 7;
+BA_ "GenSigSendType" SG_ 2499745087 KeyID_ReducedSetMode 1;
+BA_ "GenSigMaxLatency" SG_ 2499745087 KeyID_ReducedSetMode 100;
+BA_ "GenSigSendType" SG_ 2432644544 AutorelockingMovements_stat 0;
+BA_ "GenSigCycleTime" SG_ 2432644544 AutorelockingMovements_stat 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432644544 AutorelockingMovements_stat 100;
+BA_ "GenSigStartValue" SG_ 2432644544 AutorelockingMovements_stat 7;
+BA_ "GenSigSendType" SG_ 2432644544 AlarmTriggeringCause_stat_ISig_1 0;
+BA_ "GenSigCycleTime" SG_ 2432644544 AlarmTriggeringCause_stat_ISig_1 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432644544 AlarmTriggeringCause_stat_ISig_1 100;
+BA_ "GenSigStartValue" SG_ 2432644544 AlarmTriggeringCause_stat_ISig_1 15;
+BA_ "SystemSignalLongSymbol" SG_ 2432644544 AlarmTriggeringCause_stat_ISig_1 "AlarmTriggeringCause_stat_ISig_10";
+BA_ "GenSigSendType" SG_ 2432644544 AlarmStatus_stat_ISig_10 0;
+BA_ "GenSigCycleTime" SG_ 2432644544 AlarmStatus_stat_ISig_10 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432644544 AlarmStatus_stat_ISig_10 100;
+BA_ "GenSigStartValue" SG_ 2432644544 AlarmStatus_stat_ISig_10 15;
+BA_ "GenSigMaxLatency" SG_ 2432644544 AlarmStatus_stat_ISig_10 26;
+BA_ "GenSigSendType" SG_ 2432644544 Indicator_Lights_Alarm_rqst_ISig 0;
+BA_ "GenSigCycleTime" SG_ 2432644544 Indicator_Lights_Alarm_rqst_ISig 100;
+BA_ "GenSigCycleTimeActive" SG_ 2432644544 Indicator_Lights_Alarm_rqst_ISig 100;
+BA_ "GenSigStartValue" SG_ 2432644544 Indicator_Lights_Alarm_rqst_ISig 7;
+BA_ "SystemSignalLongSymbol" SG_ 2432644544 Indicator_Lights_Alarm_rqst_ISig "Indicator_Lights_Alarm_rqst_ISig_10";
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ CIOM SG_ 2432690593 PassengerDoorLatch_stat 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ CIOM SG_ 2432690593 PassengerDoorLatch_stat 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ CIOM SG_ 2432690593 PSWindowPosition_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ CIOM SG_ 2432690593 PSWindowPosition_ISig_10 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ CIOM SG_ 2432690593 PassengerDoorAjar_stat_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ CIOM SG_ 2432690593 PassengerDoorAjar_stat_ISig_10 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ CIOM SG_ 2432690593 ChildLock_DeviceIndication 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ CIOM SG_ 2432690593 ChildLock_DeviceIndication 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ CIOM SG_ 2432679840 DriverDoorLatch_stat 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ CIOM SG_ 2432679840 DriverDoorLatch_stat 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432679840 PS_MirrorSelection_cmd 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432679840 PS_MirrorSelection_cmd 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ CIOM SG_ 2432679840 MirrorHeatNormalModeInd_cmd_2_IS 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ CIOM SG_ 2432679840 MirrorHeatNormalModeInd_cmd_2_IS 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432679840 PS_MirrorDirection_cmd 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432679840 PS_MirrorDirection_cmd 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432679840 PW_DS_Passenger_SwStatus 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432679840 PW_DS_Passenger_SwStatus 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ CIOM SG_ 2432679840 DriverDoorAjar_stat_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ CIOM SG_ 2432679840 DriverDoorAjar_stat_ISig_10 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ CIOM SG_ 2432679840 MirrorHeat_rqst_ddm 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ CIOM SG_ 2432679840 MirrorHeat_rqst_ddm 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ CIOM SG_ 2432679840 DSWindowPosition_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ CIOM SG_ 2432679840 DSWindowPosition_ISig_10 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ Alarm SG_ 2432662336 AutoRelock_rqst 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ Alarm SG_ 2432662336 AutoRelock_rqst 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ Alarm SG_ 2432662336 KeyPosition_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ Alarm SG_ 2432662336 KeyPosition_ISig_10 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ Alarm SG_ 2432662336 ParkingHeater_IndicationCmd_ISig 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ Alarm SG_ 2432662336 ParkingHeater_IndicationCmd_ISig 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2566886464 WheelBasedVehicleSpeedLowRes_ISi 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ Alarm SG_ 2566886464 AmbientAirTemperature_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ Alarm SG_ 2566886464 AmbientAirTemperature_ISig_10 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2566886464 AmbientAirTemperature_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2566886464 AmbientAirTemperature_ISig_10 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2566886464 AmbientAirTemperature_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2566886464 AmbientAirTemperature_ISig_10 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2566886464 TotalVehicleDistanceHighRes_ISig 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2566886464 TotalVehicleDistanceHighRes_ISig 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2566886464 TotalVehicleDistanceHighRes_ISig 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2566886464 TotalVehicleDistanceHighRes_ISig 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ Alarm SG_ 2566886464 TotalVehicleDistanceHighRes_ISig 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ Alarm SG_ 2566886464 TotalVehicleDistanceHighRes_ISig 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ Alarm SG_ 2566886464 ExitPreDeliveryModeHMI_rqst_ISig 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ Alarm SG_ 2566886464 ExitPreDeliveryModeHMI_rqst_ISig 600;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2566892096 YearUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2566892096 YearUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ Alarm SG_ 2566892096 YearUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ Alarm SG_ 2566892096 YearUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2566892096 YearUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2566892096 YearUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ Alarm SG_ 2566892096 DayUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ Alarm SG_ 2566892096 DayUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2566892096 DayUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2566892096 DayUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2566892096 DayUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2566892096 DayUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2566892096 MinutesUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2566892096 MinutesUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ Alarm SG_ 2566892096 MinutesUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ Alarm SG_ 2566892096 MinutesUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2566892096 MinutesUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2566892096 MinutesUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2566892096 HoursUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2566892096 HoursUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2566892096 HoursUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2566892096 HoursUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ Alarm SG_ 2566892096 HoursUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ Alarm SG_ 2566892096 HoursUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2566892096 SecondsUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2566892096 SecondsUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2566892096 SecondsUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2566892096 SecondsUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ Alarm SG_ 2566892096 SecondsUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ Alarm SG_ 2566892096 SecondsUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2566892096 MonthUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2566892096 MonthUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2566892096 MonthUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2566892096 MonthUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ Alarm SG_ 2566892096 MonthUTC_ISig_10 6000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ Alarm SG_ 2566892096 MonthUTC_ISig_10 1500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 VehicleMode_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 VehicleMode_ISig_10 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ Alarm SG_ 2432642880 VehicleMode_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ Alarm SG_ 2432642880 VehicleMode_ISig_10 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 VehicleMode_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 VehicleMode_ISig_10 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 BunkH2PowerWinOpenDSBtn_stat 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 BunkH2PowerWinOpenDSBtn_stat 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 BacklightCmd_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 BacklightCmd_ISig_10 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 BacklightCmd_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 BacklightCmd_ISig_10 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 FuncIndIlluminationLevel_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 FuncIndIlluminationLevel_ISig_10 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 ElectricalLoadReduction_rqst_ISi 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 ElectricalLoadReduction_rqst_ISi 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 ElectricalLoadReduction_rqst_ISi 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 ElectricalLoadReduction_rqst_ISi 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 DoorWarningLight_cmd_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 DoorWarningLight_cmd_ISig_10 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 DoorWarningLight_cmd_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 DoorWarningLight_cmd_ISig_10 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 BunkH2PowerWinOpenPSBtn_stat 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 BunkH2PowerWinOpenPSBtn_stat 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 BunkH1PowerWinClosePSBtn_stat_IS 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 BunkH1PowerWinClosePSBtn_stat_IS 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 DoorInstepLight_cmd_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 DoorInstepLight_cmd_ISig_10 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 DoorInstepLight_cmd_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 DoorInstepLight_cmd_ISig_10 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 FlexSwitchChildLockButton_stat 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 FlexSwitchChildLockButton_stat 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 MainSwitchButton_Status_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 MainSwitchButton_Status_ISig_10 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 MainSwitchButton_Status_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 MainSwitchButton_Status_ISig_10 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 BunkH1PowerWinOpenDSBtn_stat_ISi 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 BunkH1PowerWinOpenDSBtn_stat_ISi 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 BunkH2PowerWinClosePSBtn_stat 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 BunkH2PowerWinClosePSBtn_stat 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 BunkH1PowerWinCloseDSBtn_stat_IS 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 BunkH1PowerWinCloseDSBtn_stat_IS 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 KeyfobLockBtn_DoublePress_ISig_1 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 KeyfobLockBtn_DoublePress_ISig_1 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 KeyfobLockBtn_DoublePress_ISig_1 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 KeyfobLockBtn_DoublePress_ISig_1 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 BunkH1PowerWinOpenPSBtn_stat_ISi 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432642880 BunkH1PowerWinOpenPSBtn_stat_ISi 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 MirrorHeatingMode_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 MirrorHeatingMode_ISig_10 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 MirrorHeatNormModeBtn_stat_ISig_ 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 MirrorHeatNormModeBtn_stat_ISig_ 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 BunkH2PowerWinCloseDSBtn_stat 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2432642880 BunkH2PowerWinCloseDSBtn_stat 500;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ CIOM SG_ 2432644544 AutorelockingMovements_stat 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ CIOM SG_ 2432644544 AutorelockingMovements_stat 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ CIOM SG_ 2432644544 AlarmTriggeringCause_stat_ISig_1 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ CIOM SG_ 2432644544 AlarmTriggeringCause_stat_ISig_1 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ PDM SG_ 2432644544 AlarmStatus_stat_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ PDM SG_ 2432644544 AlarmStatus_stat_ISig_10 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ CIOM SG_ 2432644544 AlarmStatus_stat_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ CIOM SG_ 2432644544 AlarmStatus_stat_ISig_10 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ DDM SG_ 2432644544 AlarmStatus_stat_ISig_10 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ DDM SG_ 2432644544 AlarmStatus_stat_ISig_10 120;
+BA_REL_ "GenSigFirstTimeoutTime" BU_SG_REL_ CIOM SG_ 2432644544 Indicator_Lights_Alarm_rqst_ISig 3000;
+BA_REL_ "GenSigTimeoutTime" BU_SG_REL_ CIOM SG_ 2432644544 Indicator_Lights_Alarm_rqst_ISig 120;
+VAL_ 2432690593 PassengerDoorLatch_stat 7 "DoorLatch_stat_NotAvailable" 6 "DoorLatch_stat_Error" 2 "DoorLatch_stat_LatchLockedFiltered" 1 "DoorLatch_stat_LatchUnlockedFiltered" 0 "DoorLatch_stat_Idle" ;
+VAL_ 2432690593 PSWindowPosition_ISig_10 7 "WindowPosition_NotAvailable" 6 "WindowPosition_Error" 5 "WindowPosition_Spare" 4 "WindowPosition_UnknownPosition" 3 "WindowPosition_Open_70_100Percent" 2 "WindowPosition_Open_30_70Percent" 1 "WindowPosition_Open_0_30Percent" 0 "WindowPosition_Closed" ;
+VAL_ 2432690593 PassengerDoorAjar_stat_ISig_10 7 "DoorAjar_stat_NotAvailable" 6 "DoorAjar_stat_Error" 2 "DoorAjar_stat_DoorOpen" 1 "DoorAjar_stat_DoorClosed" 0 "DoorAjar_stat_Idle" ;
+VAL_ 2432690593 ChildLock_DeviceIndication 3 "DeviceIndication_SpareValue" 2 "DeviceIndication_Blink" 1 "DeviceIndication_On" 0 "DeviceIndication_Off" ;
+VAL_ 2432679840 DriverDoorLatch_stat 7 "DoorLatch_stat_NotAvailable" 6 "DoorLatch_stat_Error" 2 "DoorLatch_stat_LatchLockedFiltered" 1 "DoorLatch_stat_LatchUnlockedFiltered" 0 "DoorLatch_stat_Idle" ;
+VAL_ 2432679840 PS_MirrorSelection_cmd 7 "PS_MirrorSelection_cmd_NotAvailable" 6 "PS_MirrorSelection_cmd_Error" 5 "PS_MirrorSelection_cmd_SpareValue_02" 4 "PS_MirrorSelection_cmd_SpareValue_01" 3 "PS_MirrorSelection_cmd_SpareValue" 2 "PS_MirrorSelection_cmd_PSWideAngleMirrorSelected" 1 "PS_MirrorSelection_cmd_PSMainMirrorSelected" 0 "PS_MirrorSelection_cmd_NoPSMirrorSelected" ;
+VAL_ 2432679840 MirrorHeatNormalModeInd_cmd_2_IS 3 "DeviceIndication_SpareValue" 2 "DeviceIndication_Blink" 1 "DeviceIndication_On" 0 "DeviceIndication_Off" ;
+VAL_ 2432679840 PS_MirrorDirection_cmd 7 "MirrorDirection_NotAvailable" 6 "MirrorDirection_Error" 5 "MirrorDirection_SpareValue" 4 "MirrorDirection_Right" 3 "MirrorDirection_Left" 2 "MirrorDirection_Down" 1 "MirrorDirection_Up" 0 "MirrorDirection_Off" ;
+VAL_ 2432679840 PW_DS_Passenger_SwStatus 7 "A5PosSwitchStatus_NotAvailable" 6 "A5PosSwitchStatus_Error" 5 "A5PosSwitchStatus_Spare" 4 "A5PosSwitchStatus_2StepLower" 3 "A5PosSwitchStatus_Lower" 2 "A5PosSwitchStatus_2StepUpper" 1 "A5PosSwitchStatus_Upper" 0 "A5PosSwitchStatus_Neutral" ;
+VAL_ 2432679840 DriverDoorAjar_stat_ISig_10 7 "DoorAjar_stat_NotAvailable" 6 "DoorAjar_stat_Error" 2 "DoorAjar_stat_DoorOpen" 1 "DoorAjar_stat_DoorClosed" 0 "DoorAjar_stat_Idle" ;
+VAL_ 2432679840 MirrorHeat_rqst_ddm 7 "MirrorHeat_NotAvailable" 6 "MirrorHeat_ErrorIndicator" 5 "MirrorHeat_SpareValue_02" 4 "MirrorHeat_SpareValue_01" 3 "MirrorHeat_SpareValue" 2 "MirrorHeat_ONExtendedMode" 1 "MirrorHeat_ONNormalMode" 0 "MirrorHeat_OFF" ;
+VAL_ 2432679840 DSWindowPosition_ISig_10 7 "WindowPosition_NotAvailable" 6 "WindowPosition_Error" 5 "WindowPosition_Spare" 4 "WindowPosition_UnknownPosition" 3 "WindowPosition_Open_70_100Percent" 2 "WindowPosition_Open_30_70Percent" 1 "WindowPosition_Open_0_30Percent" 0 "WindowPosition_Closed" ;
+VAL_ 2432662336 AutoRelock_rqst 3 "AutoRelock_rqst_NotAvailable" 2 "AutoRelock_rqst_Error" 1 "AutoRelock_rqst_AutoRelockActivated" 0 "AutoRelock_rqst_Idle" ;
+VAL_ 2432662336 KeyPosition_ISig_10 7 "KeyPosition_NotAvailable" 6 "KeyPosition_ErrorIndicator" 5 "KeyPosition_IgnitionKeyInCrankPosition" 4 "KeyPosition_IgnitionKeyInPreheatPosition" 3 "KeyPosition_IgnitionKeyIn15PositionNormalDrivingPosition" 2 "KeyPosition_IgnitionKeyInAccessoryPosition" 1 "KeyPosition_IgnitionKeyInOffPosition" 0 "KeyPosition_KeyOut" ;
+VAL_ 2432662336 ParkingHeater_IndicationCmd_ISig 1 "IndicationCmd_ONLEDActivated" 0 "IndicationCmd_OFFLEDNotActivated" ;
+VAL_ 2566886464 ExitPreDeliveryModeHMI_rqst_ISig 3 "FalseTrue_NotAvaiable" 2 "FalseTrue_Error" 1 "FalseTrue_True" 0 "FalseTrue_False" ;
+VAL_ 2432642880 VehicleMode_ISig_10 15 "VehicleMode_NotAvailable" 14 "VehicleMode_Error" 13 "VehicleMode_Spare_7" 12 "VehicleMode_Spare_6" 11 "VehicleMode_Spare_5" 10 "VehicleMode_Spare_4" 9 "VehicleMode_Spare_3" 8 "VehicleMode_Spare_2" 7 "VehicleMode_Spare_1" 6 "VehicleMode_Running" 5 "VehicleMode_Cranking" 4 "VehicleMode_PreRunning" 3 "VehicleMode_Accessory" 2 "VehicleMode_Living" 1 "VehicleMode_Parked" 0 "VehicleMode_Hibernate" ;
+VAL_ 2432642880 BunkH2PowerWinOpenDSBtn_stat 3 "PushButtonStatus_NotAvailable" 2 "PushButtonStatus_Error" 1 "PushButtonStatus_Pushed" 0 "PushButtonStatus_Neutral" ;
+VAL_ 2432642880 BacklightCmd_ISig_10 31 "BacklightCmd_NotAvailable" 30 "BacklightCmd_Error" 16 "BacklightCmd_BacklightLevel16" 15 "BacklightCmd_BacklightLevel15" 14 "BacklightCmd_BacklightLevel14" 13 "BacklightCmd_BacklightLevel13" 12 "BacklightCmd_BacklightLevel12" 11 "BacklightCmd_BacklightLevel11" 10 "BacklightCmd_BacklightLevel10" 9 "BacklightCmd_BacklightLevel9" 8 "BacklightCmd_BacklightLevel8" 7 "BacklightCmd_BacklightLevel7" 6 "BacklightCmd_BacklightLevel6" 5 "BacklightCmd_BacklightLevel5" 4 "BacklightCmd_BacklightLevel4" 3 "BacklightCmd_BacklightLevel3" 2 "BacklightCmd_BacklightLevel2" 1 "BacklightCmd_BacklightLevel1" 0 "BacklightCmd_BacklightOff" ;
+VAL_ 2432642880 FuncIndIlluminationLevel_ISig_10 7 "FuncIndIlluminationLevel_NotAvailable" 6 "FuncIndIlluminationLevel_Error" 5 "FuncIndIlluminationLevel_Spare" 4 "FuncIndIlluminationLevel_IlluminationLevel4" 3 "FuncIndIlluminationLevel_IlluminationLevel3" 2 "FuncIndIlluminationLevel_IlluminationLevel2" 1 "FuncIndIlluminationLevel_IlluminationLevel1" 0 "FuncIndIlluminationLevel_IlluminationOff" ;
+VAL_ 2432642880 ElectricalLoadReduction_rqst_ISi 7 "ElectricalLoadReduction_rqst_NotAvailable" 6 "ElectricalLoadReduction_rqst_Error" 5 "ElectricalLoadReduction_rqst_SpareValue_02" 4 "ElectricalLoadReduction_rqst_SpareValue_01" 3 "ElectricalLoadReduction_rqst_SpareValue" 2 "ElectricalLoadReduction_rqst_Level2Request" 1 "ElectricalLoadReduction_rqst_Level1Request" 0 "ElectricalLoadReduction_rqst_NoRequest" ;
+VAL_ 2432642880 DoorWarningLight_cmd_ISig_10 3 "OffOn_NotAvailable" 2 "OffOn_Error" 1 "OffOn_On" 0 "OffOn_Off" ;
+VAL_ 2432642880 BunkH2PowerWinOpenPSBtn_stat 3 "PushButtonStatus_NotAvailable" 2 "PushButtonStatus_Error" 1 "PushButtonStatus_Pushed" 0 "PushButtonStatus_Neutral" ;
+VAL_ 2432642880 BunkH1PowerWinClosePSBtn_stat_IS 3 "PushButtonStatus_NotAvailable" 2 "PushButtonStatus_Error" 1 "PushButtonStatus_Pushed" 0 "PushButtonStatus_Neutral" ;
+VAL_ 2432642880 DoorInstepLight_cmd_ISig_10 3 "OffOn_NotAvailable" 2 "OffOn_Error" 1 "OffOn_On" 0 "OffOn_Off" ;
+VAL_ 2432642880 FlexSwitchChildLockButton_stat 7 "A3PosSwitchStatus_NotAvailable" 6 "A3PosSwitchStatus_Error" 5 "A3PosSwitchStatus_Spare_02" 4 "A3PosSwitchStatus_Spare_01" 3 "A3PosSwitchStatus_Spare" 2 "A3PosSwitchStatus_Upper" 1 "A3PosSwitchStatus_Lower" 0 "A3PosSwitchStatus_Middle" ;
+VAL_ 2432642880 MainSwitchButton_Status_ISig_10 3 "PushButtonStatus_NotAvailable" 2 "PushButtonStatus_Error" 1 "PushButtonStatus_Pushed" 0 "PushButtonStatus_Neutral" ;
+VAL_ 2432642880 BunkH1PowerWinOpenDSBtn_stat_ISi 3 "PushButtonStatus_NotAvailable" 2 "PushButtonStatus_Error" 1 "PushButtonStatus_Pushed" 0 "PushButtonStatus_Neutral" ;
+VAL_ 2432642880 BunkH2PowerWinClosePSBtn_stat 3 "PushButtonStatus_NotAvailable" 2 "PushButtonStatus_Error" 1 "PushButtonStatus_Pushed" 0 "PushButtonStatus_Neutral" ;
+VAL_ 2432642880 BunkH1PowerWinCloseDSBtn_stat_IS 3 "PushButtonStatus_NotAvailable" 2 "PushButtonStatus_Error" 1 "PushButtonStatus_Pushed" 0 "PushButtonStatus_Neutral" ;
+VAL_ 2432642880 KeyfobLockBtn_DoublePress_ISig_1 3 "NotDetected_NotAvaliable" 2 "NotDetected_Error" 1 "NotDetected_Detected" 0 "NotDetected_NotDetected" ;
+VAL_ 2432642880 BunkH1PowerWinOpenPSBtn_stat_ISi 3 "PushButtonStatus_NotAvailable" 2 "PushButtonStatus_Error" 1 "PushButtonStatus_Pushed" 0 "PushButtonStatus_Neutral" ;
+VAL_ 2432642880 MirrorHeatingMode_ISig_10 7 "MirrorHeat_NotAvailable" 6 "MirrorHeat_ErrorIndicator" 5 "MirrorHeat_SpareValue_02" 4 "MirrorHeat_SpareValue_01" 3 "MirrorHeat_SpareValue" 2 "MirrorHeat_ONExtendedMode" 1 "MirrorHeat_ONNormalMode" 0 "MirrorHeat_OFF" ;
+VAL_ 2432642880 MirrorHeatNormModeBtn_stat_ISig_ 3 "PushButtonStatus_NotAvailable" 2 "PushButtonStatus_Error" 1 "PushButtonStatus_Pushed" 0 "PushButtonStatus_Neutral" ;
+VAL_ 2432642880 BunkH2PowerWinCloseDSBtn_stat 3 "PushButtonStatus_NotAvailable" 2 "PushButtonStatus_Error" 1 "PushButtonStatus_Pushed" 0 "PushButtonStatus_Neutral" ;
+VAL_ 2432644544 AutorelockingMovements_stat 7 "AutorelockingMovements_stat_NotAvailable" 6 "AutorelockingMovements_stat_Error" 5 "AutorelockingMovements_stat_Spare_02" 4 "AutorelockingMovements_stat_Spare_01" 3 "AutorelockingMovements_stat_Spare" 2 "AutorelockingMovements_stat_MovementHasBeenDetected" 1 "AutorelockingMovements_stat_NoMovementHasBeenDetected" 0 "AutorelockingMovements_stat_Idle" ;
+VAL_ 2432644544 AlarmTriggeringCause_stat_ISig_1 15 "AlarmTriggeringCause_stat_NotAvailable" 14 "AlarmTriggeringCause_stat_Error" 10 "AlarmTriggeringCause_stat_OtherTamperIssues" 9 "AlarmTriggeringCause_stat_DoorsConnectionTampered" 8 "AlarmTriggeringCause_stat_SirenConnectionTampered" 7 "AlarmTriggeringCause_stat_TrailerAlarmTriggered" 6 "AlarmTriggeringCause_stat_FrontHatchOpened" 5 "AlarmTriggeringCause_stat_LuggageCompartementOpened" 4 "AlarmTriggeringCause_stat_CabTilted" 3 "AlarmTriggeringCause_stat_MotionSensorTriggered" 2 "AlarmTriggeringCause_stat_PassengerDoorOpened" 1 "AlarmTriggeringCause_stat_DriverDoorOpened" 0 "AlarmTriggeringCause_stat_Idle" ;
+VAL_ 2432644544 AlarmStatus_stat_ISig_10 15 "AlarmStatus_stat_NotAvailable" 14 "AlarmStatus_stat_Error" 13 "AlarmStatus_stat_Spare_06" 12 "AlarmStatus_stat_Spare_05" 11 "AlarmStatus_stat_Spare_04" 10 "AlarmStatus_stat_Spare_03" 9 "AlarmStatus_stat_Spare_02" 8 "AlarmStatus_stat_Spare_01" 7 "AlarmStatus_stat_TamperMode" 6 "AlarmStatus_stat_ServiceMode" 5 "AlarmStatus_stat_AlarmMode" 4 "AlarmStatus_stat_PanicMode" 3 "AlarmStatus_stat_UnsetMode" 2 "AlarmStatus_stat_ReduceSetMode" 1 "AlarmStatus_stat_SetMode" 0 "AlarmStatus_stat_Idle" ;
+VAL_ 2432644544 Indicator_Lights_Alarm_rqst_ISig 7 "Indicator_Lights_Alarm_rqst_NotAvailable" 6 "Indicator_Lights_Alarm_rqst_Error" 5 "Indicator_Lights_Alarm_rqst_Spare_02" 4 "Indicator_Lights_Alarm_rqst_Spare_01" 3 "Indicator_Lights_Alarm_rqst_Spare" 2 "Indicator_Lights_Alarm_rqst_DeactivateIndLightsNoWarnings" 1 "Indicator_Lights_Alarm_rqst_ActivateIndicatorLightsWarnings" 0 "Indicator_Lights_Alarm_rqst_Idle" ;
+SIG_GROUP_ 2583680161 DiagFaultStat_PDM_sg_ISig_10 1 : DiagFaultStat_PDM_DtcIdA_ISig_10 DiagFaultStat_PDM_EcuAdr_ISig_10 DiagFaultStat_PDM_DtcIdB_ISig_10 DiagFaultStat_PDM_FailTA_ISig_10 DiagFaultStat_PDM_FailTB_ISig_10;
+SIG_GROUP_ 2583658400 DiagFaultStat_DDM_sg_ISig_10 1 : DiagFaultStat_DDM_DtcIdA_ISig_10 DiagFaultStat_DDM_FailTA_ISig_10 DiagFaultStat_DDM_DtcIdB_ISig_10 DiagFaultStat_DDM_FailTB_ISig_10 DiagFaultStat_DDM_EcuAdr_ISig_10;
+SIG_GROUP_ 2583636672 DiagFaultStat_Alarm_sg_ISig_10 1 : DiagFaultStat_Alarm_DtcIdA_ISig_ DiagFaultStat_Alarm_DtcIdB_ISig_ DiagFaultStat_Alarm_FailTA_ISig_ DiagFaultStat_Alarm_FailTB_ISig_ DiagFaultStat_Alarm_EcuAdr_ISig_;
+

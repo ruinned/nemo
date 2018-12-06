@@ -1,0 +1,1451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="84ED90F8-1FB7-4287-BE07-0C931FAE0FA4">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="03504379-8655-4839-A95B-D4C8FC471463">
+          <SHORT-NAME>TestApp</SHORT-NAME>
+          <PORTS>
+            <R-PORT-PROTOTYPE UUID="20D6C82A-9253-4490-B626-ED1B94FFEB64">
+              <SHORT-NAME>Pp12VDcDcEnable</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="ED217161-FFC3-4A74-A53A-0B16ECEBEF8A">
+              <SHORT-NAME>PpAdcAnalogInputC4</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="2B2FAC75-0EB0-4353-ACA8-574D0ABA3E73">
+              <SHORT-NAME>PpAdcAnalogInputBatteryMon</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="4A6C50FB-8E3F-4E30-8723-6209BF053B96">
+              <SHORT-NAME>PpAdcAnalogInputC5</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="79069376-340E-4B41-A2D4-FE2CBBAF5B69">
+              <SHORT-NAME>PpAdcAnalogInputC6</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="71C9F033-9DA7-4274-9116-BA7752996CF4">
+              <SHORT-NAME>PpAdcAnalogInputC7</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="BB224ABE-3C6E-4C63-B2DF-106129D3B89E">
+              <SHORT-NAME>PpAdcAnalogInputC18</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="041955B9-62CA-48E2-8D2F-45BEE0F78704">
+              <SHORT-NAME>PpAdcAnalogInputC19</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="1BC4B1F7-1A10-4BFC-9B63-515430C32FEB">
+              <SHORT-NAME>PpAdcAnalogInputC20</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="C2841855-FBAC-42B7-824C-9217DE03D547">
+              <SHORT-NAME>PpAdcAnalogInputC21</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="6EE01B7E-E4D9-47F6-AEF7-1DEE45811887">
+              <SHORT-NAME>PpAdcAnalogInputC22</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="69CC5867-A6CE-4A98-8AE8-CFAC19CCC751">
+              <SHORT-NAME>PpAdcAnalogInputC23</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="C7AC7384-6428-406A-9725-96856130D23F">
+              <SHORT-NAME>PpAdcAnalogInputCAN1TermintionH1</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="493258BC-2C4A-42D5-A124-C809213CBA12">
+              <SHORT-NAME>PpAdcAnalogInputCAN1TermintionH2</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="FD8C25B3-DF00-46C2-A89A-66A8F0161FDA">
+              <SHORT-NAME>PpAdcAnalogInputCAN1TermintionL1</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="496FAFD8-51D8-4282-A085-1D6B0B7A0FEF">
+              <SHORT-NAME>PpAdcAnalogInputCAN1TermintionL2</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="C735B3E4-C685-41C6-8FAA-D4E3AA47B717">
+              <SHORT-NAME>PpAdcAnalogInputD8</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="8AD4544C-93F7-4611-9F02-BB997ABE3ACD">
+              <SHORT-NAME>PpAdcAnalogInputD17</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="6ECBA125-A02C-4474-AF67-522B5A6B8594">
+              <SHORT-NAME>PpAdcAnalogInputHighSideOut2</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="87522ACA-DD53-42C9-BA69-B41A06FF53C4">
+              <SHORT-NAME>PpAdcAnalogInputHighSideOut3</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="C4444AE3-F0FB-4CB4-868D-D8557F59D3C8">
+              <SHORT-NAME>PpAdcAnalogInputHighSideOut4</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="63FAABF8-2C02-48A9-B32D-CA16D02036DD">
+              <SHORT-NAME>PpAdcAnalogInputHsLin1IpsMultiSense</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="48C4B6AF-69C7-4947-A094-E574B3523396">
+              <SHORT-NAME>PpAdcAnalogInputHsOut1IpsCurrentSense</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="36A92E9A-C324-47E6-99F6-7E6F2AB1C488">
+              <SHORT-NAME>PpAdcAnalogInputHsOut3IpsCurrentSense</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="4B4B58C9-FC0F-4CB9-9CDA-91A990D257EA">
+              <SHORT-NAME>PpAdcAnalogInputHsOut5IpsCurrentSense</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="3D595A6E-C474-4FBA-8012-6DBA419BC63E">
+              <SHORT-NAME>PpAdcAnalogInputHsPwm1IpsCurrentSense</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="73ED1E3E-CE74-4878-B940-A55BF943A1DC">
+              <SHORT-NAME>PpAdcAnalogInputHsPwm3IpsCurrentSense</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="F3E5058E-0CBB-49C3-901A-75B82522B88E">
+              <SHORT-NAME>PpAdcAnalogInputLsPwm1GateMonitoring</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="A0BD720B-1724-4BA8-A638-07B5FFD3FE5D">
+              <SHORT-NAME>PpAdcAnalogInputLsPwm2GateMonitoring</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="9623724D-771D-4581-A638-24E04A306512">
+              <SHORT-NAME>PpAdcAnalogInputLsPwm3GateMonitoring</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="32E2A21E-2A7C-4477-9F95-D8289DE9E914">
+              <SHORT-NAME>PpAdcAnalogInputLsPwm4GateMonitoring</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="53CF963D-ADF3-4503-8ACF-CA6AF58FD78D">
+              <SHORT-NAME>PpAdcAnalogInputLsPwm5GateMonitoring</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="30084C67-9945-414E-8958-6930E5655F12">
+              <SHORT-NAME>PpAdcAnalogInputUAI73</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="BDE76B26-C302-4497-931C-DC9565BFC568">
+              <SHORT-NAME>PpAdcAnalogInputUAI74</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="A0B23BC2-364E-4FC8-AC68-E32658867994">
+              <SHORT-NAME>PpAdcAnalogInputUAI75</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="F30D0E71-79D9-472E-AC2F-3524495EA108">
+              <SHORT-NAME>PpAdcAnalogInputUAI76</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="3847B4FD-B0EC-456E-B17F-61F16655AFD8">
+              <SHORT-NAME>PpAdcAnalogInputUAI81</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="320A7417-462C-40C8-9EE8-B6745424FA3A">
+              <SHORT-NAME>PpAdcAnalogInputUAI82</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="EBA14901-B6AA-4DBE-B8AF-1EB1D29BFE65">
+              <SHORT-NAME>PpAdcAnalogInputUAI87</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="8D92D52E-849F-49D4-9907-B8E99D0A14B8">
+              <SHORT-NAME>PpCAN1STB</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="4DC03D8E-A7A8-4CA4-BA31-D0C7EAF3D4DB">
+              <SHORT-NAME>PpCAN2STB</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="B8427C84-AD0C-4A33-9827-A43A51BCCEA7">
+              <SHORT-NAME>PpCAN3STB</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="CA560DE5-39B0-49A9-8A4B-B6F9F9A269B8">
+              <SHORT-NAME>PpCAN4STB</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="A41F6FEA-0DA8-4012-8A9A-4146EE1839C1">
+              <SHORT-NAME>PpCAN5STB</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="6F116DF0-F14E-4173-BDF8-6FD616408AF2">
+              <SHORT-NAME>PpCAN6STB</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="1AE891AE-AF86-45F0-BA33-313052216F2A">
+              <SHORT-NAME>PpHsOut1IpsFault</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="6CC25E69-8D49-4276-9CD5-E2305515DADD">
+              <SHORT-NAME>PpHsOut1IpsInput0</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="4109BA18-A162-40E2-9CFF-EA51793C4C61">
+              <SHORT-NAME>PpHsOut1IpsInput1</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="CE885504-450A-4071-B1D1-8217B028731F">
+              <SHORT-NAME>PpHsOut3IpsFault</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="63B9D83E-43B9-4221-8CB4-49EC8496D04E">
+              <SHORT-NAME>PpHsOut3IpsInput0</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="0F4A813B-D279-440A-93E3-648022247DF2">
+              <SHORT-NAME>PpHsOut3IpsInput1</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="CCF70E87-4B6D-4684-A2BA-6CB4004EB0CE">
+              <SHORT-NAME>PpHsOut5IpsInput</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="279B61EB-3F05-460B-BD12-64F5892B7494">
+              <SHORT-NAME>PpHsPwm1IpsFault</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="06A60851-EDD7-4BDE-BC58-F10D6B36B446">
+              <SHORT-NAME>PpHsPwm3IpsFault</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="EA22308A-EC17-4C62-AA82-1FB10D484B8C">
+              <SHORT-NAME>PpIPSComSel</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="A34C099D-F248-4B18-8C48-0CF9033AF40F">
+              <SHORT-NAME>PpIPSComSen</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="AF4B48AC-464B-4BE7-A374-24BBDD633BAB">
+              <SHORT-NAME>PpIPSPwrSel0</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="7BD53D71-B34E-4682-9E78-4E871002009A">
+              <SHORT-NAME>PpIPSPwrSel1</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="041C9C15-E635-4CB9-BFAB-A8BF8751B235">
+              <SHORT-NAME>PpIPSPwrSen</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="88C1CC4E-AFD0-432D-9D08-6C9AF9DE18E8">
+              <SHORT-NAME>PpLficNres</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="5CE3673B-09A6-4BFC-B733-C0614F8D7D92">
+              <SHORT-NAME>PpLIN1EN</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="6B2C0E0E-412A-46A2-A9E3-13F49D918CEC">
+              <SHORT-NAME>PpLIN1Inh</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="2837F838-0346-4188-9D49-688F7144CBB3">
+              <SHORT-NAME>PpLIN2EN</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="BCDCC069-46AD-42AF-88B1-414039D02119">
+              <SHORT-NAME>PpLIN2Inh</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="E72751C8-AC60-4C75-A40A-8604A55839D3">
+              <SHORT-NAME>PpLIN3EN</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="C97E856F-F87B-4E97-89C4-D6C27C92C317">
+              <SHORT-NAME>PpLIN3Inh</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="E147DF7E-A52F-48C1-8E3D-7C4FE7019E5A">
+              <SHORT-NAME>PpLIN4EN</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="E55914BB-D02A-4329-8A53-FE4F26DD8BFB">
+              <SHORT-NAME>PpLIN4Inh</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="6561AC9C-7CA2-4F24-84D7-1FC7428ADD46">
+              <SHORT-NAME>PpLIN5EN</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="0B6E991E-3134-40B3-92AF-479FA45017C5">
+              <SHORT-NAME>PpLIN5Inh</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="9A267217-47F2-4D16-AD65-4A644894F89A">
+              <SHORT-NAME>PpLIN6EN</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="A4434CD7-369B-48D4-9A7A-AFE13424BEB5">
+              <SHORT-NAME>PpLIN6Inh</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="AACC559D-221B-48B2-9F8A-3C690B53AABB">
+              <SHORT-NAME>PpLINPwrIpsFaultRst</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="3142E711-1DFB-412A-9517-5950D230C4A0">
+              <SHORT-NAME>PpLINPwrIpsIn0</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="88CCA413-86A1-4783-8532-F65BD1DA6FD6">
+              <SHORT-NAME>PpLINPwrIpsIn1</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="7A3562DF-2C6F-45C7-8843-075EF5D573E7">
+              <SHORT-NAME>PpLINSecurityEN</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="59BB3ECF-BAC5-4D7F-BF7A-7BC2E1D8AF4D">
+              <SHORT-NAME>PpLINSecurityInh</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="63014F9B-9EA2-4C0B-AD39-242BE0799D44">
+              <SHORT-NAME>PpLivingPopUpCtrl</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="B4CC66D7-154F-408E-8A2F-7378CE813E55">
+              <SHORT-NAME>PpParkedPopUpCtrl</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="D0E75965-8C5C-474B-B076-787D897C95C0">
+              <SHORT-NAME>PpPwmHsPwm1IpsIn0</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="4DA33455-20CF-4381-A297-CD01C9162C21">
+              <SHORT-NAME>PpPwmHsPwm1IpsIn1</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="ED5F9B66-370C-47B7-9F7F-756DEEC40EAE">
+              <SHORT-NAME>PpPwmHsPwm3IpsIn0</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="42C3B2A8-77A4-45EB-A2A6-27953AA8181B">
+              <SHORT-NAME>PpPwmHsPwm3IpsIn1</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="36C95A14-EA7B-4C0A-8A45-A8613055EBD9">
+              <SHORT-NAME>PpPwmLsPwm1Gate</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="A397F1D7-F29F-41E2-8D04-ECBC6EE7535C">
+              <SHORT-NAME>PpPwmLsPwm2Gate</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="B722F232-FFB7-4F9F-B5BF-F509AB443574">
+              <SHORT-NAME>PpPwmLsPwm3Gate</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="AB772F21-5F80-4118-A04E-E763C41912B4">
+              <SHORT-NAME>PpPwmLsPwm4Gate</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="16D53455-ADB3-49AB-8D8D-9FD3958F4B63">
+              <SHORT-NAME>PpPwmLsPwm5Gate</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="4C8E8F57-95EF-4144-B745-95BCD1FE4381">
+              <SHORT-NAME>PpPwmRegWdtOut</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="BBF9B506-3933-4324-964D-D04B3D601B08">
+              <SHORT-NAME>PpRegRst</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="1A44C015-B6F5-4D1D-9CE8-49CFFC27CA0F">
+              <SHORT-NAME>PpRficNres</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="9DB0D82D-4D24-425F-9336-C307FEA43B1A">
+              <SHORT-NAME>PpRficRed</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC />
+                <CLIENT-COM-SPEC />
+              </REQUIRED-COM-SPECS>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="722DC696-678C-4A37-BEF8-648BCBCDAF5E">
+              <SHORT-NAME>TestApp_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="4E4383C8-0983-4D0B-B464-9AB20C0C908C">
+                  <SHORT-NAME>TMT_ReTestApp</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/TestApp/TestApp_InternalBehavior/ReTestApp</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="009DC3DD-3022-4BC0-AE0B-5E378DB52E2A">
+                  <SHORT-NAME>ReTestApp</SHORT-NAME>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="4AA49734-CB44-4F20-8674-168A0EB5D747">
+                      <SHORT-NAME>SC_Pp12VDcDcEnable_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/Pp12VDcDcEnable</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="BC441C77-4DAB-4050-8028-38351E5AC250">
+                      <SHORT-NAME>SC_Pp12VDcDcEnable_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/Pp12VDcDcEnable</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="5B95AEA3-DB07-4C40-B8C7-0383A3070AB1">
+                      <SHORT-NAME>SC_PpAdcAnalogInputBatteryMon_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputBatteryMon</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="A088B013-E9FE-47C0-9F4D-689AF2CDE8A9">
+                      <SHORT-NAME>SC_PpAdcAnalogInputC18_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputC18</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="0B35CFDB-C87B-40F4-81FC-E22574BF4203">
+                      <SHORT-NAME>SC_PpAdcAnalogInputC19_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputC19</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="4A0CBB56-C74C-4DAC-91AC-30B1295488D6">
+                      <SHORT-NAME>SC_PpAdcAnalogInputC20_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputC20</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="936C06E0-8ACF-4E94-9D7B-9E698C6206B4">
+                      <SHORT-NAME>SC_PpAdcAnalogInputC21_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputC21</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="D6E310F2-F5B6-4268-AD52-669D744E7246">
+                      <SHORT-NAME>SC_PpAdcAnalogInputC22_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputC22</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="6F2CBBE2-A770-4DAF-8EB1-7E32FA2A8EF3">
+                      <SHORT-NAME>SC_PpAdcAnalogInputC23_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputC23</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="C9DBA198-51CE-4C40-AC0F-A011F46A6654">
+                      <SHORT-NAME>SC_PpAdcAnalogInputC4_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputC4</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="2490212F-3438-483B-8670-F4E359B3E128">
+                      <SHORT-NAME>SC_PpAdcAnalogInputC5_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputC5</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="3556C033-B68D-49EF-ACAD-3D5BC02DB251">
+                      <SHORT-NAME>SC_PpAdcAnalogInputC6_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputC6</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="9F080257-AF28-4C45-B684-112E0D16A838">
+                      <SHORT-NAME>SC_PpAdcAnalogInputC7_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputC7</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="5A735588-8710-4D4A-9735-339A78999A40">
+                      <SHORT-NAME>SC_PpAdcAnalogInputCAN1TermintionH1_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputCAN1TermintionH1</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="3B39B0AF-1D8B-4F24-8E73-F3D5C6BF21F1">
+                      <SHORT-NAME>SC_PpAdcAnalogInputCAN1TermintionH2_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputCAN1TermintionH2</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="9ECE01B0-2941-448A-B61B-A8C043531138">
+                      <SHORT-NAME>SC_PpAdcAnalogInputCAN1TermintionL1_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputCAN1TermintionL1</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="4DF0A6A1-C36F-438A-9250-687440DEB6F2">
+                      <SHORT-NAME>SC_PpAdcAnalogInputCAN1TermintionL2_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputCAN1TermintionL2</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="1BB410E2-EC95-46B9-9528-62309E880E2A">
+                      <SHORT-NAME>SC_PpAdcAnalogInputD17_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputD17</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="9EA93EF5-6441-4383-A40A-0281D77B825F">
+                      <SHORT-NAME>SC_PpAdcAnalogInputD8_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputD8</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="D443B2F2-C186-4AAB-94CC-99F633F36BF9">
+                      <SHORT-NAME>SC_PpAdcAnalogInputHighSideOut2_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputHighSideOut2</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="0D34DF68-74B7-4C3D-8654-F6A591269645">
+                      <SHORT-NAME>SC_PpAdcAnalogInputHighSideOut3_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputHighSideOut3</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="6D3BC48F-95D3-4CFF-AA96-54844A8511DC">
+                      <SHORT-NAME>SC_PpAdcAnalogInputHighSideOut4_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputHighSideOut4</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="45DE719B-5CD9-4857-8096-45CFE1989DC5">
+                      <SHORT-NAME>SC_PpAdcAnalogInputHsLin1IpsMultiSense_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputHsLin1IpsMultiSense</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="805E45A2-9918-474C-BC17-C0DE0415CDB7">
+                      <SHORT-NAME>SC_PpAdcAnalogInputHsOut1IpsCurrentSense_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputHsOut1IpsCurrentSense</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="FB7F18C8-E203-4512-8D33-08F45B2AECC2">
+                      <SHORT-NAME>SC_PpAdcAnalogInputHsOut3IpsCurrentSense_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputHsOut3IpsCurrentSense</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="1500D85D-73D3-4C2E-9576-F40D13253B82">
+                      <SHORT-NAME>SC_PpAdcAnalogInputHsOut5IpsCurrentSense_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputHsOut5IpsCurrentSense</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="BA59398B-78B9-4AD9-ADCA-3437DA075724">
+                      <SHORT-NAME>SC_PpAdcAnalogInputHsPwm1IpsCurrentSense_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputHsPwm1IpsCurrentSense</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="83FD35DE-A4DF-4835-A7CB-E0FAA23387B5">
+                      <SHORT-NAME>SC_PpAdcAnalogInputHsPwm3IpsCurrentSense_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputHsPwm3IpsCurrentSense</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="683AB8B0-A82F-427F-9CE7-5B371977DE97">
+                      <SHORT-NAME>SC_PpAdcAnalogInputLsPwm1GateMonitoring_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputLsPwm1GateMonitoring</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="114430EA-B367-4A24-AEFF-C8ECCD60E319">
+                      <SHORT-NAME>SC_PpAdcAnalogInputLsPwm2GateMonitoring_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputLsPwm2GateMonitoring</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="555400F9-0566-44FF-923D-8C500A64ED39">
+                      <SHORT-NAME>SC_PpAdcAnalogInputLsPwm3GateMonitoring_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputLsPwm3GateMonitoring</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="D7D4F13D-F6D0-4F85-9616-36F6192E545E">
+                      <SHORT-NAME>SC_PpAdcAnalogInputLsPwm4GateMonitoring_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputLsPwm4GateMonitoring</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="B63C2762-1085-4C26-BB4A-81E68E28A3DE">
+                      <SHORT-NAME>SC_PpAdcAnalogInputLsPwm5GateMonitoring_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputLsPwm5GateMonitoring</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="122FB0C4-7AA9-47B7-ABA0-CE42E436FC78">
+                      <SHORT-NAME>SC_PpAdcAnalogInputUAI73_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputUAI73</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="F34C8F7A-82F3-4492-9BE3-E030386B14D2">
+                      <SHORT-NAME>SC_PpAdcAnalogInputUAI74_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputUAI74</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="3E5CDF89-C64F-43C7-9722-F47F3594FB94">
+                      <SHORT-NAME>SC_PpAdcAnalogInputUAI75_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputUAI75</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="5430B42D-53A7-47C8-8213-FAD6312D5385">
+                      <SHORT-NAME>SC_PpAdcAnalogInputUAI76_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputUAI76</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="1CBA6656-1474-4806-824F-BD2CBEB96E62">
+                      <SHORT-NAME>SC_PpAdcAnalogInputUAI81_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputUAI81</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="7012EC46-B12D-487D-921B-A227956235CB">
+                      <SHORT-NAME>SC_PpAdcAnalogInputUAI82_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputUAI82</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="31032F5B-CE0C-43B0-9917-8192F677A332">
+                      <SHORT-NAME>SC_PpAdcAnalogInputUAI87_AdcRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpAdcAnalogInputUAI87</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="691B1C6F-BD4F-4747-8644-FECA506E3B94">
+                      <SHORT-NAME>SC_PpCAN1STB_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpCAN1STB</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="D8BCB918-5EFA-4486-BAC2-A31E61424FF7">
+                      <SHORT-NAME>SC_PpCAN1STB_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpCAN1STB</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="AB49F7B0-25D5-4FEB-A60C-5B478BAC9574">
+                      <SHORT-NAME>SC_PpCAN2STB_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpCAN2STB</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="04FD5C8B-53B7-489B-9FF0-ADDA2E942834">
+                      <SHORT-NAME>SC_PpCAN2STB_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpCAN2STB</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="6A1714F9-A54A-4CEC-8B78-E0AE5600D7DF">
+                      <SHORT-NAME>SC_PpCAN3STB_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpCAN3STB</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="669BC91A-5857-4F92-85B3-0C49F80CCD4E">
+                      <SHORT-NAME>SC_PpCAN3STB_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpCAN3STB</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="FA18BDBF-ED47-4743-894B-9ED850FEB093">
+                      <SHORT-NAME>SC_PpCAN4STB_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpCAN4STB</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="8A920270-AA30-4437-83A2-497A6AFAE53C">
+                      <SHORT-NAME>SC_PpCAN4STB_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpCAN4STB</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="A87A56FF-D1B7-40DA-8582-3117242658FB">
+                      <SHORT-NAME>SC_PpCAN5STB_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpCAN5STB</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="025A75BE-330D-46D0-B1AA-B4416174D8E5">
+                      <SHORT-NAME>SC_PpCAN5STB_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpCAN5STB</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="C7DA63F2-0E50-4545-8E48-7163513AA205">
+                      <SHORT-NAME>SC_PpCAN6STB_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpCAN6STB</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="B5CFF8C9-A6AF-414C-AEE2-CE24FC51F0E1">
+                      <SHORT-NAME>SC_PpCAN6STB_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpCAN6STB</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="86F4D5DE-6DE1-4377-BA37-73EB5B2818B1">
+                      <SHORT-NAME>SC_PpHsOut1IpsFault_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsOut1IpsFault</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="A9BDA2FD-322E-4CEA-98EC-C7B24A03E676">
+                      <SHORT-NAME>SC_PpHsOut1IpsFault_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsOut1IpsFault</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="A46ACB2E-EBB4-40A3-8E4E-FD27012C7F9A">
+                      <SHORT-NAME>SC_PpHsOut1IpsInput0_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsOut1IpsInput0</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="D46A7EAC-876A-41C8-A263-DFD7C0F1A6CF">
+                      <SHORT-NAME>SC_PpHsOut1IpsInput0_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsOut1IpsInput0</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="3178F329-C128-493D-814A-09AC1AF06863">
+                      <SHORT-NAME>SC_PpHsOut1IpsInput1_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsOut1IpsInput1</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="0F7F27E7-A66E-406C-9F58-5EBB973666F9">
+                      <SHORT-NAME>SC_PpHsOut1IpsInput1_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsOut1IpsInput1</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="E1443E1E-A8AF-42AD-9BD0-3A7F7EF28D47">
+                      <SHORT-NAME>SC_PpHsOut3IpsFault_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsOut3IpsFault</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="A1568876-BC3F-40A1-A502-0A5B43D76BAA">
+                      <SHORT-NAME>SC_PpHsOut3IpsFault_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsOut3IpsFault</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="7FB26FE8-E32A-4C65-9992-02990435D873">
+                      <SHORT-NAME>SC_PpHsOut3IpsInput0_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsOut3IpsInput0</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="8E12D836-CE8B-43DC-975B-26D75AA422DC">
+                      <SHORT-NAME>SC_PpHsOut3IpsInput0_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsOut3IpsInput0</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="2395FF20-C524-4C90-824B-84B3CC1EAA23">
+                      <SHORT-NAME>SC_PpHsOut3IpsInput1_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsOut3IpsInput1</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="2E65AD04-FAFC-4D87-8FC2-77FBE995E907">
+                      <SHORT-NAME>SC_PpHsOut3IpsInput1_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsOut3IpsInput1</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="001DBA0D-3223-44D5-96F8-CB97EB4114E6">
+                      <SHORT-NAME>SC_PpHsOut5IpsInput_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsOut5IpsInput</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="8710A936-0640-469E-88DE-3A73F18C0F29">
+                      <SHORT-NAME>SC_PpHsOut5IpsInput_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsOut5IpsInput</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="5EDBEA86-91D9-4A9C-8013-C0D81F309376">
+                      <SHORT-NAME>SC_PpHsPwm1IpsFault_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsPwm1IpsFault</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="54D79F11-F1E2-4CB6-ADF8-2C64BAE2F74D">
+                      <SHORT-NAME>SC_PpHsPwm1IpsFault_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsPwm1IpsFault</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="52E14796-FC2C-4938-BAE0-423DEF47E41C">
+                      <SHORT-NAME>SC_PpHsPwm3IpsFault_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsPwm3IpsFault</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="2F4A656B-AEED-4683-99C9-3856B82ABDC4">
+                      <SHORT-NAME>SC_PpHsPwm3IpsFault_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpHsPwm3IpsFault</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="2B0AE5B1-8546-49A3-B771-B7006E9B979E">
+                      <SHORT-NAME>SC_PpIPSComSel_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpIPSComSel</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="043DBD62-B831-4AF0-8436-B1CBC8F9CC4C">
+                      <SHORT-NAME>SC_PpIPSComSel_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpIPSComSel</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="4C19AB0F-AAB4-49D0-889F-08629DF689EF">
+                      <SHORT-NAME>SC_PpIPSComSen_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpIPSComSen</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="28BBC07B-99C8-4678-B37E-D456C2F5B6D8">
+                      <SHORT-NAME>SC_PpIPSComSen_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpIPSComSen</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="1364A67E-4FCF-4700-A29A-378BA0443803">
+                      <SHORT-NAME>SC_PpIPSPwrSel0_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpIPSPwrSel0</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="AE62B426-8529-46B0-BA81-3C99D65223F2">
+                      <SHORT-NAME>SC_PpIPSPwrSel0_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpIPSPwrSel0</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="92343BDC-30AC-4893-B3BC-F93CC5065D49">
+                      <SHORT-NAME>SC_PpIPSPwrSel1_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpIPSPwrSel1</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="027AD897-810A-413A-B01E-49769B68DFF0">
+                      <SHORT-NAME>SC_PpIPSPwrSel1_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpIPSPwrSel1</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="20CFF03A-8E45-417C-9098-C4EEEC557946">
+                      <SHORT-NAME>SC_PpIPSPwrSen_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpIPSPwrSen</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="12951236-B889-470E-9FDE-3D7FEA6E3160">
+                      <SHORT-NAME>SC_PpIPSPwrSen_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpIPSPwrSen</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="9C26A739-8B5E-4F43-8032-5EA4F43C0E79">
+                      <SHORT-NAME>SC_PpLIN1EN_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN1EN</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="781B0EA7-1656-4D35-8738-C48B8E7CE9E8">
+                      <SHORT-NAME>SC_PpLIN1EN_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN1EN</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="284FB34A-2A63-4CA8-87F9-9F78E75348E0">
+                      <SHORT-NAME>SC_PpLIN1Inh_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN1Inh</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="3A2C4E71-3C17-4CE7-A9B4-592D444496EE">
+                      <SHORT-NAME>SC_PpLIN1Inh_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN1Inh</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="6AE43D58-CE59-4F14-9371-3E033088089E">
+                      <SHORT-NAME>SC_PpLIN2EN_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN2EN</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="64A381FA-EB0E-46A2-99F1-23EF64C60635">
+                      <SHORT-NAME>SC_PpLIN2EN_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN2EN</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="ACCE92D9-98CA-488B-B80B-422201A212B4">
+                      <SHORT-NAME>SC_PpLIN2Inh_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN2Inh</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="58723C67-9D54-42B6-A6AC-268EDE1D3220">
+                      <SHORT-NAME>SC_PpLIN2Inh_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN2Inh</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="50EEF6A3-C569-4F4A-9469-030F66CF74E6">
+                      <SHORT-NAME>SC_PpLIN3EN_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN3EN</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="C9F35B17-7065-4119-811F-D7CCD15958E8">
+                      <SHORT-NAME>SC_PpLIN3EN_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN3EN</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="4FBCFE98-71AF-4B9D-8B25-F7A01C0FC598">
+                      <SHORT-NAME>SC_PpLIN3Inh_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN3Inh</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="2A54FC30-DFEF-4C8B-8C8B-27B689DF488D">
+                      <SHORT-NAME>SC_PpLIN3Inh_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN3Inh</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="9FC21BFD-0182-4392-B831-2679216B9941">
+                      <SHORT-NAME>SC_PpLIN4EN_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN4EN</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="3A3D25FE-4DA0-4E56-B19E-1F41ADDF4EF8">
+                      <SHORT-NAME>SC_PpLIN4EN_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN4EN</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="ADD7CB45-DE9D-48CC-A589-8FBEDB8877B7">
+                      <SHORT-NAME>SC_PpLIN4Inh_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN4Inh</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="D46076EE-E3B2-4260-A4DF-AEF253D3BAF8">
+                      <SHORT-NAME>SC_PpLIN4Inh_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN4Inh</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="CCF3E33F-04E9-4394-8E16-1235C7C80590">
+                      <SHORT-NAME>SC_PpLIN5EN_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN5EN</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="BF6D503F-2771-4E8D-AF42-FF7F1DC65492">
+                      <SHORT-NAME>SC_PpLIN5EN_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN5EN</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="6F5A40B2-E2E8-4504-A3E1-98CEF8F82B01">
+                      <SHORT-NAME>SC_PpLIN5Inh_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN5Inh</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="5D68A7EF-40F0-40E9-A015-5142FD68D3F9">
+                      <SHORT-NAME>SC_PpLIN5Inh_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN5Inh</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="519C2A56-6D7D-4DB3-9C65-FAF34E8074F6">
+                      <SHORT-NAME>SC_PpLIN6EN_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN6EN</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="F55A7EE8-39F4-48A0-A93B-210BBF37A359">
+                      <SHORT-NAME>SC_PpLIN6EN_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN6EN</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="1B1663E3-A07A-43BB-9F39-4A3B37E37790">
+                      <SHORT-NAME>SC_PpLIN6Inh_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN6Inh</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="344DDB29-A878-421C-ACDA-DF175CEF2653">
+                      <SHORT-NAME>SC_PpLIN6Inh_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLIN6Inh</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="264A06BD-AEB5-4876-9488-491BAB0A0910">
+                      <SHORT-NAME>SC_PpLINPwrIpsFaultRst_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLINPwrIpsFaultRst</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="BC2C2A3E-C7EB-4A87-86EF-F088D9BF89AF">
+                      <SHORT-NAME>SC_PpLINPwrIpsFaultRst_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLINPwrIpsFaultRst</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="16F2BF31-23A1-4C2A-AAD1-F96196365077">
+                      <SHORT-NAME>SC_PpLINPwrIpsIn0_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLINPwrIpsIn0</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="9178D94A-7C7B-487A-B97E-8192835C4F29">
+                      <SHORT-NAME>SC_PpLINPwrIpsIn0_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLINPwrIpsIn0</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="8771E1F0-6214-4297-BC6E-6C40A0583A9E">
+                      <SHORT-NAME>SC_PpLINPwrIpsIn1_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLINPwrIpsIn1</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="A1D3F990-BD9A-4F6C-B757-ED154E09F70D">
+                      <SHORT-NAME>SC_PpLINPwrIpsIn1_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLINPwrIpsIn1</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="AA330947-0266-4F84-824C-773B2D2462F8">
+                      <SHORT-NAME>SC_PpLINSecurityEN_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLINSecurityEN</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="EF0BA394-B551-4D9B-B208-8A670CF4ECF9">
+                      <SHORT-NAME>SC_PpLINSecurityEN_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLINSecurityEN</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="2016EA4B-389F-4F06-8541-110CD88DE4E0">
+                      <SHORT-NAME>SC_PpLINSecurityInh_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLINSecurityInh</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="2C3A454E-18F5-4239-8A99-061C180A2E69">
+                      <SHORT-NAME>SC_PpLINSecurityInh_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLINSecurityInh</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="A8F72E6A-A5EA-449E-A6DA-B19376C67BCF">
+                      <SHORT-NAME>SC_PpLficNres_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLficNres</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="B497EEBE-DC2A-478E-9E53-705F27C6516D">
+                      <SHORT-NAME>SC_PpLficNres_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLficNres</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="DA188350-CB45-4FC7-9015-F07344918BE2">
+                      <SHORT-NAME>SC_PpLivingPopUpCtrl_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLivingPopUpCtrl</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="53C597EF-5360-44CE-B409-8AF9FA4325A1">
+                      <SHORT-NAME>SC_PpLivingPopUpCtrl_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpLivingPopUpCtrl</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="236330F2-866C-4D00-8885-7370A9C74788">
+                      <SHORT-NAME>SC_PpParkedPopUpCtrl_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpParkedPopUpCtrl</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="F18C4ABE-BCB9-4CFD-9297-63471F0BBCC6">
+                      <SHORT-NAME>SC_PpParkedPopUpCtrl_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpParkedPopUpCtrl</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="A213878A-CA8E-4CAF-A264-8CC5BD53AE8B">
+                      <SHORT-NAME>SC_PpPwmHsPwm1IpsIn0_PwmDutySet</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpPwmHsPwm1IpsIn0</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="B078F487-D00B-47F5-AC22-57E8C6FB61B9">
+                      <SHORT-NAME>SC_PpPwmHsPwm1IpsIn1_PwmDutySet</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpPwmHsPwm1IpsIn1</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="C123D074-BA0A-48D5-B98E-FB55B926E7E4">
+                      <SHORT-NAME>SC_PpPwmHsPwm3IpsIn0_PwmDutySet</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpPwmHsPwm3IpsIn0</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="8BFD5569-D4F7-454F-859B-10F30EB68C4A">
+                      <SHORT-NAME>SC_PpPwmHsPwm3IpsIn1_PwmDutySet</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpPwmHsPwm3IpsIn1</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="0E16710F-6887-4D52-A0F4-2F57AAE89501">
+                      <SHORT-NAME>SC_PpPwmLsPwm1Gate_PwmDutySet</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpPwmLsPwm1Gate</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="5DBAB160-43F6-44A6-89D2-C3A9F28D6195">
+                      <SHORT-NAME>SC_PpPwmLsPwm2Gate_PwmDutySet</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpPwmLsPwm2Gate</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="2B56555B-3414-4DD4-9491-2FFC37633871">
+                      <SHORT-NAME>SC_PpPwmLsPwm3Gate_PwmDutySet</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpPwmLsPwm3Gate</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="3DB895D4-9D96-4A53-8B3C-9023861DF942">
+                      <SHORT-NAME>SC_PpPwmLsPwm4Gate_PwmDutySet</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpPwmLsPwm4Gate</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="1D90C922-751D-4757-ADC4-E45576870B29">
+                      <SHORT-NAME>SC_PpPwmLsPwm5Gate_PwmDutySet</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpPwmLsPwm5Gate</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="6DEB9908-4522-46DE-B1C3-20A3982E4361">
+                      <SHORT-NAME>SC_PpPwmRegWdtOut_PwmDutySet</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpPwmRegWdtOut</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="501EAC61-0760-4839-90A6-031175AC70DB">
+                      <SHORT-NAME>SC_PpRegRst_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpRegRst</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="3404AA94-47DD-40CB-A46B-E5634AD6AC06">
+                      <SHORT-NAME>SC_PpRegRst_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpRegRst</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="0E4033D0-0074-4AE2-A991-3C10055EAD19">
+                      <SHORT-NAME>SC_PpRficNres_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpRficNres</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="83520CE5-0357-4953-816A-82055A553D00">
+                      <SHORT-NAME>SC_PpRficNres_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpRficNres</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="8F94C09E-58D7-48BA-8028-0095951E2DB7">
+                      <SHORT-NAME>SC_PpRficRed_DioRead</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpRficRed</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="95707DA0-A370-4554-9F3A-95C3CEE368EE">
+                      <SHORT-NAME>SC_PpRficRed_DioWrite</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/TestApp/PpRficRed</CONTEXT-R-PORT-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="A90C98F5-37ED-4E48-99AE-8D7C11FDCBBE">
+          <SHORT-NAME>TestApp_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/TestApp/TestApp_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

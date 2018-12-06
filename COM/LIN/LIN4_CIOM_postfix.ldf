@@ -1,0 +1,807 @@
+/*************************************************************************************/
+//                                                                                     
+// Description: LIN Description file created using Vector's DaVinci Network Designer   
+// Created:     29 Mar 2012 15:53:32
+// Author:      T0C0513
+// Version:     0.0
+//                                                                                     
+/*************************************************************************************/
+
+// COM_MATRIX_1.2.1
+
+LIN_description_file;
+LIN_protocol_version = "2.0";
+LIN_language_version = "2.0";
+LIN_speed = 9.6 kbps;
+
+Nodes {
+  Master: CIOM, 5 ms, 0.5 ms ; 
+  Slaves: CCFW, DLFW, ELCP1, ELCP2, FSP1_L4, ILCP2 ;
+}
+
+
+Signals {
+  BacklightCmd_ISig_16: 5, 0, CIOM, CCFW, ELCP2, ELCP1, DLFW, ILCP2, FSP1_L4 ; 
+  DiagInfoCCFW: 7, 0, CCFW, CIOM ; 
+  DiagInfoDLFW: 7, 0, DLFW, CIOM ; 
+  DiagInfoELCP1: 7, 0, ELCP1, CIOM ; 
+  DiagInfoELCP2: 7, 0, ELCP2, CIOM ; 
+  DiagInfoILCP2: 7, 0, ILCP2, CIOM ; 
+  FSP1DiagInfoL4: 6, 0, FSP1_L4, CIOM ; 
+  FSP1IndicationCmdL4: 16, 0, CIOM, FSP1_L4 ; 
+  FSP1ResponseErrorL4: 1, 0, FSP1_L4, CIOM ; 
+  FSP1SwitchStatusL4: 8, 0, FSP1_L4, CIOM ; 
+  FuncIndIlluminationLevel_ISig_16: 3, 1, CIOM, ILCP2, ELCP2, FSP1_L4, CCFW, DLFW, ELCP1 ; 
+  LIN_ACCOrCCIndication: 2, 0, CIOM, CCFW ; 
+  LIN_ASLIndication: 2, 0, CIOM, CCFW ; 
+  LIN_BackLightDimming_Status: 5, 31, ELCP1, CIOM ; 
+  LIN_BlackPanelMode_ButtonStat: 2, 3, ELCP1, CIOM ; 
+  LIN_DaytimeRunningLight_Indica: 2, 0, CIOM, ELCP1 ; 
+  LIN_DifflockDeactivationBtn_st: 2, 3, DLFW, CIOM ; 
+  LIN_DifflockMode_Wheelstatus: 4, 15, DLFW, CIOM ; 
+  LIN_DifflockOnOff_Indication: 2, 0, CIOM, DLFW ; 
+  LIN_DrivingLight_Indication: 2, 0, CIOM, ELCP1 ; 
+  LIN_DrivingLightPlus_Indicatio: 2, 0, CIOM, ELCP1 ; 
+  LIN_DRL_ButtonStatus: 2, 3, ELCP2, CIOM ; 
+  LIN_EscButtonMuddySiteDeviceIn: 2, 0, CIOM, DLFW ; 
+  LIN_EscButtonMuddySiteStatus: 2, 3, DLFW, CIOM ; 
+  LIN_FCW_DeviceIndication: 2, 0, CIOM, CCFW ; 
+  LIN_FCWPushButton: 2, 3, CCFW, CIOM ; 
+  LIN_FogLightFront_ButtonStat_1: 2, 3, ELCP1, CIOM ; 
+  LIN_FogLightFront_ButtonStat_2: 2, 3, ELCP2, CIOM ; 
+  LIN_FogLightRear_ButtonStat_1: 2, 3, ELCP1, CIOM ; 
+  LIN_FogLightRear_ButtonStat_2: 2, 3, ELCP2, CIOM ; 
+  LIN_FrontFog_Indication: 2, 0, CIOM, ELCP1 ; 
+  LIN_HeadLampUpDown_SwitchStatu: 3, 7, ELCP2, CIOM ; 
+  LIN_IntLghtCenterBtnFreeWhl_s: 2, 3, ILCP2, CIOM ; 
+  LIN_IntLghtDimmingLvlFreeWhl_s: 4, 15, ILCP2, CIOM ; 
+  LIN_IntLghtMaxModeBtnPnl2_s: 2, 3, ILCP2, CIOM ; 
+  LIN_IntLghtNightModeBt2_s: 2, 3, ILCP2, CIOM ; 
+  LIN_IntLghtRestModeBtnPnl2_s: 2, 3, ILCP2, CIOM ; 
+  LIN_LevelingThumbwheel_stat: 5, 31, ELCP1, CIOM ; 
+  LIN_LightMode_Status_1: 4, 15, ELCP1, CIOM ; 
+  LIN_LightMode_Status_2: 4, 15, ELCP2, CIOM ; 
+  LIN_LKS_DeviceIndication: 2, 0, CIOM, CCFW ; 
+  LIN_LKSPushButton: 2, 3, CCFW, CIOM ; 
+  LIN_Offroad_ButtonStatus: 2, 3, DLFW, CIOM ; 
+  LIN_Offroad_Indication: 2, 0, CIOM, DLFW ; 
+  LIN_ParkingLight_Indication: 2, 0, CIOM, ELCP1 ; 
+  LIN_RearFog_Indication: 2, 0, CIOM, ELCP1 ; 
+  LIN_RearWorkProjector_BtnStat: 2, 3, ELCP2, CIOM ; 
+  LIN_RearWorkProjector_Indicati: 2, 0, CIOM, ELCP2 ; 
+  LIN_SpeedControlModeButtonStat: 2, 3, CCFW, CIOM ; 
+  LIN_SpeedControlModeWheelStat: 4, 15, CCFW, CIOM ; 
+  ResponseErrorCCFW: 1, 0, CCFW, CIOM ; 
+  ResponseErrorDLFW: 1, 0, DLFW, CIOM ; 
+  ResponseErrorELCP1: 1, 0, ELCP1, CIOM ; 
+  ResponseErrorELCP2: 1, 0, ELCP2, CIOM ; 
+  ResponseErrorILCP2: 1, 0, ILCP2, CIOM ; 
+  SwitchDetectionNeeded1L4: 1, 0, FSP1_L4, CIOM ; 
+  SwitchDetectionResp1L4: 64, {0, 0, 0, 0, 0, 0, 0, 0}, FSP1_L4, CIOM ; 
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+
+Frames {
+  Backlight_FuncInd_L4: 52, CIOM, 1 {
+    BacklightCmd_ISig_16, 0 ;
+    FuncIndIlluminationLevel_ISig_16, 5 ;
+  } 
+  CCFWtoCIOM_L4: 19, CCFW, 3 {
+    DiagInfoCCFW, 0 ;
+    ResponseErrorCCFW, 7 ;
+    LIN_SpeedControlModeButtonStat, 8 ;
+    LIN_SpeedControlModeWheelStat, 10 ;
+    LIN_LKSPushButton, 14 ;
+    LIN_FCWPushButton, 16 ;
+  } 
+  CIOMtoSlaves1_L4: 56, CIOM, 2 {
+    LIN_DaytimeRunningLight_Indica, 0 ;
+    LIN_DrivingLight_Indication, 2 ;
+    LIN_DrivingLightPlus_Indicatio, 4 ;
+    LIN_FrontFog_Indication, 6 ;
+    LIN_ParkingLight_Indication, 8 ;
+    LIN_RearFog_Indication, 10 ;
+  } 
+  CIOMtoSlaves2_L4: 58, CIOM, 2 {
+    LIN_ACCOrCCIndication, 0 ;
+    LIN_DifflockOnOff_Indication, 2 ;
+    LIN_ASLIndication, 4 ;
+    LIN_FCW_DeviceIndication, 6 ;
+    LIN_LKS_DeviceIndication, 8 ;
+    LIN_Offroad_Indication, 10 ;
+    LIN_RearWorkProjector_Indicati, 12 ;
+    LIN_EscButtonMuddySiteDeviceIn, 14 ;
+  } 
+  DLFWtoCIOM_L4: 18, DLFW, 3 {
+    DiagInfoDLFW, 0 ;
+    ResponseErrorDLFW, 7 ;
+    LIN_DifflockDeactivationBtn_st, 8 ;
+    LIN_DifflockMode_Wheelstatus, 10 ;
+    LIN_Offroad_ButtonStatus, 14 ;
+    LIN_EscButtonMuddySiteStatus, 16 ;
+  } 
+  ELCP1toCIOM_L4: 14, ELCP1, 4 {
+    DiagInfoELCP1, 0 ;
+    ResponseErrorELCP1, 7 ;
+    LIN_FogLightFront_ButtonStat_1, 8 ;
+    LIN_FogLightRear_ButtonStat_1, 10 ;
+    LIN_LightMode_Status_1, 12 ;
+    LIN_BackLightDimming_Status, 16 ;
+    LIN_BlackPanelMode_ButtonStat, 21 ;
+    LIN_LevelingThumbwheel_stat, 24 ;
+  } 
+  ELCP2toCIOM_L4: 35, ELCP2, 3 {
+    DiagInfoELCP2, 0 ;
+    ResponseErrorELCP2, 7 ;
+    LIN_DRL_ButtonStatus, 8 ;
+    LIN_FogLightFront_ButtonStat_2, 10 ;
+    LIN_FogLightRear_ButtonStat_2, 12 ;
+    LIN_RearWorkProjector_BtnStat, 14 ;
+    LIN_HeadLampUpDown_SwitchStatu, 16 ;
+    LIN_LightMode_Status_2, 19 ;
+  } 
+  FSP1_Frame_L4: 2, FSP1_L4, 2 {
+    FSP1DiagInfoL4, 0 ;
+    SwitchDetectionNeeded1L4, 6 ;
+    FSP1ResponseErrorL4, 7 ;
+    FSP1SwitchStatusL4, 8 ;
+  } 
+  FSP1_SwitchDetResp_L4: 48, FSP1_L4, 8 {
+    SwitchDetectionResp1L4, 0 ;
+  } 
+  FSP_1_2_Req_L4: 53, CIOM, 4 {
+    FSP1IndicationCmdL4, 0 ;
+  } 
+  ILCP2toCIOM_L4: 32, ILCP2, 3 {
+    DiagInfoILCP2, 0 ;
+    ResponseErrorILCP2, 7 ;
+    LIN_IntLghtMaxModeBtnPnl2_s, 8 ;
+    LIN_IntLghtDimmingLvlFreeWhl_s, 10 ;
+    LIN_IntLghtNightModeBt2_s, 14 ;
+    LIN_IntLghtCenterBtnFreeWhl_s, 16 ;
+    LIN_IntLghtRestModeBtnPnl2_s, 18 ;
+  } 
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  CCFW{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x13 ;
+    product_id = 0x5b, 0x0, 0 ;
+    response_error = ResponseErrorCCFW ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      CCFWtoCIOM_L4 = 0x13 ;
+      Backlight_FuncInd_L4 = 0x34 ;
+      CIOMtoSlaves2_L4 = 0x3a ;
+    }
+  } 
+  DLFW{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x12 ;
+    product_id = 0x5b, 0x0, 0 ;
+    response_error = ResponseErrorDLFW ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      DLFWtoCIOM_L4 = 0x12 ;
+      Backlight_FuncInd_L4 = 0x34 ;
+      CIOMtoSlaves2_L4 = 0x3a ;
+    }
+  } 
+  ELCP1{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0xe ;
+    product_id = 0x5b, 0x0, 0 ;
+    response_error = ResponseErrorELCP1 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      ELCP1toCIOM_L4 = 0xe ;
+      Backlight_FuncInd_L4 = 0x34 ;
+      CIOMtoSlaves1_L4 = 0x38 ;
+    }
+  } 
+  ELCP2{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x23 ;
+    product_id = 0x5b, 0x0, 0 ;
+    response_error = ResponseErrorELCP2 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      ELCP2toCIOM_L4 = 0x23 ;
+      Backlight_FuncInd_L4 = 0x34 ;
+      CIOMtoSlaves2_L4 = 0x3a ;
+    }
+  } 
+  FSP1_L4{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x2 ;
+    product_id = 0x5b, 0x1, 0 ;
+    response_error = FSP1ResponseErrorL4 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      FSP1_Frame_L4 = 0x2 ;
+      FSP1_SwitchDetResp_L4 = 0x30 ;
+      Backlight_FuncInd_L4 = 0x34 ;
+      FSP_1_2_Req_L4 = 0x35 ;
+    }
+  } 
+  ILCP2{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x20 ;
+    product_id = 0x5b, 0x0, 0 ;
+    response_error = ResponseErrorILCP2 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      ILCP2toCIOM_L4 = 0x20 ;
+      Backlight_FuncInd_L4 = 0x34 ;
+    }
+  } 
+}
+
+Schedule_tables {
+ Table_1 {
+    CIOMtoSlaves1_L4 delay 10 ms ;
+    Backlight_FuncInd_L4 delay 10 ms ;
+    FSP_1_2_Req_L4 delay 15 ms ;
+    FSP1_Frame_L4 delay 10 ms ;
+    ELCP1toCIOM_L4 delay 15 ms ;
+  }
+ Table_2 {
+    CIOMtoSlaves2_L4 delay 10 ms ;
+    Backlight_FuncInd_L4 delay 10 ms ;
+    ELCP2toCIOM_L4 delay 15 ms ;
+    CCFWtoCIOM_L4 delay 15 ms ;
+    DLFWtoCIOM_L4 delay 15 ms ;
+    ILCP2toCIOM_L4 delay 15 ms ;
+  }
+ Table_e {
+    FSP1_SwitchDetResp_L4 delay 20 ms ;
+    CIOMtoSlaves1_L4 delay 10 ms ;
+    ELCP1toCIOM_L4 delay 15 ms ;
+  }
+ MasterReq_SlaveResp_Table_1 {
+    MasterReq delay 20 ms ;
+    SlaveResp delay 20 ms ;
+    CIOMtoSlaves1_L4 delay 10 ms ;
+    Backlight_FuncInd_L4 delay 10 ms ;
+    FSP_1_2_Req_L4 delay 15 ms ;
+    FSP1_Frame_L4 delay 10 ms ;
+    ELCP1toCIOM_L4 delay 15 ms ;
+  }
+ MasterReq_SlaveResp_Table_2 {
+    MasterReq delay 20 ms ;
+    SlaveResp delay 20 ms ;
+    CIOMtoSlaves2_L4 delay 10 ms ;
+    Backlight_FuncInd_L4 delay 10 ms ;
+    ELCP2toCIOM_L4 delay 15 ms ;
+    CCFWtoCIOM_L4 delay 15 ms ;
+    DLFWtoCIOM_L4 delay 15 ms ;
+    ILCP2toCIOM_L4 delay 15 ms ;
+  }
+ MasterReq_SlaveResp {
+    MasterReq delay 20 ms ;
+    SlaveResp delay 20 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  BacklightCmd {
+    logical_value, 0, "BacklightCmd_BacklightOff" ;
+    logical_value, 1, "BacklightCmd_BacklightLevel1" ;
+    logical_value, 2, "BacklightCmd_BacklightLevel2" ;
+    logical_value, 3, "BacklightCmd_BacklightLevel3" ;
+    logical_value, 4, "BacklightCmd_BacklightLevel4" ;
+    logical_value, 5, "BacklightCmd_BacklightLevel5" ;
+    logical_value, 6, "BacklightCmd_BacklightLevel6" ;
+    logical_value, 7, "BacklightCmd_BacklightLevel7" ;
+    logical_value, 8, "BacklightCmd_BacklightLevel8" ;
+    logical_value, 9, "BacklightCmd_BacklightLevel9" ;
+    logical_value, 10, "BacklightCmd_BacklightLevel10" ;
+    logical_value, 11, "BacklightCmd_BacklightLevel11" ;
+    logical_value, 12, "BacklightCmd_BacklightLevel12" ;
+    logical_value, 13, "BacklightCmd_BacklightLevel13" ;
+    logical_value, 14, "BacklightCmd_BacklightLevel14" ;
+    logical_value, 15, "BacklightCmd_BacklightLevel15" ;
+    logical_value, 16, "BacklightCmd_BacklightLevel16" ;
+    logical_value, 30, "BacklightCmd_Error" ;
+    logical_value, 31, "BacklightCmd_NotAvailable" ;
+  } 
+  DiagInfoCCFW {
+    physical_value, 0, 127, 1, 0, "NotApplicable" ;
+  } 
+  DiagInfoDLFW {
+    physical_value, 0, 127, 1, 0, "NotApplicable" ;
+  } 
+  DiagInfoELCP1 {
+    physical_value, 0, 127, 1, 0, "NotApplicable" ;
+  } 
+  DiagInfoELCP2 {
+    physical_value, 0, 127, 1, 0, "NotApplicable" ;
+  } 
+  DiagInfoILCP2 {
+    physical_value, 0, 127, 1, 0, "NotApplicable" ;
+  } 
+  FSP1DiagInfoL4 {
+    physical_value, 0, 63, 1, 0, "NotApplicable" ;
+  } 
+  FSP1IndicationCmdL4 {
+    physical_value, 0, 65535, 1, 0, "NotApplicable" ;
+  } 
+  FSP1SwitchStatusL4 {
+    physical_value, 0, 255, 1, 0, "NotApplicable" ;
+  } 
+  FuncIndIlluminationLevel {
+    logical_value, 0, "FuncIndIlluminationLevel_IlluminationOff" ;
+    logical_value, 1, "FuncIndIlluminationLevel_IlluminationLevel1" ;
+    logical_value, 2, "FuncIndIlluminationLevel_IlluminationLevel2" ;
+    logical_value, 3, "FuncIndIlluminationLevel_IlluminationLevel3" ;
+    logical_value, 4, "FuncIndIlluminationLevel_IlluminationLevel4" ;
+    logical_value, 5, "FuncIndIlluminationLevel_Spare" ;
+    logical_value, 6, "FuncIndIlluminationLevel_Error" ;
+    logical_value, 7, "FuncIndIlluminationLevel_NotAvailable" ;
+  } 
+  LIN_ACCOrCCIndication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_ASLIndication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_BackLightDimming_Status {
+    logical_value, 0, "Thumbwheel_stat_ThumbWheelPos0" ;
+    logical_value, 1, "Thumbwheel_stat_ThumbWheelPos1" ;
+    logical_value, 2, "Thumbwheel_stat_ThumbWheelPos2" ;
+    logical_value, 3, "Thumbwheel_stat_ThumbWheelPos3" ;
+    logical_value, 4, "Thumbwheel_stat_ThumbWheelPos4" ;
+    logical_value, 5, "Thumbwheel_stat_ThumbWheelPos5" ;
+    logical_value, 6, "Thumbwheel_stat_ThumbWheelPos6" ;
+    logical_value, 7, "Thumbwheel_stat_ThumbWheelPos7" ;
+    logical_value, 8, "Thumbwheel_stat_ThumbWheelPos8" ;
+    logical_value, 9, "Thumbwheel_stat_ThumbWheelPos9" ;
+    logical_value, 10, "Thumbwheel_stat_ThumbWheelPos10" ;
+    logical_value, 11, "Thumbwheel_stat_ThumbWheelPos11" ;
+    logical_value, 12, "Thumbwheel_stat_ThumbWheelPos12" ;
+    logical_value, 13, "Thumbwheel_stat_ThumbWheelPos13" ;
+    logical_value, 14, "Thumbwheel_stat_ThumbWheelPos14" ;
+    logical_value, 15, "Thumbwheel_stat_ThumbWheelPos15" ;
+    logical_value, 16, "Thumbwheel_stat_ThumbWheelPos16" ;
+    logical_value, 17, "Thumbwheel_stat_Spare" ;
+    logical_value, 18, "Thumbwheel_stat_Spare_01" ;
+    logical_value, 19, "Thumbwheel_stat_Spare_02" ;
+    logical_value, 20, "Thumbwheel_stat_Spare_03" ;
+    logical_value, 21, "Thumbwheel_stat_Spare_04" ;
+    logical_value, 22, "Thumbwheel_stat_Spare_05" ;
+    logical_value, 23, "Thumbwheel_stat_Spare_06" ;
+    logical_value, 24, "Thumbwheel_stat_Spare_07" ;
+    logical_value, 25, "Thumbwheel_stat_Spare_08" ;
+    logical_value, 26, "Thumbwheel_stat_Spare_09" ;
+    logical_value, 27, "Thumbwheel_stat_Spare_10" ;
+    logical_value, 28, "Thumbwheel_stat_Spare_11" ;
+    logical_value, 29, "Thumbwheel_stat_Spare_12" ;
+    logical_value, 30, "Thumbwheel_stat_Error" ;
+    logical_value, 31, "Thumbwheel_stat_NotAvaliable" ;
+  } 
+  LIN_BlackPanelMode_ButtonStat {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_DaytimeRunningLight_Indica {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_DifflockDeactivationBtn_st {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_DifflockMode_Wheelstatus {
+    logical_value, 0, "FreeWheel_Status_NoMovement" ;
+    logical_value, 1, "FreeWheel_Status_1StepClockwise" ;
+    logical_value, 2, "FreeWheel_Status_2StepsClockwise" ;
+    logical_value, 3, "FreeWheel_Status_3StepsClockwise" ;
+    logical_value, 4, "FreeWheel_Status_4StepsClockwise" ;
+    logical_value, 5, "FreeWheel_Status_5StepsClockwise" ;
+    logical_value, 6, "FreeWheel_Status_6StepsClockwise" ;
+    logical_value, 7, "FreeWheel_Status_1StepCounterClockwise" ;
+    logical_value, 8, "FreeWheel_Status_2StepsCounterClockwise" ;
+    logical_value, 9, "FreeWheel_Status_3StepsCounterClockwise" ;
+    logical_value, 10, "FreeWheel_Status_4StepsCounterClockwise" ;
+    logical_value, 11, "FreeWheel_Status_5StepsCounterClockwise" ;
+    logical_value, 12, "FreeWheel_Status_6StepsCounterClockwise" ;
+    logical_value, 13, "FreeWheel_Status_Spare" ;
+    logical_value, 14, "FreeWheel_Status_Error" ;
+    logical_value, 15, "FreeWheel_Status_NotAvailable" ;
+  } 
+  LIN_DifflockOnOff_Indication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_DrivingLight_Indication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_DrivingLightPlus_Indicatio {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_DRL_ButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_EscButtonMuddySiteDeviceIn {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_EscButtonMuddySiteStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_FCW_DeviceIndication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_FCWPushButton {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_FogLightFront_ButtonStat_1 {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_FogLightFront_ButtonStat_2 {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_FogLightRear_ButtonStat_1 {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_FogLightRear_ButtonStat_2 {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_FrontFog_Indication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_HeadLampUpDown_SwitchStatu {
+    logical_value, 0, "A3PosSwitchStatus_Middle" ;
+    logical_value, 1, "A3PosSwitchStatus_Lower" ;
+    logical_value, 2, "A3PosSwitchStatus_Upper" ;
+    logical_value, 3, "A3PosSwitchStatus_Spare" ;
+    logical_value, 4, "A3PosSwitchStatus_Spare_01" ;
+    logical_value, 5, "A3PosSwitchStatus_Spare_02" ;
+    logical_value, 6, "A3PosSwitchStatus_Error" ;
+    logical_value, 7, "A3PosSwitchStatus_NotAvailable" ;
+  } 
+  LIN_IntLghtCenterBtnFreeWhl_s {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_IntLghtDimmingLvlFreeWhl_s {
+    logical_value, 0, "FreeWheel_Status_NoMovement" ;
+    logical_value, 1, "FreeWheel_Status_1StepClockwise" ;
+    logical_value, 2, "FreeWheel_Status_2StepsClockwise" ;
+    logical_value, 3, "FreeWheel_Status_3StepsClockwise" ;
+    logical_value, 4, "FreeWheel_Status_4StepsClockwise" ;
+    logical_value, 5, "FreeWheel_Status_5StepsClockwise" ;
+    logical_value, 6, "FreeWheel_Status_6StepsClockwise" ;
+    logical_value, 7, "FreeWheel_Status_1StepCounterClockwise" ;
+    logical_value, 8, "FreeWheel_Status_2StepsCounterClockwise" ;
+    logical_value, 9, "FreeWheel_Status_3StepsCounterClockwise" ;
+    logical_value, 10, "FreeWheel_Status_4StepsCounterClockwise" ;
+    logical_value, 11, "FreeWheel_Status_5StepsCounterClockwise" ;
+    logical_value, 12, "FreeWheel_Status_6StepsCounterClockwise" ;
+    logical_value, 13, "FreeWheel_Status_Spare" ;
+    logical_value, 14, "FreeWheel_Status_Error" ;
+    logical_value, 15, "FreeWheel_Status_NotAvailable" ;
+  } 
+  LIN_IntLghtMaxModeBtnPnl2_s {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_IntLghtNightModeBt2_s {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_IntLghtRestModeBtnPnl2_s {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_LevelingThumbwheel_stat {
+    logical_value, 0, "Thumbwheel_stat_ThumbWheelPos0" ;
+    logical_value, 1, "Thumbwheel_stat_ThumbWheelPos1" ;
+    logical_value, 2, "Thumbwheel_stat_ThumbWheelPos2" ;
+    logical_value, 3, "Thumbwheel_stat_ThumbWheelPos3" ;
+    logical_value, 4, "Thumbwheel_stat_ThumbWheelPos4" ;
+    logical_value, 5, "Thumbwheel_stat_ThumbWheelPos5" ;
+    logical_value, 6, "Thumbwheel_stat_ThumbWheelPos6" ;
+    logical_value, 7, "Thumbwheel_stat_ThumbWheelPos7" ;
+    logical_value, 8, "Thumbwheel_stat_ThumbWheelPos8" ;
+    logical_value, 9, "Thumbwheel_stat_ThumbWheelPos9" ;
+    logical_value, 10, "Thumbwheel_stat_ThumbWheelPos10" ;
+    logical_value, 11, "Thumbwheel_stat_ThumbWheelPos11" ;
+    logical_value, 12, "Thumbwheel_stat_ThumbWheelPos12" ;
+    logical_value, 13, "Thumbwheel_stat_ThumbWheelPos13" ;
+    logical_value, 14, "Thumbwheel_stat_ThumbWheelPos14" ;
+    logical_value, 15, "Thumbwheel_stat_ThumbWheelPos15" ;
+    logical_value, 16, "Thumbwheel_stat_ThumbWheelPos16" ;
+    logical_value, 17, "Thumbwheel_stat_Spare" ;
+    logical_value, 18, "Thumbwheel_stat_Spare_01" ;
+    logical_value, 19, "Thumbwheel_stat_Spare_02" ;
+    logical_value, 20, "Thumbwheel_stat_Spare_03" ;
+    logical_value, 21, "Thumbwheel_stat_Spare_04" ;
+    logical_value, 22, "Thumbwheel_stat_Spare_05" ;
+    logical_value, 23, "Thumbwheel_stat_Spare_06" ;
+    logical_value, 24, "Thumbwheel_stat_Spare_07" ;
+    logical_value, 25, "Thumbwheel_stat_Spare_08" ;
+    logical_value, 26, "Thumbwheel_stat_Spare_09" ;
+    logical_value, 27, "Thumbwheel_stat_Spare_10" ;
+    logical_value, 28, "Thumbwheel_stat_Spare_11" ;
+    logical_value, 29, "Thumbwheel_stat_Spare_12" ;
+    logical_value, 30, "Thumbwheel_stat_Error" ;
+    logical_value, 31, "Thumbwheel_stat_NotAvaliable" ;
+  } 
+  LIN_LightMode_Status_1 {
+    logical_value, 0, "FreeWheel_Status_NoMovement" ;
+    logical_value, 1, "FreeWheel_Status_1StepClockwise" ;
+    logical_value, 2, "FreeWheel_Status_2StepsClockwise" ;
+    logical_value, 3, "FreeWheel_Status_3StepsClockwise" ;
+    logical_value, 4, "FreeWheel_Status_4StepsClockwise" ;
+    logical_value, 5, "FreeWheel_Status_5StepsClockwise" ;
+    logical_value, 6, "FreeWheel_Status_6StepsClockwise" ;
+    logical_value, 7, "FreeWheel_Status_1StepCounterClockwise" ;
+    logical_value, 8, "FreeWheel_Status_2StepsCounterClockwise" ;
+    logical_value, 9, "FreeWheel_Status_3StepsCounterClockwise" ;
+    logical_value, 10, "FreeWheel_Status_4StepsCounterClockwise" ;
+    logical_value, 11, "FreeWheel_Status_5StepsCounterClockwise" ;
+    logical_value, 12, "FreeWheel_Status_6StepsCounterClockwise" ;
+    logical_value, 13, "FreeWheel_Status_Spare" ;
+    logical_value, 14, "FreeWheel_Status_Error" ;
+    logical_value, 15, "FreeWheel_Status_NotAvailable" ;
+  } 
+  LIN_LightMode_Status_2 {
+    logical_value, 0, "FreeWheel_Status_NoMovement" ;
+    logical_value, 1, "FreeWheel_Status_1StepClockwise" ;
+    logical_value, 2, "FreeWheel_Status_2StepsClockwise" ;
+    logical_value, 3, "FreeWheel_Status_3StepsClockwise" ;
+    logical_value, 4, "FreeWheel_Status_4StepsClockwise" ;
+    logical_value, 5, "FreeWheel_Status_5StepsClockwise" ;
+    logical_value, 6, "FreeWheel_Status_6StepsClockwise" ;
+    logical_value, 7, "FreeWheel_Status_1StepCounterClockwise" ;
+    logical_value, 8, "FreeWheel_Status_2StepsCounterClockwise" ;
+    logical_value, 9, "FreeWheel_Status_3StepsCounterClockwise" ;
+    logical_value, 10, "FreeWheel_Status_4StepsCounterClockwise" ;
+    logical_value, 11, "FreeWheel_Status_5StepsCounterClockwise" ;
+    logical_value, 12, "FreeWheel_Status_6StepsCounterClockwise" ;
+    logical_value, 13, "FreeWheel_Status_Spare" ;
+    logical_value, 14, "FreeWheel_Status_Error" ;
+    logical_value, 15, "FreeWheel_Status_NotAvailable" ;
+  } 
+  LIN_LKS_DeviceIndication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_LKSPushButton {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_Offroad_ButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_Offroad_Indication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_ParkingLight_Indication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_RearFog_Indication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_RearWorkProjector_BtnStat {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_RearWorkProjector_Indicati {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_SpeedControlModeButtonStat {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_SpeedControlModeWheelStat {
+    logical_value, 0, "FreeWheel_Status_NoMovement" ;
+    logical_value, 1, "FreeWheel_Status_1StepClockwise" ;
+    logical_value, 2, "FreeWheel_Status_2StepsClockwise" ;
+    logical_value, 3, "FreeWheel_Status_3StepsClockwise" ;
+    logical_value, 4, "FreeWheel_Status_4StepsClockwise" ;
+    logical_value, 5, "FreeWheel_Status_5StepsClockwise" ;
+    logical_value, 6, "FreeWheel_Status_6StepsClockwise" ;
+    logical_value, 7, "FreeWheel_Status_1StepCounterClockwise" ;
+    logical_value, 8, "FreeWheel_Status_2StepsCounterClockwise" ;
+    logical_value, 9, "FreeWheel_Status_3StepsCounterClockwise" ;
+    logical_value, 10, "FreeWheel_Status_4StepsCounterClockwise" ;
+    logical_value, 11, "FreeWheel_Status_5StepsCounterClockwise" ;
+    logical_value, 12, "FreeWheel_Status_6StepsCounterClockwise" ;
+    logical_value, 13, "FreeWheel_Status_Spare" ;
+    logical_value, 14, "FreeWheel_Status_Error" ;
+    logical_value, 15, "FreeWheel_Status_NotAvailable" ;
+  } 
+  ResponseError_T {
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  } 
+}
+
+Signal_representation {
+  BacklightCmd: BacklightCmd_ISig_16 ;
+  DiagInfoCCFW: DiagInfoCCFW ;
+  DiagInfoDLFW: DiagInfoDLFW ;
+  DiagInfoELCP1: DiagInfoELCP1 ;
+  DiagInfoELCP2: DiagInfoELCP2 ;
+  DiagInfoILCP2: DiagInfoILCP2 ;
+  FSP1DiagInfoL4: FSP1DiagInfoL4 ;
+  FSP1IndicationCmdL4: FSP1IndicationCmdL4 ;
+  FSP1SwitchStatusL4: FSP1SwitchStatusL4 ;
+  FuncIndIlluminationLevel: FuncIndIlluminationLevel_ISig_16 ;
+  LIN_ACCOrCCIndication: LIN_ACCOrCCIndication ;
+  LIN_ASLIndication: LIN_ASLIndication ;
+  LIN_BackLightDimming_Status: LIN_BackLightDimming_Status ;
+  LIN_BlackPanelMode_ButtonStat: LIN_BlackPanelMode_ButtonStat ;
+  LIN_DaytimeRunningLight_Indica: LIN_DaytimeRunningLight_Indica ;
+  LIN_DifflockDeactivationBtn_st: LIN_DifflockDeactivationBtn_st ;
+  LIN_DifflockMode_Wheelstatus: LIN_DifflockMode_Wheelstatus ;
+  LIN_DifflockOnOff_Indication: LIN_DifflockOnOff_Indication ;
+  LIN_DrivingLight_Indication: LIN_DrivingLight_Indication ;
+  LIN_DrivingLightPlus_Indicatio: LIN_DrivingLightPlus_Indicatio ;
+  LIN_DRL_ButtonStatus: LIN_DRL_ButtonStatus ;
+  LIN_EscButtonMuddySiteDeviceIn: LIN_EscButtonMuddySiteDeviceIn ;
+  LIN_EscButtonMuddySiteStatus: LIN_EscButtonMuddySiteStatus ;
+  LIN_FCW_DeviceIndication: LIN_FCW_DeviceIndication ;
+  LIN_FCWPushButton: LIN_FCWPushButton ;
+  LIN_FogLightFront_ButtonStat_1: LIN_FogLightFront_ButtonStat_1 ;
+  LIN_FogLightFront_ButtonStat_2: LIN_FogLightFront_ButtonStat_2 ;
+  LIN_FogLightRear_ButtonStat_1: LIN_FogLightRear_ButtonStat_1 ;
+  LIN_FogLightRear_ButtonStat_2: LIN_FogLightRear_ButtonStat_2 ;
+  LIN_FrontFog_Indication: LIN_FrontFog_Indication ;
+  LIN_HeadLampUpDown_SwitchStatu: LIN_HeadLampUpDown_SwitchStatu ;
+  LIN_IntLghtCenterBtnFreeWhl_s: LIN_IntLghtCenterBtnFreeWhl_s ;
+  LIN_IntLghtDimmingLvlFreeWhl_s: LIN_IntLghtDimmingLvlFreeWhl_s ;
+  LIN_IntLghtMaxModeBtnPnl2_s: LIN_IntLghtMaxModeBtnPnl2_s ;
+  LIN_IntLghtNightModeBt2_s: LIN_IntLghtNightModeBt2_s ;
+  LIN_IntLghtRestModeBtnPnl2_s: LIN_IntLghtRestModeBtnPnl2_s ;
+  LIN_LevelingThumbwheel_stat: LIN_LevelingThumbwheel_stat ;
+  LIN_LightMode_Status_1: LIN_LightMode_Status_1 ;
+  LIN_LightMode_Status_2: LIN_LightMode_Status_2 ;
+  LIN_LKS_DeviceIndication: LIN_LKS_DeviceIndication ;
+  LIN_LKSPushButton: LIN_LKSPushButton ;
+  LIN_Offroad_ButtonStatus: LIN_Offroad_ButtonStatus ;
+  LIN_Offroad_Indication: LIN_Offroad_Indication ;
+  LIN_ParkingLight_Indication: LIN_ParkingLight_Indication ;
+  LIN_RearFog_Indication: LIN_RearFog_Indication ;
+  LIN_RearWorkProjector_BtnStat: LIN_RearWorkProjector_BtnStat ;
+  LIN_RearWorkProjector_Indicati: LIN_RearWorkProjector_Indicati ;
+  LIN_SpeedControlModeButtonStat: LIN_SpeedControlModeButtonStat ;
+  LIN_SpeedControlModeWheelStat: LIN_SpeedControlModeWheelStat ;
+  ResponseError_T: FSP1ResponseErrorL4, ResponseErrorCCFW, ResponseErrorDLFW, ResponseErrorELCP1, ResponseErrorELCP2, ResponseErrorILCP2 ;
+}
+

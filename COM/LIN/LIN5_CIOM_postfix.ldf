@@ -1,0 +1,369 @@
+/*************************************************************************************/
+//                                                                                     
+// Description: LIN Description file created using Vector's DaVinci Network Designer   
+// Created:     29 Mar 2012 15:54:00
+// Author:      T0C0513
+// Version:     0.0
+//                                                                                     
+/*************************************************************************************/
+
+// COM_MATRIX_1.2.1
+
+LIN_description_file;
+LIN_protocol_version = "2.0";
+LIN_language_version = "2.0";
+LIN_speed = 9.6 kbps;
+
+Nodes {
+  Master: CIOM, 5 ms, 0.5 ms ; 
+  Slaves: FSP1_L5, RCECS ;
+}
+
+
+Signals {
+  BacklightCmd_ISig_17: 5, 0, CIOM, FSP1_L5 ; 
+  DiagInfoRCECS: 7, 0, RCECS, CIOM ; 
+  FSP1DiagInfoL5: 6, 0, FSP1_L5, CIOM ; 
+  FSP1IndicationCmdL5: 16, 0, CIOM, FSP1_L5 ; 
+  FSP1ResponseErrorL5: 1, 0, FSP1_L5, CIOM ; 
+  FSP1SwitchStatusL5: 8, 0, FSP1_L5, CIOM ; 
+  FuncIndIlluminationLevel_ISig_17: 3, 1, CIOM, RCECS, FSP1_L5 ; 
+  LIN_Adjust_DeviceIndication: 2, 0, CIOM, RCECS ; 
+  LIN_AdjustButtonStatus: 2, 3, RCECS, CIOM ; 
+  LIN_BackButtonStatus: 2, 3, RCECS, CIOM ; 
+  LIN_Down_DeviceIndication: 2, 0, CIOM, RCECS ; 
+  LIN_M1_DeviceIndication: 2, 0, CIOM, RCECS ; 
+  LIN_M2_DeviceIndication: 2, 0, CIOM, RCECS ; 
+  LIN_M3_DeviceIndication: 2, 0, CIOM, RCECS ; 
+  LIN_MemButtonStatus: 2, 3, RCECS, CIOM ; 
+  LIN_SelectButtonStatus: 2, 3, RCECS, CIOM ; 
+  LIN_ShortPulseMaxLength: 4, 0, CIOM, RCECS ; 
+  LIN_StopButtonStatus: 2, 3, RCECS, CIOM ; 
+  LIN_Up_DeviceIndication: 2, 0, CIOM, RCECS ; 
+  LIN_WRDownButtonStatus: 3, 7, RCECS, CIOM ; 
+  LIN_WRUpButtonStatus: 3, 7, RCECS, CIOM ; 
+  ResponseErrorRCECS: 1, 0, RCECS, CIOM ; 
+  SwitchDetectionNeeded1L5: 1, 0, FSP1_L5, CIOM ; 
+  SwitchDetectionResp1L5: 64, {0, 0, 0, 0, 0, 0, 0, 0}, FSP1_L5, CIOM ; 
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+
+Frames {
+  Backlight_FuncInd_L5: 52, CIOM, 1 {
+    BacklightCmd_ISig_17, 0 ;
+    FuncIndIlluminationLevel_ISig_17, 5 ;
+  } 
+  CIOMtoSlaves_L5: 56, CIOM, 2 {
+    LIN_Adjust_DeviceIndication, 0 ;
+    LIN_Down_DeviceIndication, 2 ;
+    LIN_M1_DeviceIndication, 4 ;
+    LIN_M2_DeviceIndication, 6 ;
+    LIN_M3_DeviceIndication, 8 ;
+    LIN_Up_DeviceIndication, 10 ;
+    LIN_ShortPulseMaxLength, 12 ;
+  } 
+  FSP1_Frame_L5: 2, FSP1_L5, 2 {
+    FSP1DiagInfoL5, 0 ;
+    SwitchDetectionNeeded1L5, 6 ;
+    FSP1ResponseErrorL5, 7 ;
+    FSP1SwitchStatusL5, 8 ;
+  } 
+  FSP1_SwitchDetResp_L5: 48, FSP1_L5, 8 {
+    SwitchDetectionResp1L5, 0 ;
+  } 
+  FSP_1_2_Req_L5: 53, CIOM, 4 {
+    FSP1IndicationCmdL5, 0 ;
+  } 
+  RCECStoCIOM_L5: 16, RCECS, 3 {
+    DiagInfoRCECS, 0 ;
+    ResponseErrorRCECS, 7 ;
+    LIN_AdjustButtonStatus, 8 ;
+    LIN_BackButtonStatus, 10 ;
+    LIN_StopButtonStatus, 12 ;
+    LIN_MemButtonStatus, 14 ;
+    LIN_SelectButtonStatus, 16 ;
+    LIN_WRDownButtonStatus, 18 ;
+    LIN_WRUpButtonStatus, 21 ;
+  } 
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  FSP1_L5{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x2 ;
+    product_id = 0x5b, 0x1, 0 ;
+    response_error = FSP1ResponseErrorL5 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      FSP1_Frame_L5 = 0x2 ;
+      FSP1_SwitchDetResp_L5 = 0x30 ;
+      Backlight_FuncInd_L5 = 0x34 ;
+      FSP_1_2_Req_L5 = 0x35 ;
+    }
+  } 
+  RCECS{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x10 ;
+    product_id = 0x5b, 0x0, 0 ;
+    response_error = ResponseErrorRCECS ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      RCECStoCIOM_L5 = 0x10 ;
+      Backlight_FuncInd_L5 = 0x34 ;
+      CIOMtoSlaves_L5 = 0x38 ;
+    }
+  } 
+}
+
+Schedule_tables {
+ Table_1 {
+    RCECStoCIOM_L5 delay 15 ms ;
+    CIOMtoSlaves_L5 delay 10 ms ;
+    Backlight_FuncInd_L5 delay 10 ms ;
+    RCECStoCIOM_L5 delay 15 ms ;
+    FSP_1_2_Req_L5 delay 15 ms ;
+    FSP1_Frame_L5 delay 10 ms ;
+  }
+ Table_2 {
+    CIOMtoSlaves_L5 delay 10 ms ;
+    Backlight_FuncInd_L5 delay 10 ms ;
+    RCECStoCIOM_L5 delay 15 ms ;
+  }
+ Table_e {
+    FSP1_SwitchDetResp_L5 delay 20 ms ;
+    CIOMtoSlaves_L5 delay 10 ms ;
+    RCECStoCIOM_L5 delay 15 ms ;
+  }
+ MasterReq_SlaveResp_Table_1 {
+    MasterReq delay 20 ms ;
+    SlaveResp delay 20 ms ;
+    RCECStoCIOM_L5 delay 15 ms ;
+    CIOMtoSlaves_L5 delay 10 ms ;
+    Backlight_FuncInd_L5 delay 10 ms ;
+    FSP_1_2_Req_L5 delay 15 ms ;
+    FSP1_Frame_L5 delay 10 ms ;
+  }
+ MasterReq_SlaveResp_Table_2 {
+    MasterReq delay 20 ms ;
+    SlaveResp delay 20 ms ;
+    CIOMtoSlaves_L5 delay 10 ms ;
+    Backlight_FuncInd_L5 delay 10 ms ;
+    RCECStoCIOM_L5 delay 15 ms ;
+  }
+ MasterReq_SlaveResp {
+    MasterReq delay 20 ms ;
+    SlaveResp delay 20 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  BacklightCmd {
+    logical_value, 0, "BacklightCmd_BacklightOff" ;
+    logical_value, 1, "BacklightCmd_BacklightLevel1" ;
+    logical_value, 2, "BacklightCmd_BacklightLevel2" ;
+    logical_value, 3, "BacklightCmd_BacklightLevel3" ;
+    logical_value, 4, "BacklightCmd_BacklightLevel4" ;
+    logical_value, 5, "BacklightCmd_BacklightLevel5" ;
+    logical_value, 6, "BacklightCmd_BacklightLevel6" ;
+    logical_value, 7, "BacklightCmd_BacklightLevel7" ;
+    logical_value, 8, "BacklightCmd_BacklightLevel8" ;
+    logical_value, 9, "BacklightCmd_BacklightLevel9" ;
+    logical_value, 10, "BacklightCmd_BacklightLevel10" ;
+    logical_value, 11, "BacklightCmd_BacklightLevel11" ;
+    logical_value, 12, "BacklightCmd_BacklightLevel12" ;
+    logical_value, 13, "BacklightCmd_BacklightLevel13" ;
+    logical_value, 14, "BacklightCmd_BacklightLevel14" ;
+    logical_value, 15, "BacklightCmd_BacklightLevel15" ;
+    logical_value, 16, "BacklightCmd_BacklightLevel16" ;
+    logical_value, 30, "BacklightCmd_Error" ;
+    logical_value, 31, "BacklightCmd_NotAvailable" ;
+  } 
+  DiagInfoRCECS {
+    physical_value, 0, 127, 1, 0, "NotApplicable" ;
+  } 
+  FSP1DiagInfoL5 {
+    physical_value, 0, 63, 1, 0, "NotApplicable" ;
+  } 
+  FSP1IndicationCmdL5 {
+    physical_value, 0, 65535, 1, 0, "NotApplicable" ;
+  } 
+  FSP1SwitchStatusL5 {
+    physical_value, 0, 255, 1, 0, "NotApplicable" ;
+  } 
+  FuncIndIlluminationLevel {
+    logical_value, 0, "FuncIndIlluminationLevel_IlluminationOff" ;
+    logical_value, 1, "FuncIndIlluminationLevel_IlluminationLevel1" ;
+    logical_value, 2, "FuncIndIlluminationLevel_IlluminationLevel2" ;
+    logical_value, 3, "FuncIndIlluminationLevel_IlluminationLevel3" ;
+    logical_value, 4, "FuncIndIlluminationLevel_IlluminationLevel4" ;
+    logical_value, 5, "FuncIndIlluminationLevel_Spare" ;
+    logical_value, 6, "FuncIndIlluminationLevel_Error" ;
+    logical_value, 7, "FuncIndIlluminationLevel_NotAvailable" ;
+  } 
+  LIN_Adjust_DeviceIndication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_AdjustButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BackButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_Down_DeviceIndication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_M1_DeviceIndication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_M2_DeviceIndication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_M3_DeviceIndication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_MemButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_SelectButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_ShortPulseMaxLength {
+    physical_value, 0, 15, 50, 0, "ms" ;
+  } 
+  LIN_StopButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_Up_DeviceIndication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_WRDownButtonStatus {
+    logical_value, 0, "EvalButtonRequest_Neutral" ;
+    logical_value, 1, "EvalButtonRequest_EvaluatingPush" ;
+    logical_value, 2, "EvalButtonRequest_ContinuouslyPushed" ;
+    logical_value, 3, "EvalButtonRequest_ShortPush" ;
+    logical_value, 4, "EvalButtonRequest_Spare1" ;
+    logical_value, 5, "EvalButtonRequest_Spare2" ;
+    logical_value, 6, "EvalButtonRequest_Error" ;
+    logical_value, 7, "EvalButtonRequest_NotAvailable" ;
+  } 
+  LIN_WRUpButtonStatus {
+    logical_value, 0, "EvalButtonRequest_Neutral" ;
+    logical_value, 1, "EvalButtonRequest_EvaluatingPush" ;
+    logical_value, 2, "EvalButtonRequest_ContinuouslyPushed" ;
+    logical_value, 3, "EvalButtonRequest_ShortPush" ;
+    logical_value, 4, "EvalButtonRequest_Spare1" ;
+    logical_value, 5, "EvalButtonRequest_Spare2" ;
+    logical_value, 6, "EvalButtonRequest_Error" ;
+    logical_value, 7, "EvalButtonRequest_NotAvailable" ;
+  } 
+  ResponseError_T {
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  } 
+}
+
+Signal_representation {
+  BacklightCmd: BacklightCmd_ISig_17 ;
+  DiagInfoRCECS: DiagInfoRCECS ;
+  FSP1DiagInfoL5: FSP1DiagInfoL5 ;
+  FSP1IndicationCmdL5: FSP1IndicationCmdL5 ;
+  FSP1SwitchStatusL5: FSP1SwitchStatusL5 ;
+  FuncIndIlluminationLevel: FuncIndIlluminationLevel_ISig_17 ;
+  LIN_Adjust_DeviceIndication: LIN_Adjust_DeviceIndication ;
+  LIN_AdjustButtonStatus: LIN_AdjustButtonStatus ;
+  LIN_BackButtonStatus: LIN_BackButtonStatus ;
+  LIN_Down_DeviceIndication: LIN_Down_DeviceIndication ;
+  LIN_M1_DeviceIndication: LIN_M1_DeviceIndication ;
+  LIN_M2_DeviceIndication: LIN_M2_DeviceIndication ;
+  LIN_M3_DeviceIndication: LIN_M3_DeviceIndication ;
+  LIN_MemButtonStatus: LIN_MemButtonStatus ;
+  LIN_SelectButtonStatus: LIN_SelectButtonStatus ;
+  LIN_ShortPulseMaxLength: LIN_ShortPulseMaxLength ;
+  LIN_StopButtonStatus: LIN_StopButtonStatus ;
+  LIN_Up_DeviceIndication: LIN_Up_DeviceIndication ;
+  LIN_WRDownButtonStatus: LIN_WRDownButtonStatus ;
+  LIN_WRUpButtonStatus: LIN_WRUpButtonStatus ;
+  ResponseError_T: FSP1ResponseErrorL5, ResponseErrorRCECS ;
+}
+

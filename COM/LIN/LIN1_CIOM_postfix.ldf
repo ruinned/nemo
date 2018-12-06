@@ -1,0 +1,1154 @@
+/*************************************************************************************/
+//                                                                                     
+// Description: LIN Description file created using Vector's DaVinci Network Designer   
+// Created:     29 Mar 2012 15:53:01
+// Author:      T0C0513
+// Version:     0.0
+//                                                                                     
+/*************************************************************************************/
+
+// COM_MATRIX_1.2.1
+
+LIN_description_file;
+LIN_protocol_version = "2.0";
+LIN_language_version = "2.0";
+LIN_speed = 9.6 kbps;
+
+Nodes {
+  Master: CIOM, 5 ms, 0.5 ms ; 
+  Slaves: FSP1_L1, FSP2_L1, ILCP1, LECM2, LECMBasic ;
+}
+
+
+Signals {
+  AlarmClockNotification_sg__AlarmClockNotification_ID_ISig_13: 7, 127, CIOM, LECM2 ; 
+  AlarmClockNotification_sg__AlarmClockNotification_Stat_ISig_13: 2, 0, CIOM, LECM2 ; 
+  AlarmClockNotification_sg__AlarmClockNotification_Type_ISig_13: 3, 7, CIOM, LECM2 ; 
+  BacklightCmd_ISig_13: 5, 0, CIOM, ILCP1, FSP2_L1, FSP1_L1 ; 
+  BunkBacklightCmd_ISig_13: 5, 0, CIOM, LECM2 ; 
+  DayOfWeek_stat_ISig_13: 4, 15, CIOM, LECM2 ; 
+  DiagInfoILCP1: 7, 0, ILCP1, CIOM ; 
+  DiagInfoLECM2: 7, 0, LECM2, CIOM ; 
+  DiagInfoLECMBasic: 7, 0, LECMBasic, CIOM ; 
+  DoorLock_stat_ISig_13: 4, 15, CIOM, LECM2 ; 
+  FSP1DiagInfoL1: 6, 0, FSP1_L1, CIOM ; 
+  FSP1IndicationCmdL1: 16, 0, CIOM, FSP1_L1 ; 
+  FSP1ResponseErrorL1: 1, 0, FSP1_L1, CIOM ; 
+  FSP1SwitchStatusL1: 8, 0, FSP1_L1, CIOM ; 
+  FSP2DiagInfoL1: 6, 0, FSP2_L1, CIOM ; 
+  FSP2IndicationCmdL1: 16, 0, CIOM, FSP2_L1 ; 
+  FSP2ResponseErrorL1: 1, 0, FSP2_L1, CIOM ; 
+  FSP2SwitchStatusL1: 8, 0, FSP2_L1, CIOM ; 
+  FuncIndIlluminationLevel_ISig_13: 3, 1, CIOM, ILCP1, FSP1_L1, FSP2_L1 ; 
+  HoursLocal_ISig_13: 8, 255, CIOM, LECM2 ; // 254 Error ; 255 Not available
+  LIN_AlmClkCurAlarm_stat_sg__LIN_AlmClkCurAlarm_stat_ID: 7, 127, CIOM, LECM2 ; 
+  LIN_AlmClkCurAlarm_stat_sg__LIN_AlmClkCurAlarm_stat_SetHr: 5, 31, CIOM, LECM2 ; // 30 Error ; 31 Not Available
+  LIN_AlmClkCurAlarm_stat_sg__LIN_AlmClkCurAlarm_stat_SetMin: 6, 63, CIOM, LECM2 ; // 62 Error ; 63 Not Available
+  LIN_AlmClkCurAlarm_stat_sg__LIN_AlmClkCurAlarm_stat_Stat: 2, 0, CIOM, LECM2 ; 
+  LIN_AlmClkCurAlarm_stat_sg__LIN_AlmClkCurAlarm_stat_Type: 3, 7, CIOM, LECM2 ; 
+  LIN_AlmClkSetCurAlm_rqst_sg__LIN_AlmClkSetCurAlm_rqst_ID: 7, 127, LECM2, CIOM ; 
+  LIN_AlmClkSetCurAlm_rqst_sg__LIN_AlmClkSetCurAlm_rqst_SetHr: 5, 31, LECM2, CIOM ; 
+  LIN_AlmClkSetCurAlm_rqst_sg__LIN_AlmClkSetCurAlm_rqst_SetMin: 6, 63, LECM2, CIOM ; 
+  LIN_AlmClkSetCurAlm_rqst_sg__LIN_AlmClkSetCurAlm_rqst_Stat: 2, 0, LECM2, CIOM ; 
+  LIN_AlmClkSetCurAlm_rqst_sg__LIN_AlmClkSetCurAlm_rqst_Type: 3, 7, LECM2, CIOM ; 
+  LIN_AudioSystemStatus: 2, 3, CIOM, LECM2 ; 
+  LIN_AudioVolumeIndicationCmd: 6, 0, CIOM, LECM2 ; 
+  LIN_BTStatus: 2, 3, CIOM, LECM2 ; 
+  LIN_BunkBAudioOnOff_ButtonStat: 2, 3, LECMBasic, CIOM ; 
+  LIN_BunkBIntLightActvnBtn_stat: 2, 3, LECMBasic, CIOM ; 
+  LIN_BunkBParkHeater_ButtonStat: 2, 3, LECMBasic, CIOM ; 
+  LIN_BunkBTempDec_ButtonStat: 2, 3, LECMBasic, CIOM ; 
+  LIN_BunkBTempInc_ButtonStat: 2, 3, LECMBasic, CIOM ; 
+  LIN_BunkBVolumeDown_ButtonStat: 2, 3, LECMBasic, CIOM ; 
+  LIN_BunkBVolumeUp_ButtonStat: 2, 3, LECMBasic, CIOM ; 
+  LIN_BunkH2AudioOnOff_ButtonSta: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2Fade_ButtonStatus: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2IntLightActvnBtn_sta: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2IntLightDecBtn_stat: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2IntLightIncBtn_stat: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2LockButtonStatus: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2OnOFF_ButtonStatus: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2ParkHeater_ButtonSta: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2Phone_ButtonStatus: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2PHTi_rqs_sg__LIN_BunkH2PHTi_rqs_DurnTimeHr: 8, 255, LECM2, CIOM ; // 254 Error ; 255 Not available
+  LIN_BunkH2PHTi_rqs_sg__LIN_BunkH2PHTi_rqs_DurnTimeMin: 8, 255, LECM2, CIOM ; // 254 Error ; 255 Not available
+  LIN_BunkH2PHTi_rqs_sg__LIN_BunkH2PHTi_rqs_StartTimeHr: 8, 255, LECM2, CIOM ; // 254 Error ; 255 Not available
+  LIN_BunkH2PHTi_rqs_sg__LIN_BunkH2PHTi_rqs_StartTimeMin: 8, 255, LECM2, CIOM ; // 254 Error ; 255 Not available
+  LIN_BunkH2PHTi_rqs_sg__LIN_BunkH2PHTi_rqs_Timer_cmd: 3, 7, LECM2, CIOM ; 
+  LIN_BunkH2PowerWinCloseDSBtn_s: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2PowerWinClosePSBtn_s: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2PowerWinOpenDSBtn_st: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2PowerWinOpenPSBtn_st: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2RoofhatchCloseBtn_St: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2RoofhatchOpenBtn_Sta: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2TempDec_ButtonStatus: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2TempInc_ButtonStatus: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2VolumeDown_ButtonSta: 2, 3, LECM2, CIOM ; 
+  LIN_BunkH2VolumeUp_ButtonStatu: 2, 3, LECM2, CIOM ; 
+  LIN_DoorAutoFuncBtn_stat: 2, 3, ILCP1, CIOM ; 
+  LIN_DoorAutoFuncInd_cmd: 2, 0, CIOM, ILCP1 ; 
+  LIN_IntLghtDimmingLvlDecBtn_s: 2, 3, ILCP1, CIOM ; 
+  LIN_IntLghtDimmingLvlIncBtn_s: 2, 3, ILCP1, CIOM ; 
+  LIN_IntLghtLvlIndScaled_cmd: 4, 0, CIOM, LECM2 ; 
+  LIN_IntLghtModeInd_cmd_sg__LIN_IntLghtModeInd_cmd_EventFlag: 1, 0, CIOM, LECM2 ; 
+  LIN_IntLghtModeInd_cmd_sg__LIN_IntLghtModeInd_cmd_IL_Mode: 3, 7, CIOM, LECM2 ; 
+  LIN_IntLghtModeSelrFreeWheel_s: 4, 15, ILCP1, CIOM ; 
+  LIN_IntLghtOffModeInd_cmd: 2, 0, CIOM, ILCP1 ; 
+  LIN_IntLightMaxModeInd_cmd: 2, 0, CIOM, ILCP1 ; 
+  LIN_IntLightNightModeInd_cmd: 2, 0, CIOM, ILCP1 ; 
+  LIN_IntLightRestingModeInd_cmd: 2, 0, CIOM, ILCP1 ; 
+  LIN_PhoneButtonIndication_cmd: 2, 0, CIOM, LECM2 ; 
+  MinutesLocal_ISig_13: 8, 255, CIOM, LECM2 ; // 254 Error ; 255 Not available
+  ParkingHeater_IndicationCmd_ISig_13: 1, 0, CIOM, LECM2 ; 
+  PHTimer1_stat_sg__PHTimer1_stat_Duration_ISig_13: 7, 127, CIOM, LECM2 ; 
+  PHTimer1_stat_sg__PHTimer1_stat_Hours_ISig_13: 8, 255, CIOM, LECM2 ; 
+  PHTimer1_stat_sg__PHTimer1_stat_Minutes_ISig_13: 8, 255, CIOM, LECM2 ; 
+  PHTimer1_stat_sg__PHTimer1_stat_Recurrence_ISig_13: 4, 15, CIOM, LECM2 ; 
+  PHTimer1_stat_sg__PHTimer1_stat_StartDay_ISig_13: 4, 15, CIOM, LECM2 ; 
+  PHTimer1_stat_sg__PHTimer1_stat_Status_ISig_13: 2, 3, CIOM, LECM2 ; 
+  PHTimer1_stat_sg__PHTimer1_stat_Temp_ISig_13: 5, 31, CIOM, LECM2 ; 
+  ResponseErrorILCP1: 1, 0, ILCP1, CIOM ; 
+  ResponseErrorLECM2: 1, 0, LECM2, CIOM ; 
+  ResponseErrorLECMBasic: 1, 0, LECMBasic, CIOM ; 
+  SelectedTimeFormat_stat_ISig_13: 2, 3, CIOM, LECM2 ; 
+  SwitchDetectionNeeded1L1: 1, 0, FSP1_L1, CIOM ; 
+  SwitchDetectionNeeded2L1: 1, 0, FSP2_L1, CIOM ; 
+  SwitchDetectionResp1L1: 64, {0, 0, 0, 0, 0, 0, 0, 0}, FSP1_L1, CIOM ; 
+  SwitchDetectionResp2L1: 64, {0, 0, 0, 0, 0, 0, 0, 0}, FSP2_L1, CIOM ; 
+  TemperatureRqstIndication_cmd_ISig_13: 5, 31, CIOM, LECM2 ; 
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+
+Frames {
+  Backlight_FuncInd_L1: 52, CIOM, 1 {
+    BacklightCmd_ISig_13, 0 ;
+    FuncIndIlluminationLevel_ISig_13, 5 ;
+  } 
+  CIOMtoSlaves1_L1: 56, CIOM, 2 {
+    LIN_IntLightRestingModeInd_cmd, 0 ;
+    LIN_IntLghtOffModeInd_cmd, 2 ;
+    LIN_IntLightMaxModeInd_cmd, 4 ;
+    LIN_DoorAutoFuncInd_cmd, 6 ;
+    LIN_IntLightNightModeInd_cmd, 8 ;
+  } 
+  CIOMtoSlaves2_FR1_L1: 57, CIOM, 5 {
+    BunkBacklightCmd_ISig_13, 0 ;
+    LIN_AudioSystemStatus, 5 ;
+    ParkingHeater_IndicationCmd_ISig_13, 7 ;
+    DoorLock_stat_ISig_13, 8 ;
+    LIN_IntLghtLvlIndScaled_cmd, 12 ;
+    LIN_AudioVolumeIndicationCmd, 16 ;
+    LIN_PhoneButtonIndication_cmd, 22 ;
+    TemperatureRqstIndication_cmd_ISig_13, 24 ;
+    LIN_IntLghtModeInd_cmd_sg__LIN_IntLghtModeInd_cmd_IL_Mode, 29 ;
+    LIN_IntLghtModeInd_cmd_sg__LIN_IntLghtModeInd_cmd_EventFlag, 32 ;
+  } 
+  CIOMtoSlaves2_FR2_L1: 58, CIOM, 8 {
+    MinutesLocal_ISig_13, 0 ;
+    DayOfWeek_stat_ISig_13, 8 ;
+    SelectedTimeFormat_stat_ISig_13, 12 ;
+    LIN_BTStatus, 14 ;
+    HoursLocal_ISig_13, 16 ;
+    LIN_AlmClkCurAlarm_stat_sg__LIN_AlmClkCurAlarm_stat_SetMin, 24 ;
+    LIN_AlmClkCurAlarm_stat_sg__LIN_AlmClkCurAlarm_stat_Stat, 30 ;
+    LIN_AlmClkCurAlarm_stat_sg__LIN_AlmClkCurAlarm_stat_SetHr, 32 ;
+    LIN_AlmClkCurAlarm_stat_sg__LIN_AlmClkCurAlarm_stat_Type, 37 ;
+    LIN_AlmClkCurAlarm_stat_sg__LIN_AlmClkCurAlarm_stat_ID, 40 ;
+    AlarmClockNotification_sg__AlarmClockNotification_ID_ISig_13, 48 ;
+    AlarmClockNotification_sg__AlarmClockNotification_Stat_ISig_13, 59 ;
+    AlarmClockNotification_sg__AlarmClockNotification_Type_ISig_13, 61 ;
+  } 
+  CIOMtoSlaves2_FR3_L1: 59, CIOM, 5 {
+    PHTimer1_stat_sg__PHTimer1_stat_Hours_ISig_13, 0 ;
+    PHTimer1_stat_sg__PHTimer1_stat_Minutes_ISig_13, 8 ;
+    PHTimer1_stat_sg__PHTimer1_stat_Recurrence_ISig_13, 16 ;
+    PHTimer1_stat_sg__PHTimer1_stat_StartDay_ISig_13, 20 ;
+    PHTimer1_stat_sg__PHTimer1_stat_Status_ISig_13, 24 ;
+    PHTimer1_stat_sg__PHTimer1_stat_Temp_ISig_13, 26 ;
+    PHTimer1_stat_sg__PHTimer1_stat_Duration_ISig_13, 33 ;
+  } 
+  FSP1_Frame_L1: 2, FSP1_L1, 2 {
+    FSP1DiagInfoL1, 0 ;
+    SwitchDetectionNeeded1L1, 6 ;
+    FSP1ResponseErrorL1, 7 ;
+    FSP1SwitchStatusL1, 8 ;
+  } 
+  FSP1_SwitchDetResp_L1: 48, FSP1_L1, 8 {
+    SwitchDetectionResp1L1, 0 ;
+  } 
+  FSP2_Frame_L1: 3, FSP2_L1, 2 {
+    FSP2DiagInfoL1, 0 ;
+    SwitchDetectionNeeded2L1, 6 ;
+    FSP2ResponseErrorL1, 7 ;
+    FSP2SwitchStatusL1, 8 ;
+  } 
+  FSP2_SwitchDetResp_L1: 49, FSP2_L1, 8 {
+    SwitchDetectionResp2L1, 0 ;
+  } 
+  FSP_1_2_Req_L1: 53, CIOM, 4 {
+    FSP1IndicationCmdL1, 0 ;
+    FSP2IndicationCmdL1, 16 ;
+  } 
+  ILCP1toCIOM_L1: 11, ILCP1, 3 {
+    DiagInfoILCP1, 0 ;
+    ResponseErrorILCP1, 7 ;
+    LIN_IntLghtModeSelrFreeWheel_s, 8 ;
+    LIN_IntLghtDimmingLvlDecBtn_s, 12 ;
+    LIN_IntLghtDimmingLvlIncBtn_s, 14 ;
+    LIN_DoorAutoFuncBtn_stat, 16 ;
+  } 
+  LECM2toCIOM_FR1_L1: 29, LECM2, 8 {
+    DiagInfoLECM2, 0 ;
+    ResponseErrorLECM2, 7 ;
+    LIN_AlmClkSetCurAlm_rqst_sg__LIN_AlmClkSetCurAlm_rqst_SetMin, 8 ;
+    LIN_BunkH2Fade_ButtonStatus, 14 ;
+    LIN_AlmClkSetCurAlm_rqst_sg__LIN_AlmClkSetCurAlm_rqst_SetHr, 16 ;
+    LIN_AlmClkSetCurAlm_rqst_sg__LIN_AlmClkSetCurAlm_rqst_Stat, 21 ;
+    LIN_BunkH2AudioOnOff_ButtonSta, 24 ;
+    LIN_BunkH2IntLightDecBtn_stat, 26 ;
+    LIN_BunkH2IntLightIncBtn_stat, 28 ;
+    LIN_BunkH2OnOFF_ButtonStatus, 30 ;
+    LIN_BunkH2LockButtonStatus, 32 ;
+    LIN_BunkH2Phone_ButtonStatus, 34 ;
+    LIN_BunkH2RoofhatchOpenBtn_Sta, 36 ;
+    LIN_BunkH2TempDec_ButtonStatus, 38 ;
+    LIN_BunkH2TempInc_ButtonStatus, 40 ;
+    LIN_BunkH2VolumeDown_ButtonSta, 42 ;
+    LIN_BunkH2VolumeUp_ButtonStatu, 44 ;
+    LIN_BunkH2RoofhatchCloseBtn_St, 46 ;
+    LIN_AlmClkSetCurAlm_rqst_sg__LIN_AlmClkSetCurAlm_rqst_Type, 48 ;
+    LIN_BunkH2IntLightActvnBtn_sta, 51 ;
+    LIN_BunkH2ParkHeater_ButtonSta, 53 ;
+    LIN_AlmClkSetCurAlm_rqst_sg__LIN_AlmClkSetCurAlm_rqst_ID, 57 ;
+  } 
+  LECM2toCIOM_FR2_L1: 43, LECM2, 1 {
+    LIN_BunkH2PowerWinCloseDSBtn_s, 0 ;
+    LIN_BunkH2PowerWinClosePSBtn_s, 2 ;
+    LIN_BunkH2PowerWinOpenDSBtn_st, 4 ;
+    LIN_BunkH2PowerWinOpenPSBtn_st, 6 ;
+  } 
+  LECM2toCIOM_FR3_L1: 44, LECM2, 5 {
+    LIN_BunkH2PHTi_rqs_sg__LIN_BunkH2PHTi_rqs_DurnTimeHr, 0 ;
+    LIN_BunkH2PHTi_rqs_sg__LIN_BunkH2PHTi_rqs_DurnTimeMin, 8 ;
+    LIN_BunkH2PHTi_rqs_sg__LIN_BunkH2PHTi_rqs_StartTimeHr, 16 ;
+    LIN_BunkH2PHTi_rqs_sg__LIN_BunkH2PHTi_rqs_StartTimeMin, 24 ;
+    LIN_BunkH2PHTi_rqs_sg__LIN_BunkH2PHTi_rqs_Timer_cmd, 32 ;
+  } 
+  LECMBasic2CIOM_L1: 30, LECMBasic, 3 {
+    DiagInfoLECMBasic, 0 ;
+    ResponseErrorLECMBasic, 7 ;
+    LIN_BunkBAudioOnOff_ButtonStat, 8 ;
+    LIN_BunkBParkHeater_ButtonStat, 10 ;
+    LIN_BunkBTempDec_ButtonStat, 12 ;
+    LIN_BunkBTempInc_ButtonStat, 14 ;
+    LIN_BunkBVolumeDown_ButtonStat, 16 ;
+    LIN_BunkBVolumeUp_ButtonStat, 18 ;
+    LIN_BunkBIntLightActvnBtn_stat, 20 ;
+  } 
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  FSP1_L1{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x2 ;
+    product_id = 0x5b, 0x1, 0 ;
+    response_error = FSP1ResponseErrorL1 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      FSP1_Frame_L1 = 0x2 ;
+      FSP1_SwitchDetResp_L1 = 0x30 ;
+      Backlight_FuncInd_L1 = 0x34 ;
+      FSP_1_2_Req_L1 = 0x35 ;
+    }
+  } 
+  FSP2_L1{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x3 ;
+    product_id = 0x5b, 0x1, 0 ;
+    response_error = FSP2ResponseErrorL1 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      FSP2_Frame_L1 = 0x3 ;
+      FSP2_SwitchDetResp_L1 = 0x31 ;
+      Backlight_FuncInd_L1 = 0x34 ;
+      FSP_1_2_Req_L1 = 0x35 ;
+    }
+  } 
+  ILCP1{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0xb ;
+    product_id = 0x5b, 0x0, 0 ;
+    response_error = ResponseErrorILCP1 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      ILCP1toCIOM_L1 = 0xb ;
+      Backlight_FuncInd_L1 = 0x34 ;
+      CIOMtoSlaves1_L1 = 0x38 ;
+    }
+  } 
+  LECM2{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x1d ;
+    product_id = 0x5b, 0x0, 0 ;
+    response_error = ResponseErrorLECM2 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      LECM2toCIOM_FR1_L1 = 0x1d ;
+      LECM2toCIOM_FR2_L1 = 0x2b ;
+      LECM2toCIOM_FR3_L1 = 0x2c ;
+      CIOMtoSlaves2_FR1_L1 = 0x39 ;
+      CIOMtoSlaves2_FR2_L1 = 0x3a ;
+      CIOMtoSlaves2_FR3_L1 = 0x3b ;
+    }
+  } 
+  LECMBasic{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x1e ;
+    product_id = 0x5b, 0x0, 0 ;
+    response_error = ResponseErrorLECMBasic ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      LECMBasic2CIOM_L1 = 0x1e ;
+    }
+  } 
+}
+
+Schedule_tables {
+ Table_1 {
+    Backlight_FuncInd_L1 delay 10 ms ;
+    FSP_1_2_Req_L1 delay 15 ms ;
+    FSP1_Frame_L1 delay 10 ms ;
+    FSP2_Frame_L1 delay 10 ms ;
+    CIOMtoSlaves1_L1 delay 10 ms ;
+    ILCP1toCIOM_L1 delay 15 ms ;
+  }
+ Table_2 {
+    CIOMtoSlaves2_FR1_L1 delay 15 ms ;
+    LECM2toCIOM_FR1_L1 delay 20 ms ;
+    LECM2toCIOM_FR2_L1 delay 10 ms ;
+    LECMBasic2CIOM_L1 delay 15 ms ;
+    CIOMtoSlaves2_FR2_L1 delay 20 ms ;
+    CIOMtoSlaves2_FR1_L1 delay 15 ms ;
+    LECM2toCIOM_FR1_L1 delay 20 ms ;
+    LECM2toCIOM_FR2_L1 delay 10 ms ;
+    LECMBasic2CIOM_L1 delay 15 ms ;
+    CIOMtoSlaves2_FR3_L1 delay 15 ms ;
+    CIOMtoSlaves2_FR1_L1 delay 15 ms ;
+    LECM2toCIOM_FR1_L1 delay 20 ms ;
+    LECM2toCIOM_FR2_L1 delay 10 ms ;
+    LECMBasic2CIOM_L1 delay 15 ms ;
+    LECM2toCIOM_FR3_L1 delay 15 ms ;
+    CIOMtoSlaves2_FR1_L1 delay 15 ms ;
+    LECM2toCIOM_FR1_L1 delay 20 ms ;
+    LECM2toCIOM_FR2_L1 delay 10 ms ;
+    LECMBasic2CIOM_L1 delay 15 ms ;
+  }
+ Table_e {
+    FSP1_SwitchDetResp_L1 delay 20 ms ;
+    FSP2_SwitchDetResp_L1 delay 20 ms ;
+    CIOMtoSlaves1_L1 delay 10 ms ;
+    ILCP1toCIOM_L1 delay 15 ms ;
+  }
+ MasterReq_SlaveResp_Table_1 {
+    MasterReq delay 20 ms ;
+    SlaveResp delay 20 ms ;
+    Backlight_FuncInd_L1 delay 10 ms ;
+    FSP_1_2_Req_L1 delay 15 ms ;
+    FSP1_Frame_L1 delay 10 ms ;
+    FSP2_Frame_L1 delay 10 ms ;
+    CIOMtoSlaves1_L1 delay 10 ms ;
+    ILCP1toCIOM_L1 delay 15 ms ;
+  }
+ MasterReq_SlaveResp_Table_2 {
+    MasterReq delay 20 ms ;
+    SlaveResp delay 20 ms ;
+    CIOMtoSlaves2_FR1_L1 delay 15 ms ;
+    LECM2toCIOM_FR1_L1 delay 20 ms ;
+    LECM2toCIOM_FR2_L1 delay 10 ms ;
+    LECMBasic2CIOM_L1 delay 15 ms ;
+    CIOMtoSlaves2_FR2_L1 delay 20 ms ;
+    CIOMtoSlaves2_FR3_L1 delay 15 ms ;
+    LECM2toCIOM_FR3_L1 delay 15 ms ;
+  }
+ MasterReq_SlaveResp {
+    MasterReq delay 20 ms ;
+    SlaveResp delay 20 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  AlarmClockNotification_ID {
+    logical_value, 0, "AlarmClkID_NotUsed" ;
+    logical_value, 1, "AlarmClkID_Alarm1" ;
+    logical_value, 2, "AlarmClkID_Alarm2" ;
+    logical_value, 3, "AlarmClkID_Alarm3" ;
+    logical_value, 4, "AlarmClkID_Alarm4" ;
+    logical_value, 5, "AlarmClkID_Alarm5" ;
+    logical_value, 6, "AlarmClkID_Alarm6" ;
+    logical_value, 7, "AlarmClkID_Alarm7" ;
+    logical_value, 8, "AlarmClkID_Alarm8" ;
+    logical_value, 9, "AlarmClkID_Alarm9" ;
+    logical_value, 10, "AlarmClkID_Alarm10" ;
+    logical_value, 126, "AlarmClkID_Error" ;
+    logical_value, 127, "AlarmClkID_NotAvailable" ;
+  } 
+  AlarmClockNotification_Stat {
+    logical_value, 0, "AlarmClkStat_Inactive" ;
+    logical_value, 1, "AlarmClkStat_Active" ;
+    logical_value, 2, "AlarmClkStat_NoUsed" ;
+    logical_value, 3, "AlarmClkStat_Spare" ;
+  } 
+  AlarmClockNotification_Type {
+    logical_value, 0, "AlarmClkType_NoAudibleNotification" ;
+    logical_value, 1, "AlarmClkType_Buzzer" ;
+    logical_value, 2, "AlarmClkType_Radio" ;
+    logical_value, 3, "AlarmClkType_Reserved" ;
+    logical_value, 4, "AlarmClkType_Reserved_01" ;
+    logical_value, 5, "AlarmClkType_Reserved_02" ;
+    logical_value, 6, "AlarmClkType_Error" ;
+    logical_value, 7, "AlarmClkType_NotAvailable" ;
+  } 
+  BacklightCmd {
+    logical_value, 0, "BacklightCmd_BacklightOff" ;
+    logical_value, 1, "BacklightCmd_BacklightLevel1" ;
+    logical_value, 2, "BacklightCmd_BacklightLevel2" ;
+    logical_value, 3, "BacklightCmd_BacklightLevel3" ;
+    logical_value, 4, "BacklightCmd_BacklightLevel4" ;
+    logical_value, 5, "BacklightCmd_BacklightLevel5" ;
+    logical_value, 6, "BacklightCmd_BacklightLevel6" ;
+    logical_value, 7, "BacklightCmd_BacklightLevel7" ;
+    logical_value, 8, "BacklightCmd_BacklightLevel8" ;
+    logical_value, 9, "BacklightCmd_BacklightLevel9" ;
+    logical_value, 10, "BacklightCmd_BacklightLevel10" ;
+    logical_value, 11, "BacklightCmd_BacklightLevel11" ;
+    logical_value, 12, "BacklightCmd_BacklightLevel12" ;
+    logical_value, 13, "BacklightCmd_BacklightLevel13" ;
+    logical_value, 14, "BacklightCmd_BacklightLevel14" ;
+    logical_value, 15, "BacklightCmd_BacklightLevel15" ;
+    logical_value, 16, "BacklightCmd_BacklightLevel16" ;
+    logical_value, 30, "BacklightCmd_Error" ;
+    logical_value, 31, "BacklightCmd_NotAvailable" ;
+  } 
+  BunkBacklightCmd {
+    logical_value, 0, "BacklightCmd_BacklightOff" ;
+    logical_value, 1, "BacklightCmd_BacklightLevel1" ;
+    logical_value, 2, "BacklightCmd_BacklightLevel2" ;
+    logical_value, 3, "BacklightCmd_BacklightLevel3" ;
+    logical_value, 4, "BacklightCmd_BacklightLevel4" ;
+    logical_value, 5, "BacklightCmd_BacklightLevel5" ;
+    logical_value, 6, "BacklightCmd_BacklightLevel6" ;
+    logical_value, 7, "BacklightCmd_BacklightLevel7" ;
+    logical_value, 8, "BacklightCmd_BacklightLevel8" ;
+    logical_value, 9, "BacklightCmd_BacklightLevel9" ;
+    logical_value, 10, "BacklightCmd_BacklightLevel10" ;
+    logical_value, 11, "BacklightCmd_BacklightLevel11" ;
+    logical_value, 12, "BacklightCmd_BacklightLevel12" ;
+    logical_value, 13, "BacklightCmd_BacklightLevel13" ;
+    logical_value, 14, "BacklightCmd_BacklightLevel14" ;
+    logical_value, 15, "BacklightCmd_BacklightLevel15" ;
+    logical_value, 16, "BacklightCmd_BacklightLevel16" ;
+    logical_value, 30, "BacklightCmd_Error" ;
+    logical_value, 31, "BacklightCmd_NotAvailable" ;
+  } 
+  DayOfWeek_stat {
+    logical_value, 0, "DayOfWeek_Monday" ;
+    logical_value, 1, "DayOfWeek_Tuesday" ;
+    logical_value, 2, "DayOfWeek_Wednesday" ;
+    logical_value, 3, "DayOfWeek_Thursday" ;
+    logical_value, 4, "DayOfWeek_Friday" ;
+    logical_value, 5, "DayOfWeek_Saturday" ;
+    logical_value, 6, "DayOfWeek_Sunday" ;
+    logical_value, 7, "DayOfWeek_Spare_1" ;
+    logical_value, 8, "DayOfWeek_Spare_2" ;
+    logical_value, 9, "DayOfWeek_Spare_3" ;
+    logical_value, 10, "DayOfWeek_Spare_4" ;
+    logical_value, 11, "DayOfWeek_Spare_5" ;
+    logical_value, 12, "DayOfWeek_Spare_6" ;
+    logical_value, 13, "DayOfWeek_Spare_7" ;
+    logical_value, 14, "DayOfWeek_Error" ;
+    logical_value, 15, "DayOfWeek_NotAvailable" ;
+  } 
+  DiagInfoILCP1 {
+    physical_value, 0, 127, 1, 0, "NotApplicable" ;
+  } 
+  DiagInfoLECM2 {
+    physical_value, 0, 127, 1, 0, "NotApplicable" ;
+  } 
+  DiagInfoLECMBasic {
+    physical_value, 0, 127, 1, 0, "NotApplicable" ;
+  } 
+  DoorLock_stat {
+    logical_value, 0, "DoorLock_stat_Idle" ;
+    logical_value, 1, "DoorLock_stat_BothDoorsAreUnlocked" ;
+    logical_value, 2, "DoorLock_stat_DriverDoorIsUnlocked" ;
+    logical_value, 3, "DoorLock_stat_PassengerDoorIsUnlocked" ;
+    logical_value, 4, "DoorLock_stat_BothDoorsAreLocked" ;
+    logical_value, 14, "DoorLock_stat_Error" ;
+    logical_value, 15, "DoorLock_stat_NotAvailable" ;
+  } 
+  FSP1DiagInfoL1 {
+    physical_value, 0, 63, 1, 0, "NotApplicable" ;
+  } 
+  FSP1IndicationCmdL1 {
+    physical_value, 0, 65535, 1, 0, "NotApplicable" ;
+  } 
+  FSP1SwitchStatusL1 {
+    physical_value, 0, 255, 1, 0, "NotApplicable" ;
+  } 
+  FSP2DiagInfoL1 {
+    physical_value, 0, 63, 1, 0, "NotApplicable" ;
+  } 
+  FSP2IndicationCmdL1 {
+    physical_value, 0, 65535, 1, 0, "NotApplicable" ;
+  } 
+  FSP2SwitchStatusL1 {
+    physical_value, 0, 255, 1, 0, "NotApplicable" ;
+  } 
+  FuncIndIlluminationLevel {
+    logical_value, 0, "FuncIndIlluminationLevel_IlluminationOff" ;
+    logical_value, 1, "FuncIndIlluminationLevel_IlluminationLevel1" ;
+    logical_value, 2, "FuncIndIlluminationLevel_IlluminationLevel2" ;
+    logical_value, 3, "FuncIndIlluminationLevel_IlluminationLevel3" ;
+    logical_value, 4, "FuncIndIlluminationLevel_IlluminationLevel4" ;
+    logical_value, 5, "FuncIndIlluminationLevel_Spare" ;
+    logical_value, 6, "FuncIndIlluminationLevel_Error" ;
+    logical_value, 7, "FuncIndIlluminationLevel_NotAvailable" ;
+  } 
+  HoursLocal {
+    physical_value, 0, 255, 1, 0, "h" ;
+  } // 254 Error ; 255 Not available
+  LIN_AlmClkCurAlarm_stat_ID {
+    logical_value, 0, "AlarmClkID_NotUsed" ;
+    logical_value, 1, "AlarmClkID_Alarm1" ;
+    logical_value, 2, "AlarmClkID_Alarm2" ;
+    logical_value, 3, "AlarmClkID_Alarm3" ;
+    logical_value, 4, "AlarmClkID_Alarm4" ;
+    logical_value, 5, "AlarmClkID_Alarm5" ;
+    logical_value, 6, "AlarmClkID_Alarm6" ;
+    logical_value, 7, "AlarmClkID_Alarm7" ;
+    logical_value, 8, "AlarmClkID_Alarm8" ;
+    logical_value, 9, "AlarmClkID_Alarm9" ;
+    logical_value, 10, "AlarmClkID_Alarm10" ;
+    logical_value, 126, "AlarmClkID_Error" ;
+    logical_value, 127, "AlarmClkID_NotAvailable" ;
+  } 
+  LIN_AlmClkCurAlarm_stat_SetHr {
+    physical_value, 0, 31, 1, 0, "h" ;
+  } // 30 Error ; 31 Not Available
+  LIN_AlmClkCurAlarm_stat_SetMin {
+    physical_value, 0, 63, 1, 0, "min" ;
+  } // 62 Error ; 63 Not Available
+  LIN_AlmClkCurAlarm_stat_Stat {
+    logical_value, 0, "AlarmClkStat_Inactive" ;
+    logical_value, 1, "AlarmClkStat_Active" ;
+    logical_value, 2, "AlarmClkStat_NoUsed" ;
+    logical_value, 3, "AlarmClkStat_Spare" ;
+  } 
+  LIN_AlmClkCurAlarm_stat_Type {
+    logical_value, 0, "AlarmClkType_NoAudibleNotification" ;
+    logical_value, 1, "AlarmClkType_Buzzer" ;
+    logical_value, 2, "AlarmClkType_Radio" ;
+    logical_value, 3, "AlarmClkType_Reserved" ;
+    logical_value, 4, "AlarmClkType_Reserved_01" ;
+    logical_value, 5, "AlarmClkType_Reserved_02" ;
+    logical_value, 6, "AlarmClkType_Error" ;
+    logical_value, 7, "AlarmClkType_NotAvailable" ;
+  } 
+  LIN_AlmClkSetCurAlm_rqst_ID {
+    logical_value, 0, "AlarmClkID_NotUsed" ;
+    logical_value, 1, "AlarmClkID_Alarm1" ;
+    logical_value, 2, "AlarmClkID_Alarm2" ;
+    logical_value, 3, "AlarmClkID_Alarm3" ;
+    logical_value, 4, "AlarmClkID_Alarm4" ;
+    logical_value, 5, "AlarmClkID_Alarm5" ;
+    logical_value, 6, "AlarmClkID_Alarm6" ;
+    logical_value, 7, "AlarmClkID_Alarm7" ;
+    logical_value, 8, "AlarmClkID_Alarm8" ;
+    logical_value, 9, "AlarmClkID_Alarm9" ;
+    logical_value, 10, "AlarmClkID_Alarm10" ;
+    logical_value, 126, "AlarmClkID_Error" ;
+    logical_value, 127, "AlarmClkID_NotAvailable" ;
+  } 
+  LIN_AlmClkSetCurAlm_rqst_SetHr {
+    physical_value, 0, 31, 1, 0, "h" ;
+  } 
+  LIN_AlmClkSetCurAlm_rqst_SetMin {
+    physical_value, 0, 63, 1, 0, "min" ;
+  } 
+  LIN_AlmClkSetCurAlm_rqst_Stat {
+    logical_value, 0, "AlarmClkStat_Inactive" ;
+    logical_value, 1, "AlarmClkStat_Active" ;
+    logical_value, 2, "AlarmClkStat_NoUsed" ;
+    logical_value, 3, "AlarmClkStat_Spare" ;
+  } 
+  LIN_AlmClkSetCurAlm_rqst_Type {
+    logical_value, 0, "AlarmClkType_NoAudibleNotification" ;
+    logical_value, 1, "AlarmClkType_Buzzer" ;
+    logical_value, 2, "AlarmClkType_Radio" ;
+    logical_value, 3, "AlarmClkType_Reserved" ;
+    logical_value, 4, "AlarmClkType_Reserved_01" ;
+    logical_value, 5, "AlarmClkType_Reserved_02" ;
+    logical_value, 6, "AlarmClkType_Error" ;
+    logical_value, 7, "AlarmClkType_NotAvailable" ;
+  } 
+  LIN_AudioSystemStatus {
+    logical_value, 0, "OffOn_Off" ;
+    logical_value, 1, "OffOn_On" ;
+    logical_value, 2, "OffOn_Error" ;
+    logical_value, 3, "OffOn_NotAvailable" ;
+  } 
+  LIN_AudioVolumeIndicationCmd {
+    physical_value, 0, 63, 1, 0, "Step" ;
+  } 
+  LIN_BTStatus {
+    logical_value, 0, "BTStatus_BTOff" ;
+    logical_value, 1, "BTStatus_BTOnAndNoDeviceConnected" ;
+    logical_value, 2, "BTStatus_BTOnAndDeviceConnected" ;
+    logical_value, 3, "BTStatus_NotAvailable" ;
+  } 
+  LIN_BunkBAudioOnOff_ButtonStat {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkBIntLightActvnBtn_stat {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkBParkHeater_ButtonStat {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkBTempDec_ButtonStat {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkBTempInc_ButtonStat {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkBVolumeDown_ButtonStat {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkBVolumeUp_ButtonStat {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2AudioOnOff_ButtonSta {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2Fade_ButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2IntLightActvnBtn_sta {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2IntLightDecBtn_stat {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2IntLightIncBtn_stat {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2LockButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2OnOFF_ButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2ParkHeater_ButtonSta {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2Phone_ButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2PHTi_rqs_DurnTimeHr {
+    physical_value, 0, 255, 1, 0, "h" ;
+  } // 254 Error ; 255 Not available
+  LIN_BunkH2PHTi_rqs_DurnTimeMin {
+    physical_value, 0, 255, 1, 0, "min" ;
+  } // 254 Error ; 255 Not available
+  LIN_BunkH2PHTi_rqs_StartTimeHr {
+    physical_value, 0, 255, 1, 0, "h" ;
+  } // 254 Error ; 255 Not available
+  LIN_BunkH2PHTi_rqs_StartTimeMin {
+    physical_value, 0, 255, 1, 0, "min" ;
+  } // 254 Error ; 255 Not available
+  LIN_BunkH2PHTi_rqs_Timer_cmd {
+    logical_value, 0, "ParkHeaterTimer_cmd_NoAction" ;
+    logical_value, 1, "ParkHeaterTimer_cmd_TimerEnable" ;
+    logical_value, 2, "ParkHeaterTimer_cmd_TimerDisable" ;
+    logical_value, 3, "ParkHeaterTimer_cmd_Spare" ;
+    logical_value, 4, "ParkHeaterTimer_cmd_Spare_01" ;
+    logical_value, 5, "ParkHeaterTimer_cmd_Spare_02" ;
+    logical_value, 6, "ParkHeaterTimer_cmd_Error" ;
+    logical_value, 7, "ParkHeaterTimer_cmd_NotAvailable" ;
+  } 
+  LIN_BunkH2PowerWinCloseDSBtn_s {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2PowerWinClosePSBtn_s {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2PowerWinOpenDSBtn_st {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2PowerWinOpenPSBtn_st {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2RoofhatchCloseBtn_St {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2RoofhatchOpenBtn_Sta {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2TempDec_ButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2TempInc_ButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2VolumeDown_ButtonSta {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_BunkH2VolumeUp_ButtonStatu {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_DoorAutoFuncBtn_stat {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_DoorAutoFuncInd_cmd {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_IntLghtDimmingLvlDecBtn_s {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_IntLghtDimmingLvlIncBtn_s {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_IntLghtLvlIndScaled_cmd {
+    physical_value, 0, 15, 1, 0, "Step" ;
+  } 
+  LIN_IntLghtModeInd_cmd_EventFlag {
+    logical_value, 0, "EventFlag_Low" ;
+    logical_value, 1, "EventFlag_High" ;
+  } 
+  LIN_IntLghtModeInd_cmd_IL_Mode {
+    logical_value, 0, "IL_Mode_OFF" ;
+    logical_value, 1, "IL_Mode_NightDriving" ;
+    logical_value, 2, "IL_Mode_Resting" ;
+    logical_value, 3, "IL_Mode_Max" ;
+    logical_value, 4, "IL_Mode_spare_1" ;
+    logical_value, 5, "IL_Mode_spare_2" ;
+    logical_value, 6, "IL_Mode_ErrorIndicator" ;
+    logical_value, 7, "IL_Mode_NotAvailable" ;
+  } 
+  LIN_IntLghtModeSelrFreeWheel_s {
+    logical_value, 0, "FreeWheel_Status_NoMovement" ;
+    logical_value, 1, "FreeWheel_Status_1StepClockwise" ;
+    logical_value, 2, "FreeWheel_Status_2StepsClockwise" ;
+    logical_value, 3, "FreeWheel_Status_3StepsClockwise" ;
+    logical_value, 4, "FreeWheel_Status_4StepsClockwise" ;
+    logical_value, 5, "FreeWheel_Status_5StepsClockwise" ;
+    logical_value, 6, "FreeWheel_Status_6StepsClockwise" ;
+    logical_value, 7, "FreeWheel_Status_1StepCounterClockwise" ;
+    logical_value, 8, "FreeWheel_Status_2StepsCounterClockwise" ;
+    logical_value, 9, "FreeWheel_Status_3StepsCounterClockwise" ;
+    logical_value, 10, "FreeWheel_Status_4StepsCounterClockwise" ;
+    logical_value, 11, "FreeWheel_Status_5StepsCounterClockwise" ;
+    logical_value, 12, "FreeWheel_Status_6StepsCounterClockwise" ;
+    logical_value, 13, "FreeWheel_Status_Spare" ;
+    logical_value, 14, "FreeWheel_Status_Error" ;
+    logical_value, 15, "FreeWheel_Status_NotAvailable" ;
+  } 
+  LIN_IntLghtOffModeInd_cmd {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_IntLightMaxModeInd_cmd {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_IntLightNightModeInd_cmd {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_IntLightRestingModeInd_cmd {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  LIN_PhoneButtonIndication_cmd {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  MinutesLocal {
+    physical_value, 0, 255, 1, 0, "min" ;
+  } // 254 Error ; 255 Not available
+  ParkingHeater_IndicationCmd {
+    logical_value, 0, "IndicationCmd_OFFLEDNotActivated" ;
+    logical_value, 1, "IndicationCmd_ONLEDActivated" ;
+  } 
+  PHTimer1_stat_Duration {
+    physical_value, 0, 127, 1, 0, "min" ;
+  } 
+  PHTimer1_stat_Hours {
+    physical_value, 0, 255, 1, 0, "h" ;
+  } 
+  PHTimer1_stat_Minutes {
+    physical_value, 0, 255, 1, 0, "min" ;
+  } 
+  PHTimer1_stat_Recurrence {
+    logical_value, 0, "HeaterTimerRecurrence_None" ;
+    logical_value, 1, "HeaterTimerRecurrence_Daily" ;
+    logical_value, 2, "HeaterTimerRecurrence_AllWeekdays" ;
+    logical_value, 3, "HeaterTimerRecurrence_Weekends" ;
+    logical_value, 4, "HeaterTimerRecurrence_Mondays" ;
+    logical_value, 5, "HeaterTimerRecurrence_Tuesdays" ;
+    logical_value, 6, "HeaterTimerRecurrence_Wednesdays" ;
+    logical_value, 7, "HeaterTimerRecurrence_Thursdays" ;
+    logical_value, 8, "HeaterTimerRecurrence_Fridays" ;
+    logical_value, 9, "HeaterTimerRecurrence_Saturdays" ;
+    logical_value, 10, "HeaterTimerRecurrence_Sundays" ;
+    logical_value, 11, "HeaterTimerRecurrence_Spare_1" ;
+    logical_value, 12, "HeaterTimerRecurrence_Spare_2" ;
+    logical_value, 13, "HeaterTimerRecurrence_Spare_3" ;
+    logical_value, 14, "HeaterTimerRecurrence_Error" ;
+    logical_value, 15, "HeaterTimerRecurrence_NotAvailable" ;
+  } 
+  PHTimer1_stat_StartDay {
+    logical_value, 0, "HeaterTimerStartDay_NotUsed" ;
+    logical_value, 1, "HeaterTimerStartDay_Monday" ;
+    logical_value, 2, "HeaterTimerStartDay_Tuesday" ;
+    logical_value, 3, "HeaterTimerStartDay_Wednesday" ;
+    logical_value, 4, "HeaterTimerStartDay_Thursday" ;
+    logical_value, 5, "HeaterTimerStartDay_Friday" ;
+    logical_value, 6, "HeaterTimerStartDay_Saturday" ;
+    logical_value, 7, "HeaterTimerStartDay_Sunday" ;
+    logical_value, 8, "HeaterTimerStartDay_Spare" ;
+    logical_value, 9, "HeaterTimerStartDay_Spare_01" ;
+    logical_value, 10, "HeaterTimerStartDay_Spare_02" ;
+    logical_value, 11, "HeaterTimerStartDay_Spare_03" ;
+    logical_value, 12, "HeaterTimerStartDay_Spare_04" ;
+    logical_value, 13, "HeaterTimerStartDay_Spare_05" ;
+    logical_value, 14, "HeaterTimerStartDay_Error" ;
+    logical_value, 15, "HeaterTimerStartDay_NotAvailable" ;
+  } 
+  PHTimer1_stat_Status {
+    logical_value, 0, "ParkHeaterTimer_Status_TimerActivated" ;
+    logical_value, 1, "ParkHeaterTimer_Status_TimerNotActivated" ;
+    logical_value, 2, "ParkHeaterTimer_Status_TimerDeleted" ;
+    logical_value, 3, "ParkHeaterTimer_Status_NotAvailable" ;
+  } 
+  PHTimer1_stat_Temp {
+    logical_value, 0, "TemperatureRqstIndication_cmd_NoTempDisplayed" ;
+    logical_value, 1, "TemperatureRqstIndication_cmd_Min" ;
+    logical_value, 2, "TemperatureRqstIndication_cmd_15C" ;
+    logical_value, 3, "TemperatureRqstIndication_cmd_16C" ;
+    logical_value, 4, "TemperatureRqstIndication_cmd_16_5C" ;
+    logical_value, 5, "TemperatureRqstIndication_cmd_17C" ;
+    logical_value, 6, "TemperatureRqstIndication_cmd_17_5C" ;
+    logical_value, 7, "TemperatureRqstIndication_cmd_18C" ;
+    logical_value, 8, "TemperatureRqstIndication_cmd_18_5C" ;
+    logical_value, 9, "TemperatureRqstIndication_cmd_19C" ;
+    logical_value, 10, "TemperatureRqstIndication_cmd_19_5C" ;
+    logical_value, 11, "TemperatureRqstIndication_cmd_20C" ;
+    logical_value, 12, "TemperatureRqstIndication_cmd_20_5C" ;
+    logical_value, 13, "TemperatureRqstIndication_cmd_21C" ;
+    logical_value, 14, "TemperatureRqstIndication_cmd_21_5C" ;
+    logical_value, 15, "TemperatureRqstIndication_cmd_22C" ;
+    logical_value, 16, "TemperatureRqstIndication_cmd_22_5C" ;
+    logical_value, 17, "TemperatureRqstIndication_cmd_23C" ;
+    logical_value, 18, "TemperatureRqstIndication_cmd_23_5C" ;
+    logical_value, 19, "TemperatureRqstIndication_cmd_24C" ;
+    logical_value, 20, "TemperatureRqstIndication_cmd_24_5C" ;
+    logical_value, 21, "TemperatureRqstIndication_cmd_25C" ;
+    logical_value, 22, "TemperatureRqstIndication_cmd_25_5C" ;
+    logical_value, 23, "TemperatureRqstIndication_cmd_26C" ;
+    logical_value, 24, "TemperatureRqstIndication_cmd_27C" ;
+    logical_value, 25, "TemperatureRqstIndication_cmd_28C" ;
+    logical_value, 26, "TemperatureRqstIndication_cmd_29C" ;
+    logical_value, 27, "TemperatureRqstIndication_cmd_Max" ;
+    logical_value, 28, "TemperatureRqstIndication_cmd_Spare" ;
+    logical_value, 29, "TemperatureRqstIndication_cmd_Spare_01" ;
+    logical_value, 30, "TemperatureRqstIndication_cmd_Error" ;
+    logical_value, 31, "TemperatureRqstIndication_cmd_NotAvailable" ;
+  } 
+  ResponseError_T {
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  } 
+  SelectedTimeFormat_stat {
+    logical_value, 0, "TimeFormatStat_AM_PM" ;
+    logical_value, 1, "TimeFormatStat_24h" ;
+    logical_value, 2, "TimeFormatStat_Error" ;
+    logical_value, 3, "TimeFormatStat_NotAvailable" ;
+  } 
+  TemperatureRqstIndication_cmd {
+    logical_value, 0, "TemperatureRqstIndication_cmd_NoTempDisplayed" ;
+    logical_value, 1, "TemperatureRqstIndication_cmd_Min" ;
+    logical_value, 2, "TemperatureRqstIndication_cmd_15C" ;
+    logical_value, 3, "TemperatureRqstIndication_cmd_16C" ;
+    logical_value, 4, "TemperatureRqstIndication_cmd_16_5C" ;
+    logical_value, 5, "TemperatureRqstIndication_cmd_17C" ;
+    logical_value, 6, "TemperatureRqstIndication_cmd_17_5C" ;
+    logical_value, 7, "TemperatureRqstIndication_cmd_18C" ;
+    logical_value, 8, "TemperatureRqstIndication_cmd_18_5C" ;
+    logical_value, 9, "TemperatureRqstIndication_cmd_19C" ;
+    logical_value, 10, "TemperatureRqstIndication_cmd_19_5C" ;
+    logical_value, 11, "TemperatureRqstIndication_cmd_20C" ;
+    logical_value, 12, "TemperatureRqstIndication_cmd_20_5C" ;
+    logical_value, 13, "TemperatureRqstIndication_cmd_21C" ;
+    logical_value, 14, "TemperatureRqstIndication_cmd_21_5C" ;
+    logical_value, 15, "TemperatureRqstIndication_cmd_22C" ;
+    logical_value, 16, "TemperatureRqstIndication_cmd_22_5C" ;
+    logical_value, 17, "TemperatureRqstIndication_cmd_23C" ;
+    logical_value, 18, "TemperatureRqstIndication_cmd_23_5C" ;
+    logical_value, 19, "TemperatureRqstIndication_cmd_24C" ;
+    logical_value, 20, "TemperatureRqstIndication_cmd_24_5C" ;
+    logical_value, 21, "TemperatureRqstIndication_cmd_25C" ;
+    logical_value, 22, "TemperatureRqstIndication_cmd_25_5C" ;
+    logical_value, 23, "TemperatureRqstIndication_cmd_26C" ;
+    logical_value, 24, "TemperatureRqstIndication_cmd_27C" ;
+    logical_value, 25, "TemperatureRqstIndication_cmd_28C" ;
+    logical_value, 26, "TemperatureRqstIndication_cmd_29C" ;
+    logical_value, 27, "TemperatureRqstIndication_cmd_Max" ;
+    logical_value, 28, "TemperatureRqstIndication_cmd_Spare" ;
+    logical_value, 29, "TemperatureRqstIndication_cmd_Spare_01" ;
+    logical_value, 30, "TemperatureRqstIndication_cmd_Error" ;
+    logical_value, 31, "TemperatureRqstIndication_cmd_NotAvailable" ;
+  } 
+}
+
+Signal_representation {
+  AlarmClockNotification_ID: AlarmClockNotification_sg__AlarmClockNotification_ID_ISig_13 ;
+  AlarmClockNotification_Stat: AlarmClockNotification_sg__AlarmClockNotification_Stat_ISig_13 ;
+  AlarmClockNotification_Type: AlarmClockNotification_sg__AlarmClockNotification_Type_ISig_13 ;
+  BacklightCmd: BacklightCmd_ISig_13 ;
+  BunkBacklightCmd: BunkBacklightCmd_ISig_13 ;
+  DayOfWeek_stat: DayOfWeek_stat_ISig_13 ;
+  DiagInfoILCP1: DiagInfoILCP1 ;
+  DiagInfoLECM2: DiagInfoLECM2 ;
+  DiagInfoLECMBasic: DiagInfoLECMBasic ;
+  DoorLock_stat: DoorLock_stat_ISig_13 ;
+  FSP1DiagInfoL1: FSP1DiagInfoL1 ;
+  FSP1IndicationCmdL1: FSP1IndicationCmdL1 ;
+  FSP1SwitchStatusL1: FSP1SwitchStatusL1 ;
+  FSP2DiagInfoL1: FSP2DiagInfoL1 ;
+  FSP2IndicationCmdL1: FSP2IndicationCmdL1 ;
+  FSP2SwitchStatusL1: FSP2SwitchStatusL1 ;
+  FuncIndIlluminationLevel: FuncIndIlluminationLevel_ISig_13 ;
+  HoursLocal: HoursLocal_ISig_13 ;
+  LIN_AlmClkCurAlarm_stat_ID: LIN_AlmClkCurAlarm_stat_sg__LIN_AlmClkCurAlarm_stat_ID ;
+  LIN_AlmClkCurAlarm_stat_SetHr: LIN_AlmClkCurAlarm_stat_sg__LIN_AlmClkCurAlarm_stat_SetHr ;
+  LIN_AlmClkCurAlarm_stat_SetMin: LIN_AlmClkCurAlarm_stat_sg__LIN_AlmClkCurAlarm_stat_SetMin ;
+  LIN_AlmClkCurAlarm_stat_Stat: LIN_AlmClkCurAlarm_stat_sg__LIN_AlmClkCurAlarm_stat_Stat ;
+  LIN_AlmClkCurAlarm_stat_Type: LIN_AlmClkCurAlarm_stat_sg__LIN_AlmClkCurAlarm_stat_Type ;
+  LIN_AlmClkSetCurAlm_rqst_ID: LIN_AlmClkSetCurAlm_rqst_sg__LIN_AlmClkSetCurAlm_rqst_ID ;
+  LIN_AlmClkSetCurAlm_rqst_SetHr: LIN_AlmClkSetCurAlm_rqst_sg__LIN_AlmClkSetCurAlm_rqst_SetHr ;
+  LIN_AlmClkSetCurAlm_rqst_SetMin: LIN_AlmClkSetCurAlm_rqst_sg__LIN_AlmClkSetCurAlm_rqst_SetMin ;
+  LIN_AlmClkSetCurAlm_rqst_Stat: LIN_AlmClkSetCurAlm_rqst_sg__LIN_AlmClkSetCurAlm_rqst_Stat ;
+  LIN_AlmClkSetCurAlm_rqst_Type: LIN_AlmClkSetCurAlm_rqst_sg__LIN_AlmClkSetCurAlm_rqst_Type ;
+  LIN_AudioSystemStatus: LIN_AudioSystemStatus ;
+  LIN_AudioVolumeIndicationCmd: LIN_AudioVolumeIndicationCmd ;
+  LIN_BTStatus: LIN_BTStatus ;
+  LIN_BunkBAudioOnOff_ButtonStat: LIN_BunkBAudioOnOff_ButtonStat ;
+  LIN_BunkBIntLightActvnBtn_stat: LIN_BunkBIntLightActvnBtn_stat ;
+  LIN_BunkBParkHeater_ButtonStat: LIN_BunkBParkHeater_ButtonStat ;
+  LIN_BunkBTempDec_ButtonStat: LIN_BunkBTempDec_ButtonStat ;
+  LIN_BunkBTempInc_ButtonStat: LIN_BunkBTempInc_ButtonStat ;
+  LIN_BunkBVolumeDown_ButtonStat: LIN_BunkBVolumeDown_ButtonStat ;
+  LIN_BunkBVolumeUp_ButtonStat: LIN_BunkBVolumeUp_ButtonStat ;
+  LIN_BunkH2AudioOnOff_ButtonSta: LIN_BunkH2AudioOnOff_ButtonSta ;
+  LIN_BunkH2Fade_ButtonStatus: LIN_BunkH2Fade_ButtonStatus ;
+  LIN_BunkH2IntLightActvnBtn_sta: LIN_BunkH2IntLightActvnBtn_sta ;
+  LIN_BunkH2IntLightDecBtn_stat: LIN_BunkH2IntLightDecBtn_stat ;
+  LIN_BunkH2IntLightIncBtn_stat: LIN_BunkH2IntLightIncBtn_stat ;
+  LIN_BunkH2LockButtonStatus: LIN_BunkH2LockButtonStatus ;
+  LIN_BunkH2OnOFF_ButtonStatus: LIN_BunkH2OnOFF_ButtonStatus ;
+  LIN_BunkH2ParkHeater_ButtonSta: LIN_BunkH2ParkHeater_ButtonSta ;
+  LIN_BunkH2Phone_ButtonStatus: LIN_BunkH2Phone_ButtonStatus ;
+  LIN_BunkH2PHTi_rqs_DurnTimeHr: LIN_BunkH2PHTi_rqs_sg__LIN_BunkH2PHTi_rqs_DurnTimeHr ;
+  LIN_BunkH2PHTi_rqs_DurnTimeMin: LIN_BunkH2PHTi_rqs_sg__LIN_BunkH2PHTi_rqs_DurnTimeMin ;
+  LIN_BunkH2PHTi_rqs_StartTimeHr: LIN_BunkH2PHTi_rqs_sg__LIN_BunkH2PHTi_rqs_StartTimeHr ;
+  LIN_BunkH2PHTi_rqs_StartTimeMin: LIN_BunkH2PHTi_rqs_sg__LIN_BunkH2PHTi_rqs_StartTimeMin ;
+  LIN_BunkH2PHTi_rqs_Timer_cmd: LIN_BunkH2PHTi_rqs_sg__LIN_BunkH2PHTi_rqs_Timer_cmd ;
+  LIN_BunkH2PowerWinCloseDSBtn_s: LIN_BunkH2PowerWinCloseDSBtn_s ;
+  LIN_BunkH2PowerWinClosePSBtn_s: LIN_BunkH2PowerWinClosePSBtn_s ;
+  LIN_BunkH2PowerWinOpenDSBtn_st: LIN_BunkH2PowerWinOpenDSBtn_st ;
+  LIN_BunkH2PowerWinOpenPSBtn_st: LIN_BunkH2PowerWinOpenPSBtn_st ;
+  LIN_BunkH2RoofhatchCloseBtn_St: LIN_BunkH2RoofhatchCloseBtn_St ;
+  LIN_BunkH2RoofhatchOpenBtn_Sta: LIN_BunkH2RoofhatchOpenBtn_Sta ;
+  LIN_BunkH2TempDec_ButtonStatus: LIN_BunkH2TempDec_ButtonStatus ;
+  LIN_BunkH2TempInc_ButtonStatus: LIN_BunkH2TempInc_ButtonStatus ;
+  LIN_BunkH2VolumeDown_ButtonSta: LIN_BunkH2VolumeDown_ButtonSta ;
+  LIN_BunkH2VolumeUp_ButtonStatu: LIN_BunkH2VolumeUp_ButtonStatu ;
+  LIN_DoorAutoFuncBtn_stat: LIN_DoorAutoFuncBtn_stat ;
+  LIN_DoorAutoFuncInd_cmd: LIN_DoorAutoFuncInd_cmd ;
+  LIN_IntLghtDimmingLvlDecBtn_s: LIN_IntLghtDimmingLvlDecBtn_s ;
+  LIN_IntLghtDimmingLvlIncBtn_s: LIN_IntLghtDimmingLvlIncBtn_s ;
+  LIN_IntLghtLvlIndScaled_cmd: LIN_IntLghtLvlIndScaled_cmd ;
+  LIN_IntLghtModeInd_cmd_EventFlag: LIN_IntLghtModeInd_cmd_sg__LIN_IntLghtModeInd_cmd_EventFlag ;
+  LIN_IntLghtModeInd_cmd_IL_Mode: LIN_IntLghtModeInd_cmd_sg__LIN_IntLghtModeInd_cmd_IL_Mode ;
+  LIN_IntLghtModeSelrFreeWheel_s: LIN_IntLghtModeSelrFreeWheel_s ;
+  LIN_IntLghtOffModeInd_cmd: LIN_IntLghtOffModeInd_cmd ;
+  LIN_IntLightMaxModeInd_cmd: LIN_IntLightMaxModeInd_cmd ;
+  LIN_IntLightNightModeInd_cmd: LIN_IntLightNightModeInd_cmd ;
+  LIN_IntLightRestingModeInd_cmd: LIN_IntLightRestingModeInd_cmd ;
+  LIN_PhoneButtonIndication_cmd: LIN_PhoneButtonIndication_cmd ;
+  MinutesLocal: MinutesLocal_ISig_13 ;
+  ParkingHeater_IndicationCmd: ParkingHeater_IndicationCmd_ISig_13 ;
+  PHTimer1_stat_Duration: PHTimer1_stat_sg__PHTimer1_stat_Duration_ISig_13 ;
+  PHTimer1_stat_Hours: PHTimer1_stat_sg__PHTimer1_stat_Hours_ISig_13 ;
+  PHTimer1_stat_Minutes: PHTimer1_stat_sg__PHTimer1_stat_Minutes_ISig_13 ;
+  PHTimer1_stat_Recurrence: PHTimer1_stat_sg__PHTimer1_stat_Recurrence_ISig_13 ;
+  PHTimer1_stat_StartDay: PHTimer1_stat_sg__PHTimer1_stat_StartDay_ISig_13 ;
+  PHTimer1_stat_Status: PHTimer1_stat_sg__PHTimer1_stat_Status_ISig_13 ;
+  PHTimer1_stat_Temp: PHTimer1_stat_sg__PHTimer1_stat_Temp_ISig_13 ;
+  ResponseError_T: FSP1ResponseErrorL1, FSP2ResponseErrorL1, ResponseErrorILCP1, ResponseErrorLECM2, ResponseErrorLECMBasic ;
+  SelectedTimeFormat_stat: SelectedTimeFormat_stat_ISig_13 ;
+  TemperatureRqstIndication_cmd: TemperatureRqstIndication_cmd_ISig_13 ;
+}
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="1CB6C5DB-D189-48A3-8F66-E436EC453E65">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <ECU-ABSTRACTION-SW-COMPONENT-TYPE UUID="372ACE71-F91A-4154-AC83-679769A79DC6">
+          <SHORT-NAME>IoHwAb_QM_LF_COMTP</SHORT-NAME>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="0F80FC31-2FF8-4F55-B932-4BAA23D2C1C3">
+              <SHORT-NAME>IoHwAb_QM_LF_COMTP_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="0E866E6B-CE3D-4A3C-AF62-5A1E36039B5D">
+                  <SHORT-NAME>TMT_Re_IoHwAb_QM_LF_COMTP</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/IoHwAb_QM_LF_COMTP/IoHwAb_QM_LF_COMTP_InternalBehavior/Re_IoHwAb_QM_LF_COMTP</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="4DCDA43E-1F4E-4A19-9F83-FE496AAF2086">
+                  <SHORT-NAME>Re_IoHwAb_QM_LF_COMTP</SHORT-NAME>
+                  <SYMBOL>Re_IoHwAb_QM_LF_COMTP</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </ECU-ABSTRACTION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="EDEC84D2-0DCA-483C-9865-FE66666166D2">
+          <SHORT-NAME>IoHwAb_QM_LF_COMTP_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/IoHwAb_QM_LF_COMTP/IoHwAb_QM_LF_COMTP_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

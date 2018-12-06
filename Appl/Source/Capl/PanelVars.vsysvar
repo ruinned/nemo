@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<systemvariables version="4">
+  <namespace name="" comment="">
+    <namespace name="StartApplication" comment="">
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="ErrorLog" comment="Store error messages of CAPL logic." bitcount="8" isSigned="true" encoding="65001" type="string" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="CANoeVersionInfo" comment="Store the current CANoe version number." bitcount="32" isSigned="true" encoding="65001" type="int" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="IdmActiveVariant" comment="Active ECU variant which is used in the context of this CANoe configuration." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="255" minValue="0" minValuePhys="0" maxValue="255" maxValuePhys="255" >
+        <valuetable definesMinMax="true">
+          <valuetableentry value="255" description="Unknown" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="UseCaseActivator" comment="Activate the start application use case." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="255" maxValuePhys="255">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="Com_RxTx" />
+          <valuetableentry value="1" description="Mem" />
+          <valuetableentry value="2" description="Diag" />
+          <valuetableentry value="3" description="Com_TxOnly" />
+          <valuetableentry value="4" description="Wdg" />
+          <valuetableentry value="5" description="Xcp" />
+          <valuetableentry value="6" description="J1939Diag" />
+          <valuetableentry value="7" description="Scc" />
+          <valuetableentry value="8" description="Multicore" />
+          <valuetableentry value="9" description="MemoryProtection" />
+          <valuetableentry value="10" description="Nm" />
+          <valuetableentry value="11" description="Idm" />
+          <valuetableentry value="255" description="Invalid" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="ComActualOutput" comment="Store an actual value received from the DUT." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="254" maxValuePhys="254" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="ComCmpOutputs" comment="Store the value comparison result of ComActualOutput  with ComExpectedOutput: &#xD;&#xA;0:  values are equal, not equal otherwise." bitcount="32" isSigned="true" encoding="65001" type="int" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="ComExpectedOutput" comment="Store an expected value of use case. It is calculated on Tester side." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="254" maxValuePhys="254"/>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="ComInput" comment="Store an input value to be scaled and transmitted to DUT." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="254" maxValuePhys="254"/>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="ComSendCtrl" comment="Play and Pause states representation of the COM use case:&#xD;&#xA;Play: 1 the periodical sending of new value of ComInput to the DUT is performed&#xD;&#xA;Pause: 0 the sending is not performed." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="255" maxValuePhys="255"/>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="ComValueShapeKind" comment="Determine the ComInput value change algorithm: 0." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="Accelerate" />
+          <valuetableentry value="1" description="Break" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="ComSignalPairSelector" comment="Represent current active transmission path: signal@channelX &lt;--&gt; signal@channelY" bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="2" maxValuePhys="2">
+    <valuetable definesMinMax="true">
+      <valuetableentry value="0" description="CAN_Backbone2_to_CAN_Backbone2"/>
+      <valuetableentry value="1" description="LIN1_CIOM_to_LIN1_CIOM"/>
+    </valuetable>
+  </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="NmCurrentChannel" comment="NM channel to be tested." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1">
+    <valuetable definesMinMax="true">
+      <valuetableentry value="0" description="CAN_Backbone2"/>
+      <valuetableentry value="1" description="LIN1_CIOM"/>
+    </valuetable>
+  </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagActivator" comment="Activate the start application use case DIAG." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagChannel" comment="DIAG channel to be tested." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="0" maxValuePhys="0">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="CAN_Backbone2" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagClearDTC" comment="Send CDTCI request to reset snapshot value." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagCounterValue" comment="Counter value from last RDBI response." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="65535" maxValuePhys="65535" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagCounterValueFromTxData" comment="Counter value from last TxData" bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="255" maxValuePhys="255" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagDTCStatusByteValue" comment="DTC status byte from last RDTCSSBDTC response." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="255" maxValuePhys="255" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagGetCounter" comment="Send RDBI request to get the counter value." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagGetDTCSnapshot" comment="Send RDTCSSBDTC request to get snapshot value." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagRequestState" comment="The current state of the diag request queue." bitcount="32" isSigned="true" encoding="65001" type="int"  startValue="0" minValue="0" minValuePhys="0" maxValue="3" maxValuePhys="3">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="QUEUE_EMPTY_REQUEST_NOT_ACTIVE" />
+          <valuetableentry value="1" description="QUEUE_EMPTY_REQUEST_ACTIVE" />
+          <valuetableentry value="2" description="QUEUE_NOT_EMPTY_REQUEST_NOT_ACTIVE" />
+          <valuetableentry value="3" description="QUEUE_NOT_EMPTY_REQUEST_ACTIVE" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagResetCounter" comment="Send WDBI request to reset the counter value to 0." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagActivateDefaultSession" comment="Send DSC to activate Default Session" bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagResetCounterWithRxData" comment="Send RxData to reset the counter value to 0." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagResponseCode" comment="Response code from last diagnostic response." bitcount="32" isSigned="true" encoding="65001" type="int"  startValue="0" minValue="0" minValuePhys="0" maxValue="255" maxValuePhys="255">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="0x00: No Response received" />
+          <valuetableentry value="1" description="0x01: Unknown Response for SID" />
+          <valuetableentry value="2" description="0x02: Unknown Response for SID" />
+          <valuetableentry value="3" description="0x03: Unknown Response for SID" />
+          <valuetableentry value="4" description="0x04: Unknown Response for SID" />
+          <valuetableentry value="5" description="0x05: Unknown Response for SID" />
+          <valuetableentry value="6" description="0x06: Unknown Response for SID" />
+          <valuetableentry value="7" description="0x07: Unknown Response for SID" />
+          <valuetableentry value="8" description="0x08: Unknown Response for SID" />
+          <valuetableentry value="9" description="0x09: Unknown Response for SID" />
+          <valuetableentry value="10" description="0x0A: Unknown Response for SID" />
+          <valuetableentry value="11" description="0x0B: Unknown Response for SID" />
+          <valuetableentry value="12" description="0x0C: Unknown Response for SID" />
+          <valuetableentry value="13" description="0x0D: Unknown Response for SID" />
+          <valuetableentry value="14" description="0x0E: Unknown Response for SID" />
+          <valuetableentry value="15" description="0x0F: Unknown Response for SID" />
+          <valuetableentry value="16" description="0x10: Unknown Response for SID" />
+          <valuetableentry value="17" description="0x11: Unknown Response for SID" />
+          <valuetableentry value="18" description="0x12: Unknown Response for SID" />
+          <valuetableentry value="19" description="0x13: Unknown Response for SID" />
+          <valuetableentry value="20" description="0x14: Unknown Response for SID" />
+          <valuetableentry value="21" description="0x15: Unknown Response for SID" />
+          <valuetableentry value="22" description="0x16: Unknown Response for SID" />
+          <valuetableentry value="23" description="0x17: Unknown Response for SID" />
+          <valuetableentry value="24" description="0x18: Unknown Response for SID" />
+          <valuetableentry value="25" description="0x19: Unknown Response for SID" />
+          <valuetableentry value="26" description="0x1A: Unknown Response for SID" />
+          <valuetableentry value="27" description="0x1B: Unknown Response for SID" />
+          <valuetableentry value="28" description="0x1C: Unknown Response for SID" />
+          <valuetableentry value="29" description="0x1D: Unknown Response for SID" />
+          <valuetableentry value="30" description="0x1E: Unknown Response for SID" />
+          <valuetableentry value="31" description="0x1F: Unknown Response for SID" />
+          <valuetableentry value="32" description="0x20: Unknown Response for SID" />
+          <valuetableentry value="33" description="0x21: Unknown Response for SID" />
+          <valuetableentry value="34" description="0x22: Unknown Response for SID" />
+          <valuetableentry value="35" description="0x23: Unknown Response for SID" />
+          <valuetableentry value="36" description="0x24: Unknown Response for SID" />
+          <valuetableentry value="37" description="0x25: Unknown Response for SID" />
+          <valuetableentry value="38" description="0x26: Unknown Response for SID" />
+          <valuetableentry value="39" description="0x27: Unknown Response for SID" />
+          <valuetableentry value="40" description="0x28: Unknown Response for SID" />
+          <valuetableentry value="41" description="0x29: Unknown Response for SID" />
+          <valuetableentry value="42" description="0x2A: Unknown Response for SID" />
+          <valuetableentry value="43" description="0x2B: Unknown Response for SID" />
+          <valuetableentry value="44" description="0x2C: Unknown Response for SID" />
+          <valuetableentry value="45" description="0x2D: Unknown Response for SID" />
+          <valuetableentry value="46" description="0x2E: Unknown Response for SID" />
+          <valuetableentry value="47" description="0x2F: Unknown Response for SID" />
+          <valuetableentry value="48" description="0x30: Unknown Response for SID" />
+          <valuetableentry value="49" description="0x31: Unknown Response for SID" />
+          <valuetableentry value="50" description="0x32: Unknown Response for SID" />
+          <valuetableentry value="51" description="0x33: Unknown Response for SID" />
+          <valuetableentry value="52" description="0x34: Unknown Response for SID" />
+          <valuetableentry value="53" description="0x35: Unknown Response for SID" />
+          <valuetableentry value="54" description="0x36: Unknown Response for SID" />
+          <valuetableentry value="55" description="0x37: Unknown Response for SID" />
+          <valuetableentry value="56" description="0x38: Unknown Response for SID" />
+          <valuetableentry value="57" description="0x39: Unknown Response for SID" />
+          <valuetableentry value="58" description="0x3A: Unknown Response for SID" />
+          <valuetableentry value="59" description="0x3B: Unknown Response for SID" />
+          <valuetableentry value="60" description="0x3C: Unknown Response for SID" />
+          <valuetableentry value="61" description="0x3D: Unknown Response for SID" />
+          <valuetableentry value="62" description="0x3E: Unknown Response for SID" />
+          <valuetableentry value="63" description="0x3F: Unknown Response for SID" />
+          <valuetableentry value="64" description="0x40: Unknown Response for SID" />
+          <valuetableentry value="65" description="0x41: Unknown Response for SID" />
+          <valuetableentry value="66" description="0x42: Unknown Response for SID" />
+          <valuetableentry value="67" description="0x43: Unknown Response for SID" />
+          <valuetableentry value="68" description="0x44: Unknown Response for SID" />
+          <valuetableentry value="69" description="0x45: Unknown Response for SID" />
+          <valuetableentry value="70" description="0x46: Unknown Response for SID" />
+          <valuetableentry value="71" description="0x47: Unknown Response for SID" />
+          <valuetableentry value="72" description="0x48: Unknown Response for SID" />
+          <valuetableentry value="73" description="0x49: Unknown Response for SID" />
+          <valuetableentry value="74" description="0x4A: Unknown Response for SID" />
+          <valuetableentry value="75" description="0x4B: Unknown Response for SID" />
+          <valuetableentry value="76" description="0x4C: Unknown Response for SID" />
+          <valuetableentry value="77" description="0x4D: Unknown Response for SID" />
+          <valuetableentry value="78" description="0x4E: Unknown Response for SID" />
+          <valuetableentry value="79" description="0x4F: Unknown Response for SID" />
+          <valuetableentry value="80" description="0x50: Positive Response DSC" />
+          <valuetableentry value="81" description="0x51: Unknown Response for SID" />
+          <valuetableentry value="82" description="0x52: Unknown Response for SID" />
+          <valuetableentry value="83" description="0x53: Unknown Response for SID" />
+          <valuetableentry value="84" description="0x54: Positive Response CDTCI" />
+          <valuetableentry value="85" description="0x55: Unknown Response for SID" />
+          <valuetableentry value="86" description="0x56: Unknown Response for SID" />
+          <valuetableentry value="87" description="0x57: Unknown Response for SID" />
+          <valuetableentry value="88" description="0x58: Unknown Response for SID" />
+          <valuetableentry value="89" description="0x59: Positive Response RDTCSSBDTC" />
+          <valuetableentry value="90" description="0x5A: Unknown Response for SID" />
+          <valuetableentry value="91" description="0x5B: Unknown Response for SID" />
+          <valuetableentry value="92" description="0x5C: Unknown Response for SID" />
+          <valuetableentry value="93" description="0x5D: Unknown Response for SID" />
+          <valuetableentry value="94" description="0x5E: Unknown Response for SID" />
+          <valuetableentry value="95" description="0x5F: Unknown Response for SID" />
+          <valuetableentry value="96" description="0x60: Unknown Response for SID" />
+          <valuetableentry value="97" description="0x61: Unknown Response for SID" />
+          <valuetableentry value="98" description="0x62: Positive Response RDBI" />
+          <valuetableentry value="99" description="0x63: Unknown Response for SID" />
+          <valuetableentry value="100" description="0x64: Unknown Response for SID" />
+          <valuetableentry value="101" description="0x65: Unknown Response for SID" />
+          <valuetableentry value="102" description="0x66: Unknown Response for SID" />
+          <valuetableentry value="103" description="0x67: Unknown Response for SID" />
+          <valuetableentry value="104" description="0x68: Unknown Response for SID" />
+          <valuetableentry value="105" description="0x69: Unknown Response for SID" />
+          <valuetableentry value="106" description="0x6A: Unknown Response for SID" />
+          <valuetableentry value="107" description="0x6B: Unknown Response for SID" />
+          <valuetableentry value="108" description="0x6C: Unknown Response for SID" />
+          <valuetableentry value="109" description="0x6D: Unknown Response for SID" />
+          <valuetableentry value="110" description="0x6E: Positive Response WDBI" />
+          <valuetableentry value="111" description="0x6F: Unknown Response for SID" />
+          <valuetableentry value="112" description="0x70: Unknown Response for SID" />
+          <valuetableentry value="113" description="0x71: Unknown Response for SID" />
+          <valuetableentry value="114" description="0x72: Unknown Response for SID" />
+          <valuetableentry value="115" description="0x73: Unknown Response for SID" />
+          <valuetableentry value="116" description="0x74: Unknown Response for SID" />
+          <valuetableentry value="117" description="0x75: Unknown Response for SID" />
+          <valuetableentry value="118" description="0x76: Unknown Response for SID" />
+          <valuetableentry value="119" description="0x77: Unknown Response for SID" />
+          <valuetableentry value="120" description="0x78: Unknown Response for SID" />
+          <valuetableentry value="121" description="0x79: Unknown Response for SID" />
+          <valuetableentry value="122" description="0x7A: Unknown Response for SID" />
+          <valuetableentry value="123" description="0x7B: Unknown Response for SID" />
+          <valuetableentry value="124" description="0x7C: Unknown Response for SID" />
+          <valuetableentry value="125" description="0x7D: Unknown Response for SID" />
+          <valuetableentry value="126" description="0x7E: Unknown Response for SID" />
+          <valuetableentry value="127" description="0x7F: Negative Response" />
+          <valuetableentry value="128" description="0x80: Unknown Response for SID" />
+          <valuetableentry value="129" description="0x81: Unknown Response for SID" />
+          <valuetableentry value="130" description="0x82: Unknown Response for SID" />
+          <valuetableentry value="131" description="0x83: Unknown Response for SID" />
+          <valuetableentry value="132" description="0x84: Unknown Response for SID" />
+          <valuetableentry value="133" description="0x85: Unknown Response for SID" />
+          <valuetableentry value="134" description="0x86: Unknown Response for SID" />
+          <valuetableentry value="135" description="0x87: Unknown Response for SID" />
+          <valuetableentry value="136" description="0x88: Unknown Response for SID" />
+          <valuetableentry value="137" description="0x89: Unknown Response for SID" />
+          <valuetableentry value="138" description="0x8A: Unknown Response for SID" />
+          <valuetableentry value="139" description="0x8B: Unknown Response for SID" />
+          <valuetableentry value="140" description="0x8C: Unknown Response for SID" />
+          <valuetableentry value="141" description="0x8D: Unknown Response for SID" />
+          <valuetableentry value="142" description="0x8E: Unknown Response for SID" />
+          <valuetableentry value="143" description="0x8F: Unknown Response for SID" />
+          <valuetableentry value="144" description="0x90: Unknown Response for SID" />
+          <valuetableentry value="145" description="0x91: Unknown Response for SID" />
+          <valuetableentry value="146" description="0x92: Unknown Response for SID" />
+          <valuetableentry value="147" description="0x93: Unknown Response for SID" />
+          <valuetableentry value="148" description="0x94: Unknown Response for SID" />
+          <valuetableentry value="149" description="0x95: Unknown Response for SID" />
+          <valuetableentry value="150" description="0x96: Unknown Response for SID" />
+          <valuetableentry value="151" description="0x97: Unknown Response for SID" />
+          <valuetableentry value="152" description="0x98: Positive Response RDBI" />
+          <valuetableentry value="153" description="0x99: Unknown Response for SID" />
+          <valuetableentry value="154" description="0x9A: Unknown Response for SID" />
+          <valuetableentry value="155" description="0x9B: Unknown Response for SID" />
+          <valuetableentry value="156" description="0x9C: Unknown Response for SID" />
+          <valuetableentry value="157" description="0x9D: Unknown Response for SID" />
+          <valuetableentry value="158" description="0x9E: Unknown Response for SID" />
+          <valuetableentry value="159" description="0x9F: Unknown Response for SID" />
+          <valuetableentry value="160" description="0xA0: Unknown Response for SID" />
+          <valuetableentry value="161" description="0xA1: Unknown Response for SID" />
+          <valuetableentry value="162" description="0xA2: Unknown Response for SID" />
+          <valuetableentry value="163" description="0xA3: Unknown Response for SID" />
+          <valuetableentry value="164" description="0xA4: Unknown Response for SID" />
+          <valuetableentry value="165" description="0xA5: Unknown Response for SID" />
+          <valuetableentry value="166" description="0xA6: Unknown Response for SID" />
+          <valuetableentry value="167" description="0xA7: Unknown Response for SID" />
+          <valuetableentry value="168" description="0xA8: Unknown Response for SID" />
+          <valuetableentry value="169" description="0xA9: Unknown Response for SID" />
+          <valuetableentry value="170" description="0xAA: Unknown Response for SID" />
+          <valuetableentry value="171" description="0xAB: Unknown Response for SID" />
+          <valuetableentry value="172" description="0xAC: Unknown Response for SID" />
+          <valuetableentry value="173" description="0xAD: Unknown Response for SID" />
+          <valuetableentry value="174" description="0xAE: Unknown Response for SID" />
+          <valuetableentry value="175" description="0xAF: Unknown Response for SID" />
+          <valuetableentry value="176" description="0xB0: Unknown Response for SID" />
+          <valuetableentry value="177" description="0xB1: Unknown Response for SID" />
+          <valuetableentry value="178" description="0xB2: Unknown Response for SID" />
+          <valuetableentry value="179" description="0xB3: Unknown Response for SID" />
+          <valuetableentry value="180" description="0xB4: Unknown Response for SID" />
+          <valuetableentry value="181" description="0xB5: Unknown Response for SID" />
+          <valuetableentry value="182" description="0xB6: Unknown Response for SID" />
+          <valuetableentry value="183" description="0xB7: Unknown Response for SID" />
+          <valuetableentry value="184" description="0xB8: Unknown Response for SID" />
+          <valuetableentry value="185" description="0xB9: Unknown Response for SID" />
+          <valuetableentry value="186" description="0xBA: Unknown Response for SID" />
+          <valuetableentry value="187" description="0xBB: Unknown Response for SID" />
+          <valuetableentry value="188" description="0xBC: Unknown Response for SID" />
+          <valuetableentry value="189" description="0xBD: Unknown Response for SID" />
+          <valuetableentry value="190" description="0xBE: Unknown Response for SID" />
+          <valuetableentry value="191" description="0xBF: Unknown Response for SID" />
+          <valuetableentry value="192" description="0xC0: Unknown Response for SID" />
+          <valuetableentry value="193" description="0xC1: Unknown Response for SID" />
+          <valuetableentry value="194" description="0xC2: Unknown Response for SID" />
+          <valuetableentry value="195" description="0xC3: Unknown Response for SID" />
+          <valuetableentry value="196" description="0xC4: Unknown Response for SID" />
+          <valuetableentry value="197" description="0xC5: Unknown Response for SID" />
+          <valuetableentry value="198" description="0xC6: Unknown Response for SID" />
+          <valuetableentry value="199" description="0xC7: Unknown Response for SID" />
+          <valuetableentry value="200" description="0xC8: Unknown Response for SID" />
+          <valuetableentry value="201" description="0xC9: Unknown Response for SID" />
+          <valuetableentry value="202" description="0xCA: Unknown Response for SID" />
+          <valuetableentry value="203" description="0xCB: Unknown Response for SID" />
+          <valuetableentry value="204" description="0xCC: Unknown Response for SID" />
+          <valuetableentry value="205" description="0xCD: Unknown Response for SID" />
+          <valuetableentry value="206" description="0xCE: Unknown Response for SID" />
+          <valuetableentry value="207" description="0xCF: Unknown Response for SID" />
+          <valuetableentry value="208" description="0xD0: Unknown Response for SID" />
+          <valuetableentry value="209" description="0xD1: Unknown Response for SID" />
+          <valuetableentry value="210" description="0xD2: Unknown Response for SID" />
+          <valuetableentry value="211" description="0xD3: Unknown Response for SID" />
+          <valuetableentry value="212" description="0xD4: Unknown Response for SID" />
+          <valuetableentry value="213" description="0xD5: Unknown Response for SID" />
+          <valuetableentry value="214" description="0xD6: Unknown Response for SID" />
+          <valuetableentry value="215" description="0xD7: Unknown Response for SID" />
+          <valuetableentry value="216" description="0xD8: Unknown Response for SID" />
+          <valuetableentry value="217" description="0xD9: Unknown Response for SID" />
+          <valuetableentry value="218" description="0xDA: Unknown Response for SID" />
+          <valuetableentry value="219" description="0xDB: Unknown Response for SID" />
+          <valuetableentry value="220" description="0xDC: Unknown Response for SID" />
+          <valuetableentry value="221" description="0xDD: Unknown Response for SID" />
+          <valuetableentry value="222" description="0xDE: Unknown Response for SID" />
+          <valuetableentry value="223" description="0xDF: Unknown Response for SID" />
+          <valuetableentry value="224" description="0xE0: Unknown Response for SID" />
+          <valuetableentry value="225" description="0xE1: Unknown Response for SID" />
+          <valuetableentry value="226" description="0xE2: Unknown Response for SID" />
+          <valuetableentry value="227" description="0xE3: Unknown Response for SID" />
+          <valuetableentry value="228" description="0xE4: Unknown Response for SID" />
+          <valuetableentry value="229" description="0xE5: Unknown Response for SID" />
+          <valuetableentry value="230" description="0xE6: Unknown Response for SID" />
+          <valuetableentry value="231" description="0xE7: Unknown Response for SID" />
+          <valuetableentry value="232" description="0xE8: Unknown Response for SID" />
+          <valuetableentry value="233" description="0xE9: Unknown Response for SID" />
+          <valuetableentry value="234" description="0xEA: Unknown Response for SID" />
+          <valuetableentry value="235" description="0xEB: Unknown Response for SID" />
+          <valuetableentry value="236" description="0xEC: Unknown Response for SID" />
+          <valuetableentry value="237" description="0xED: Unknown Response for SID" />
+          <valuetableentry value="238" description="0xEE: Unknown Response for SID" />
+          <valuetableentry value="239" description="0xEF: Unknown Response for SID" />
+          <valuetableentry value="240" description="0xF0: Unknown Response for SID" />
+          <valuetableentry value="241" description="0xF1: Unknown Response for SID" />
+          <valuetableentry value="242" description="0xF2: Unknown Response for SID" />
+          <valuetableentry value="243" description="0xF3: Unknown Response for SID" />
+          <valuetableentry value="244" description="0xF4: Unknown Response for SID" />
+          <valuetableentry value="245" description="0xF5: Unknown Response for SID" />
+          <valuetableentry value="246" description="0xF6: Unknown Response for SID" />
+          <valuetableentry value="247" description="0xF7: Unknown Response for SID" />
+          <valuetableentry value="248" description="0xF8: Unknown Response for SID" />
+          <valuetableentry value="249" description="0xF9: Unknown Response for SID" />
+          <valuetableentry value="250" description="0xFA: Unknown Response for SID" />
+          <valuetableentry value="251" description="0xFB: Unknown Response for SID" />
+          <valuetableentry value="252" description="0xFC: Unknown Response for SID" />
+          <valuetableentry value="253" description="0xFD: Unknown Response for SID" />
+          <valuetableentry value="254" description="0xFE: Unknown Response for SID" />
+          <valuetableentry value="255" description="0xFF: Unknown Response for SID" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagSetCounter" comment="Send WDBI request to set the counter value." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="65535" maxValuePhys="65535" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagSetEventStatusFailed" comment="Set DEM event to passed, which will increase the counter in the Test Application." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagSetEventStatusPassed" comment="Set DEM event to failed, which will increase the counter in the Test Application, and additionally store the counter in a DEM snapshot." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="DiagSnapshotDataValue" comment="Snapshot value from last RDTCSSBDTC response." bitcount="32" isSigned="true" encoding="65001" type="int" />
+
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MemActivator" comment="Activate the start application use case MEM" startValue="0" bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MemNvBlockSelector" comment="Select the block to be used for the write and read operation." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="Block 1 (-)" />
+          <valuetableentry value="1" description="Block 2 (-)" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MemNvPending" comment="Indicate if currently an operation on the NV block is pending (Read or Write was triggered, but the JobEndCallback was not called yet)." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="IDLE" />
+          <valuetableentry value="1" description="PENDING" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MemNvPendingExtended" comment="Indicate if currently an operation on the NV block is pending." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="6" maxValuePhys="6">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="UNKNOWN" />
+          <valuetableentry value="1" description="WRITE_PENDING" />
+          <valuetableentry value="2" description="WRITE_FINISHED" />
+          <valuetableentry value="3" description="READ_PENDING" />
+          <valuetableentry value="4" description="READ_FINISHED" />
+          <valuetableentry value="5" description="WRITE_FAILED" />
+          <valuetableentry value="6" description="READ_FAILED" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MemNvReadCurrValue" comment="Last value read by the Test Application which was sent via TxData by the ECU." startValue="0" bitcount="32" isSigned="true" encoding="65001" type="int" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MemNvStore" comment="Transfer the value of MemNvStoreValue to the Test Application via RxData. Trigger a write operation in the Test Application for the received value." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MemNvStoreValue" comment="User can enter the value to be stored in the ECUs NV block." startValue="0" bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="31" maxValuePhys="31" />
+
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="NmTesterComMode" comment="Current communication mode of the tested channel on Tester side.&#xD;&#xA;0: ComM is uninitialized.&#xD;&#xA;1: ComM is in Full Communication Mode.&#xD;&#xA;2: ComM is in No Communication Mode." startValue="0" bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="2" maxValuePhys="2">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="TESTER_COMM_MODE_UNINIT" />
+          <valuetableentry value="1" description="TESTER_COMM_MODE_FULL_COMMUNICATION" />
+          <valuetableentry value="2" description="TESTER_COMM_MODE_NO_COMMUNICATION" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="NmEcuNetworkRequest" comment="Request the network for the tested channel on ECU side.&#xD;&#xA;0: No communication is requested.&#xD;&#xA;1: Full communication is requested." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="1" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" >
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="COMM_NO_COMMUNICATION" />
+          <valuetableentry value="1" description="COMM_FULL_COMMUNICATION" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="NmEcuReleaseNetworkEnabled" comment="Is ECU network release enabled?&#xD;&#xA;1: True, ECU network can be released.&#xD;&#xA;0: False, ECU network cannot be released." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="NmEcuRequestNetworkEnabled" comment="Is ECU network request enabled?&#xD;&#xA;1: True, ECU network can be requested.&#xD;&#xA;0: False, ECU network cannot be requested." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="NmEcuUserNetworkRequestState" comment="State of ECU network request. Network request made by &#34;user&#34; via RxData.&#xD;&#xA;0: No communication is requested.&#xD;&#xA;1: Full communication is requested." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" >
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="COMM_NO_COMMUNICATION" />
+          <valuetableentry value="1" description="COMM_FULL_COMMUNICATION" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="NmEcuTimerNetworkRequestState" comment="State of ECU network request. Network request made when internal timer expires after NoCom was reached.&#xD;&#xA;0: No communication is requested.&#xD;&#xA;1: Full communication is requested." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" >
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="COMM_NO_COMMUNICATION" />
+          <valuetableentry value="1" description="COMM_FULL_COMMUNICATION" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="NmNmMsgCounterEcu" comment="Count ECU NM messages for the tested channel." startValue="0" bitcount="32" isSigned="true" encoding="65001" type="int" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="NmNmMsgCounterTester" comment="Count Tester NM messages for the tested channel." startValue="0" bitcount="32" isSigned="true" encoding="65001" type="int" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="NmRxDataChannelState" comment="Channel state of the RxData signal.&#xD;&#xA;0 if the RxData channel is in bus sleep mode.&#xD;&#xA;1 if the RxData channel is in normal operation mode." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="1" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="NmTesterNetworkRequest" comment="Request the network for the tested channel on Tester side.&#xD;&#xA;0: No communication is requested.&#xD;&#xA;1: Full communication is requested." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="1" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" >
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="COMM_NO_COMMUNICATION" />
+          <valuetableentry value="1" description="COMM_FULL_COMMUNICATION" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="NmTesterNetworkRequestEnabled" comment="Is Tester network request enabled?&#xD;&#xA;1: True, Tester network can be requested.&#xD;&#xA;0: False, Tester network cannot be requested." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="NmEcuTimerNetworkRequestCounter" comment="Count the appearance of ECU timer based network requests." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="NmEcuUserNetworkRequestCounter" comment="Count the appearance of ECU user based network requests." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="NmTimeSinceLastEcuNmMsg" comment="Time since the last Nm message from ECU." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="WdgAliveIndicationCycleTime" comment="The time between the alive indications from the Test Application to the WdgM in milliseconds. " bitcount="32" isSigned="true" encoding="65001" type="int" startValue="10" minValue="10" minValuePhys="10" maxValue="200" maxValuePhys="200" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="WdgPlayStatus" comment="Handle the play and pause button for auto increment of the cycle time. 0: Play was pressed. 2: Pause was pressed." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="3" maxValuePhys="3" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="WdgUptimeCounter" comment="Stores the time since the last start or reset of the ECU in seconds and freezes after 255 seconds (no overflow)." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="255" maxValuePhys="255" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="WdgUptimeGreaterThan255s" comment="Controls if the greater-than sign in front of the uptime should be displayed." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="ComPanelGridRowContent" comment=".Net COM Panel variable to update the grid row content" bitcount="8" isSigned="true" encoding="65001" type="string" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="ComPanelGridHeaderContent" comment=".Net COM Panel variable to update the grid header content" bitcount="8" isSigned="true" encoding="65001" type="string" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="ComPanelUiContent" comment=".Net COM Panel variable to update UI content" bitcount="8" isSigned="true" encoding="65001" type="string" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="XcpOutput" comment="Actual value which was uploaded from the DUT." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="254" maxValuePhys="254" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="XcpInput" comment="Input value to be downloaded to the DUT." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="254" maxValuePhys="254"/>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="XcpPlayStatus" comment="Play and Pause states representation of the Xcp use case:&#xD;&#xA;Play: 1 download XcpInput to DUT periodically&#xD;&#xA;Pause: 0 automatic download is not performed" bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="255" maxValuePhys="255"/>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="XcpCurrentChannel" comment="Xcp channel to be tested." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="0" maxValuePhys="0">
+        <valuetable definesMinMax="true">
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="XcpPanelUiContent" comment=".Net XCP Panel variable to update UI content" bitcount="8" isSigned="true" encoding="65001" type="string" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="XcpValueShapeKind" comment="Determine the XcpInput value change algorithm" bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="Increment" />
+          <valuetableentry value="1" description="Decrement" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="J1939DiagPanelUiContent" comment=".Net J1939DIAG Panel variable to update UI content" bitcount="8" isSigned="true" encoding="65001" type="string" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="J1939DiagSetEventStatusFailed" comment="Set DEM event to failed, which will cause reporting in DM1" bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="J1939DiagSetEventStatusPassed" comment="Set DEM event to passed." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="J1939DiagActiveDtcCounter" comment="Active DTCs received via DM1" bitcount="32" isSigned="true" encoding="65001" type="int" minValue="-1" minValuePhys="-1" maxValue="255" maxValuePhys="255" >
+        <valuetable>
+          <valuetableentry value="-1" description="DTC not found in DM1" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="J1939DiagPreviouslyActiveDtcCounter" comment="Previously active DTCs received via DM2" bitcount="32" isSigned="true" encoding="65001" type="int" minValue="-2" minValuePhys="-2" maxValue="255" maxValuePhys="255" >
+        <valuetable>
+          <valuetableentry value="-2" description="No response" />
+          <valuetableentry value="-1" description="DTC not found in DM2" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="J1939DiagAcknowledge" comment="Acknowledgement of J1939Diag requests" bitcount="32" isSigned="true" encoding="65001" type="int" minValue="-2" minValuePhys="-2" maxValue="3" maxValuePhys="3" >
+        <valuetable>
+          <valuetableentry value="-2" description="Waiting for response" />
+          <valuetableentry value="-1" description="No response" />
+          <valuetableentry value="0" description="0x00: Positive Ack" />
+          <valuetableentry value="1" description="0x01: Negative Ack" />
+          <valuetableentry value="2" description="0x02: Access denied" />
+          <valuetableentry value="3" description="0x03: Cannot respond" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="J1939DiagRequestDM2" comment="Request DM2" bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="J1939DiagRequestDM3" comment="Request DM3" bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" />
+
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="SccChargeMode" comment="Select the charge mode of the Electric Vehicle Supply Equipment." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="0" maxValuePhys="0">
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="SccConnect" comment="Connect or disconnect the Electric Vehicle to / from the Electric Vehicle Supply Equipment." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="Disconnect" />
+          <valuetableentry value="1" description="Connect" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="SccEvRxCurrent" comment="Set the current value of the Electric Vehicle depending on the charge mode.&#xD;&#xA;AC: maximum current in [A] &#xD;&#xA;DC: target current in [A]" bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="3" maxValuePhys="3">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="16A" />
+          <valuetableentry value="1" description="24A" />
+          <valuetableentry value="2" description="32A" />
+          <valuetableentry value="3" description="40A" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="SccEvRxVoltage" comment="Set the voltage value of the Electric Vehicle depending on the charge mode.&#xD;&#xA;AC: maximum voltage in [V] &#xD;&#xA;DC: target voltage in [V]" bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="3" maxValuePhys="3">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="230V" />
+          <valuetableentry value="1" description="300V" />
+          <valuetableentry value="2" description="400V" />
+          <valuetableentry value="3" description="500V" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="SccEvseRxCurrent" comment="Set the current value of the Electric Vehicle Supply Equipment depending on the charge mode.&#xD;&#xA;AC: maximum current in [A] &#xD;&#xA;DC: present current in [A]" bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="3" maxValuePhys="3">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="16A" />
+          <valuetableentry value="1" description="24A" />
+          <valuetableentry value="2" description="32A" />
+          <valuetableentry value="3" description="40A" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="SccEvseRxVoltage" comment="Set the voltage value of the Electric Vehicle Supply Equipment depending on the charge mode.&#xD;&#xA;AC: nominal voltage in [V] &#xD;&#xA;DC: present voltage in [V]" bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="3" maxValuePhys="3">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="230V" />
+          <valuetableentry value="1" description="300V" />
+          <valuetableentry value="2" description="400V" />
+          <valuetableentry value="3" description="500V" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="SccEvseTxCurrent" comment="Get the current value of the Electric Vehicle Supply Equipment depending on the charge mode.&#xD;&#xA;AC: maximum current in [A] &#xD;&#xA;DC: present current in [A]" bitcount="32" isSigned="true" encoding="65001" type="int" startValue="7" minValue="0" minValuePhys="0" maxValue="7" maxValuePhys="7">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="7" description="---" />
+          <valuetableentry value="0" description="16A" />
+          <valuetableentry value="1" description="24A" />
+          <valuetableentry value="2" description="32A" />
+          <valuetableentry value="3" description="40A" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="SccEvseTxVoltage" comment="Get the voltage value of the Electric Vehicle Supply Equipment depending on the charge mode.&#xD;&#xA;AC: nominal voltage in [V]&#xD;&#xA;DC: present voltage in [V]" bitcount="32" isSigned="true" encoding="65001" type="int" startValue="7" minValue="0" minValuePhys="0" maxValue="7" maxValuePhys="7">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="7" description="---" />
+          <valuetableentry value="0" description="230V" />
+          <valuetableentry value="1" description="300V" />
+          <valuetableentry value="2" description="400V" />
+          <valuetableentry value="3" description="500V" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="SccEvTxCurrent" comment="Get the current value of the Electric Vehicle depending on the charge mode.&#xD;&#xA;AC: maximum current in [A] &#xD;&#xA;DC: target current in [A]" bitcount="32" isSigned="true" encoding="65001" type="int" startValue="-1" minValue="-1" minValuePhys="-1" maxValue="3" maxValuePhys="3">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="-1" description="---" />
+          <valuetableentry value="0" description="16A" />
+          <valuetableentry value="1" description="24A" />
+          <valuetableentry value="2" description="32A" />
+          <valuetableentry value="3" description="40A" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="SccEvTxVoltage" comment="Get the voltage value of the Electric Vehicle depending on the charge mode.&#xD;&#xA;AC: maximum voltage in [V] &#xD;&#xA;DC: target voltage in [V]" bitcount="32" isSigned="true" encoding="65001" type="int" startValue="-1" minValue="-1" minValuePhys="-1" maxValue="3" maxValuePhys="3">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="-1" description="---" />
+          <valuetableentry value="0" description="230V" />
+          <valuetableentry value="1" description="300V" />
+          <valuetableentry value="2" description="400V" />
+          <valuetableentry value="3" description="500V" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="SccProtocolState" comment="Shows the current state of the communication protocol." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="10" maxValuePhys="10">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="Idle" />
+          <valuetableentry value="1" description="Initialization" />
+          <valuetableentry value="2" description="Session Setup" />
+          <valuetableentry value="3" description="Service Discovery" />
+          <valuetableentry value="4" description="Service and Payment Selection" />
+          <valuetableentry value="5" description="Payment / Authorization" />
+          <valuetableentry value="6" description="Charge Parameter Discovery" />
+          <valuetableentry value="7" description="Charge Loop Initialization" />
+          <valuetableentry value="8" description="Charge Loop" />
+          <valuetableentry value="9" description="Stop Charging" />
+          <valuetableentry value="10" description="Wait (end of protocol)" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="SccPanelUiContent" comment=".Net SCC Panel variable to update UI content" bitcount="8" isSigned="true" encoding="65001" type="string" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MultiCorePlayStatus" comment="Set the Play or Pause state for the continuous value change of the input value." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" >
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="Pause" />
+          <valuetableentry value="1" description="Play" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MultiCoreInput" comment="Set the counter value which will be transmitted to the SWC on a slave core." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="15" maxValuePhys="15" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MultiCoreSlaveSelector" comment="Select the slave to use in the data path." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="0" maxValuePhys="0">
+        <valuetable definesMinMax="true">
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MultiCoreOutput" comment="Get the counter value which was transmitted from the SWC on a slave core." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="15" maxValuePhys="15" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MultiCoreActiveSlaveCore" comment="Get the logical core ID of the slave core used in the data path." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="31" maxValuePhys="31" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MultiCoreErrorSwcToCoreMapping" comment="Get the error status for the SWC to core mapping: Returns an error if the SWC of the currently active slave runs on the same core as the main StartApplication SWC." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" >
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="OK" />
+          <valuetableentry value="1" description="Error" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MultiCorePanelUiContent" comment=".Net MultiCore panel variable to update UI content." bitcount="8" isSigned="true" encoding="65001" type="string" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MemoryProtectionPlayStatus" comment="Set the Play or Pause state for the continuous value change of the input value." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" >
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="Pause" />
+          <valuetableentry value="1" description="Play" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MemoryProtectionInput" comment="Set the sensor value which will be transmitted to the ECU and written to the IRV of the trusted application." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="63" maxValuePhys="63" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MemoryProtectionAccessMode" comment="Select the context to use to write the IRV of the trusted application." bitcount="32" isSigned="true" encoding="65001" type="int" startValue="0" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1">
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="Valid" />
+          <valuetableentry value="1" description="Invalid" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MemoryProtectionOutput" comment="Get the value of the IRV of the trusted application." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="63" maxValuePhys="63" />
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MemoryProtectionAccessState" comment="Get the result of the last write access to the IRV of the trusted application: Returns if the ProtectionHook was called with a Memory Access Violation." bitcount="32" isSigned="true" encoding="65001" type="int" minValue="0" minValuePhys="0" maxValue="1" maxValuePhys="1" >
+        <valuetable definesMinMax="true">
+          <valuetableentry value="0" description="OK" />
+          <valuetableentry value="1" description="MemoryAccessViolation" />
+        </valuetable>
+      </variable>
+      <variable anlyzLocal="2" readOnly="false" valueSequence="false" unit="" name="MemoryProtectionPanelUiContent" comment=".Net MemoryProtection panel variable to update UI content." bitcount="8" isSigned="true" encoding="65001" type="string" />
+    </namespace>
+  </namespace>
+</systemvariables>

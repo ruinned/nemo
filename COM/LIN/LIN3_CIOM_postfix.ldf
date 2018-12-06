@@ -1,0 +1,365 @@
+/*************************************************************************************/
+//                                                                                     
+// Description: LIN Description file created using Vector's DaVinci Network Designer   
+// Created:     23 Jan 2017 13:59:50
+// Author:      t035621
+// Version:     0.0
+//                                                                                     
+/*************************************************************************************/
+
+// COM_MATRIX_1.25.0
+
+LIN_description_file;
+LIN_protocol_version = "2.0";
+LIN_language_version = "2.0";
+LIN_speed = 9.6 kbps;
+
+Nodes {
+  Master: CIOM, 5 ms, 0.5 ms ; 
+  Slaves: FSP1_L3, FSP2_L3, TCP ;
+}
+
+
+Signals {
+  ABS_Indication: 2, 3, CIOM, TCP ; 
+  ATC_Indication: 2, 3, CIOM, TCP ; 
+  BacklightCmd_ISig_15: 5, 0, CIOM, FSP2_L3, FSP1_L3, TCP ; 
+  DiagInfoTCP: 7, 0, TCP, CIOM ; 
+  ESC_Indication: 2, 3, CIOM, TCP ; 
+  FSP1DiagInfoL3: 6, 0, FSP1_L3, CIOM ; 
+  FSP1IndicationCmdL3: 16, 0, CIOM, FSP1_L3 ; 
+  FSP1ResponseErrorL3: 1, 0, FSP1_L3, CIOM ; 
+  FSP1SwitchStatusL3: 8, 0, FSP1_L3, CIOM ; 
+  FSP2DiagInfoL3: 6, 0, FSP2_L3, CIOM ; 
+  FSP2IndicationCmdL3: 16, 0, CIOM, FSP2_L3 ; 
+  FSP2ResponseErrorL3: 1, 0, FSP2_L3, CIOM ; 
+  FSP2SwitchStatusL3: 8, 0, FSP2_L3, CIOM ; 
+  FuncIndIlluminationLevel_ISig_15: 3, 1, CIOM, FSP1_L3, FSP2_L3, TCP ; 
+  LIN_TCP_ABS_ButtonStatus: 2, 3, TCP, CIOM ; 
+  LIN_TCP_ATC_ButtonStatus: 2, 3, TCP, CIOM ; 
+  LIN_TCP_ESC_ButtonStatus: 2, 3, TCP, CIOM ; 
+  LIN_TCP_KnobPostionStatus: 3, 7, TCP, CIOM ; 
+  LIN_TCP_TCS_ButtonStatus: 2, 3, TCP, CIOM ; 
+  ResponseErrorTCP: 1, 0, TCP, CIOM ; 
+  SwitchDetectionNeeded1L3: 1, 0, FSP1_L3, CIOM ; 
+  SwitchDetectionNeeded2L3: 1, 0, FSP2_L3, CIOM ; 
+  SwitchDetectionResp1L3: 64, {0, 0, 0, 0, 0, 0, 0, 0}, FSP1_L3, CIOM ; 
+  SwitchDetectionResp2L3: 64, {0, 0, 0, 0, 0, 0, 0, 0}, FSP2_L3, CIOM ; 
+  TCS_Indication: 2, 3, CIOM, TCP ; 
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+
+Frames {
+  Backlight_FuncInd_L3: 52, CIOM, 1 {
+    BacklightCmd_ISig_15, 0 ;
+    FuncIndIlluminationLevel_ISig_15, 5 ;
+  } 
+  FSP1_Frame_L3: 2, FSP1_L3, 2 {
+    FSP1DiagInfoL3, 0 ;
+    SwitchDetectionNeeded1L3, 6 ;
+    FSP1ResponseErrorL3, 7 ;
+    FSP1SwitchStatusL3, 8 ;
+  } 
+  FSP1_SwitchDetResp_L3: 48, FSP1_L3, 8 {
+    SwitchDetectionResp1L3, 0 ;
+  } 
+  FSP2_Frame_L3: 3, FSP2_L3, 2 {
+    FSP2DiagInfoL3, 0 ;
+    SwitchDetectionNeeded2L3, 6 ;
+    FSP2ResponseErrorL3, 7 ;
+    FSP2SwitchStatusL3, 8 ;
+  } 
+  FSP2_SwitchDetResp_L3: 49, FSP2_L3, 8 {
+    SwitchDetectionResp2L3, 0 ;
+  } 
+  FSP_1_2_Req_L3: 53, CIOM, 4 {
+    FSP1IndicationCmdL3, 0 ;
+    FSP2IndicationCmdL3, 16 ;
+  } 
+  MastertoTCP: 46, CIOM, 2 {
+    ABS_Indication, 0 ;
+    ATC_Indication, 2 ;
+    ESC_Indication, 4 ;
+    TCS_Indication, 6 ;
+  } 
+  TCPtoMaster: 39, TCP, 5 {
+    DiagInfoTCP, 0 ;
+    ResponseErrorTCP, 7 ;
+    LIN_TCP_TCS_ButtonStatus, 8 ;
+    LIN_TCP_ATC_ButtonStatus, 10 ;
+    LIN_TCP_ABS_ButtonStatus, 12 ;
+    LIN_TCP_ESC_ButtonStatus, 14 ;
+    LIN_TCP_KnobPostionStatus, 16 ;
+  } 
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  FSP1_L3{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x2 ;
+    product_id = 0x5b, 0x1, 0 ;
+    response_error = FSP1ResponseErrorL3 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      FSP1_Frame_L3 = 0x2 ;
+      FSP1_SwitchDetResp_L3 = 0x30 ;
+      Backlight_FuncInd_L3 = 0x34 ;
+      FSP_1_2_Req_L3 = 0x35 ;
+    }
+  } 
+  FSP2_L3{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x3 ;
+    product_id = 0x5b, 0x1, 0 ;
+    response_error = FSP2ResponseErrorL3 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      FSP2_Frame_L3 = 0x3 ;
+      FSP2_SwitchDetResp_L3 = 0x31 ;
+      Backlight_FuncInd_L3 = 0x34 ;
+      FSP_1_2_Req_L3 = 0x35 ;
+    }
+  } 
+  TCP{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x39 ;
+    product_id = 0x5b, 0x0, 0 ;
+    response_error = ResponseErrorTCP ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      TCPtoMaster = 0x27 ;
+      MastertoTCP = 0x2e ;
+      Backlight_FuncInd_L3 = 0x34 ;
+    }
+  } 
+}
+
+Schedule_tables {
+ Table_1 {
+    Backlight_FuncInd_L3 delay 10 ms ;
+    FSP_1_2_Req_L3 delay 15 ms ;
+    FSP1_Frame_L3 delay 10 ms ;
+    FSP2_Frame_L3 delay 10 ms ;
+    MastertoTCP delay 10 ms ;
+    TCPtoMaster delay 15 ms ;
+  }
+ Table_2 {
+    Backlight_FuncInd_L3 delay 10 ms ;
+    FSP_1_2_Req_L3 delay 15 ms ;
+    FSP1_Frame_L3 delay 10 ms ;
+  }
+ Table_e {
+    FSP1_SwitchDetResp_L3 delay 20 ms ;
+    FSP2_SwitchDetResp_L3 delay 20 ms ;
+  }
+ MasterReq_SlaveResp_Table_1 {
+    MasterReq delay 20 ms ;
+    SlaveResp delay 20 ms ;
+    Backlight_FuncInd_L3 delay 10 ms ;
+    FSP_1_2_Req_L3 delay 15 ms ;
+    FSP1_Frame_L3 delay 10 ms ;
+    FSP2_Frame_L3 delay 10 ms ;
+    MastertoTCP delay 10 ms ;
+    TCPtoMaster delay 15 ms ;
+  }
+ MasterReq_SlaveResp_Table_2 {
+    MasterReq delay 20 ms ;
+    SlaveResp delay 20 ms ;
+    Backlight_FuncInd_L3 delay 10 ms ;
+    FSP_1_2_Req_L3 delay 15 ms ;
+    FSP1_Frame_L3 delay 10 ms ;
+  }
+ MasterReq_SlaveResp {
+    MasterReq delay 20 ms ;
+    SlaveResp delay 20 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  ABS_Indication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  ATC_Indication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  BacklightCmd {
+    logical_value, 0, "BacklightCmd_BacklightOff" ;
+    logical_value, 1, "BacklightCmd_BacklightLevel1" ;
+    logical_value, 2, "BacklightCmd_BacklightLevel2" ;
+    logical_value, 3, "BacklightCmd_BacklightLevel3" ;
+    logical_value, 4, "BacklightCmd_BacklightLevel4" ;
+    logical_value, 5, "BacklightCmd_BacklightLevel5" ;
+    logical_value, 6, "BacklightCmd_BacklightLevel6" ;
+    logical_value, 7, "BacklightCmd_BacklightLevel7" ;
+    logical_value, 8, "BacklightCmd_BacklightLevel8" ;
+    logical_value, 9, "BacklightCmd_BacklightLevel9" ;
+    logical_value, 10, "BacklightCmd_BacklightLevel10" ;
+    logical_value, 11, "BacklightCmd_BacklightLevel11" ;
+    logical_value, 12, "BacklightCmd_BacklightLevel12" ;
+    logical_value, 13, "BacklightCmd_BacklightLevel13" ;
+    logical_value, 14, "BacklightCmd_BacklightLevel14" ;
+    logical_value, 15, "BacklightCmd_BacklightLevel15" ;
+    logical_value, 16, "BacklightCmd_BacklightLevel16" ;
+    logical_value, 30, "BacklightCmd_Error" ;
+    logical_value, 31, "BacklightCmd_NotAvailable" ;
+  } 
+  DiagInfoTCP {
+    physical_value, 0, 127, 1, 0, "NotApplicable" ;
+  } 
+  ESC_Indication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+  FSP1DiagInfoL3 {
+    physical_value, 0, 63, 1, 0, "NotApplicable" ;
+  } 
+  FSP1IndicationCmdL3 {
+    physical_value, 0, 65535, 1, 0, "NotApplicable" ;
+  } 
+  FSP1SwitchStatusL3 {
+    physical_value, 0, 255, 1, 0, "NotApplicable" ;
+  } 
+  FSP2DiagInfoL3 {
+    physical_value, 0, 63, 1, 0, "NotApplicable" ;
+  } 
+  FSP2IndicationCmdL3 {
+    physical_value, 0, 65535, 1, 0, "NotApplicable" ;
+  } 
+  FSP2SwitchStatusL3 {
+    physical_value, 0, 255, 1, 0, "NotApplicable" ;
+  } 
+  FuncIndIlluminationLevel {
+    logical_value, 0, "FuncIndIlluminationLevel_IlluminationOff" ;
+    logical_value, 1, "FuncIndIlluminationLevel_IlluminationLevel1" ;
+    logical_value, 2, "FuncIndIlluminationLevel_IlluminationLevel2" ;
+    logical_value, 3, "FuncIndIlluminationLevel_IlluminationLevel3" ;
+    logical_value, 4, "FuncIndIlluminationLevel_IlluminationLevel4" ;
+    logical_value, 5, "FuncIndIlluminationLevel_Spare" ;
+    logical_value, 6, "FuncIndIlluminationLevel_Error" ;
+    logical_value, 7, "FuncIndIlluminationLevel_NotAvailable" ;
+  } 
+  LIN_TCP_ABS_ButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_TCP_ATC_ButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_TCP_ESC_ButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  LIN_TCP_KnobPostionStatus {
+    logical_value, 0, "TCPKnobPostionStatus_Pos0" ;
+    logical_value, 1, "TCPKnobPostionStatus_Pos1" ;
+    logical_value, 2, "TCPKnobPostionStatus_Pos2" ;
+    logical_value, 3, "TCPKnobPostionStatus_Pos3" ;
+    logical_value, 4, "TCPKnobPostionStatus_Pos4" ;
+    logical_value, 5, "TCPKnobPostionStatus_Spare1" ;
+    logical_value, 6, "TCPKnobPostionStatus_Error" ;
+    logical_value, 7, "TCPKnobPostionStatus_NotAvailable" ;
+  } 
+  LIN_TCP_TCS_ButtonStatus {
+    logical_value, 0, "PushButtonStatus_Neutral" ;
+    logical_value, 1, "PushButtonStatus_Pushed" ;
+    logical_value, 2, "PushButtonStatus_Error" ;
+    logical_value, 3, "PushButtonStatus_NotAvailable" ;
+  } 
+  ResponseError_T {
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  } 
+  TCS_Indication {
+    logical_value, 0, "DeviceIndication_Off" ;
+    logical_value, 1, "DeviceIndication_On" ;
+    logical_value, 2, "DeviceIndication_Blink" ;
+    logical_value, 3, "DeviceIndication_SpareValue" ;
+  } 
+}
+
+Signal_representation {
+  ABS_Indication: ABS_Indication ;
+  ATC_Indication: ATC_Indication ;
+  BacklightCmd: BacklightCmd_ISig_15 ;
+  DiagInfoTCP: DiagInfoTCP ;
+  ESC_Indication: ESC_Indication ;
+  FSP1DiagInfoL3: FSP1DiagInfoL3 ;
+  FSP1IndicationCmdL3: FSP1IndicationCmdL3 ;
+  FSP1SwitchStatusL3: FSP1SwitchStatusL3 ;
+  FSP2DiagInfoL3: FSP2DiagInfoL3 ;
+  FSP2IndicationCmdL3: FSP2IndicationCmdL3 ;
+  FSP2SwitchStatusL3: FSP2SwitchStatusL3 ;
+  FuncIndIlluminationLevel: FuncIndIlluminationLevel_ISig_15 ;
+  LIN_TCP_ABS_ButtonStatus: LIN_TCP_ABS_ButtonStatus ;
+  LIN_TCP_ATC_ButtonStatus: LIN_TCP_ATC_ButtonStatus ;
+  LIN_TCP_ESC_ButtonStatus: LIN_TCP_ESC_ButtonStatus ;
+  LIN_TCP_KnobPostionStatus: LIN_TCP_KnobPostionStatus ;
+  LIN_TCP_TCS_ButtonStatus: LIN_TCP_TCS_ButtonStatus ;
+  ResponseError_T: FSP1ResponseErrorL3, FSP2ResponseErrorL3, ResponseErrorTCP ;
+  TCS_Indication: TCS_Indication ;
+}
+

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProjectAssistant Version="5.17.51 SP2">
+    <General>
+        <Name>CBD1800194D00</Name>
+    </General>
+    <Environment>
+        <Platform>Canoeemu</Platform>
+        <Derivative UUID="DB5C1BD2-145D-43AA-A5EA-C2AEF9CCC8F0">MPC5746C</Derivative>
+        <Compiler UUID="44266E21-0E8C-4DDA-B800-91CE20104931">Diab</Compiler>
+        <PinLayout></PinLayout>
+        <SipIds>
+            <SipId>CBD1800194_D01</SipId>
+        </SipIds>
+    </Environment>
+    <Folders>
+        <ECUC>.\Config\ECUC</ECUC>
+        <GenData>.\Appl\GenData</GenData>
+        <Source>.\Appl\Source</Source>
+        <ServiceComponents>.\Config\ServiceComponents</ServiceComponents>
+        <Logs>.\Log</Logs>
+        <SIP>C:\Vector\CBD1800194_D01_Mpc57xx</SIP>
+        <StartMenu></StartMenu>
+        <ApplicationComponentFolders>
+            <ApplicationComponentFolder>.\Config\ApplicationComponents</ApplicationComponentFolder>
+        </ApplicationComponentFolders>
+        <BswInternalBehaviour>.\Config\InternalBehavior</BswInternalBehaviour>
+        <McData>.\Config\McData</McData>
+        <DefinitionRestriction>.\DefRestrict</DefinitionRestriction>
+        <AUTOSAR>C:\Users\Vinil\AppData\Local\Temp\DaVinci\Cfg-6623899\Workflow\1542788248181-0\Config\AUTOSAR</AUTOSAR>
+    </Folders>
+    <Tools/>
+    <Input>
+        <ECUEX>.\Config\System\SystemExtract.arxml</ECUEX>
+    </Input>
+    <References>
+        <OEMCommunicationExtract>.\Config\System\SystemExtract_Communication.arxml</OEMCommunicationExtract>
+    </References>
+    <EcucSplitter>
+        <Configuration>.\Config\ECUC\CBD1800194D00.ecuc.arxml</Configuration>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Com_ecuc.arxml">
+            <Module Name="Com"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Rte_ecuc.arxml">
+            <Module Name="Rte"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Os_ecuc.arxml">
+            <Module Name="Os"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_LinSM_ecuc.arxml">
+            <Module Name="LinSM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_ComM_ecuc.arxml">
+            <Module Name="ComM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_EcuC_ecuc.arxml">
+            <Module Name="EcuC"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_LinTp_ecuc.arxml">
+            <Module Name="LinTp"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_LinIf_ecuc.arxml">
+            <Module Name="LinIf"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_CanIf_ecuc.arxml">
+            <Module Name="CanIf"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Lin_ecuc.arxml">
+            <Module Name="Lin"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Can_ecuc.arxml">
+            <Module Name="Can"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_J1939Tp_ecuc.arxml">
+            <Module Name="J1939Tp"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Det_ecuc.arxml">
+            <Module Name="Det"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_J1939Nm_ecuc.arxml">
+            <Module Name="J1939Nm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_PduR_ecuc.arxml">
+            <Module Name="PduR"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_J1939Rm_ecuc.arxml">
+            <Module Name="J1939Rm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_CanSM_ecuc.arxml">
+            <Module Name="CanSM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_BswM_ecuc.arxml">
+            <Module Name="BswM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Nm_ecuc.arxml">
+            <Module Name="Nm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Fls_ecuc.arxml">
+            <Module Name="Fls"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_EcuM_ecuc.arxml">
+            <Module Name="EcuM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Dem_ecuc.arxml">
+            <Module Name="Dem"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Issm_ecuc.arxml">
+            <Module Name="Issm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Dcm_ecuc.arxml">
+            <Module Name="Dcm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_CanTp_ecuc.arxml">
+            <Module Name="CanTp"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_CanNm_ecuc.arxml">
+            <Module Name="CanNm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_vDem42_ecuc.arxml">
+            <Module Name="vDem42"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_NvM_ecuc.arxml">
+            <Module Name="NvM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_MemIf_ecuc.arxml">
+            <Module Name="MemIf"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Crc_ecuc.arxml">
+            <Module Name="Crc"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Fee_ecuc.arxml">
+            <Module Name="Fee"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Cdd_ecuc.arxml">
+            <Module Name="Cdd"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Resource_ecuc.arxml">
+            <Module Name="Resource"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Icu_ecuc.arxml">
+            <Module Name="Icu"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Wdg_ecuc.arxml">
+            <Module Name="Wdg"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Base_ecuc.arxml">
+            <Module Name="Base"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Mcl_ecuc.arxml">
+            <Module Name="Mcl"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Spi_ecuc.arxml">
+            <Module Name="Spi"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_CanTrcv_ecuc.arxml">
+            <Module Name="CanTrcv"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_IoHwAb_ecuc.arxml">
+            <Module Name="IoHwAb"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Dio_ecuc.arxml">
+            <Module Name="Dio"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Pwm_ecuc.arxml">
+            <Module Name="Pwm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Port_ecuc.arxml">
+            <Module Name="Port"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Adc_ecuc.arxml">
+            <Module Name="Adc"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Gpt_ecuc.arxml">
+            <Module Name="Gpt"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\CBD1800194D00_Mcu_ecuc.arxml">
+            <Module Name="Mcu"/>
+        </Splitter>
+        <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
+    </EcucSplitter>
+    <ECUC>
+        <Active RootPackageName="/ActiveEcuC/ActiveEcuC"/>
+    </ECUC>
+    <PostBuildLoadable RTEDataFreezeChecksum="" CurrentConfigurationPhase="PRE_COMPILE"/>
+    <ToolSettings>
+        <Generators/>
+        <Misc>
+            <Settings Name="com.vector.cfg.modulesearchpath">
+                <Settings Name="SearchPath"/>
+            </Settings>
+        </Misc>
+    </ToolSettings>
+    <TopDownServiceConfiguration>
+        <NvM>true</NvM>
+    </TopDownServiceConfiguration>
+</ProjectAssistant>

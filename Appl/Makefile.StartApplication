@@ -1,0 +1,4 @@
+APP_SOURCE_LST += ..\Appl\Source\StartApplication.c
+APP_SOURCE_LST += ..\Appl\Source\StartApplicationTrusted.c
+APP_SOURCE_LST += ..\Appl\Source\StartApplicationMemoryAccessState.c
+APP_SOURCE_LST += ..\Appl\Source\BswInit.c

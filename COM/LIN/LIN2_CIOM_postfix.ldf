@@ -1,0 +1,333 @@
+/*************************************************************************************/
+//                                                                                     
+// Description: LIN Description file created using Vector's DaVinci Network Designer   
+// Created:     29 Mar 2012 15:53:13
+// Author:      T0C0513
+// Version:     0.0
+//                                                                                     
+/*************************************************************************************/
+
+// COM_MATRIX_1.2.1
+
+LIN_description_file;
+LIN_protocol_version = "2.0";
+LIN_language_version = "2.0";
+LIN_speed = 9.6 kbps;
+
+Nodes {
+  Master: CIOM, 5 ms, 0.5 ms ; 
+  Slaves: FSP1_L2, FSP2_L2, FSP3_L2, FSP4_L2 ;
+}
+
+
+Signals {
+  BacklightCmd_ISig_14: 5, 0, CIOM, FSP2_L2, FSP4_L2, FSP3_L2, FSP1_L2 ; 
+  FSP1DiagInfoL2: 6, 0, FSP1_L2, CIOM ; 
+  FSP1IndicationCmdL2: 16, 0, CIOM, FSP1_L2 ; 
+  FSP1ResponseErrorL2: 1, 0, FSP1_L2, CIOM ; 
+  FSP1SwitchStatusL2: 8, 0, FSP1_L2, CIOM ; 
+  FSP2DiagInfoL2: 6, 0, FSP2_L2, CIOM ; 
+  FSP2IndicationCmdL2: 16, 0, CIOM, FSP2_L2 ; 
+  FSP2ResponseErrorL2: 1, 0, FSP2_L2, CIOM ; 
+  FSP2SwitchStatusL2: 8, 0, FSP2_L2, CIOM ; 
+  FSP3DiagInfoL2: 6, 0, FSP3_L2, CIOM ; 
+  FSP3IndicationCmdL2: 16, 0, CIOM, FSP3_L2 ; 
+  FSP3ResponseErrorL2: 1, 0, FSP3_L2, CIOM ; 
+  FSP3SwitchStatusL2: 8, 0, FSP3_L2, CIOM ; 
+  FSP4DiagInfoL2: 6, 0, FSP4_L2, CIOM ; 
+  FSP4IndicationCmdL2: 16, 0, CIOM, FSP4_L2 ; 
+  FSP4ResponseErrorL2: 1, 0, FSP4_L2, CIOM ; 
+  FSP4SwitchStatusL2: 8, 0, FSP4_L2, CIOM ; 
+  FuncIndIlluminationLevel_ISig_14: 3, 1, CIOM, FSP2_L2, FSP4_L2, FSP3_L2, FSP1_L2 ; 
+  SwitchDetectionNeeded1L2: 1, 0, FSP1_L2, CIOM ; 
+  SwitchDetectionNeeded2L2: 1, 0, FSP2_L2, CIOM ; 
+  SwitchDetectionNeeded3L2: 1, 0, FSP3_L2, CIOM ; 
+  SwitchDetectionNeeded4L2: 1, 0, FSP4_L2, CIOM ; 
+  SwitchDetectionResp1L2: 64, {0, 0, 0, 0, 0, 0, 0, 0}, FSP1_L2, CIOM ; 
+  SwitchDetectionResp2L2: 64, {0, 0, 0, 0, 0, 0, 0, 0}, FSP2_L2, CIOM ; 
+  SwitchDetectionResp3L2: 64, {0, 0, 0, 0, 0, 0, 0, 0}, FSP3_L2, CIOM ; 
+  SwitchDetectionResp4L2: 64, {0, 0, 0, 0, 0, 0, 0, 0}, FSP4_L2, CIOM ; 
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+
+Frames {
+  Backlight_FuncInd_L2: 52, CIOM, 1 {
+    BacklightCmd_ISig_14, 0 ;
+    FuncIndIlluminationLevel_ISig_14, 5 ;
+  } 
+  FSP1_Frame_L2: 2, FSP1_L2, 2 {
+    FSP1DiagInfoL2, 0 ;
+    SwitchDetectionNeeded1L2, 6 ;
+    FSP1ResponseErrorL2, 7 ;
+    FSP1SwitchStatusL2, 8 ;
+  } 
+  FSP1_SwitchDetResp_L2: 48, FSP1_L2, 8 {
+    SwitchDetectionResp1L2, 0 ;
+  } 
+  FSP2_Frame_L2: 3, FSP2_L2, 2 {
+    FSP2DiagInfoL2, 0 ;
+    SwitchDetectionNeeded2L2, 6 ;
+    FSP2ResponseErrorL2, 7 ;
+    FSP2SwitchStatusL2, 8 ;
+  } 
+  FSP2_SwitchDetResp_L2: 49, FSP2_L2, 8 {
+    SwitchDetectionResp2L2, 0 ;
+  } 
+  FSP3_Frame_L2: 4, FSP3_L2, 2 {
+    FSP3DiagInfoL2, 0 ;
+    SwitchDetectionNeeded3L2, 6 ;
+    FSP3ResponseErrorL2, 7 ;
+    FSP3SwitchStatusL2, 8 ;
+  } 
+  FSP3_SwitchDetResp_L2: 50, FSP3_L2, 8 {
+    SwitchDetectionResp3L2, 0 ;
+  } 
+  FSP4_Frame_L2: 5, FSP4_L2, 2 {
+    FSP4DiagInfoL2, 0 ;
+    SwitchDetectionNeeded4L2, 6 ;
+    FSP4ResponseErrorL2, 7 ;
+    FSP4SwitchStatusL2, 8 ;
+  } 
+  FSP4_SwitchDetResp_L2: 51, FSP4_L2, 8 {
+    SwitchDetectionResp4L2, 0 ;
+  } 
+  FSP_1_2_Req_L2: 53, CIOM, 4 {
+    FSP1IndicationCmdL2, 0 ;
+    FSP2IndicationCmdL2, 16 ;
+  } 
+  FSP_3_4_Req_L2: 54, CIOM, 4 {
+    FSP3IndicationCmdL2, 0 ;
+    FSP4IndicationCmdL2, 16 ;
+  } 
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  FSP1_L2{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x2 ;
+    product_id = 0x5b, 0x1, 0 ;
+    response_error = FSP1ResponseErrorL2 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      FSP1_Frame_L2 = 0x2 ;
+      FSP1_SwitchDetResp_L2 = 0x30 ;
+      Backlight_FuncInd_L2 = 0x34 ;
+      FSP_1_2_Req_L2 = 0x35 ;
+    }
+  } 
+  FSP2_L2{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x3 ;
+    product_id = 0x5b, 0x1, 0 ;
+    response_error = FSP2ResponseErrorL2 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      FSP2_Frame_L2 = 0x3 ;
+      FSP2_SwitchDetResp_L2 = 0x31 ;
+      Backlight_FuncInd_L2 = 0x34 ;
+      FSP_1_2_Req_L2 = 0x35 ;
+    }
+  } 
+  FSP3_L2{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x4 ;
+    product_id = 0x5b, 0x1, 0 ;
+    response_error = FSP3ResponseErrorL2 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      FSP3_Frame_L2 = 0x4 ;
+      FSP3_SwitchDetResp_L2 = 0x32 ;
+      Backlight_FuncInd_L2 = 0x34 ;
+      FSP_3_4_Req_L2 = 0x36 ;
+    }
+  } 
+  FSP4_L2{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x5 ;
+    product_id = 0x5b, 0x1, 0 ;
+    response_error = FSP4ResponseErrorL2 ;
+    P2_min = 0 ms ;
+    ST_min = 0 ms ;
+    configurable_frames {
+      FSP4_Frame_L2 = 0x5 ;
+      FSP4_SwitchDetResp_L2 = 0x33 ;
+      Backlight_FuncInd_L2 = 0x34 ;
+      FSP_3_4_Req_L2 = 0x36 ;
+    }
+  } 
+}
+
+Schedule_tables {
+ Table0 {
+    Backlight_FuncInd_L2 delay 10 ms ;
+    FSP_1_2_Req_L2 delay 15 ms ;
+    FSP_3_4_Req_L2 delay 15 ms ;
+    FSP1_Frame_L2 delay 10 ms ;
+    FSP2_Frame_L2 delay 10 ms ;
+    FSP3_Frame_L2 delay 10 ms ;
+    FSP4_Frame_L2 delay 10 ms ;
+  }
+ Table_e {
+    FSP1_SwitchDetResp_L2 delay 20 ms ;
+    FSP2_SwitchDetResp_L2 delay 20 ms ;
+    FSP3_SwitchDetResp_L2 delay 20 ms ;
+    FSP4_SwitchDetResp_L2 delay 20 ms ;
+  }
+ MasterReq_SlaveResp_Table0 {
+    MasterReq delay 20 ms ;
+    SlaveResp delay 20 ms ;
+    Backlight_FuncInd_L2 delay 10 ms ;
+    FSP_1_2_Req_L2 delay 15 ms ;
+    FSP_3_4_Req_L2 delay 15 ms ;
+    FSP1_Frame_L2 delay 10 ms ;
+    FSP2_Frame_L2 delay 10 ms ;
+    FSP3_Frame_L2 delay 10 ms ;
+    FSP4_Frame_L2 delay 10 ms ;
+  }
+ MasterReq_SlaveResp {
+    MasterReq delay 20 ms ;
+    SlaveResp delay 20 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  BacklightCmd {
+    logical_value, 0, "BacklightCmd_BacklightOff" ;
+    logical_value, 1, "BacklightCmd_BacklightLevel1" ;
+    logical_value, 2, "BacklightCmd_BacklightLevel2" ;
+    logical_value, 3, "BacklightCmd_BacklightLevel3" ;
+    logical_value, 4, "BacklightCmd_BacklightLevel4" ;
+    logical_value, 5, "BacklightCmd_BacklightLevel5" ;
+    logical_value, 6, "BacklightCmd_BacklightLevel6" ;
+    logical_value, 7, "BacklightCmd_BacklightLevel7" ;
+    logical_value, 8, "BacklightCmd_BacklightLevel8" ;
+    logical_value, 9, "BacklightCmd_BacklightLevel9" ;
+    logical_value, 10, "BacklightCmd_BacklightLevel10" ;
+    logical_value, 11, "BacklightCmd_BacklightLevel11" ;
+    logical_value, 12, "BacklightCmd_BacklightLevel12" ;
+    logical_value, 13, "BacklightCmd_BacklightLevel13" ;
+    logical_value, 14, "BacklightCmd_BacklightLevel14" ;
+    logical_value, 15, "BacklightCmd_BacklightLevel15" ;
+    logical_value, 16, "BacklightCmd_BacklightLevel16" ;
+    logical_value, 30, "BacklightCmd_Error" ;
+    logical_value, 31, "BacklightCmd_NotAvailable" ;
+  } 
+  FSP1DiagInfoL2 {
+    physical_value, 0, 63, 1, 0, "NotApplicable" ;
+  } 
+  FSP1IndicationCmdL2 {
+    physical_value, 0, 65535, 1, 0, "NotApplicable" ;
+  } 
+  FSP1SwitchStatusL2 {
+    physical_value, 0, 255, 1, 0, "NotApplicable" ;
+  } 
+  FSP2DiagInfoL2 {
+    physical_value, 0, 63, 1, 0, "NotApplicable" ;
+  } 
+  FSP2IndicationCmdL2 {
+    physical_value, 0, 65535, 1, 0, "NotApplicable" ;
+  } 
+  FSP2SwitchStatusL2 {
+    physical_value, 0, 255, 1, 0, "NotApplicable" ;
+  } 
+  FSP3DiagInfoL2 {
+    physical_value, 0, 63, 1, 0, "NotApplicable" ;
+  } 
+  FSP3IndicationCmdL2 {
+    physical_value, 0, 65535, 1, 0, "NotApplicable" ;
+  } 
+  FSP3SwitchStatusL2 {
+    physical_value, 0, 255, 1, 0, "NotApplicable" ;
+  } 
+  FSP4DiagInfoL2 {
+    physical_value, 0, 63, 1, 0, "NotApplicable" ;
+  } 
+  FSP4IndicationCmdL2 {
+    physical_value, 0, 65535, 1, 0, "NotApplicable" ;
+  } 
+  FSP4SwitchStatusL2 {
+    physical_value, 0, 255, 1, 0, "NotApplicable" ;
+  } 
+  FuncIndIlluminationLevel {
+    logical_value, 0, "FuncIndIlluminationLevel_IlluminationOff" ;
+    logical_value, 1, "FuncIndIlluminationLevel_IlluminationLevel1" ;
+    logical_value, 2, "FuncIndIlluminationLevel_IlluminationLevel2" ;
+    logical_value, 3, "FuncIndIlluminationLevel_IlluminationLevel3" ;
+    logical_value, 4, "FuncIndIlluminationLevel_IlluminationLevel4" ;
+    logical_value, 5, "FuncIndIlluminationLevel_Spare" ;
+    logical_value, 6, "FuncIndIlluminationLevel_Error" ;
+    logical_value, 7, "FuncIndIlluminationLevel_NotAvailable" ;
+  } 
+  ResponseError_T {
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  } 
+}
+
+Signal_representation {
+  BacklightCmd: BacklightCmd_ISig_14 ;
+  FSP1DiagInfoL2: FSP1DiagInfoL2 ;
+  FSP1IndicationCmdL2: FSP1IndicationCmdL2 ;
+  FSP1SwitchStatusL2: FSP1SwitchStatusL2 ;
+  FSP2DiagInfoL2: FSP2DiagInfoL2 ;
+  FSP2IndicationCmdL2: FSP2IndicationCmdL2 ;
+  FSP2SwitchStatusL2: FSP2SwitchStatusL2 ;
+  FSP3DiagInfoL2: FSP3DiagInfoL2 ;
+  FSP3IndicationCmdL2: FSP3IndicationCmdL2 ;
+  FSP3SwitchStatusL2: FSP3SwitchStatusL2 ;
+  FSP4DiagInfoL2: FSP4DiagInfoL2 ;
+  FSP4IndicationCmdL2: FSP4IndicationCmdL2 ;
+  FSP4SwitchStatusL2: FSP4SwitchStatusL2 ;
+  FuncIndIlluminationLevel: FuncIndIlluminationLevel_ISig_14 ;
+  ResponseError_T: FSP1ResponseErrorL2, FSP2ResponseErrorL2, FSP3ResponseErrorL2, FSP4ResponseErrorL2 ;
+}
+

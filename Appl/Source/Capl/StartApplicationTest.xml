@@ -1,0 +1,1329 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<testmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.vector-informatik.de/CANoe/TestModule/1.8" xsi:schemaLocation="http://www.vector-informatik.de/CANoe/TestModule/1.8 testmodule.xsd" title="StartApplication" version="1.0">
+    <miscinfo title="Please note">
+        <info>
+            <description>EXAMPLE CODE ONLY
+
+                This Example Code is only intended for illustrating an example of a possible BSW integration and BSW
+                configuration. The Example Code has not passed any quality control measures and may be incomplete. The
+                Example Code is neither intended nor qualified for use in series production. The Example Code as well
+                as any of its modifications and/or implementations must be tested with diligent care and must comply
+                with all quality requirements which are necessary according to the state of the art before their use.
+            </description>
+        </info>
+    </miscinfo>
+    <templates>
+        <!-- ************************************************************************* -->
+        <!-- ***                    COM Use Case Templates                         *** -->
+        <!-- ************************************************************************* -->
+        <testcasetemplate name="DataTransmission template" version="2.0">
+            <paramdef name="parDescription" />
+            <paramdef name="parComSignalPairSelector" />
+            <paramdef name="parCANoeVersion" default="80200" />
+            <description>$parDescription$</description>
+            <preparation>
+                <set title="Clear error log">
+                    <sysvar name="StartApplication::ErrorLog"></sysvar>
+                </set>
+                <statechange title="Activate COM Tx Only Use Case" wait="1200">
+                    <in>
+                        <sysvar name="StartApplication::UseCaseActivator">3</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::UseCaseActivator">3</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Verify that the current CANoe version is suitable for the Start Application" timeout="10" joincondition="all">
+                    <sysvar name="StartApplication::CANoeVersionInfo">
+                        <ge>$parCANoeVersion$</ge>
+                    </sysvar>
+                </awaitvaluematch>
+                <set title="Initialize variables">
+                    <sysvar name="StartApplication::ComSignalPairSelector">$parComSignalPairSelector$</sysvar>
+                    <sysvar name="StartApplication::ComSendCtrl">2</sysvar>
+                </set>
+                <set title="Initialize ComInput">
+                    <sysvar name="StartApplication::ComInput">0</sysvar>
+                </set>
+                <awaitvaluematch title="Wait for rx data processing on ECU side." timeout="10000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="ComCmpOutputs">
+                        <eq>0</eq>
+                    </sysvar>
+                    <sysvar namespace="StartApplication" name="ComActualOutput">
+                        <eq>0</eq>
+                    </sysvar>
+                    <sysvar namespace="StartApplication" name="ComExpectedOutput">
+                        <eq>0</eq>
+                    </sysvar>
+                </awaitvaluematch>
+            </preparation>
+            <set title="Set sensor value to 254, this will be scaled to the maximum value of the Rx signal">
+                <sysvar namespace="StartApplication" name="ComInput">254</sysvar>
+            </set>
+            <awaitvaluematch title="Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet." timeout="10000" joincondition="all">
+                <sysvar namespace="StartApplication" name="ComCmpOutputs">
+                    <ne>0</ne>
+                </sysvar>
+            </awaitvaluematch>
+            <awaitvaluematch title="Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal" timeout="10000" joincondition="all">
+                <sysvar namespace="StartApplication" name="ComCmpOutputs">
+                    <eq>0</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <set title="Set sensor value to 128, this will be scaled to the median value of the Rx signal">
+                <sysvar namespace="StartApplication" name="ComInput">128</sysvar>
+            </set>
+            <awaitvaluematch title="Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet." timeout="10000" joincondition="all">
+                <sysvar namespace="StartApplication" name="ComCmpOutputs">
+                    <ne>0</ne>
+                </sysvar>
+            </awaitvaluematch>
+            <awaitvaluematch title="Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal" timeout="10000" joincondition="all">
+                <sysvar namespace="StartApplication" name="ComCmpOutputs">
+                    <eq>0</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <set title="Set sensor value to 0, this will be scaled to the minimum value of the Rx signal">
+                <sysvar namespace="StartApplication" name="ComInput">0</sysvar>
+            </set>
+            <awaitvaluematch title="Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet." timeout="10000" joincondition="all">
+                <sysvar namespace="StartApplication" name="ComCmpOutputs">
+                    <ne>0</ne>
+                </sysvar>
+            </awaitvaluematch>
+            <awaitvaluematch title="Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal" timeout="10000" joincondition="all">
+                <sysvar namespace="StartApplication" name="ComCmpOutputs">
+                    <eq>0</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <completion>
+                <set title="Switch back to Com Rx/Tx use case">
+                    <sysvar name="StartApplication::UseCaseActivator">0</sysvar>
+                </set>
+                <valuecomment>
+                    <description></description>
+                    <sysvar name="StartApplication::ErrorLog"/>
+                </valuecomment>
+            </completion>
+        </testcasetemplate>
+
+        <testcasetemplate name="DataReception template" version="2.0">
+            <paramdef name="parDescription" />
+            <paramdef name="parComSignalPairSelector" />
+            <paramdef name="parCANoeVersion" default="80200" />
+            <description>$parDescription$</description>
+            <preparation>
+                <set title="Clear error log">
+                    <sysvar name="StartApplication::ErrorLog"></sysvar>
+                </set>
+                <statechange title="Activate COM Use Case" wait="1200">
+                    <in>
+                        <sysvar name="StartApplication::UseCaseActivator">0</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::UseCaseActivator">0</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Verify that the current CANoe version is suitable for the Start Application" timeout="10" joincondition="all">
+                    <sysvar name="StartApplication::CANoeVersionInfo">
+                        <ge>$parCANoeVersion$</ge>
+                    </sysvar>
+                </awaitvaluematch>
+                <set title="Initialize variables">
+                    <sysvar name="StartApplication::ComSignalPairSelector">$parComSignalPairSelector$</sysvar>
+                    <sysvar name="StartApplication::ComSendCtrl">2</sysvar>
+                </set>
+                <set title="Initialize ComInput">
+                    <sysvar name="StartApplication::ComInput">0</sysvar>
+                </set>
+                <awaitvaluematch title="Wait for rx data processing on ECU side." timeout="10000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="ComCmpOutputs">
+                        <eq>0</eq>
+                    </sysvar>
+                    <sysvar namespace="StartApplication" name="ComActualOutput">
+                        <eq>0</eq>
+                    </sysvar>
+                    <sysvar namespace="StartApplication" name="ComExpectedOutput">
+                        <eq>0</eq>
+                    </sysvar>
+                </awaitvaluematch>
+            </preparation>
+            <set title="Set sensor value to 254, this will be scaled to the maximum value of the Rx signal">
+                <sysvar namespace="StartApplication" name="ComInput">254</sysvar>
+            </set>
+            <awaitvaluematch title="Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet." timeout="10000" joincondition="all">
+                <sysvar namespace="StartApplication" name="ComCmpOutputs">
+                    <ne>0</ne>
+                </sysvar>
+            </awaitvaluematch>
+            <awaitvaluematch title="Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal" timeout="10000" joincondition="all">
+                <sysvar namespace="StartApplication" name="ComCmpOutputs">
+                    <eq>0</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <set title="Set sensor value to 128, this will be scaled to the median value of the Rx signal">
+                <sysvar namespace="StartApplication" name="ComInput">128</sysvar>
+            </set>
+            <awaitvaluematch title="Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet." timeout="10000" joincondition="all">
+                <sysvar namespace="StartApplication" name="ComCmpOutputs">
+                    <ne>0</ne>
+                </sysvar>
+            </awaitvaluematch>
+            <awaitvaluematch title="Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal" timeout="10000" joincondition="all">
+                <sysvar namespace="StartApplication" name="ComCmpOutputs">
+                    <eq>0</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <set title="Set sensor value to 0, this will be scaled to the minimum value of the Rx signal">
+                <sysvar namespace="StartApplication" name="ComInput">0</sysvar>
+            </set>
+            <awaitvaluematch title="Wait until there is a difference between actual and expected output because the Rx signal has been transmitted on the bus but the ECU has not updated the Tx signal yet." timeout="10000" joincondition="all">
+                <sysvar namespace="StartApplication" name="ComCmpOutputs">
+                    <ne>0</ne>
+                </sysvar>
+            </awaitvaluematch>
+            <awaitvaluematch title="Wait until there is no difference between actual and expected output because the ECU has updated the Tx signal" timeout="10000" joincondition="all">
+                <sysvar namespace="StartApplication" name="ComCmpOutputs">
+                    <eq>0</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <completion>
+                <valuecomment>
+                    <description></description>
+                    <sysvar name="StartApplication::ErrorLog"/>
+                </valuecomment>
+            </completion>
+        </testcasetemplate>
+        <!-- ************************************************************************* -->
+        <!-- ***                    DIAG Use Case Templates                        *** -->
+        <!-- ************************************************************************* -->
+        <testcasetemplate name="BasicRequestResponseViaUDS template" version="2.0">
+            <paramdef name="parDescription" />
+            <paramdef name="parDiagChannel" />
+            <paramdef name="parCANoeVersion" default="80200" />
+            <description>$parDescription$</description>
+            <preparation>
+                <set title="Clear error log">
+                    <sysvar name="StartApplication::ErrorLog"></sysvar>
+                </set>
+                <statechange title="Activate DIAG Use Case" wait="1200">
+                    <in>
+                        <sysvar name="StartApplication::UseCaseActivator">2</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::UseCaseActivator">2</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Verify that the current CANoe version is suitable for the Start Application" timeout="10" joincondition="all">
+                    <sysvar name="StartApplication::CANoeVersionInfo">
+                        <ge>$parCANoeVersion$</ge>
+                    </sysvar>
+                </awaitvaluematch>
+                <set title="Initialize variables">
+                    <sysvar name="StartApplication::DiagChannel">$parDiagChannel$</sysvar>
+                    <sysvar name="StartApplication::DiagActivateDefaultSession">0</sysvar>
+                </set>
+                <wait title="Wait to allow System Variables to change" time="10"/>
+                <awaitvaluematch title="Wait until there is no diagnostic request active and no further requests are queued." timeout="30000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="DiagRequestState">
+                        <eq>0</eq>
+                    </sysvar>
+                </awaitvaluematch>
+                <statechange title="Reset response code" wait="10">
+                    <in>
+                        <sysvar name="StartApplication::DiagResponseCode">0</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::DiagResponseCode">0</sysvar>
+                    </expected>
+                </statechange>
+            </preparation>
+            <statechange title="Try to activate default session via DSC" wait="1000">
+                <in>
+                    <sysvar name="StartApplication::DiagActivateDefaultSession">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagActivateDefaultSession">1</sysvar>
+                </expected>
+            </statechange>
+            <awaitvaluematch title="Verify that a response can be received: either positive response (0x50) or negative response (0x7F)" timeout="5000" joincondition="any">
+                <sysvar name="StartApplication::DiagResponseCode">
+                    <eq>0x50</eq>
+                </sysvar>
+                <sysvar name="StartApplication::DiagResponseCode">
+                    <eq>0x7F</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <completion>
+                <valuecomment>
+                    <description></description>
+                    <sysvar name="StartApplication::ErrorLog"/>
+                </valuecomment>
+            </completion>
+        </testcasetemplate>
+
+        <testcasetemplate name="ReadDiagnosticDataViaUDS template" version="2.0">
+            <paramdef name="parDescription" />
+            <paramdef name="parDiagChannel" />
+            <paramdef name="parCANoeVersion" default="80200" />
+            <description>$parDescription$</description>
+            <preparation>
+                <set title="Clear error log">
+                    <sysvar name="StartApplication::ErrorLog"></sysvar>
+                </set>
+                <statechange title="Activate DIAG Use Case" wait="1200">
+                    <in>
+                        <sysvar name="StartApplication::UseCaseActivator">2</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::UseCaseActivator">2</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Verify that the current CANoe version is suitable for the Start Application" timeout="10" joincondition="all">
+                    <sysvar name="StartApplication::CANoeVersionInfo">
+                        <ge>$parCANoeVersion$</ge>
+                    </sysvar>
+                </awaitvaluematch>
+                <set title="Initialize variables">
+                    <sysvar name="StartApplication::DiagChannel">$parDiagChannel$</sysvar>
+                    <sysvar name="StartApplication::DiagSetEventStatusPassed">0</sysvar>
+                    <sysvar name="StartApplication::DiagGetCounter">0</sysvar>
+                    <sysvar name="StartApplication::DiagResetCounterWithRxData">0</sysvar>
+                    <sysvar name="StartApplication::DiagCounterValue">0</sysvar>
+                </set>
+                <wait title="Wait to allow System Variables to change" time="10"/>
+                <awaitvaluematch title="Wait until there is no diagnostic request active and no further requests are queued." timeout="30000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="DiagRequestState">
+                        <eq>0</eq>
+                    </sysvar>
+                </awaitvaluematch>
+                <statechange title="Reset response code" wait="10">
+                    <in>
+                        <sysvar name="StartApplication::DiagResponseCode">0</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::DiagResponseCode">0</sysvar>
+                    </expected>
+                </statechange>
+            </preparation>
+            <statechange title="Initialize: Reset DID value to 0 via RxData" wait="100" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagResetCounterWithRxData">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagResetCounterWithRxData">1</sysvar>
+                </expected>
+            </statechange>
+            <wait title="Wait to allow for transmission of control signals" time="1200"/>
+            <statechange title="Get DID value via RDBI and verify that it was reset to 0x0000" wait="1000" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagGetCounter">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagCounterValue">0x0000</sysvar>
+                    <sysvar name="StartApplication::DiagResponseCode">0x62</sysvar>
+                </expected>
+            </statechange>
+            <statechange title="Set event status to passed to increment the DID value by 1" wait="100" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagSetEventStatusPassed">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagSetEventStatusPassed">1</sysvar>
+                </expected>
+            </statechange>
+            <statechange title="Get DID value via RDBI and verify that it was set to 0x0001" wait="1000" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagGetCounter">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagCounterValue">0x0001</sysvar>
+                    <sysvar name="StartApplication::DiagResponseCode">0x62</sysvar>
+                </expected>
+            </statechange>
+            <completion>
+                <valuecomment>
+                    <description></description>
+                    <sysvar name="StartApplication::ErrorLog"/>
+                </valuecomment>
+            </completion>
+        </testcasetemplate>
+
+        <testcasetemplate name="WriteDiagnosticDataViaUDS template" version="2.0">
+            <paramdef name="parDescription" />
+            <paramdef name="parDiagChannel" />
+            <paramdef name="parCANoeVersion" default="80200" />
+            <description>$parDescription$</description>
+            <preparation>
+                <set title="Clear error log">
+                    <sysvar name="StartApplication::ErrorLog"></sysvar>
+                </set>
+                <statechange title="Activate DIAG Use Case" wait="1200">
+                    <in>
+                        <sysvar name="StartApplication::UseCaseActivator">2</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::UseCaseActivator">2</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Verify that the current CANoe version is suitable for the Start Application" timeout="10" joincondition="all">
+                    <sysvar name="StartApplication::CANoeVersionInfo">
+                        <ge>$parCANoeVersion$</ge>
+                    </sysvar>
+                </awaitvaluematch>
+                <set title="Initialize variables">
+                    <sysvar name="StartApplication::DiagRequestState">0</sysvar>
+                    <sysvar name="StartApplication::DiagChannel">$parDiagChannel$</sysvar>
+                    <sysvar name="StartApplication::DiagSetCounter">0</sysvar>
+                    <sysvar name="StartApplication::DiagCounterValueFromTxData">0</sysvar>
+                    <sysvar name="StartApplication::DiagResetCounterWithRxData">0</sysvar>
+                </set>
+                <wait title="Wait to allow System Variables to change" time="10"/>
+                <awaitvaluematch title="Wait until there is no diagnostic request active and no further requests are queued." timeout="30000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="DiagRequestState">
+                        <eq>0</eq>
+                    </sysvar>
+                </awaitvaluematch>
+                <statechange title="Reset response code" wait="10">
+                    <in>
+                        <sysvar name="StartApplication::DiagResponseCode">0</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::DiagResponseCode">0</sysvar>
+                    </expected>
+                </statechange>
+            </preparation>
+            <statechange title="Initialize: Reset DID value to 0 via RxData" wait="100" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagResetCounterWithRxData">0</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagResetCounterWithRxData">0</sysvar>
+                </expected>
+            </statechange>
+            <wait title="Wait to allow for transmission of control signals" time="1200"/>
+            <awaitvaluematch title="Get DID value via TxData and verify that it was reset to 0x0000" timeout="10000" joincondition="all">
+                <sysvar name="StartApplication::DiagCounterValueFromTxData">
+                    <eq>0</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <statechange title="Set DID value to 0x0005 via WDBI" wait="1000">
+                <in>
+                    <sysvar name="StartApplication::DiagSetCounter">0x0005</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagResponseCode">0x6E</sysvar>
+                </expected>
+            </statechange>
+            <awaitvaluematch title="Get DID value via TxData and verify that it was set to 0x0005" timeout="10000" joincondition="all">
+                <sysvar name="StartApplication::DiagCounterValueFromTxData">
+                    <eq>5</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <completion>
+                <valuecomment>
+                    <description></description>
+                    <sysvar name="StartApplication::ErrorLog"/>
+                </valuecomment>
+            </completion>
+        </testcasetemplate>
+
+        <testcasetemplate name="DiagnosticEventHandlingWithFreezeFrameAndWithoutDebouncing template" version="2.0">
+            <paramdef name="parDescription" />
+            <paramdef name="parDiagChannel" />
+            <paramdef name="parCANoeVersion" default="80200" />
+            <description>$parDescription$</description>
+            <preparation>
+                <set title="Clear error log">
+                    <sysvar name="StartApplication::ErrorLog"></sysvar>
+                </set>
+                <statechange title="Activate DIAG Use Case" wait="1200">
+                    <in>
+                        <sysvar name="StartApplication::UseCaseActivator">2</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::UseCaseActivator">2</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Verify that the current CANoe version is suitable for the Start Application" timeout="10" joincondition="all">
+                    <sysvar name="StartApplication::CANoeVersionInfo">
+                        <ge>$parCANoeVersion$</ge>
+                    </sysvar>
+                </awaitvaluematch>
+                <set title="Initialize variables">
+                    <sysvar name="StartApplication::DiagChannel">$parDiagChannel$</sysvar>
+                    <sysvar name="StartApplication::DiagSetEventStatusPassed">0</sysvar>
+                    <sysvar name="StartApplication::DiagGetCounter">0</sysvar>
+                    <sysvar name="StartApplication::DiagGetDTCSnapshot">0</sysvar>
+                    <sysvar name="StartApplication::DiagResetCounterWithRxData">0</sysvar>
+                    <sysvar name="StartApplication::DiagClearDTC">0</sysvar>
+                    <sysvar name="StartApplication::DiagCounterValue">0</sysvar>
+                    <sysvar name="StartApplication::DiagSnapshotDataValue">0</sysvar>
+                </set>
+                <wait title="Wait to allow System Variables to change" time="10"/>
+                <awaitvaluematch title="Wait until there is no diagnostic request active and no further requests are queued." timeout="30000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="DiagRequestState">
+                        <eq>0</eq>
+                    </sysvar>
+                </awaitvaluematch>
+                <statechange title="Reset response code" wait="10">
+                    <in>
+                        <sysvar name="StartApplication::DiagResponseCode">0</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::DiagResponseCode">0</sysvar>
+                    </expected>
+                </statechange>
+            </preparation>
+            <statechange title="Initialize: Reset event counter to 0 via RxData" wait="100" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagResetCounterWithRxData">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagResetCounterWithRxData">1</sysvar>
+                </expected>
+            </statechange>
+            <wait title="Wait to allow for transmission of control signals" time="1200"/>
+            <statechange title="Initialize: Clear DTC" wait="1000" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagClearDTC">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagResponseCode">0x54</sysvar>
+                </expected>
+            </statechange>
+            <statechange title="Get DTC snapshot and verify that no snapshot record is returned (i.e. -1)" wait="1000" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagGetDTCSnapshot">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagSnapshotDataValue">-1</sysvar>
+                    <sysvar name="StartApplication::DiagResponseCode">0x59</sysvar>
+                </expected>
+            </statechange>
+            <statechange title="Set event status to passed" wait="100" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagSetEventStatusPassed">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagSetEventStatusPassed">1</sysvar>
+                </expected>
+            </statechange>
+            <statechange title="Get DTC snapshot and verify that still no snapshot record is returned (i.e. -1)" wait="1000" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagGetDTCSnapshot">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagSnapshotDataValue">-1</sysvar>
+                    <sysvar name="StartApplication::DiagResponseCode">0x59</sysvar>
+                </expected>
+            </statechange>
+            <statechange title="Set event status to failed" wait="100" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagSetEventStatusFailed">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagSetEventStatusFailed">1</sysvar>
+                </expected>
+            </statechange>
+            <statechange title="Get DTC snapshot and verify that a snapshot record with the value 2 is returned" wait="1000" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagGetDTCSnapshot">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagSnapshotDataValue">2</sysvar>
+                    <sysvar name="StartApplication::DiagResponseCode">0x59</sysvar>
+                </expected>
+            </statechange>
+            <statechange title="Set event status to passed" wait="100" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagSetEventStatusPassed">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagSetEventStatusPassed">1</sysvar>
+                </expected>
+            </statechange>
+            <statechange title="Get DTC snapshot and verify that still a snapshot record with the value 2 is returned" wait="1000" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagGetDTCSnapshot">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagSnapshotDataValue">2</sysvar>
+                    <sysvar name="StartApplication::DiagResponseCode">0x59</sysvar>
+                </expected>
+            </statechange>
+            <statechange title="Set event status to failed" wait="100" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagSetEventStatusFailed">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagSetEventStatusFailed">1</sysvar>
+                </expected>
+            </statechange>
+            <statechange title="Get DTC snapshot and verify that still a snapshot record with the value 2 is returned" wait="1000" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagGetDTCSnapshot">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagSnapshotDataValue">2</sysvar>
+                    <sysvar name="StartApplication::DiagResponseCode">0x59</sysvar>
+                </expected>
+            </statechange>
+            <statechange title="Clear DTC" wait="1000" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagClearDTC">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagResponseCode">0x54</sysvar>
+                </expected>
+            </statechange>
+            <statechange title="Get DTC snapshot and verify that no snapshot record is returned (i.e. -1)" wait="1000" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagGetDTCSnapshot">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagSnapshotDataValue">-1</sysvar>
+                    <sysvar name="StartApplication::DiagResponseCode">0x59</sysvar>
+                </expected>
+            </statechange>
+            <statechange title="Set event status to failed" wait="100" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagSetEventStatusFailed">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagSetEventStatusFailed">1</sysvar>
+                </expected>
+            </statechange>
+            <statechange title="Get DTC snapshot and verify that a snapshot record with the value 5 is returned" wait="1000" resettime="100">
+                <in>
+                    <sysvar name="StartApplication::DiagGetDTCSnapshot">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::DiagSnapshotDataValue">5</sysvar>
+                    <sysvar name="StartApplication::DiagResponseCode">0x59</sysvar>
+                </expected>
+            </statechange>
+            <completion>
+                <valuecomment>
+                    <description></description>
+                    <sysvar name="StartApplication::ErrorLog"/>
+                </valuecomment>
+            </completion>
+        </testcasetemplate>
+        <!-- ************************************************************************* -->
+        <!-- ***                    NM Use Case Templates                          *** -->
+        <!-- ************************************************************************* -->
+        <testcasetemplate name="InternalWakeupAutosarNm template" version="2.0">
+            <paramdef name="parDescription" />
+            <paramdef name="parNmCurrentChannel" />
+            <paramdef name="parNmNoComTimeout" />
+            <paramdef name="parCANoeVersion" default="80200" />
+            <description>$parDescription$</description>
+            <preparation>
+                <set title="Clear error log">
+                    <sysvar name="StartApplication::ErrorLog"></sysvar>
+                </set>
+                <statechange title="Activate NM Use Case" wait="1200">
+                    <in>
+                        <sysvar name="StartApplication::UseCaseActivator">10</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::UseCaseActivator">10</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Verify that the current CANoe version is suitable for the Start Application" timeout="10" joincondition="all">
+                    <sysvar name="StartApplication::CANoeVersionInfo">
+                        <ge>$parCANoeVersion$</ge>
+                    </sysvar>
+                </awaitvaluematch>
+                <statechange title="Initialize variables" wait="100">
+                    <in>
+                        <sysvar name="StartApplication::NmCurrentChannel">$parNmCurrentChannel$</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::NmCurrentChannel">$parNmCurrentChannel$</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Verify that the channel is in FullCom mode" timeout="1000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="NmTesterComMode">
+                        <eq>1</eq>
+                    </sysvar>
+                </awaitvaluematch>
+            </preparation>
+            <statechange title="Request NoCom for Tester and ECU" wait="100">
+                <in>
+                    <sysvar name="StartApplication::NmTesterNetworkRequest">0</sysvar>
+                    <sysvar name="StartApplication::NmEcuNetworkRequest">0</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::NmTesterNetworkRequest">0</sysvar>
+                    <sysvar name="StartApplication::NmEcuNetworkRequest">0</sysvar>
+                </expected>
+            </statechange>
+            <awaitvaluematch title="Wait for transition into bus sleep mode" timeout="$parNmNoComTimeout$" joincondition="all">
+                <sysvar name="StartApplication::NmTesterComMode">
+                    <eq>2</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <statechange title="Reset ECU NM message counter" wait="100">
+                <in>
+                    <sysvar name="StartApplication::NmNmMsgCounterEcu">0</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::NmNmMsgCounterEcu">0</sysvar>
+                </expected>
+            </statechange>
+            <awaitvaluematch title="Verify that the test application request FullCom for all ComM users" timeout="120000" joincondition="all">
+                <sysvar namespace="StartApplication" name="NmEcuTimerNetworkRequestState">
+                    <eq>1</eq>
+                </sysvar>
+                <sysvar namespace="StartApplication" name="NmTesterComMode">
+                    <eq>1</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <awaitvaluematch title="Check appearance of NM messages from ECU" timeout="$parNmNoComTimeout$" joincondition="all">
+                <sysvar name="StartApplication::NmNmMsgCounterEcu">
+                    <gt>0</gt>
+                </sysvar>
+            </awaitvaluematch>
+            <completion>
+                <statechange title="Request FullCom for Tester and ECU" wait="100">
+                    <in>
+                        <sysvar name="StartApplication::NmTesterNetworkRequest">1</sysvar>
+                        <sysvar name="StartApplication::NmEcuNetworkRequest">1</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::NmTesterNetworkRequest">1</sysvar>
+                        <sysvar name="StartApplication::NmEcuNetworkRequest">1</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Wait up to 10s for FullCom on channel" timeout="10000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="NmTesterComMode">
+                        <eq>1</eq>
+                    </sysvar>
+                    <sysvar namespace="StartApplication" name="NmEcuUserNetworkRequestState">
+                        <eq>1</eq>
+                    </sysvar>
+                </awaitvaluematch>
+                <valuecomment>
+                    <description></description>
+                    <sysvar name="StartApplication::ErrorLog"/>
+                </valuecomment>
+            </completion>
+        </testcasetemplate>
+
+        <testcasetemplate name="ExternalWakeupAutosarNm template" version="2.0">
+            <paramdef name="parDescription" />
+            <paramdef name="parNmCurrentChannel" />
+            <paramdef name="parNmNoComTimeout" />
+            <paramdef name="parCANoeVersion" default="80200" />
+            <description>$parDescription$</description>
+            <preparation>
+                <set title="Clear error log">
+                    <sysvar name="StartApplication::ErrorLog"></sysvar>
+                </set>
+                <statechange title="Activate NM Use Case" wait="1200">
+                    <in>
+                        <sysvar name="StartApplication::UseCaseActivator">10</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::UseCaseActivator">10</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Verify that the current CANoe version is suitable for the Start Application" timeout="10" joincondition="all">
+                    <sysvar name="StartApplication::CANoeVersionInfo">
+                        <ge>$parCANoeVersion$</ge>
+                    </sysvar>
+                </awaitvaluematch>
+                <statechange title="Initialize variables" wait="100">
+                    <in>
+                        <sysvar name="StartApplication::NmCurrentChannel">$parNmCurrentChannel$</sysvar>
+                        <sysvar name="StartApplication::NmEcuTimerNetworkRequestCounter">0</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::NmCurrentChannel">$parNmCurrentChannel$</sysvar>
+                        <sysvar name="StartApplication::NmEcuTimerNetworkRequestCounter">0</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Verify that the channel is in FullCom mode" timeout="1000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="NmTesterComMode">
+                        <eq>1</eq>
+                    </sysvar>
+                </awaitvaluematch>
+            </preparation>
+            <statechange title="Request NoCom for Tester and ECU" wait="100">
+                <in>
+                    <sysvar name="StartApplication::NmTesterNetworkRequest">0</sysvar>
+                    <sysvar name="StartApplication::NmEcuNetworkRequest">0</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::NmTesterNetworkRequest">0</sysvar>
+                    <sysvar name="StartApplication::NmEcuNetworkRequest">0</sysvar>
+                </expected>
+            </statechange>
+            <awaitvaluematch title="Wait for transition into bus sleep mode" timeout="$parNmNoComTimeout$" joincondition="all">
+                <sysvar namespace="StartApplication" name="NmTesterComMode">
+                    <eq>2</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <wait title="Wait before Tester request FullCom" time="1000"/>
+            <statechange title="Request FullCom from Tester" wait="100">
+                <in>
+                    <sysvar name="StartApplication::NmTesterNetworkRequest">1</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::NmTesterNetworkRequest">1</sysvar>
+                </expected>
+            </statechange>
+            <awaitvaluematch title="Verify that the channel is in FullCom mode" timeout="3000" joincondition="all">
+                <sysvar namespace="StartApplication" name="NmEcuTimerNetworkRequestState">
+                    <eq>0</eq>
+                </sysvar>
+                <sysvar namespace="StartApplication" name="NmTesterComMode">
+                    <eq>1</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <statecheck title="Evaluate appearance of ECU timer based network requests." wait="100">
+                <expected>
+                    <sysvar namespace="StartApplication" name="NmEcuTimerNetworkRequestCounter">
+                        <eq>0</eq>
+                    </sysvar>
+                </expected>
+            </statecheck>
+            <completion>
+                <statechange title="Request FullCom for Tester and ECU" wait="100">
+                    <in>
+                        <sysvar name="StartApplication::NmTesterNetworkRequest">1</sysvar>
+                        <sysvar name="StartApplication::NmEcuNetworkRequest">1</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::NmTesterNetworkRequest">1</sysvar>
+                        <sysvar name="StartApplication::NmEcuNetworkRequest">1</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Wait up to 10s for FullCom on channel" timeout="10000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="NmTesterComMode">
+                        <eq>1</eq>
+                    </sysvar>
+                    <sysvar namespace="StartApplication" name="NmEcuUserNetworkRequestState">
+                        <eq>1</eq>
+                    </sysvar>
+                </awaitvaluematch>
+                <valuecomment>
+                    <description></description>
+                    <sysvar name="StartApplication::ErrorLog"/>
+                </valuecomment>
+            </completion>
+        </testcasetemplate>
+
+        <testcasetemplate name="NmVoteReceptionAutosarNm template" version="2.0">
+            <paramdef name="parDescription" />
+            <paramdef name="parNmCurrentChannel" />
+            <paramdef name="parNmNoComTime" />
+            <paramdef name="parNmNmMsgTimeOut" />
+            <paramdef name="parCANoeVersion" default="80200" />
+            <description>$parDescription$</description>
+            <preparation>
+                <set title="Clear error log">
+                    <sysvar name="StartApplication::ErrorLog"></sysvar>
+                </set>
+                <statechange title="Activate NM Use Case" wait="1200">
+                    <in>
+                        <sysvar name="StartApplication::UseCaseActivator">10</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::UseCaseActivator">10</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Verify that the current CANoe version is suitable for the Start Application" timeout="10" joincondition="all">
+                    <sysvar name="StartApplication::CANoeVersionInfo">
+                        <ge>$parCANoeVersion$</ge>
+                    </sysvar>
+                </awaitvaluematch>
+                <statechange title="Initialize variables" wait="100">
+                    <in>
+                        <sysvar name="StartApplication::NmCurrentChannel">$parNmCurrentChannel$</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::NmCurrentChannel">$parNmCurrentChannel$</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Verify that the channel is in FullCom mode" timeout="1000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="NmTesterComMode">
+                        <eq>1</eq>
+                    </sysvar>
+                </awaitvaluematch>
+            </preparation>
+            <statechange title="Request NoCom for ECU and FullCom for Tester" wait="100">
+                <in>
+                    <sysvar name="StartApplication::NmTesterNetworkRequest">1</sysvar>
+                    <sysvar name="StartApplication::NmEcuNetworkRequest">0</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::NmTesterNetworkRequest">1</sysvar>
+                    <sysvar name="StartApplication::NmEcuNetworkRequest">0</sysvar>
+                </expected>
+            </statechange>
+            <awaitvaluematch title="Verify that ECU stops the transmission of Nm messages" timeout="60000">
+                <sysvar namespace="StartApplication" name="NmTimeSinceLastEcuNmMsg">
+                    <gt>$parNmNmMsgTimeOut$</gt>
+                </sysvar>
+            </awaitvaluematch>
+            <statechange title="Reset ECU timer/user network request counter" wait="100">
+                <in>
+                    <sysvar name="StartApplication::NmEcuTimerNetworkRequestCounter">0</sysvar>
+                    <sysvar name="StartApplication::NmEcuUserNetworkRequestCounter">0</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::NmEcuTimerNetworkRequestCounter">0</sysvar>
+                    <sysvar name="StartApplication::NmEcuUserNetworkRequestCounter">0</sysvar>
+                </expected>
+            </statechange>
+            <wait title="Wait before evaluation of ECU timer/user network request state" time="$parNmNoComTime$"/>
+            <awaitvaluematch title="Verify that the channel is in FullCom mode and the ECU did not request the network" timeout="100" joincondition="all">
+                <sysvar namespace="StartApplication" name="NmEcuTimerNetworkRequestCounter">
+                    <eq>0</eq>
+                </sysvar>
+                <sysvar namespace="StartApplication" name="NmEcuUserNetworkRequestCounter">
+                    <eq>0</eq>
+                </sysvar>
+                <sysvar namespace="StartApplication" name="NmTesterComMode">
+                    <eq>1</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <completion>
+                <statechange title="Request FullCom for Tester and ECU" wait="100">
+                    <in>
+                        <sysvar name="StartApplication::NmTesterNetworkRequest">1</sysvar>
+                        <sysvar name="StartApplication::NmEcuNetworkRequest">1</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::NmTesterNetworkRequest">1</sysvar>
+                        <sysvar name="StartApplication::NmEcuNetworkRequest">1</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Wait up to 10s for FullCom on channel" timeout="10000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="NmTesterComMode">
+                        <eq>1</eq>
+                    </sysvar>
+                    <sysvar namespace="StartApplication" name="NmEcuUserNetworkRequestState">
+                        <eq>1</eq>
+                    </sysvar>
+                </awaitvaluematch>
+                <valuecomment>
+                    <description></description>
+                    <sysvar name="StartApplication::ErrorLog"/>
+                </valuecomment>
+            </completion>
+        </testcasetemplate>
+
+        <testcasetemplate name="InternalWakeupLin template" version="2.0">
+            <paramdef name="parDescription" />
+            <paramdef name="parNmCurrentChannel" />
+            <paramdef name="parNmNoComTimeout" />
+            <description>$parDescription$</description>
+            <preparation>
+                <set title="Clear error log">
+                    <sysvar name="StartApplication::ErrorLog"></sysvar>
+                </set>
+                <statechange title="Activate NM Use Case" wait="1200">
+                    <in>
+                        <sysvar name="StartApplication::UseCaseActivator">10</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::UseCaseActivator">10</sysvar>
+                    </expected>
+                </statechange>
+                <statechange title="Initialize variables" wait="100">
+                    <in>
+                        <sysvar name="StartApplication::NmCurrentChannel">$parNmCurrentChannel$</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::NmCurrentChannel">$parNmCurrentChannel$</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Verify that the channel is in FullCom mode" timeout="1000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="NmTesterComMode">
+                        <eq>1</eq>
+                    </sysvar>
+                </awaitvaluematch>
+            </preparation>
+            <statechange title="Request NoCom for Tester" wait="100">
+                <in>
+                    <sysvar name="StartApplication::NmTesterNetworkRequest">0</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::NmTesterNetworkRequest">0</sysvar>
+                </expected>
+            </statechange>
+            <wait title="Wait before ComMode evaluation" time="500"/>
+            <awaitvaluematch title="Verify that the channel is in FullCom mode" timeout="1000" joincondition="all">
+                <sysvar namespace="StartApplication" name="NmTesterComMode">
+                    <eq>1</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <statechange title="Request NoCom for ECU" wait="100">
+                <in>
+                    <sysvar name="StartApplication::NmEcuNetworkRequest">0</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::NmEcuNetworkRequest">0</sysvar>
+                </expected>
+            </statechange>
+            <awaitvaluematch title="Wait for transition into bus sleep mode" timeout="$parNmNoComTimeout$" joincondition="all">
+                <sysvar name="StartApplication::NmTesterComMode">
+                    <eq>2</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <awaitvaluematch title="Verify that the test application request FullCom for all ComM users" timeout="120000" joincondition="all">
+                <sysvar namespace="StartApplication" name="NmEcuTimerNetworkRequestState">
+                    <eq>1</eq>
+                </sysvar>
+                <sysvar namespace="StartApplication" name="NmTesterComMode">
+                    <eq>1</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <completion>
+                <statechange title="Request FullCom ECU" wait="100">
+                    <in>
+                        <sysvar name="StartApplication::NmEcuNetworkRequest">1</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::NmEcuNetworkRequest">1</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Wait up to 10s for FullCom on channel" timeout="10000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="NmTesterComMode">
+                        <eq>1</eq>
+                    </sysvar>
+                    <sysvar namespace="StartApplication" name="NmEcuUserNetworkRequestState">
+                        <eq>1</eq>
+                    </sysvar>
+                </awaitvaluematch>
+                <valuecomment>
+                    <description></description>
+                    <sysvar name="StartApplication::ErrorLog"/>
+                </valuecomment>
+            </completion>
+        </testcasetemplate>
+
+        <!-- ********************************************* -->
+        <!--            NON Autosar NM Templates           -->
+        <!-- ********************************************* -->
+        <!-- for non-Autosar NM the Tester Switch (NW Request / NW Release) is disabled -->
+        <testcasetemplate name="InternalWakeup template" version="2.0">
+            <paramdef name="parDescription" />
+            <paramdef name="parNmCurrentChannel" />
+            <paramdef name="parNmNoComTimeout" />
+            <description>$parDescription$</description>
+            <preparation>
+                <set title="Clear error log">
+                    <sysvar name="StartApplication::ErrorLog"></sysvar>
+                </set>
+                <statechange title="Activate NM Use Case" wait="1200">
+                    <in>
+                        <sysvar name="StartApplication::UseCaseActivator">10</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::UseCaseActivator">10</sysvar>
+                    </expected>
+                </statechange>
+                <statechange title="Initialize variables" wait="100">
+                    <in>
+                        <sysvar name="StartApplication::NmCurrentChannel">$parNmCurrentChannel$</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::NmCurrentChannel">$parNmCurrentChannel$</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Verify that the channel is in FullCom mode" timeout="1000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="NmTesterComMode">
+                        <eq>1</eq>
+                    </sysvar>
+                </awaitvaluematch>
+            </preparation>
+            <statechange title="Request NoCom for ECU" wait="100">
+                <in>
+                    <sysvar name="StartApplication::NmEcuNetworkRequest">0</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::NmEcuNetworkRequest">0</sysvar>
+                </expected>
+            </statechange>
+            <awaitvaluematch title="Wait for transition into bus sleep mode" timeout="$parNmNoComTimeout$" joincondition="all">
+                <sysvar name="StartApplication::NmTesterComMode">
+                    <eq>2</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <awaitvaluematch title="Verify that the test application request FullCom for all ComM users" timeout="120000" joincondition="all">
+                <sysvar namespace="StartApplication" name="NmEcuTimerNetworkRequestState">
+                    <eq>1</eq>
+                </sysvar>
+                <sysvar namespace="StartApplication" name="NmTesterComMode">
+                    <eq>1</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <completion>
+                <statechange title="Request FullCom ECU" wait="100">
+                    <in>
+                        <sysvar name="StartApplication::NmEcuNetworkRequest">1</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::NmEcuNetworkRequest">1</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Wait up to 10s for FullCom on channel" timeout="10000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="NmTesterComMode">
+                        <eq>1</eq>
+                    </sysvar>
+                    <sysvar namespace="StartApplication" name="NmEcuUserNetworkRequestState">
+                        <eq>1</eq>
+                    </sysvar>
+                </awaitvaluematch>
+                <valuecomment>
+                    <description></description>
+                    <sysvar name="StartApplication::ErrorLog"/>
+                </valuecomment>
+            </completion>
+        </testcasetemplate>
+
+        <testcasetemplate name="InternalWakeupOsekNm template" version="2.0">
+            <paramdef name="parDescription" />
+            <paramdef name="parNmCurrentChannel" />
+            <paramdef name="parNmNoComTimeout" />
+            <description>$parDescription$</description>
+            <preparation>
+                <set title="Clear error log">
+                    <sysvar name="StartApplication::ErrorLog"></sysvar>
+                </set>
+                <statechange title="Activate NM Use Case" wait="1200">
+                    <in>
+                        <sysvar name="StartApplication::UseCaseActivator">10</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::UseCaseActivator">10</sysvar>
+                    </expected>
+                </statechange>
+                <statechange title="Initialize variables" wait="100">
+                    <in>
+                        <sysvar name="StartApplication::NmCurrentChannel">$parNmCurrentChannel$</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::NmCurrentChannel">$parNmCurrentChannel$</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Verify that the channel is in FullCom mode" timeout="1000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="NmTesterComMode">
+                        <eq>1</eq>
+                    </sysvar>
+                </awaitvaluematch>
+            </preparation>
+            <statechange title="Request NoCom for ECU" wait="100">
+                <in>
+                    <sysvar name="StartApplication::NmEcuNetworkRequest">0</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::NmEcuNetworkRequest">0</sysvar>
+                </expected>
+            </statechange>
+            <awaitvaluematch title="Wait for transition into bus sleep mode" timeout="$parNmNoComTimeout$" joincondition="all">
+                <sysvar name="StartApplication::NmTesterComMode">
+                    <eq>2</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <statechange title="Reset ECU NM message counter" wait="100">
+                <in>
+                    <sysvar name="StartApplication::NmNmMsgCounterEcu">0</sysvar>
+                </in>
+                <expected>
+                    <sysvar name="StartApplication::NmNmMsgCounterEcu">0</sysvar>
+                </expected>
+            </statechange>
+            <awaitvaluematch title="Verify that the test application request FullCom for all ComM users" timeout="120000" joincondition="all">
+                <sysvar namespace="StartApplication" name="NmEcuTimerNetworkRequestState">
+                    <eq>1</eq>
+                </sysvar>
+                <sysvar namespace="StartApplication" name="NmTesterComMode">
+                    <eq>1</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <awaitvaluematch title="Check appearance of NM messages from ECU" timeout="$parNmNoComTimeout$" joincondition="all">
+                <sysvar name="StartApplication::NmNmMsgCounterEcu">
+                    <gt>0</gt>
+                </sysvar>
+            </awaitvaluematch>
+            <completion>
+                <statechange title="Request FullCom for ECU" wait="100">
+                    <in>
+                        <sysvar name="StartApplication::NmEcuNetworkRequest">1</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::NmEcuNetworkRequest">1</sysvar>
+                    </expected>
+                </statechange>
+                <awaitvaluematch title="Wait up to 10s for FullCom on channel" timeout="10000" joincondition="all">
+                    <sysvar namespace="StartApplication" name="NmTesterComMode">
+                        <eq>1</eq>
+                    </sysvar>
+                    <sysvar namespace="StartApplication" name="NmEcuUserNetworkRequestState">
+                        <eq>1</eq>
+                    </sysvar>
+                </awaitvaluematch>
+                <valuecomment>
+                    <description></description>
+                    <sysvar name="StartApplication::ErrorLog"/>
+                </valuecomment>
+            </completion>
+        </testcasetemplate>
+
+        <!-- ************************************************************************* -->
+        <!-- ***                MEMORYPROTECTION Use Case Templates                *** -->
+        <!-- ************************************************************************* -->
+        <testcasetemplate name="MemoryAccessViolationDetection template" version="2.0">
+            <paramdef name="parDescription" />
+            <description>$parDescription$</description>
+            <preparation>
+                <set title="Clear error log">
+                    <sysvar name="StartApplication::ErrorLog"></sysvar>
+                </set>
+                <statechange title="Activate MEMORYPROTECTION Use Case" wait="1200">
+                    <in>
+                        <sysvar name="StartApplication::UseCaseActivator">9</sysvar>
+                    </in>
+                    <expected>
+                        <sysvar name="StartApplication::UseCaseActivator">9</sysvar>
+                    </expected>
+                </statechange>
+                <set title="Initialize variables">
+                    <sysvar name="StartApplication::MemoryProtectionAccessMode">0</sysvar>
+                    <sysvar name="StartApplication::MemoryProtectionPlayStatus">0</sysvar>
+                    <sysvar name="StartApplication::MemoryProtectionInput">63</sysvar>
+                </set>
+            </preparation>
+            <set title="Set sensor value to 48, triggers writing of IRV from a valid context">
+                <sysvar name="StartApplication::MemoryProtectionInput">48</sysvar>
+            </set>
+            <awaitvaluematch title="Verify that the read IRV value is equal to the written value and no memory access violation occurred" timeout="2000" joincondition="all">
+                <sysvar name="StartApplication::MemoryProtectionOutput">
+                    <eq>48</eq>
+                </sysvar>
+                <sysvar name="StartApplication::MemoryProtectionAccessState">
+                    <eq>0</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <set title="Set sensor value to 32, triggers writing of IRV from a valid context">
+                <sysvar name="StartApplication::MemoryProtectionInput">32</sysvar>
+            </set>
+            <awaitvaluematch title="Verify that the read IRV value is equal to the written value and no memory access violation occurred" timeout="2000" joincondition="all">
+                <sysvar name="StartApplication::MemoryProtectionOutput">
+                    <eq>32</eq>
+                </sysvar>
+                <sysvar name="StartApplication::MemoryProtectionAccessState">
+                    <eq>0</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <set title="Set memory access mode to an invalid context">
+                <sysvar name="StartApplication::MemoryProtectionAccessMode">1</sysvar>
+            </set>
+            <set title="Set sensor value to 16, triggers writing of IRV from an invalid context">
+                <sysvar name="StartApplication::MemoryProtectionInput">16</sysvar>
+            </set>
+            <awaitvaluematch title="Verify that the IRV value does not change and a memory access violation was detected" timeout="2000" joincondition="all">
+                <sysvar name="StartApplication::MemoryProtectionOutput">
+                    <eq>32</eq>
+                </sysvar>
+                <sysvar name="StartApplication::MemoryProtectionAccessState">
+                    <eq>1</eq>
+                </sysvar>
+            </awaitvaluematch>
+            <completion>
+                <valuecomment>
+                    <description></description>
+                    <sysvar name="StartApplication::ErrorLog"/>
+                </valuecomment>
+            </completion>
+        </testcasetemplate>
+    </templates>
+
+    <!-- ************************************************************************* -->
+    <!-- ***                    Template Instances                             *** -->
+    <!-- ************************************************************************* -->
+
+        <testgroup title="Usecase COM">
+            <testgroup title="CAN Data Transmission and Reception">
+                <templateinstances template="DataTransmission template">
+                    <testcaseinstance ident="TCASE-375705" title="CAN Data Transmission ( CAN_Backbone2 )">
+                        <paramvalue name="parDescription">Verify that the application can transmit data on CAN using signals or signal groups.
+                        Ecu Rx signal: 'EngineGasRate_oEMS_BB2_05P_oBackbone2_96ec243f_Rx',
+                        Ecu Tx signal: 'PinCode_validity_time_oCIOM_BB2_10P_oBackbone2_d8b8c81c_Tx'.</paramvalue>
+                        <paramvalue name="parComSignalPairSelector">0</paramvalue>
+                    </testcaseinstance>
+                </templateinstances>
+                <templateinstances template="DataReception template">
+                    <testcaseinstance ident="TCASE-375706" title="CAN Data Reception ( CAN_Backbone2 )">
+                        <paramvalue name="parDescription">Verify that the application can receive data on CAN using signals or signal groups.
+                        Ecu Rx signal: 'EngineGasRate_oEMS_BB2_05P_oBackbone2_96ec243f_Rx',
+                        Ecu Tx signal: 'PinCode_validity_time_oCIOM_BB2_10P_oBackbone2_d8b8c81c_Tx'.</paramvalue>
+                        <paramvalue name="parComSignalPairSelector">0</paramvalue>
+                    </testcaseinstance>
+                </templateinstances>
+            </testgroup>
+            <testgroup title="LIN Data Transmission and Reception">
+                <templateinstances template="DataTransmission template">
+                    <testcaseinstance ident="TCASE-375709" title="LIN Data Transmission ( LIN1_CIOM )">
+                        <paramvalue name="parDescription">Verify that the application can transmit data on LIN using signals.
+                        Ecu Rx signal: 'EngineGasRate_oEMS_BB2_05P_oBackbone2_96ec243f_Rx',
+                        Ecu Tx signal: 'FSP1IndicationCmdL1_oFSP_1_2_Req_L1_oLIN00_c2c0fe90_Tx'.</paramvalue>
+                        <paramvalue name="parComSignalPairSelector">1</paramvalue>
+                    </testcaseinstance>
+                </templateinstances>
+                <templateinstances template="DataReception template">
+                    <testcaseinstance ident="TCASE-375710" title="LIN Data Reception ( LIN1_CIOM )">
+                        <paramvalue name="parDescription">Verify that the application can receive data on LIN using signals.
+                        Ecu Rx signal: 'FSP2SwitchStatusL1_oFSP2_Frame_L1_oLIN00_ee70e556_Rx',
+                        Ecu Tx signal: 'FSP1IndicationCmdL1_oFSP_1_2_Req_L1_oLIN00_c2c0fe90_Tx'.</paramvalue>
+                        <paramvalue name="parComSignalPairSelector">1</paramvalue>
+                    </testcaseinstance>
+                </templateinstances>
+            </testgroup>
+        </testgroup>
+        <testgroup title="Usecase DIAG">
+            <testgroup title="Diagnostics over CAN">
+                <templateinstances template="BasicRequestResponseViaUDS template">
+                    <testcaseinstance ident="TCASE-478915" title="Basic Request/Response via UDS over CAN ( CAN_Backbone2 )">
+                        <paramvalue name="parDescription">Verify that a DCM request can be sent and a response can be received via UDS over CAN</paramvalue>
+                        <paramvalue name="parDiagChannel">0</paramvalue>
+                    </testcaseinstance>
+                </templateinstances>
+            </testgroup>
+        </testgroup>
+        <testgroup title="Usecase NM">
+            <testgroup title="Wakeup and Sleep on CAN">
+                <templateinstances template="InternalWakeupAutosarNm template">
+                    <testcaseinstance ident="TCASE-393480" title="Internal Wakeup on CAN with Autosar NM ( CAN_Backbone2 )">
+                        <paramvalue name="parDescription">Verify that the application can trigger the transition from Bus Sleep to Normal Operation on CAN</paramvalue>
+                        <paramvalue name="parNmCurrentChannel">0</paramvalue>
+                        <paramvalue name="parNmNoComTimeout">20000</paramvalue>
+                    </testcaseinstance>
+                </templateinstances>
+                <templateinstances template="NmVoteReceptionAutosarNm template">
+                    <testcaseinstance ident="TCASE-393482" title="NM Vote Reception on CAN with Autosar NM ( CAN_Backbone2 )">
+                        <paramvalue name="parDescription">Verify that the DUT keeps the CAN channel awake as long as it receives NM messages.</paramvalue>
+                        <paramvalue name="parNmCurrentChannel">0</paramvalue>
+                        <paramvalue name="parNmNoComTime">25000</paramvalue>
+                        <paramvalue name="parNmNmMsgTimeOut">400</paramvalue>
+                    </testcaseinstance>
+                </templateinstances>
+            </testgroup>
+        </testgroup>
+        <testgroup title="Usecase MEMORYPROTECTION">
+            <testgroup title="Valid and Invalid Memory Access">
+                <templateinstances template="MemoryAccessViolationDetection template">
+                    <testcaseinstance ident="TCASE-580499" title="Memory Access Violation Detection">
+                        <paramvalue name="parDescription">Verify that the MPU detects a memory access violation and the OS protection hook is called.</paramvalue>
+                    </testcaseinstance>
+                </templateinstances>
+            </testgroup>
+        </testgroup>
+</testmodule>
+

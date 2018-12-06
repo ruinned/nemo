@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="a9a7242d-4d32-476a-9c1a-35eed0bc43b9">
+      <SHORT-NAME>cdd_spi</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="2e223d59-fd3e-4200-b4d8-ce8722405047">
+          <SHORT-NAME>CddSwComponentTypes</SHORT-NAME>
+          <ELEMENTS>
+            <COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE UUID="6058cb58-f255-4a08-a9d5-6b57ed03b2c2">
+              <SHORT-NAME>SPI</SHORT-NAME>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="4c9db0b0-a325-41ad-bd25-cf004d55aaca">
+                  <SHORT-NAME>InternalBehavior</SHORT-NAME>
+                  <EVENTS>
+                    <TIMING-EVENT UUID="0082864b-803b-4fbd-a423-558994c40116">
+                      <SHORT-NAME>TE_RE_ASW_FG1_spi_10ms</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/cdd_spi/CddSwComponentTypes/SPI/InternalBehavior/RE_ASW_FG1_spi_10ms</START-ON-EVENT-REF>
+                      <PERIOD>0.01</PERIOD>
+                    </TIMING-EVENT>
+                  </EVENTS>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="3e399e96-1afe-429d-bd97-65dbae24f333">
+                      <SHORT-NAME>RE_ASW_FG1_spi_10ms</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>cdd_spi_10ms</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
