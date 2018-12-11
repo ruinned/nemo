@@ -284,24 +284,14 @@ void TestCANInput_TP(void)
 	if(PVT_PEPS_AntPi_Y_Ctrl != 0)
 	{
 		ImmoMode = (PEPS_ImmoMode)PVT_PEPS_AntPi_Y_Ctrl;
-		
-		if((ImmoMode == SharedCoil) || (ImmoMode == Active_High))
+
+		if(ImmoMode != SharedCoil)
 		{
-			(void)lf_ata5291_wreg(GPIO1,0x01);
-				lf_ata5291_sgp(0);
-		}
-		else if(ImmoMode == Active_Low)
-		{
-			(void)lf_ata5291_wreg(GPIO1,0x01);
-				lf_ata5291_sgp(1);
-		}
-		else if(ImmoMode == High_Z)
-		{
-			(void)lf_ata5291_wreg(GPIO1,0x00);
+			ImmoMode = Always_Low;
 		}
 		else
 		{
-
+			
 		}
 	}
 	else

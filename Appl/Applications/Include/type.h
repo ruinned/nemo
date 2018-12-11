@@ -149,9 +149,7 @@ extern u8	lf_antenna_RSSIOutputOrder[LF_ANT_RSSI_OUTPUT_ORDER_MAX];
 typedef enum
 {
 	SharedCoil = 1,
-	Active_High,
-	Active_Low,
-	High_Z
+	Always_Low
 } PEPS_ImmoMode;
 extern PEPS_ImmoMode ImmoMode;
 

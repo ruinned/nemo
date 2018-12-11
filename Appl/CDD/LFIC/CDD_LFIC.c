@@ -960,15 +960,22 @@ static void check_errors(void)
 ***********************************************************************************************************************/
 static void AtaImmoTurnOn(void)
 {
+	// SharedCoil
+	lf_ata5291_sdm(0x00, 0x01);
+	lf_ata5291_gis();
+
 	if(ImmoMode == SharedCoil)
 	{
-		lf_ata5291_sdm(0x00, 0x01);
-		lf_ata5291_gis();
+		lf_ata5291_sgp(1);
 	}
 	else
 	{
-		lf_ata5291_gim();	// Turn on CW Immo only, use normal immo mode
+		// Always_Low
+		lf_ata5291_sgp(0);
 	}
+	
+	// else
+	// lf_ata5291_gim();	// Turn on CW Immo only, use normal immo mode
 
 	lf_ata5291_iro(0);
 	lf_ata5291_crx();
@@ -993,24 +1000,10 @@ static void AtaImmoInit(void)
 	ata5291_Immo_timing.One  = 32;
 	ata5291_Immo_timing.Zero = 16;
 
-	if((ImmoMode == SharedCoil) || (ImmoMode == Active_High))
-	{
-		(void)lf_ata5291_wreg(GPIO1,0x01);
-			lf_ata5291_sgp(0);
-	}
-	else if(ImmoMode == Active_Low)
-	{
-		(void)lf_ata5291_wreg(GPIO1,0x01);
-			lf_ata5291_sgp(1);
-	}
-	else if(ImmoMode == High_Z)
-	{
-		(void)lf_ata5291_wreg(GPIO1,0x00);
-	}
-	else
-	{
-
-	}
+	// SharedCoil:
+	(void)lf_ata5291_wreg(GPIO1,0x01);
+	lf_ata5291_sgp(0);
+	
 
 	immoDataBuffer = lf_ata5291_rreg(IMRCC); // Immobilizer Rx Check Configuration
 	immoDataBuffer = immoDataBuffer | 0x80; 	
@@ -1620,17 +1613,14 @@ void DST_RX_ISR(void)
 {
  	static uint8 bufferFillLevel = 0;
 
-	if((ImmoMode == SharedCoil) || (ImmoMode == Active_High))
+	if(ImmoMode == SharedCoil)
 	{
 		lf_ata5291_sgp(1);
 	}
-	else if(ImmoMode == Active_Low)
-	{
-		lf_ata5291_sgp(0);
-	}
 	else
 	{
-
+		// Always_Low
+		lf_ata5291_sgp(0);
 	}
 
 	bufferFillLevel = lf_ata5291_grx();				
@@ -1649,18 +1639,8 @@ void DST_RX_ISR(void)
 		Rte_Write_b_DST_ResponseNG_P_SR(On);
 	}
 
-	if((ImmoMode == SharedCoil) || (ImmoMode == Active_High))
-	{
-		lf_ata5291_sgp(0);
-	}
-	else if(ImmoMode == Active_Low)
-	{
-		lf_ata5291_sgp(1);
-	}
-	else
-	{
-
-	}
+	// SharedCoil
+	lf_ata5291_sgp(0);
 
 	lf_ata5291_gid();				
 }
@@ -2309,17 +2289,14 @@ FUNC(void, CDD_LFIC_CODE) RE_SetupDST_Telegram(uint8 dst_order) /* PRQA S 0850 *
 
 	AtaImmoTurnOn();	
 
-	if((ImmoMode == SharedCoil) || (ImmoMode == Active_High))
+	if(ImmoMode == SharedCoil)
 	{
 		lf_ata5291_sgp(1);
 	}
-	else if(ImmoMode == Active_Low)
-	{
-		lf_ata5291_sgp(0);
-	}
 	else
 	{
-
+		// Always_Low
+		lf_ata5291_sgp(0);
 	}
 
 	//IoHwAb_GptEnableNotification(Rte_PDAV_IoHwAbP_Gpt_LFControl_1);
@@ -2459,7 +2436,7 @@ void Test_SetupDST_Telegram(uint8 dst_order, uint8 data)
 		break;
 
 	case	kDST_Selected_Program_Page4:		/* Regit.Count:2 /Key No.:1/ Selective Addr.:1 */
-		Rte_Read_st_DstBlock_P_write_fob_number(&write_fob_number);
+		// Rte_Read_st_DstBlock_P_write_fob_number(&write_fob_number);
 		// Rte_Read_R_b_Learning_RegistCnt_SR(&Learning_RegistCnt);		// TP Rev.1
 	
 		DST_RxDataLength = 3;
@@ -2480,7 +2457,7 @@ void Test_SetupDST_Telegram(uint8 dst_order, uint8 data)
 		break;
 
 	case	kDST_Selected_Program_Page6:		/* Security Key Number */
-		Rte_Read_st_DstBlock_P_security_key_number(security_key_number);
+		// Rte_Read_st_DstBlock_P_security_key_number(security_key_number);
 		
 		DST_RxDataLength = 3;
 		DST_RxDataCRC8ChkLength = 2;	/* except crc8 */
@@ -2502,7 +2479,7 @@ void Test_SetupDST_Telegram(uint8 dst_order, uint8 data)
 		break;
 
 	case	kDST_Selected_Program_Page14:		/* Vehicle ID */
-		Rte_Read_st_DstBlock_P_vehicle_serial(vehicle_serial);
+		// Rte_Read_st_DstBlock_P_vehicle_serial(vehicle_serial);
 		
 		DST_RxDataLength = 3;
 		DST_RxDataCRC8ChkLength = 2;	/* except crc8 */
@@ -2526,7 +2503,7 @@ void Test_SetupDST_Telegram(uint8 dst_order, uint8 data)
 		break;
 		
 	case	kDST_AES_Encryption_Read:	/* challenge --> response */
-		Rte_Read_st_DstBlock_P_challenge(challenge);
+		// Rte_Read_st_DstBlock_P_challenge(challenge);
 	
 		DST_RxDataLength = 9;
 		e_DST_OP_MODE = k_DST_READ_MODE;
@@ -2549,7 +2526,7 @@ void Test_SetupDST_Telegram(uint8 dst_order, uint8 data)
 		break;
 
 	case	kDST_AES_Encryption_Program:	/* Encryption Program */
-		Rte_Read_st_DstBlock_P_encryption(encryption_key);
+		// Rte_Read_st_DstBlock_P_encryption(encryption_key);
 		
 		DST_RxDataLength = 3;
 		DST_RxDataCRC8ChkLength = 2;	
@@ -2594,17 +2571,14 @@ void Test_SetupDST_Telegram(uint8 dst_order, uint8 data)
 
 	AtaImmoTurnOn();
 
-	if((ImmoMode == SharedCoil) || (ImmoMode == Active_High))
+	if(ImmoMode == SharedCoil)
 	{
 		lf_ata5291_sgp(1);
 	}
-	else if(ImmoMode == Active_Low)
-	{
-		lf_ata5291_sgp(0);
-	}
 	else
 	{
-
+		// Always_Low
+		lf_ata5291_sgp(0);
 	}
 
 	//IoHwAb_GptEnableNotification(Rte_PDAV_IoHwAbP_Gpt_LFControl_1);
