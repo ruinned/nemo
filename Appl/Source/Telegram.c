@@ -524,7 +524,16 @@ void TestCANOutput(void) // CAN Input Gain값 변경, RSSI와 같은,내부 변�
 	/* else */
 	}
 #else
+	static u8 TestCounter = 0;
 
+	if(TestCounter <= 100)
+	{
+		TestCounter++;
+	}
+	else
+	{
+
+	}
 	// UpTimer8(tmr_rssivalueClear)
 
 	if(b_FobFound_OK == On)
@@ -536,10 +545,14 @@ void TestCANOutput(void) // CAN Input Gain값 변경, RSSI와 같은,내부 변�
 		PVT_PEPS_P3_MaxRSSI = (lRSSI(fob_cnt,kANTENA_P3)) & 0x1FF; // P3
 		PVT_PEPS_P4_MaxRSSI = (lRSSI(fob_cnt,kANTENA_P4)) & 0x1FF; // P4
 
-		Rte_Write_Debug_PVT_PEPS_P1_MaxRSSI_P_Debug_PVT_PEPS_P1_MaxRSSI(PVT_PEPS_P1_MaxRSSI);
-		Rte_Write_Debug_PVT_PEPS_P2_MaxRSSI_P_Debug_PVT_PEPS_P2_MaxRSSI(PVT_PEPS_P2_MaxRSSI);
-		Rte_Write_Debug_PVT_PEPS_P3_MaxRSSI_P_Debug_PVT_PEPS_P3_MaxRSSI(PVT_PEPS_P3_MaxRSSI);
-		Rte_Write_Debug_PVT_PEPS_P4_MaxRSSI_P_Debug_PVT_PEPS_P4_MaxRSSI(PVT_PEPS_P4_MaxRSSI);
+		if(TestCounter >= 100)
+		{
+			TestCounter = 0;
+			Rte_Write_Debug_PVT_PEPS_P1_MaxRSSI_P_Debug_PVT_PEPS_P1_MaxRSSI(PVT_PEPS_P1_MaxRSSI);
+			Rte_Write_Debug_PVT_PEPS_P2_MaxRSSI_P_Debug_PVT_PEPS_P2_MaxRSSI(PVT_PEPS_P2_MaxRSSI);
+			Rte_Write_Debug_PVT_PEPS_P3_MaxRSSI_P_Debug_PVT_PEPS_P3_MaxRSSI(PVT_PEPS_P3_MaxRSSI);
+			Rte_Write_Debug_PVT_PEPS_P4_MaxRSSI_P_Debug_PVT_PEPS_P4_MaxRSSI(PVT_PEPS_P4_MaxRSSI);
+		}
 	}
 
 	if(b_RkeFunction_OK == On)
